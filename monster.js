@@ -1,0 +1,85 @@
+import*as T from'./vendor/three.module.js';
+import{itemById}from'./spelling.js';
+export const COLOURS={mint:'#79cbbb',lilac:'#ad8ed8',peach:'#f2a18c',blue:'#7db4dc',gold:'#ecc774',moon:'#dce0f4'};
+export function palMarkup(p,{baby=false,prompt=''}={}){return `<div class="pal-stage">${prompt?`<div class="pal-dialogue"><strong>${safe(p.palName||'Your pal')} ${prompt.trim().endsWith('?')?'asks…':'says…'}</strong><p>${safe(prompt)}</p></div>`:''}<div class="pal-creature" data-pal data-reaction="idle" role="button" tabindex="0" aria-label="${safe(p.palName||p.name||'Your pal')}. Tap for an oof, double-tap to tickle, hold to purr. Enter to greet, G to giggle, hold P to purr."><div class="monster-canvas" data-monster='${safe(JSON.stringify({species:p.species||'bobble',colour:p.colour||'mint',wearing:baby?{}:p.wearing||{},baby}))}'></div><span class="pal-reaction" aria-live="polite"></span><span class="pal-hearts" aria-hidden="true">♥ <i>♥</i> ♥</span></div><div class="pal-actions"><button data-pal-action="oof">Say hello</button><button data-pal-action="giggle">Tickle</button><button data-pal-action="purr">Cuddle</button></div></div>`;}
+function safe(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+let speaking=false;document.addEventListener('pal-speaking',e=>speaking=!!e.detail);
+const sphere=new T.SphereGeometry(1,40,28);
+function material(colour,extra={}){return new T.MeshPhysicalMaterial({color:colour,roughness:.5,metalness:0,clearcoat:.32,clearcoatRoughness:.55,...extra});}
+function ball(parent,mat,x,y,z,sx,sy=sx,sz=sx){const m=new T.Mesh(sphere,mat);m.position.set(x,y,z);m.scale.set(sx,sy,sz);m.castShadow=true;m.receiveShadow=true;parent.add(m);return m;}
+function mesh(parent,geometry,mat,x,y,z){const m=new T.Mesh(geometry,mat);m.position.set(x,y,z);m.castShadow=true;m.receiveShadow=true;parent.add(m);return m;}
+function tube(parent,points,radius,mat){return mesh(parent,new T.TubeGeometry(new T.CatmullRomCurve3(points.map(p=>new T.Vector3(...p))),28,radius,10,false),mat,0,0,0);}
+function fallback(host,p){host.innerHTML=`<svg viewBox="0 0 300 330" aria-hidden="true"><defs><radialGradient id="skin"><stop stop-color="#dbeee9"/><stop offset="1" stop-color="${COLOURS[p.colour]||COLOURS.mint}"/></radialGradient></defs><ellipse cx="150" cy="308" rx="84" ry="12" fill="#52426b18"/><path d="M111 81Q85 15 70 39M190 80Q220 12 233 41" fill="none" stroke="${COLOURS[p.colour]||COLOURS.mint}" stroke-width="15" stroke-linecap="round"/><ellipse cx="150" cy="184" rx="100" ry="116" fill="url(#skin)"/><ellipse cx="104" cy="145" rx="29" ry="33" fill="#fffaf0"/><ellipse cx="190" cy="145" rx="29" ry="33" fill="#fffaf0"/><ellipse class="fallback-pupil" cx="110" cy="150" rx="15" ry="20" fill="#39304c"/><ellipse class="fallback-pupil" cx="184" cy="150" rx="15" ry="20" fill="#39304c"/><circle cx="115" cy="143" r="6" fill="white"/><circle cx="189" cy="143" r="6" fill="white"/><path class="fallback-mouth" d="M128 193Q150 214 173 193" stroke="#61475e" stroke-width="8" fill="none" stroke-linecap="round"/><ellipse cx="100" cy="291" rx="30" ry="18" fill="${COLOURS[p.colour]||COLOURS.mint}"/><ellipse cx="201" cy="291" rx="30" ry="18" fill="${COLOURS[p.colour]||COLOURS.mint}"/></svg><p class="render-note">Simple character view · 3D is unavailable on this browser.</p>`;}
+
+function createModel(p){
+ const root=new T.Group(),body=new T.Group();root.add(body);
+ const colour=COLOURS[p.colour]||COLOURS.mint,skin=material(colour,{sheen:.5,sheenColor:new T.Color('#e9e3ff'),sheenRoughness:.8,iridescence:['gold','moon'].includes(p.colour)?.7:0});
+ const lighter=material(new T.Color(colour).lerp(new T.Color('#fff4e3'),.35));
+ const dark=material('#3c304c',{roughness:.35}),white=material('#fff9e9',{roughness:.2,clearcoat:1}),iris=material('#514668',{roughness:.12,clearcoat:1}),black=material('#171727',{roughness:.08,clearcoat:1});
+ const blush=material('#f294aa',{transparent:true,opacity:.63});
+ const shape=p.species==='blip'?[1,1.02,.76]:p.species==='wiggle'?[.78,1.22,.68]:[.9,1.13,.73];if(p.baby){shape[0]*=1.08;shape[1]*=.95;}
+ ball(body,skin,0,1.3,0,...shape);
+ const belly=ball(body,lighter,0,.7,.61,.38,.33,.1);
+ const arms=[];
+ for(const sign of[-1,1]){const arm=new T.Group();arm.position.set(sign*shape[0]*.87,.95,0);body.add(arm);arm.rotation.z=sign*.42;ball(arm,skin,sign*.12,-.18,.04,.17,.34,.17);ball(arm,skin,sign*.21,-.43,.1,.19,.18,.19);ball(body,skin,sign*.4,.16,.15,.25,.19,.35);arms.push(arm);}
+ const eyes=[],eyeY=p.species==='blip'?1.65:1.72;
+ const coords=p.species==='blip'?[-.42,0,.42]:[-.32,.32];
+ for(const x of coords){const e=new T.Group();e.position.set(x,eyeY+(p.species==='blip'&&x===0?.12:0),shape[2]*.82);body.add(e);const r=p.species==='blip'?.215:p.baby?.3:.27;ball(e,white,0,0,0,r,r*1.12,r*.7);const pupil=new T.Group();pupil.position.z=r*.64;e.add(pupil);ball(pupil,iris,0,-.01,0,r*.69,r*.78,.055);ball(pupil,black,0,-.01,.045,r*.43,r*.57,.035);ball(pupil,white,r*.16,r*.29,.071,r*.15,r*.18,.025);ball(pupil,white,-r*.15,-r*.14,.07,r*.065,r*.07,.015);eyes.push({group:e,pupil});}
+ for(const sign of[-1,1])ball(body,blush,sign*.53,1.4,shape[2]*.86,.13,.065,.025);
+ const smile=tube(body,[[-.23,1.3,shape[2]*.99],[-.14,1.245,shape[2]*1.025],[0,1.22,shape[2]*1.045],[.14,1.245,shape[2]*1.025],[.23,1.3,shape[2]*.99]],.027,dark);
+ const mouth=ball(body,dark,0,1.27,shape[2]*1.035,.12,.13,.025);mouth.visible=false;
+ const tongue=ball(body,material('#e0a2b4'),0,1.215,shape[2]*1.075,.065,.035,.015);tongue.visible=false;
+ const antennae=[];
+ const n=p.species==='blip'?1:2;
+ for(let i=0;i<n;i++){const sign=n===1?0:i===0?-1:1,pivot=new T.Group();pivot.position.set(sign*.35,2.17,0);body.add(pivot);tube(pivot,[[0,0,0],[sign*.12,.3,.02],[sign*.19,.57,.01]],p.species==='wiggle'?.07:.045,skin);ball(pivot,lighter,sign*.19,.57,.01,p.species==='wiggle'?.14:.105);antennae.push(pivot);}
+ if(p.species==='wiggle')for(const sign of[-1,1]){const fin=ball(body,skin,sign*.78,1.91,-.03,.31,.12,.11);fin.rotation.z=sign*.4;}
+ // Clothes share the rig and body proportions, so sleeves, hems and shoes
+ // stay fitted when the creature moves rather than following a flat image.
+ const coat=itemById('coat',p.wearing?.coat);
+ if(coat){belly.visible=false;const fabric=material(coat.colour,{roughness:coat.style==='rain'?.34:.9,clearcoat:coat.style==='rain'?.65:.05});
+  const points=[[.48,.27],[.72,.38],[.88,.7],[.91,.94],[.94,1.18]].map(([r,y])=>new T.Vector2(r*shape[0]/.9,y));const jacket=mesh(body,new T.LatheGeometry(points,48),fabric,0,0,0);jacket.scale.z=.85;
+  for(const[side,arm]of arms.entries()){const sign=side===0?-1:1;ball(arm,fabric,sign*.1,-.14,.04,.205,.29,.205);}
+  const zipper=material('#f8edcf',{roughness:.4});tube(body,[[0,.3,.66],[0,.7,.79],[0,1.17,.82]],.015,zipper);for(const y of[.47,.73,.99])ball(body,zipper,.07,y,.79,.028,.028,.02);for(const sign of[-1,1]){const collar=ball(body,fabric,sign*.22,1.15,.8,.15,.1,.035);collar.rotation.z=sign*.4;}
+  if(coat.style==='puffer')for(const y of[.47,.7,.93]){const seam=mesh(body,new T.TorusGeometry((.72+(y-.4)*.24)*shape[0]/.9,.022,7,50),fabric,0,y,0);seam.rotation.x=Math.PI/2;seam.scale.y=.85;}
+  if(coat.style==='hoodie'){const hood=mesh(body,new T.TorusGeometry(.6,.12,12,42,Math.PI),fabric,0,1.23,-.16);hood.rotation.x=.65;tube(body,[[-.2,1.17,.75],[-.18,.92,.81]],.016,zipper);tube(body,[[.2,1.17,.75],[.18,.92,.81]],.016,zipper);}
+ }
+ const hat=itemById('hat',p.wearing?.hat);
+ if(hat){const fabric=material(hat.colour,{roughness:.85});
+  if(hat.style==='party'){const cone=mesh(body,new T.ConeGeometry(.42,.85,40),fabric,0,2.6,0);ball(body,white,0,3.03,0,.075);for(const[x,y]of[[-.12,2.43],[.1,2.6],[0,2.8]])ball(body,white,x,y,.28,.035);}
+  else{const crown=hat.style==='beanie'?mesh(body,new T.SphereGeometry(.61,36,24,0,Math.PI*2,0,Math.PI/2),fabric,0,2.16,0):mesh(body,new T.CylinderGeometry(.44,.6,.43,40),fabric,0,2.4,0);crown.scale.z=.8;const brim=mesh(body,new T.TorusGeometry(hat.style==='beanie'?.58:.68,hat.style==='beanie'?.09:.045,12,48),fabric,0,2.19,0);brim.rotation.x=Math.PI/2;brim.scale.y=.8;if(hat.style==='beanie')ball(body,fabric,0,2.79,0,.14);}
+ }
+ const shoes=itemById('shoes',p.wearing?.shoes);
+ if(shoes){const leather=material(shoes.colour,{roughness:shoes.style==='boots'?.4:.85});for(const sign of[-1,1]){ball(body,leather,sign*.4,.15,.23,.28,shoes.style==='boots'?.3:.2,.41);if(shoes.style!=='slippers'){ball(body,white,sign*.4,.015,.24,.285,.045,.42);for(const y of[.22,.3])tube(body,[[sign*.4-.12,y,.55],[sign*.4+.12,y,.55]],.015,white);}}}
+ return{root,body,eyes,arms,antennae,smile,mouth,tongue};
+}
+
+export function mountMonsters(){
+ const disposers=[];
+ document.querySelectorAll('[data-monster]').forEach(host=>{
+  let p;try{p=JSON.parse(host.dataset.monster);}catch{return;}
+  const wrapper=host.closest('[data-pal]');let renderer;
+  try{renderer=new T.WebGLRenderer({alpha:true,antialias:true,powerPreference:'low-power'});}catch{fallback(host,p);return;}
+  host.appendChild(renderer.domElement);host.dataset.engine='3d';renderer.setPixelRatio(Math.min(devicePixelRatio,1.6));renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=1.08;
+  const scene=new T.Scene(),camera=new T.PerspectiveCamera(32,1,.1,50);camera.position.set(.25,1.9,6.3);camera.lookAt(0,1.45,0);
+  scene.add(new T.HemisphereLight('#fff4e4','#b5a1d2',1.9));const key=new T.DirectionalLight('#fff4de',3.2);key.position.set(-3,5,5);scene.add(key);const rim=new T.DirectionalLight('#d9d1ff',1.7);rim.position.set(3,3,-3);scene.add(rim);
+  const shadowCanvas=document.createElement('canvas');shadowCanvas.width=128;shadowCanvas.height=128;const shadowContext=shadowCanvas.getContext('2d'),gradient=shadowContext.createRadialGradient(64,64,10,64,64,62);gradient.addColorStop(0,'rgba(77,58,98,.22)');gradient.addColorStop(1,'rgba(77,58,98,0)');shadowContext.fillStyle=gradient;shadowContext.fillRect(0,0,128,128);const shadowTexture=new T.CanvasTexture(shadowCanvas),plane=new T.Mesh(new T.PlaneGeometry(2.8,1.8),new T.MeshBasicMaterial({map:shadowTexture,transparent:true,depthWrite:false}));plane.rotation.x=-Math.PI/2;plane.position.y=-.045;scene.add(plane);
+  const model=createModel(p);scene.add(model.root);if(p.baby){model.root.scale.setScalar(.78);model.root.position.y=.1;}
+  const pointer={x:0,y:0};const move=e=>{const r=host.getBoundingClientRect();pointer.x=Math.max(-1,Math.min(1,(e.clientX-r.left)/r.width*2-1));pointer.y=Math.max(-1,Math.min(1,(e.clientY-r.top)/r.height*2-1));};wrapper.addEventListener('pointermove',move);
+  const resize=()=>{const r=host.getBoundingClientRect();renderer.setSize(Math.max(1,r.width),Math.max(1,r.height),false);camera.aspect=r.width/Math.max(1,r.height);camera.updateProjectionMatrix();};const observer=new ResizeObserver(resize);observer.observe(host);resize();
+  const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;let frame,lastReaction='idle',reactionStart=0,disposed=false;const start=performance.now();
+  function animate(now){if(disposed)return;frame=requestAnimationFrame(animate);if(document.hidden)return;const t=(now-start)/1000,reaction=wrapper.dataset.reaction||'idle';if(reaction!==lastReaction){lastReaction=reaction;reactionStart=t;}const rt=t-reactionStart;
+   model.root.rotation.y=T.MathUtils.lerp(model.root.rotation.y,pointer.x*.16,.08);model.body.position.y=reduced?0:Math.sin(t*1.8)*.018;model.body.rotation.z=0;model.body.scale.set(1,1,1);
+   const blink=!reduced&&(t%5.3<.12||t%5.3>5.16);for(const eye of model.eyes){eye.group.scale.y=blink?.08:1;eye.pupil.position.x=pointer.x*.035;eye.pupil.position.y=-pointer.y*.025;}
+   model.smile.visible=true;model.mouth.visible=false;model.tongue.visible=false;
+   for(let i=0;i<model.arms.length;i++)model.arms[i].rotation.z=(i===0?-1:1)*(.42+(reduced?0:Math.sin(t*1.4+i)*.025));for(let i=0;i<model.antennae.length;i++)model.antennae[i].rotation.z=reduced?0:Math.sin(t*1.9+i)*.07;
+   if(speaking&&reaction==='idle'){model.smile.visible=false;model.mouth.visible=true;model.mouth.scale.set(.13,.04+Math.abs(Math.sin(t*10))*.065,.03);model.tongue.visible=true;}
+   if(reaction==='oof'){model.smile.visible=false;model.mouth.visible=true;model.mouth.scale.set(.085,.11,.028);if(!reduced){model.body.rotation.z=Math.sin(Math.min(rt/.7,1)*Math.PI)*-.045;model.body.position.z=Math.sin(Math.min(rt/.7,1)*Math.PI)*-.06;}for(const e of model.eyes)e.group.scale.y=1.06;}
+   if(reaction==='giggle'){model.smile.visible=false;model.mouth.visible=true;model.mouth.scale.set(.19,.09,.03);model.tongue.visible=true;for(const e of model.eyes)e.group.scale.y=.65;if(!reduced){model.body.rotation.z=Math.sin(rt*22)*.035;model.body.position.y=Math.abs(Math.sin(rt*15))*.035;for(let i=0;i<model.arms.length;i++)model.arms[i].rotation.z=(i===0?-1:1)*(.8+Math.sin(rt*18)*.12);}}
+   if(reaction==='purr'){for(const e of model.eyes)e.group.scale.y=.3;if(!reduced){model.body.rotation.z=Math.sin(rt*2)*.025;model.body.scale.y=1+Math.sin(rt*3)*.007;}}
+   renderer.render(scene,camera);
+  }
+  frame=requestAnimationFrame(animate);
+  disposers.push(()=>{disposed=true;cancelAnimationFrame(frame);observer.disconnect();wrapper.removeEventListener('pointermove',move);shadowTexture.dispose();scene.traverse(o=>{if(o.isMesh){if(o.geometry!==sphere)o.geometry.dispose();if(Array.isArray(o.material))o.material.forEach(m=>m.dispose());else o.material?.dispose();}});renderer.dispose();renderer.forceContextLoss();});
+ });
+ return()=>disposers.forEach(fn=>fn());
+}

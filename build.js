@@ -1,11 +1,5 @@
-import{mkdir,copyFile,access,cp}from'node:fs/promises';
-import{fileURLToPath}from'node:url';
-import path from'node:path';
+import{mkdir,copyFile,cp,access}from'node:fs/promises';
+import path from'node:path';import{fileURLToPath}from'node:url';
 const root=path.dirname(fileURLToPath(import.meta.url)),out=path.join(root,'dist');
-const scripts=['app.js','learning.js','worlds.js','creature-v3.js','sprite-colour.js','pal-gestures.js','pal-interaction.js','voice.js','progression.js','reward-pages.js','meanings.js'];
-for(const species of['sprout','bunny','dragon'])for(const outfit of['school','explorer','cosy'])await access(path.join(root,'assets',`${species}-${outfit}.png`));
-await access(path.join(root,'assets','babies.png'));await access(path.join(root,'assets','world.png'));
-await mkdir(out,{recursive:true});
-for(const file of['index.html','styles.css','adventure.css','progression.css',...scripts])await copyFile(path.join(root,file),path.join(out,file));
-await cp(path.join(root,'assets'),path.join(out,'assets'),{recursive:true});
-console.log('Static app built in dist/. No site was published.');
+const files=['index.html','app.css','app.js','monster.js','spelling.js','learning.js','meanings.js','voice.js','pal-interaction.js','pal-gestures.js'];
+await access(path.join(root,'vendor','three.module.js'));await access(path.join(root,'vendor','three.core.js'));await mkdir(out,{recursive:true});for(const f of files)await copyFile(path.join(root,f),path.join(out,f));await cp(path.join(root,'vendor'),path.join(out,'vendor'),{recursive:true});console.log('Built spelling-only app in dist/. No website was published.');

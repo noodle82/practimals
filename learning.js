@@ -24,30 +24,3 @@ export const localDay = (date = new Date()) => `${date.getFullYear()}-${String(d
 export function cleanWords(text) {
   return [...new Set(text.split(/[\n,;]+/).map(x => x.trim().toLowerCase()).filter(x => /^[a-z]+(?:[-'][a-z]+)*$/.test(x)))].slice(0,20);
 }
-export function normaliseTables(values) {
-  return [...new Set(values.map(Number).filter(x => Number.isInteger(x) && x >= 1 && x <= 12))].sort((a,b) => a-b);
-}
-export function practiceWords(words, cursor = 0, count = 3) {
-  if (!words.length) return [];
-  const start = ((cursor % words.length) + words.length) % words.length;
-  return Array.from({length:Math.min(count,words.length)},(_,i)=>words[(start+i)%words.length]);
-}
-export function makeQuestions(tables, count = 5, random = Math.random) {
-  const selected = normaliseTables(tables);
-  if (!selected.length) return [];
-  const pool = selected.flatMap(a => Array.from({ length:12 }, (_, i) => ({ a, b:i+1, answer:a*(i+1) })));
-  for (let i=pool.length-1; i>0; i--) { const j = Math.floor(random()*(i+1)); [pool[i],pool[j]] = [pool[j],pool[i]]; }
-  return pool.slice(0,count);
-}
-export function awardActivity(profile, activity, day = localDay()) {
-  if (!['spelling','tables','creative'].includes(activity)) throw new Error('Unknown activity');
-  const current = profile.days[day] || [];
-  if (current.includes(activity)) return { earned:0, bonus:0 };
-  profile.days[day] = [...current,activity];
-  const bonus = profile.days[day].length === 3 ? 15 : 0;
-  profile.stars += 10 + bonus;
-  return { earned:10,bonus };
-}
-export function hasWord(sentence, word) {
-  return sentence.toLowerCase().split(/[^a-z'-]+/).includes(word.toLowerCase());
-}

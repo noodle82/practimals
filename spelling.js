@@ -1,0 +1,51 @@
+import{localDay}from'./learning.js';
+export const METHODS={study:{title:'Look, cover, check',description:'Look at your word. Say it. Cover it and try.',icon:'Aa'},listen:{title:'Hear & spell',description:'Listen carefully, then spell your weekly words.',icon:'♫'},build:{title:'Build the word',description:'Put the letters in the right order.',icon:'▦'},letters:{title:'Missing letters',description:'Find the letters hiding in your words.',icon:'a_c'},gap:{title:'What’s the missing word?',description:'Complete a sentence using your weekly words.',icon:'___'},meaning:{title:'Match the meaning',description:'Choose the weekly word that fits the clue.',icon:'?'},sentence:{title:'Make a sentence',description:'Choose one of your words and give it a sentence.',icon:'✎'},draw:{title:'Draw your word',description:'Make a picture to help a word stick.',icon:'✿'}};
+export const WARDROBE={hat:{title:'A hat',after:1,items:[{id:'hat-bucket-lilac',label:'Lilac bucket hat',style:'bucket',colour:'#a48ad6'},{id:'hat-beanie-coral',label:'Coral bobble hat',style:'beanie',colour:'#ed947e'},{id:'hat-party-gold',label:'Golden party hat',style:'party',colour:'#eec66d'}]},coat:{title:'A coat',after:3,items:[{id:'coat-rain-mint',label:'Mint raincoat',style:'rain',colour:'#68bba6'},{id:'coat-hoodie-lilac',label:'Lilac hoodie',style:'hoodie',colour:'#9d85c5'},{id:'coat-puffer-blue',label:'Blue puffer',style:'puffer',colour:'#79a9d3'}]},shoes:{title:'Some shoes',after:5,items:[{id:'shoes-trainers-red',label:'Red trainers',style:'trainers',colour:'#df7c7b'},{id:'shoes-boots-yellow',label:'Yellow boots',style:'boots',colour:'#e3b653'},{id:'shoes-slippers-purple',label:'Purple slippers',style:'slippers',colour:'#ac8ac8'}]}};
+export const BABIES=[{id:'mote',name:'Mote',species:'bobble',colour:'mint',rarity:'Common',weight:30},{id:'fizz',name:'Fizz',species:'blip',colour:'peach',rarity:'Common',weight:30},{id:'wiglet',name:'Wiglet',species:'wiggle',colour:'lilac',rarity:'Common',weight:30},{id:'ripple',name:'Ripple',species:'blip',colour:'blue',rarity:'Rare',weight:10},{id:'nova',name:'Nova',species:'wiggle',colour:'gold',rarity:'Super rare',weight:2},{id:'moonlet',name:'Moonlet',species:'bobble',colour:'moon',rarity:'Super rare',weight:2}];
+export function validDay(day){return /^\d{4}-\d{2}-\d{2}$/.test(day)&&!Number.isNaN(Date.parse(day+'T12:00:00Z'))&&new Date(day+'T12:00:00Z').toISOString().slice(0,10)===day;}
+export function dayNumber(day){if(!validDay(day))throw Error('Choose a valid date.');const[y,m,d]=day.split('-').map(Number);return Date.UTC(y,m-1,d)/86400000;}
+export function addDays(day,n){return new Date((dayNumber(day)+n)*86400000).toISOString().slice(0,10);}
+export function nextTestDay(day=localDay()){const weekday=new Date(day+'T12:00:00Z').getUTCDay();return addDays(day,((5-weekday+7)%7)||7);}
+export function formatDay(day){return validDay(day)?new Intl.DateTimeFormat('en-GB',{weekday:'long',day:'numeric',month:'short',timeZone:'UTC'}).format(new Date(day+'T12:00:00Z')):'Choose a test date';}
+function babyPick(random=Math.random){let value=random()*BABIES.reduce((sum,b)=>sum+b.weight,0);return BABIES.find(b=>(value-=b.weight)<0)||BABIES[0];}
+export function freshProfile(id,name,age){return{id,name,age,palName:'Your pal',species:'bobble',colour:'mint',words:[],week:null,eggs:[],babies:[],items:[],wearing:{hat:null,coat:null,shoes:null},scrapbook:[],testHistory:[]};}
+export function parseWeeklyWords(text){const entries=String(text).replace(/[‘’]/g,"'").replace(/[–—]/g,'-').split(/[\n,;]+/).map(x=>x.trim().replace(/^(?:\d+[.)]\s*|[•*]\s*)/,'').toLowerCase()).filter(Boolean);const invalid=entries.find(x=>!/^[a-z]+(?:[-'][a-z]+)*$/.test(x));if(invalid)throw Error(`Check “${invalid}”. Put one spelling on each line.`);const words=[...new Set(entries)];if(words.length>20)throw Error('This list has more than 20 spellings. Please check it.');return words;}
+export function setWeek(p,words,testDate,{newWeek=false,today=localDay(),random=Math.random,id=globalThis.crypto.randomUUID()}={}){
+ if(!validDay(testDate))throw Error('Choose the spelling-test date.');
+ if(!Array.isArray(words)||words.length<1||words.length>20)throw Error('Add between 1 and 20 weekly spellings.');
+ if(words.some(x=>!x.word)||new Set(words.map(x=>x.word)).size!==words.length)throw Error('Check your weekly spelling list.');
+ const fresh=!p.week||newWeek,changed=p.words.map(x=>x.word).join('\n')!==words.map(x=>x.word).join('\n');
+ if(fresh){const baby=babyPick(random);p.week={id,start:today,testDate,progress:{},rounds:{},games:[],claimed:{},eggId:id};p.eggs.push({id,start:today,testDate,babyId:baby.id,hatched:false});}
+ else{p.week.testDate=testDate;p.week.progress=Object.fromEntries(Object.entries(p.week.progress).filter(([word])=>words.some(x=>x.word===word)));if(changed)p.week.rounds={};const egg=p.eggs.find(e=>e.id===p.week.eggId);if(egg)egg.testDate=testDate;}
+ p.words=words;return p.week;
+}
+export function orderedWords(p,method,day=localDay()){
+ if(!p.week)return[];const round=p.week.rounds[method];const done=round?.day===day&&!round.complete?round.done:[];
+ return p.words.filter(x=>!done.includes(x.word));
+}
+export function recordWord(p,word,method,{correct=false,assisted=false}={}){
+ if(!p.week||!p.words.some(x=>x.word===word)||!METHODS[method])throw Error('Use a word from this week’s list.');
+ const data=p.week.progress[word]??={tries:0,correct:0,spelled:false,methods:[]};data.tries++;if(correct)data.correct++;
+ if(correct&&!assisted&&['listen','study','build','letters'].includes(method))data.spelled=true;
+ data.methods=[...new Set([...data.methods,method])];
+}
+export function completeWord(p,word,method,day=localDay()){
+ if(!p.words.some(x=>x.word===word)||!METHODS[method])throw Error('Use the weekly list.');
+ const old=p.week.rounds[method];if(!old||old.day!==day||old.complete)p.week.rounds[method]={day,done:[],complete:false};
+ const round=p.week.rounds[method];round.done=[...new Set([...round.done,word])];
+ const complete=['draw','sentence'].includes(method)||p.words.every(x=>round.done.includes(x.word));
+ if(complete){round.complete=true;const key=day+':'+method;if(!p.week.games.some(x=>x.key===key)){p.week.games.push({key,day,method});return{complete:true,credited:true};}}
+ return{complete,credited:false};
+}
+export function rewardAvailable(p,category){const slot=WARDROBE[category];return!!p.week&&!!slot&&p.week.games.length>=slot.after&&!p.week.claimed[category];}
+export function chooseClothes(p,category,itemId){const slot=WARDROBE[category];if(!slot?.items.some(x=>x.id===itemId)||!rewardAvailable(p,category))return false;p.items=[...new Set([...p.items,itemId])];p.wearing[category]=itemId;p.week.claimed[category]=true;return true;}
+export function equip(p,category,id){if(id===null){p.wearing[category]=null;return true;}if(!p.items.includes(id)||!WARDROBE[category]?.items.some(x=>x.id===id))return false;p.wearing[category]=id;return true;}
+export function itemById(category,id){return WARDROBE[category]?.items.find(x=>x.id===id)||null;}
+export function eggProgress(egg,today=localDay()){
+ const hatchDay=addDays(egg.testDate,-1),elapsed=dayNumber(today)-dayNumber(egg.start),duration=Math.max(1,dayNumber(hatchDay)-dayNumber(egg.start));
+ const ready=dayNumber(today)>=dayNumber(hatchDay);return{stage:ready?5:Math.max(0,Math.min(4,Math.floor(elapsed/duration*5))),ready,hatchDay};
+}
+export function hatchEgg(p,id,today=localDay()){const egg=p.eggs.find(e=>e.id===id);if(!egg||egg.hatched||!eggProgress(egg,today).ready)return false;egg.hatched=true;p.babies.push({id:globalThis.crypto.randomUUID(),babyId:egg.babyId,eggId:egg.id,born:today,name:BABIES.find(b=>b.id===egg.babyId).name});return true;}
+export function choicesFor(p,word,random=Math.random){if(!p.words.some(x=>x.word===word))throw Error('Word is not assigned.');const others=p.words.filter(x=>x.word!==word).map(x=>x.word);for(let i=others.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[others[i],others[j]]=[others[j],others[i]];}const choices=[word,...others.slice(0,3)];for(let i=choices.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[choices[i],choices[j]]=[choices[j],choices[i]];}return choices;}
+export function gapFor(entry){const escaped=entry.word.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),rx=new RegExp('\\b'+escaped+'\\b','gi');if(entry.sentence&&rx.test(entry.sentence))return entry.sentence.replace(rx,'_____');return entry.meaning?`Which weekly word means “${entry.meaning}”?`:'Ask a grown-up to describe this weekly word.';}
+export function markTest(p,answers,weekId){if(!p.week||p.week.id!==weekId||answers.length!==p.words.length||answers.some(x=>!x.trim()))throw Error('Complete the current weekly list.');const results=p.words.map((w,i)=>({word:w.word,answer:answers[i],correct:w.word===answers[i].trim().toLowerCase()}));const result={date:localDay(),weekId,score:results.filter(x=>x.correct).length,total:p.words.length,results};p.testHistory.unshift(result);p.testHistory=p.testHistory.slice(0,20);return result;}

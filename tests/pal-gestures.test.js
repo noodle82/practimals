@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {createPalGesture} from '../pal-gestures.js';
+function setup(){let time=0,id=0;const timers=new Map(),events=[];const gesture=createPalGesture({react:kind=>events.push(kind),stop:()=>events.push('stop'),schedule:(fn,after)=>{timers.set(++id,{fn,at:time+after});return id;},cancel:id=>timers.delete(id)});return{gesture,events,tick(ms){const end=time+ms;while(true){const due=[...timers].filter(([,t])=>t.at<=end).sort(([,a],[,b])=>a.at-b.at)[0];if(!due)break;time=due[1].at;timers.delete(due[0]);due[1].fn();}time=end;}};}
+test('a single tap produces one oof after the double-tap window',()=>{const t=setup();t.gesture.down();t.gesture.up();t.tick(309);assert.deepEqual(t.events,[]);t.tick(2);assert.deepEqual(t.events,['oof']);});
+test('double tapping giggles without also producing an oof',()=>{const t=setup();t.gesture.down();t.gesture.up();t.tick(100);t.gesture.down();t.gesture.up();t.tick(1000);assert.deepEqual(t.events,['giggle']);});
+test('holding purrs until release, with no delayed tap sound',()=>{const t=setup();t.gesture.down();t.tick(551);assert.deepEqual(t.events,['purr']);t.gesture.up();t.tick(1000);assert.deepEqual(t.events,['purr','stop']);});
+test('moving a finger away cancels the hold and tap',()=>{const t=setup();t.gesture.down(10,10);t.gesture.move(100,100);t.tick(600);t.gesture.up();t.tick(600);assert.deepEqual(t.events,[]);});
+test('cancellation or disposal leaves no delayed sound or stuck purr',()=>{const t=setup();t.gesture.down();t.tick(100);t.gesture.cancel();t.tick(1000);assert.deepEqual(t.events,['stop']);const other=setup();other.gesture.down();other.gesture.up();other.gesture.dispose();other.tick(1000);assert.deepEqual(other.events,['stop']);});
+test('a second tap held down becomes a cuddle with no extra tap sounds',()=>{const t=setup();t.gesture.down();t.gesture.up();t.tick(100);t.gesture.down();t.tick(551);t.gesture.up();t.tick(1000);assert.deepEqual(t.events,['purr','stop']);});

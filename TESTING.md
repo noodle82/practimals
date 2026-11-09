@@ -1,23 +1,21 @@
-# Validation for v0.4
+# Validation · Practimals v0.5
 
-33 automated tests passed. Static build passed with locally bundled Three.js modules and licence.
+41 automated tests pass. Static build passes with locally bundled Three.js and its licence.
 
-Browser walkthrough verified:
+Browser checks in Chromium:
 
-- Empty new profiles, with no invented/demo targets or pre-equipped clothing.
-- Parent input of 15 words and a test date; all 15 visible on the home page.
-- No fantasy map, times-table activity, shop or currencies in the child interface.
-- Live WebGL 3D rendering; fitted hat, coat and shoe meshes.
-- The Practimal asking the current question aloud in a mocked female voice, with visible dialogue. All speech text was checked against the selected weekly target. Actual installed voice quality still depends on the device.
-- Full-list hear/spell, missing-letter, look/cover/check, missing-word and meaning rounds. Builder letter interaction and assigned-word-only distractors.
-- Pause/resume within a round and no early reward before all words were covered.
-- Hat after 1 completed game, coat after 3, shoes after 5; no extra reward from same-method repeats on one day.
-- Writing and drawing about a selected word from the weekly list, and saving the creation.
-- Whole-list test scoring 15/15 without granting a score-dependent egg/baby.
-- Date-based egg readiness the day before the test, hatching, collection persistence and a fresh egg in a later week.
-- Actual simulated touch single/double/hold/release reactions in the live 3D view.
-- Separate profiles, saved wardrobe/babies, word-list-first phone layout and no horizontal overflow at phone/tablet/desktop sizes.
+- Exact saved 15-word example, 90 independent challenge lights, all six complete rounds, and only assigned words in multiple-choice answers and letter banks.
+- Shown answers and wrong answers do not earn mastery. Repeated starts vary. Look/cover visibly covers the word and marks hidden word text inaccessible to assistive reading while covered.
+- The last successful challenge unlocks the real hatch, then one persistent baby. Reopening cannot duplicate the hatch.
+- A demo hatch and feeding/cot actions leave real saved progress unchanged.
+- Actual school test records retain wrong words and score; a shuffled 15-question practice test correctly marks against its question order.
+- Three distinct pitch/pace styles use the chosen explicit female base voice; iris colours and locked rainbow selection work.
+- Live WebGL rendered starter monsters, rainbow and all six fitted clothing categories. Full-list bulk checks skipped repeated renderer allocation; 3D was independently verified before and after them.
+- Real touch events distinguish single oof, double giggle, hold purr and release. Dance and yawn buttons produce separate gestures.
+- Real drawing input, eraser, undo, redo, stamps and saved image work, including its next wardrobe unlock.
+- No horizontal overflow at 390px, 768px or 1024px; desktop visuals inspected at 1280px.
+- Legacy migration preserves name, belongings, previous target list and meanings while avoiding invented mastery.
+- Nursery teaching stores independently correct weekly words in the real baby’s own word collection. Visible colour unlock labels were checked at phone and tablet widths.
+- No browser exceptions during the walkthrough.
 
-Unit tests also cover 10-, 15- and 20-word lists, wardrobe thresholds, date/DST/leap-day calculations, earlier waiting eggs, meaning lookup failures and source attribution, and female-voice selection without a male fallback.
-
-Physical tablet GPU performance, touch comfort, sound quality and the children's responses need a family trial. No GitHub upload or public deployment was performed for this delivery.
+Limits: desktop Chromium and simulated tablet touch were used. Physical iPad/Android voice sound and keyboard behaviour need checking on the intended device. Three choices are device speech styles, not recorded custom monster voices. Keyboard autocorrect attributes are requests; the OS can retain its own suggestions. Photo OCR remains unconnected. Nothing was published to GitHub during these checks.

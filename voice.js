@@ -17,3 +17,6 @@ export function calmUtterance(text,voices,preferredURI,Utterance){
  utterance.voice=voice;utterance.lang=voice.lang;utterance.rate=.78;utterance.pitch=1.02;utterance.volume=.9;
  return utterance;
 }
+
+export const MONSTER_VOICES={bubbles:{name:'Bubbles',description:'Bright, bouncy and squeaky',pitch:1.65,rate:.85},mallow:{name:'Mallow',description:'Soft, cosy and gentle',pitch:1.35,rate:.75},ziggle:{name:'Ziggle',description:'Tiny, cheeky and chirpy',pitch:1.9,rate:.92}};
+export function monsterUtterance(text,voices,preferredURI,style='bubbles',Utterance){const u=calmUtterance(text,voices,preferredURI,Utterance);if(!u)return null;const v=MONSTER_VOICES[style]||MONSTER_VOICES.bubbles;u.pitch=v.pitch;u.rate=v.rate;return u;}

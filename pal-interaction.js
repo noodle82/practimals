@@ -28,6 +28,7 @@ function playSound(kind){
  stopPurr();
  if(kind==='oof'){vowel(280,0,.24,520);tone(150,.14,.08,'sine',85,.13);}
  if(kind==='giggle'){[0,.13,.27,.42,.58].forEach((t,i)=>{vowel(460+(i%2)*130,t,.12,1100+(i%2)*220);tone(650+i*45,.1,t,'sine',840,.1);});}
+ if(kind==='dance'){[392,523,659,523,440,587,784,587].forEach((f,i)=>tone(f,.22,i*.2,'triangle',f,.16));}
  if(kind==='celebrate'){[523,659,784,1046].forEach((f,i)=>tone(f,.35,i*.11,'sine',f,.25));}
  if(kind==='travel'){[220,330,440,660].forEach((f,i)=>tone(f,.5,i*.09,'sine',f*1.5,.15));}
  if(kind==='purr'){
@@ -48,9 +49,9 @@ export function stopPalInteraction(){
 function react(element,kind){
  stopPalInteraction();reactingElement=element;currentReaction=kind;
  element.dataset.reaction=kind;
- element.querySelector('.pal-reaction').textContent={oof:'Oof! Hello, you!',giggle:'Hee-hee! That tickles!',purr:'Prrrr… happy here.',celebrate:'We did it together!'}[kind]||'';
+ element.querySelector('.pal-reaction').textContent={oof:'Oof! Hello, you!',giggle:'Hee-hee! That tickles!',purr:'Prrrr… happy here.',celebrate:'We did it together!',dance:'Wiggle, wobble, woo!',yawn:'Aaaah… big stretch!',cross:'Can your eyes do this?',roll:'Where did my eyebrows go?'}[kind]||'';
  playSound(kind);
- if(kind!=='purr')timers.push(setTimeout(()=>stopPalInteraction(),kind==='giggle'?1300:950));
+ if(kind!=='purr')timers.push(setTimeout(()=>stopPalInteraction(),kind==='dance'?4000:['yawn','cross','roll'].includes(kind)?2600:kind==='giggle'?1300:950));
 }
 export function bindPalInteractions(){
  const cleanups=[];
@@ -62,7 +63,7 @@ export function bindPalInteractions(){
    pointermove:e=>{gesture.move(e.clientX,e.clientY);const r=element.getBoundingClientRect();element.style.setProperty('--look-x',`${Math.max(-5,Math.min(5,(e.clientX-r.x-r.width/2)/r.width*10))}deg`);},
    pointerup:()=>gesture.up(),pointercancel:()=>gesture.cancel(),lostpointercapture:()=>gesture.cancel(),
    contextmenu:e=>e.preventDefault(),click:e=>e.preventDefault(),
-   keydown:e=>{if(e.repeat)return;if(e.key==='Enter'||e.key===' '){e.preventDefault();audioReady();react(element,'oof');}if(e.key.toLowerCase()==='g')react(element,'giggle');if(e.key.toLowerCase()==='p')react(element,'purr');},
+   keydown:e=>{if(e.repeat)return;if(e.key==='Enter'||e.key===' '){e.preventDefault();audioReady();react(element,'oof');}if(e.key.toLowerCase()==='d')react(element,'dance');if(e.key.toLowerCase()==='g')react(element,'giggle');if(e.key.toLowerCase()==='p')react(element,'purr');},
    keyup:e=>{if(e.key.toLowerCase()==='p'&&currentReaction==='purr')stopPalInteraction();},
    blur:()=>gesture.cancel()
   };
@@ -73,7 +74,7 @@ export function bindPalInteractions(){
   cleanups.push(()=>{gesture.dispose();activeGestures.delete(gesture);for(const[event,fn]of Object.entries(handlers))element.removeEventListener(event,fn);});
  });
  document.querySelectorAll('[data-pal-action]').forEach(button=>{
-  const click=()=>{const element=document.querySelector('.pal-stage [data-pal],.map-companion [data-pal],[data-pal]');if(!element)return;audioReady();react(element,button.dataset.palAction);if(button.dataset.palAction==='purr')timers.push(setTimeout(stopPalInteraction,2200));};
+  const click=()=>{const element=button.closest('.pal-stage')?.querySelector('[data-pal]');if(!element)return;audioReady();react(element,button.dataset.palAction);if(button.dataset.palAction==='purr')timers.push(setTimeout(stopPalInteraction,2200));};
   button.addEventListener('click',click);cleanups.push(()=>button.removeEventListener('click',click));
  });
  const cancel=()=>{cleanups.forEach(fn=>fn());stopPalInteraction();};

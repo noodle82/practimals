@@ -1,7 +1,7 @@
 import*as T from'./vendor/three.module.js';
-import{itemById}from'./spelling.js';
-export const COLOURS={mint:'#79cbbb',lilac:'#ad8ed8',peach:'#f2a18c',blue:'#7db4dc',gold:'#ecc774',moon:'#dce0f4'};
-export function palMarkup(p,{baby=false,prompt=''}={}){return `<div class="pal-stage">${prompt?`<div class="pal-dialogue"><strong>${safe(p.palName||'Your pal')} ${prompt.trim().endsWith('?')?'asks…':'says…'}</strong><p>${safe(prompt)}</p></div>`:''}<div class="pal-creature" data-pal data-reaction="idle" role="button" tabindex="0" aria-label="${safe(p.palName||p.name||'Your pal')}. Tap for an oof, double-tap to tickle, hold to purr. Enter to greet, G to giggle, hold P to purr."><div class="monster-canvas" data-monster='${safe(JSON.stringify({species:p.species||'bobble',colour:p.colour||'mint',wearing:baby?{}:p.wearing||{},baby}))}'></div><span class="pal-reaction" aria-live="polite"></span><span class="pal-hearts" aria-hidden="true">♥ <i>♥</i> ♥</span></div><div class="pal-actions"><button data-pal-action="oof">Say hello</button><button data-pal-action="giggle">Tickle</button><button data-pal-action="purr">Cuddle</button></div></div>`;}
+import{itemById,EYE_COLOURS}from'./spelling.js';
+export const COLOURS={mint:'#79cbbb',lilac:'#ad8ed8',peach:'#f2a18c',blue:'#7db4dc',gold:'#ecc774',moon:'#dce0f4',rose:'#ef91bb',aqua:'#58cfd6',lemon:'#edd575',coral:'#ee827e',berry:'#b96fbd',rainbow:'#b88cea'};
+export function palMarkup(p,{baby=false,prompt=''}={}){return `<div class="pal-stage">${prompt?`<div class="pal-dialogue"><strong>${safe(p.palName||'Bobble')} ${prompt.trim().endsWith('?')?'asks…':'says…'}</strong><p>${safe(prompt)}</p></div>`:''}<div class="pal-creature" data-pal data-reaction="idle" role="button" tabindex="0" aria-label="${safe(p.palName||p.name||'Bobble')}. Tap for an oof, double-tap to tickle, hold to purr. Enter to greet, G to giggle, hold P to purr. D to dance."><div class="monster-canvas" data-monster='${safe(JSON.stringify({species:p.species||'bobble',colour:p.colour||'mint',wearing:baby?{}:p.wearing||{},eyeColour:p.eyeColour||'violet',asleep:!!p.asleep,quiet:!!prompt,baby}))}'></div><span class="pal-reaction" aria-live="polite"></span><span class="pal-hearts" aria-hidden="true">♥ <i>♥</i> ♥</span></div><div class="pal-actions"><button data-pal-action="oof">Say hello</button><button data-pal-action="giggle">Tickle</button><button data-pal-action="purr">Cuddle</button><button data-pal-action="dance">Dance ♫</button><button data-pal-action="yawn" aria-label="Make a big yawn">Yawn</button><button data-pal-action="cross" aria-label="Make a silly face">Silly face</button><button data-pal-action="roll" aria-label="Roll eyes playfully">Eye roll</button></div></div>`;}
 function safe(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 let speaking=false;document.addEventListener('pal-speaking',e=>speaking=!!e.detail);
 const sphere=new T.SphereGeometry(1,40,28);
@@ -15,10 +15,14 @@ function createModel(p){
  const root=new T.Group(),body=new T.Group();root.add(body);
  const colour=COLOURS[p.colour]||COLOURS.mint,skin=material(colour,{sheen:.5,sheenColor:new T.Color('#e9e3ff'),sheenRoughness:.8,iridescence:['gold','moon'].includes(p.colour)?.7:0});
  const lighter=material(new T.Color(colour).lerp(new T.Color('#fff4e3'),.35));
- const dark=material('#3c304c',{roughness:.35}),white=material('#fff9e9',{roughness:.2,clearcoat:1}),iris=material('#514668',{roughness:.12,clearcoat:1}),black=material('#171727',{roughness:.08,clearcoat:1});
+ const dark=material('#3c304c',{roughness:.35}),white=material('#fff9e9',{roughness:.2,clearcoat:1}),iris=material(EYE_COLOURS[p.eyeColour]||'#7953bf',{roughness:.12,clearcoat:1}),black=material('#171727',{roughness:.08,clearcoat:1});
  const blush=material('#f294aa',{transparent:true,opacity:.63});
  const shape=p.species==='blip'?[1,1.02,.76]:p.species==='wiggle'?[.78,1.22,.68]:[.9,1.13,.73];if(p.baby){shape[0]*=1.08;shape[1]*=.95;}
- ball(body,skin,0,1.3,0,...shape);
+ const torso=ball(body,skin,0,1.3,0,...shape);torso.geometry=sphere.clone();const pos=torso.geometry.attributes.position;const rainbow=[];for(let i=0;i<pos.count;i++){const x=pos.getX(i),y=pos.getY(i),z=pos.getZ(i),bulge=1+.027*Math.sin(y*9+x*4)*Math.cos(z*5);pos.setXYZ(i,x*bulge,y,z*bulge);const c=new T.Color().setHSL(((y+1)*.43+x*.08+1)%1,.67,.65);rainbow.push(c.r,c.g,c.b);}torso.geometry.computeVertexNormals();if(p.colour==='rainbow'){torso.geometry.setAttribute('color',new T.Float32BufferAttribute(rainbow,3));torso.material=skin.clone();torso.material.color.set('#ffffff');torso.material.vertexColors=true;}
+ // Tiny skin speckles and little cheek dimples add character without a texture download.
+ for(const sign of[-1,1]){for(let i=0;i<3;i++)ball(body,lighter,sign*(.56+i*.065),1.48+(i%2)*.05,shape[2]*.8,.018,.02,.012);}
+ ball(body,lighter,0,1.45,shape[2]*1.035,.075,.05,.045);
+ const brows=[];for(const sign of[-1,1]){const brow=tube(body,[[sign*.19,2.03,shape[2]*.85],[sign*.31,2.08,shape[2]*.87],[sign*.43,2.04,shape[2]*.82]],.023,lighter);brows.push(brow);}
  const belly=ball(body,lighter,0,.7,.61,.38,.33,.1);
  const arms=[];
  for(const sign of[-1,1]){const arm=new T.Group();arm.position.set(sign*shape[0]*.87,.95,0);body.add(arm);arm.rotation.z=sign*.42;ball(arm,skin,sign*.12,-.18,.04,.17,.34,.17);ball(arm,skin,sign*.21,-.43,.1,.19,.18,.19);ball(body,skin,sign*.4,.16,.15,.25,.19,.35);arms.push(arm);}
@@ -29,6 +33,7 @@ function createModel(p){
  const smile=tube(body,[[-.23,1.3,shape[2]*.99],[-.14,1.245,shape[2]*1.025],[0,1.22,shape[2]*1.045],[.14,1.245,shape[2]*1.025],[.23,1.3,shape[2]*.99]],.027,dark);
  const mouth=ball(body,dark,0,1.27,shape[2]*1.035,.12,.13,.025);mouth.visible=false;
  const tongue=ball(body,material('#e0a2b4'),0,1.215,shape[2]*1.075,.065,.035,.015);tongue.visible=false;
+ const tooth=ball(body,white,.075,1.25,shape[2]*1.07,.04,.047,.018);
  const antennae=[];
  const n=p.species==='blip'?1:2;
  for(let i=0;i<n;i++){const sign=n===1?0:i===0?-1:1,pivot=new T.Group();pivot.position.set(sign*.35,2.17,0);body.add(pivot);tube(pivot,[[0,0,0],[sign*.12,.3,.02],[sign*.19,.57,.01]],p.species==='wiggle'?.07:.045,skin);ball(pivot,lighter,sign*.19,.57,.01,p.species==='wiggle'?.14:.105);antennae.push(pivot);}
@@ -50,7 +55,10 @@ function createModel(p){
  }
  const shoes=itemById('shoes',p.wearing?.shoes);
  if(shoes){const leather=material(shoes.colour,{roughness:shoes.style==='boots'?.4:.85});for(const sign of[-1,1]){ball(body,leather,sign*.4,.15,.23,.28,shoes.style==='boots'?.3:.2,.41);if(shoes.style!=='slippers'){ball(body,white,sign*.4,.015,.24,.285,.045,.42);for(const y of[.22,.3])tube(body,[[sign*.4-.12,y,.55],[sign*.4+.12,y,.55]],.015,white);}}}
- return{root,body,eyes,arms,antennae,smile,mouth,tongue};
+ const glasses=itemById('glasses',p.wearing?.glasses);if(glasses){const frame=material(glasses.colour,{metalness:.35,roughness:.28});for(const e of eyes){const ring=mesh(e.group,new T.TorusGeometry(p.species==='blip'?.232:.29,.027,10,glasses.style==='star'?10:48),frame,0,0,.23);if(glasses.style==='star')ring.rotation.z=.25;}tube(body,[[-.65,eyeY,shape[2]*.9],[0,eyeY+.02,shape[2]*1.14],[.65,eyeY,shape[2]*.9]],.018,frame);}
+ const gloves=itemById('gloves',p.wearing?.gloves);if(gloves){const fabric=material(gloves.colour,{roughness:.85});for(let i=0;i<arms.length;i++){const sign=i===0?-1:1;ball(arms[i],fabric,sign*.21,-.43,.1,.215,.22,.215);ball(arms[i],fabric,sign*.08,-.38,.23,.08,.1,.08);}}
+ const earrings=itemById('earrings',p.wearing?.earrings);if(earrings){const jewel=material(earrings.colour,{metalness:.45,roughness:.2});for(const sign of[-1,1]){ball(body,jewel,sign*shape[0]*.96,1.42,.14,.045);if(earrings.style==='hoop')mesh(body,new T.TorusGeometry(.11,.027,10,32),jewel,sign*shape[0]*.98,1.3,.15);else ball(body,jewel,sign*shape[0]*.98,1.26,.15,.07,.12,.05);}}
+ return{root,body,eyes,arms,antennae,smile,mouth,tongue,tooth,brows};
 }
 
 export function mountMonsters(){
@@ -67,8 +75,8 @@ export function mountMonsters(){
   const pointer={x:0,y:0};const move=e=>{const r=host.getBoundingClientRect();pointer.x=Math.max(-1,Math.min(1,(e.clientX-r.left)/r.width*2-1));pointer.y=Math.max(-1,Math.min(1,(e.clientY-r.top)/r.height*2-1));};wrapper.addEventListener('pointermove',move);
   const resize=()=>{const r=host.getBoundingClientRect();renderer.setSize(Math.max(1,r.width),Math.max(1,r.height),false);camera.aspect=r.width/Math.max(1,r.height);camera.updateProjectionMatrix();};const observer=new ResizeObserver(resize);observer.observe(host);resize();
   const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;let frame,lastReaction='idle',reactionStart=0,disposed=false;const start=performance.now();
-  function animate(now){if(disposed)return;frame=requestAnimationFrame(animate);if(document.hidden)return;const t=(now-start)/1000,reaction=wrapper.dataset.reaction||'idle';if(reaction!==lastReaction){lastReaction=reaction;reactionStart=t;}const rt=t-reactionStart;
-   model.root.rotation.y=T.MathUtils.lerp(model.root.rotation.y,pointer.x*.16,.08);model.body.position.y=reduced?0:Math.sin(t*1.8)*.018;model.body.rotation.z=0;model.body.scale.set(1,1,1);
+  function animate(now){if(disposed)return;frame=requestAnimationFrame(animate);if(document.hidden)return;const t=(now-start)/1000;let reaction=wrapper.dataset.reaction||'idle';if(reaction==='idle'&&p.asleep)reaction='purr';if(reaction==='idle'&&!p.quiet&&!speaking&&!reduced){const idle=t%39;if(idle>15&&idle<17.4)reaction='cross';else if(idle>27&&idle<30)reaction='yawn';else if(idle>35&&idle<37)reaction='roll';}if(reaction!==lastReaction){lastReaction=reaction;reactionStart=t;}const rt=t-reactionStart;
+   model.root.rotation.y=T.MathUtils.lerp(model.root.rotation.y,pointer.x*.16,.08);model.body.position.y=reduced?0:Math.sin(t*1.8)*.018;model.body.rotation.z=0;model.body.rotation.x=0;model.body.position.z=0;model.body.scale.set(1,1,1);model.tooth.visible=true;
    const blink=!reduced&&(t%5.3<.12||t%5.3>5.16);for(const eye of model.eyes){eye.group.scale.y=blink?.08:1;eye.pupil.position.x=pointer.x*.035;eye.pupil.position.y=-pointer.y*.025;}
    model.smile.visible=true;model.mouth.visible=false;model.tongue.visible=false;
    for(let i=0;i<model.arms.length;i++)model.arms[i].rotation.z=(i===0?-1:1)*(.42+(reduced?0:Math.sin(t*1.4+i)*.025));for(let i=0;i<model.antennae.length;i++)model.antennae[i].rotation.z=reduced?0:Math.sin(t*1.9+i)*.07;
@@ -76,6 +84,10 @@ export function mountMonsters(){
    if(reaction==='oof'){model.smile.visible=false;model.mouth.visible=true;model.mouth.scale.set(.085,.11,.028);if(!reduced){model.body.rotation.z=Math.sin(Math.min(rt/.7,1)*Math.PI)*-.045;model.body.position.z=Math.sin(Math.min(rt/.7,1)*Math.PI)*-.06;}for(const e of model.eyes)e.group.scale.y=1.06;}
    if(reaction==='giggle'){model.smile.visible=false;model.mouth.visible=true;model.mouth.scale.set(.19,.09,.03);model.tongue.visible=true;for(const e of model.eyes)e.group.scale.y=.65;if(!reduced){model.body.rotation.z=Math.sin(rt*22)*.035;model.body.position.y=Math.abs(Math.sin(rt*15))*.035;for(let i=0;i<model.arms.length;i++)model.arms[i].rotation.z=(i===0?-1:1)*(.8+Math.sin(rt*18)*.12);}}
    if(reaction==='purr'){for(const e of model.eyes)e.group.scale.y=.3;if(!reduced){model.body.rotation.z=Math.sin(rt*2)*.025;model.body.scale.y=1+Math.sin(rt*3)*.007;}}
+   if(reaction==='dance'){if(!reduced){model.root.rotation.y=Math.sin(rt*4)*.45;model.body.position.y=Math.abs(Math.sin(rt*6))*.16;model.body.rotation.z=Math.sin(rt*6)*.14;model.body.rotation.x=Math.sin(rt*3)*.08;for(let i=0;i<model.arms.length;i++)model.arms[i].rotation.z=(i===0?-1:1)*(1.5+Math.sin(rt*6+i)*.55);}model.smile.visible=false;model.mouth.visible=true;model.mouth.scale.set(.17,.09,.03);model.tongue.visible=true;}
+   if(reaction==='cross'){for(let i=0;i<model.eyes.length;i++){const e=model.eyes[i];e.pupil.position.x=(i===0?.09:-.09);e.pupil.position.y=-.015;}model.tongue.visible=true;model.smile.visible=false;model.mouth.visible=true;model.mouth.scale.set(.12,.07,.03);}
+   if(reaction==='roll'){for(const e of model.eyes){e.pupil.position.x=reduced?0:Math.sin(rt*3)*.06;e.pupil.position.y=.09;}if(!reduced)model.body.rotation.z=Math.sin(rt*2)*.04;}
+   if(reaction==='yawn'){for(const e of model.eyes)e.group.scale.y=.35;model.smile.visible=false;model.tooth.visible=false;model.mouth.visible=true;model.mouth.scale.set(.14,.22,.03);if(!reduced)for(let i=0;i<model.arms.length;i++)model.arms[i].rotation.z=(i===0?-1:1)*1.9;}
    renderer.render(scene,camera);
   }
   frame=requestAnimationFrame(animate);

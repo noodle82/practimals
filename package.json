@@ -1,0 +1,9 @@
+{
+  "name": "practimals-prototype",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "description": "A playful spelling and times-table practice prototype for ages 5–10.",
+  "scripts": { "start": "node server.js", "test": "node --test tests/*.test.js", "build": "node build.js" },
+  "engines": { "node": ">=20" }
+}

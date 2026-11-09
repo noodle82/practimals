@@ -1,0 +1,11 @@
+import{mkdir,copyFile,access,cp}from'node:fs/promises';
+import{fileURLToPath}from'node:url';
+import path from'node:path';
+const root=path.dirname(fileURLToPath(import.meta.url)),out=path.join(root,'dist');
+const scripts=['app.js','learning.js','worlds.js','creature-v3.js','sprite-colour.js','pal-gestures.js','pal-interaction.js','voice.js','progression.js','reward-pages.js','meanings.js'];
+for(const species of['sprout','bunny','dragon'])for(const outfit of['school','explorer','cosy'])await access(path.join(root,'assets',`${species}-${outfit}.png`));
+await access(path.join(root,'assets','babies.png'));await access(path.join(root,'assets','world.png'));
+await mkdir(out,{recursive:true});
+for(const file of['index.html','styles.css','adventure.css','progression.css',...scripts])await copyFile(path.join(root,file),path.join(out,file));
+await cp(path.join(root,'assets'),path.join(out,'assets'),{recursive:true});
+console.log('Static app built in dist/. No site was published.');

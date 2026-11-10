@@ -1,3 +1,5 @@
+import{scheduleBabyHello}from'./baby-sounds.js';
+let characterVoice='bubbles';export function setCharacterVoice(style){characterVoice=style||'bubbles';}
 import { createPalGesture } from './pal-gestures.js';
 let audioContext,master,purrNodes=[],timers=[],enabled=true;
 let currentReaction=null,reactingElement=null;
@@ -26,8 +28,10 @@ function vowel(pitch,start,duration,formant=650){
 function playSound(kind){
  if(!enabled)return;
  stopPurr();
- if(kind==='oof'){vowel(280,0,.24,520);tone(150,.14,.08,'sine',85,.13);}
- if(kind==='giggle'){[0,.13,.27,.42,.58].forEach((t,i)=>{vowel(460+(i%2)*130,t,.12,1100+(i%2)*220);tone(650+i*45,.1,t,'sine',840,.1);});}
+ if(kind==='munch'){[0,.18,.36].forEach(t=>tone(160,.08,t,'triangle',95,.055));return;}
+ if(kind==='babyhello'){const ctx=audioReady();if(ctx){const helloGain=ctx.createGain();helloGain.gain.value=4;helloGain.connect(master);scheduleBabyHello(ctx,helloGain);}return;}
+ if(kind==='oof'){const f={bubbles:430,mallow:355,ziggle:540}[characterVoice]||430;vowel(f,0,.18,f*2.4);tone(f*.51,.14,.04,'sine',f*.43,.05);}
+ if(kind==='giggle'){[0,.13,.27,.42,.58].forEach((t,i)=>{vowel(({bubbles:630,mallow:490,ziggle:760}[characterVoice]||630)+(i%2)*85,t,.095,1400+(i%2)*180);tone(650+i*45,.1,t,'sine',840,.1);});}
  if(kind==='dance'){[392,523,659,523,440,587,784,587].forEach((f,i)=>tone(f,.22,i*.2,'triangle',f,.16));}
  if(kind==='celebrate'){[523,659,784,1046].forEach((f,i)=>tone(f,.35,i*.11,'sine',f,.25));}
  if(kind==='travel'){[220,330,440,660].forEach((f,i)=>tone(f,.5,i*.09,'sine',f*1.5,.15));}

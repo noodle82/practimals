@@ -1,0 +1,34 @@
+workflows:
+  ios-testflight:
+    name: Spelloids iOS TestFlight
+    max_build_duration: 60
+    instance_type: mac_mini_m2
+    integrations:
+      app_store_connect: spelloids-apple
+    environment:
+      node: "22"
+      xcode: latest
+      cocoapods: default
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: com.spelloids.spelling
+    scripts:
+      - name: Install pinned dependencies
+        script: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Check learning and voice assets
+        script: npm test
+      - name: Build app and create iPhone/iPad project
+        script: npm run ios:prepare
+      - name: Apply distribution signing
+        script: xcode-project use-profiles
+      - name: Create signed Apple build
+        script: xcode-project build-ipa --workspace ios/App/App.xcworkspace --scheme App
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+    publishing:
+      app_store_connect:
+        auth: integration
+        submit_to_testflight: false
+        submit_to_app_store: false

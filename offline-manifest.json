@@ -1,0 +1,267 @@
+{
+  "version": "0.10.0",
+  "cacheName": "spelloids-v10-79dc18ac26a1",
+  "files": [
+    {
+      "path": "platform-compat.js"
+    },
+    {
+      "path": "voice-profiles.js"
+    },
+    {
+      "path": "voice-tone.js"
+    },
+    {
+      "path": "refinement-v10.css"
+    },
+    {
+      "path": "cache-config.js"
+    },
+    {
+      "path": "setup.js"
+    },
+    {
+      "path": "media-store.js"
+    },
+    {
+      "path": "baby-sounds.js"
+    },
+    {
+      "path": "speech-worker.js"
+    },
+    {
+      "path": "refinement-v9.css"
+    },
+    {
+      "path": "table-games.js"
+    },
+    {
+      "path": "curriculum.js"
+    },
+    {
+      "path": "wordsearch.js"
+    },
+    {
+      "path": "scrapbook.js"
+    },
+    {
+      "path": "developer.js"
+    },
+    {
+      "path": "product.css"
+    },
+    {
+      "path": "index.html"
+    },
+    {
+      "path": "creation.css"
+    },
+    {
+      "path": "pal-model.js"
+    },
+    {
+      "path": "character-audio.js"
+    },
+    {
+      "path": "refine.css"
+    },
+    {
+      "path": "journey.js"
+    },
+    {
+      "path": "presentation.js"
+    },
+    {
+      "path": "nursery.js"
+    },
+    {
+      "path": "den.js"
+    },
+    {
+      "path": "theme.css"
+    },
+    {
+      "path": "logo.svg"
+    },
+    {
+      "path": "sample.js"
+    },
+    {
+      "path": "app.css"
+    },
+    {
+      "path": "app.js"
+    },
+    {
+      "path": "monster.js"
+    },
+    {
+      "path": "spelling.js"
+    },
+    {
+      "path": "learning.js"
+    },
+    {
+      "path": "meanings.js"
+    },
+    {
+      "path": "voice.js"
+    },
+    {
+      "path": "pal-interaction.js"
+    },
+    {
+      "path": "pal-gestures.js"
+    },
+    {
+      "path": "fonts/body-LICENSE.txt"
+    },
+    {
+      "path": "fonts/body.ttf"
+    },
+    {
+      "path": "fonts/CORE-SOURCES.json"
+    },
+    {
+      "path": "fonts/handwriting-LICENSE.txt"
+    },
+    {
+      "path": "fonts/handwriting.ttf"
+    },
+    {
+      "path": "fonts/headings-LICENSE.txt"
+    },
+    {
+      "path": "fonts/headings.ttf"
+    },
+    {
+      "path": "fonts/joined-LICENSE.txt"
+    },
+    {
+      "path": "fonts/joined.ttf"
+    },
+    {
+      "path": "fonts/silly-LICENSE.txt"
+    },
+    {
+      "path": "fonts/silly.ttf"
+    },
+    {
+      "path": "fonts/SOURCES.json"
+    },
+    {
+      "path": "audio/bella-sentences-01.bin"
+    },
+    {
+      "path": "audio/bella-welcome-01.bin"
+    },
+    {
+      "path": "audio/bella-words-01.bin"
+    },
+    {
+      "path": "audio/heart-sentences-01.bin"
+    },
+    {
+      "path": "audio/heart-welcome-01.bin"
+    },
+    {
+      "path": "audio/heart-words-01.bin"
+    },
+    {
+      "path": "audio/manifest.json"
+    },
+    {
+      "path": "audio/natural-sentences-01.bin"
+    },
+    {
+      "path": "audio/natural-welcome-01.bin"
+    },
+    {
+      "path": "audio/natural-words-01.bin"
+    },
+    {
+      "path": "vendor/LICENSE"
+    },
+    {
+      "path": "vendor/speech/kokoro.web.js"
+    },
+    {
+      "path": "vendor/speech/LICENSE-espeak-ng.txt"
+    },
+    {
+      "path": "vendor/speech/LICENSE-kokoro.txt"
+    },
+    {
+      "path": "vendor/speech/LICENSE-onnx.txt"
+    },
+    {
+      "path": "vendor/speech/LICENSE-phonemizer.txt"
+    },
+    {
+      "path": "vendor/speech/LICENSE-transformers.txt"
+    },
+    {
+      "path": "vendor/speech/models/kokoro/config.json"
+    },
+    {
+      "path": "vendor/speech/models/kokoro/onnx/model-01.bin"
+    },
+    {
+      "path": "vendor/speech/models/kokoro/onnx/model-02.bin"
+    },
+    {
+      "path": "vendor/speech/models/kokoro/onnx/model-03.bin"
+    },
+    {
+      "path": "vendor/speech/models/kokoro/onnx/model-04.bin"
+    },
+    {
+      "path": "vendor/speech/models/kokoro/onnx/model-05.bin"
+    },
+    {
+      "path": "vendor/speech/models/kokoro/onnx/parts.json"
+    },
+    {
+      "path": "vendor/speech/models/kokoro/tokenizer.json"
+    },
+    {
+      "path": "vendor/speech/models/kokoro/tokenizer_config.json"
+    },
+    {
+      "path": "vendor/speech/models/kokoro/voices/af_bella.bin"
+    },
+    {
+      "path": "vendor/speech/models/kokoro/voices/af_heart.bin"
+    },
+    {
+      "path": "vendor/speech/models/kokoro/voices/bf_emma.bin"
+    },
+    {
+      "path": "vendor/speech/ort-wasm-simd-threaded.jsep.mjs"
+    },
+    {
+      "path": "vendor/speech/ort-wasm-simd-threaded.jsep.wasm"
+    },
+    {
+      "path": "vendor/speech/PROVENANCE.json"
+    },
+    {
+      "path": "vendor/speech/VOICES.md"
+    },
+    {
+      "path": "vendor/three.core.js"
+    },
+    {
+      "path": "vendor/three.module.js"
+    },
+    {
+      "path": "vendor/voice-tone/LICENSE.txt"
+    },
+    {
+      "path": "vendor/voice-tone/signalsmith-core.js"
+    },
+    {
+      "path": "vendor/voice-tone/SOURCE.json"
+    }
+  ]
+}

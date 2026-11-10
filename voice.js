@@ -1,11 +1,3 @@
-// Uses the device's real female voices, plus phrasing, pace and pitch profiles.
-export const MONSTER_VOICES={bubbles:{name:'Bubbles',description:'Bouncy, bright and encouraging',pitch:1.3,rate:1.02,index:0},mallow:{name:'Mallow',description:'Warm, cheerful and reassuring',pitch:1.16,rate:.94,index:1},ziggle:{name:'Ziggle',description:'Cheeky, lively and curious',pitch:1.5,rate:1.08,index:2}};
-const femaleName=/\bfemale\b|\b(samantha|serena|kate|moira|karen|tessa|victoria|allison|ava|susan|hazel|sonia|libby|aria|jenny|natasha|clara|michelle|emma|elizabeth|zira|catherine|cathy|heera|veena|neerja)\b/i;
-const score=v=>(/^en[-_]GB$/i.test(v.lang)?100:0)+(/female/i.test(v.name)?20:0)+(v.localService?10:0);
-export function femaleEnglishVoices(voices){return voices.filter(v=>/^en(?:[-_]|$)/i.test(v.lang)&&femaleName.test(v.name)&&!(/\bmale\b/i.test(v.name))).sort((a,b)=>score(b)-score(a)||a.name.localeCompare(b.name));}
-export function chooseCalmVoice(voices,preferredURI){const female=femaleEnglishVoices(voices);return female.find(v=>v.voiceURI===preferredURI)||female[0]||null;}
-export function calmUtterance(text,voices,preferredURI,Utterance){const voice=chooseCalmVoice(voices,preferredURI);if(!voice)return null;const u=new Utterance(text);Object.assign(u,{voice,lang:voice.lang,rate:.78,pitch:1.02,volume:1});return u;}
-export function monsterVoice(voices,preferredURI,style){const all=femaleEnglishVoices(voices),preferred=all.find(v=>v.voiceURI===preferredURI),ordered=preferred?[preferred,...all.filter(v=>v!==preferred)]:all;return ordered.length?ordered[(MONSTER_VOICES[style]?.index||0)%ordered.length]:null;}
-export function monsterUtterance(text,voices,preferredURI,style='bubbles',Utterance,options={}){const voice=monsterVoice(voices,preferredURI,style);if(!voice)return null;const v=MONSTER_VOICES[style]||MONSTER_VOICES.bubbles,u=new Utterance(text);Object.assign(u,{voice,lang:voice.lang,pitch:options.clear?1.08:v.pitch,rate:options.clear?.68:v.rate,volume:1});return u;}
+// Clear question payloads. All playback uses local character-audio.js, never device TTS.
 export function wordSpeech(word){return{parts:[{text:word,clear:true}]};}
-export function spellingSpeech(entry,{repeat=false}={}){if(repeat)return wordSpeech(entry.word);return{parts:[...(entry.sentence?[{text:entry.sentence,pause:330}]:[]),{text:'Spell.',clear:true,pause:160},{text:entry.word,clear:true}]};}
+export function spellingSpeech(entry,{repeat=false}={}){if(repeat)return wordSpeech(entry.word);return{parts:[...(entry.sentence?[{text:entry.sentence,clear:true,pause:550}]:[]),{text:'Spell.',clear:true,pause:400},{text:entry.word,clear:true}]};}

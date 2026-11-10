@@ -3,7 +3,7 @@ import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 const root = path.dirname(fileURLToPath(import.meta.url));
-const types = { '.html': 'text/html', '.css': 'text/css', '.js': 'text/javascript', '.svg': 'image/svg+xml', '.json': 'application/json', '.png':'image/png' };
+const types = { '.html': 'text/html', '.css': 'text/css', '.js': 'text/javascript', '.ttf':'font/ttf','.woff2':'font/woff2','.mjs':'text/javascript', '.wasm':'application/wasm', '.wav':'audio/wav', '.svg': 'image/svg+xml', '.json': 'application/json', '.png':'image/png' };
 const server = http.createServer(async (req, res) => {
   try {
     const pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
@@ -14,4 +14,4 @@ const server = http.createServer(async (req, res) => {
     res.end(data);
   } catch { res.writeHead(404).end('Not found'); }
 });
-server.listen(Number(process.env.PORT || 4173), '127.0.0.1', () => console.log('Practimals is ready at http://127.0.0.1:' + server.address().port));
+server.listen(Number(process.env.PORT || 4173), '127.0.0.1', () => console.log('Spelloids is ready at http://127.0.0.1:' + server.address().port));

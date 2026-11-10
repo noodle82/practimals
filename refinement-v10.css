@@ -1,0 +1,7 @@
+/* The multi-character icons need a smaller type size inside their rounded squares. */
+.mode-letters .method-icon,.mode-gap .method-icon{width:34px;max-width:34px;height:36px;flex:0 0 34px;font-size:16px;letter-spacing:-.065em;line-height:1;white-space:nowrap;overflow:hidden}
+.challenge-icon.c-letters,.challenge-icon.c-gap{font-size:9px;letter-spacing:-.07em;white-space:nowrap;overflow:hidden}
+.method-card>div{min-width:0;flex:1}.method-card h3{overflow-wrap:anywhere}.method-card{padding-right:28px}
+.voice-choices{grid-template-columns:repeat(2,minmax(0,1fr))}.voice-choice{min-width:0}.voice-choice h3,.voice-choice p{overflow-wrap:anywhere}
+@media(max-width:540px){.voice-choices{grid-template-columns:1fr}.mode-letters .method-icon,.mode-gap .method-icon{width:30px;max-width:30px;height:34px;flex-basis:30px;font-size:14px}}
+.mode-gap .method-icon{font-size:12px;letter-spacing:-.1em}

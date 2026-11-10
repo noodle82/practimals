@@ -1,0 +1,7 @@
+{
+  "appId": "com.spelloids.spelling",
+  "appName": "Spelloids",
+  "webDir": "dist",
+  "server": { "hostname": "localhost", "iosScheme": "capacitor" },
+  "ios": { "backgroundColor": "#e8e6f2", "contentInset": "automatic" }
+}

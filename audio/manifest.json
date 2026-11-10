@@ -1,0 +1,6021 @@
+{
+  "format": "signed-16-bit-little-endian-pcm",
+  "rate": 24000,
+  "engine": "Kokoro 82M v1.0 Q8 · approved natural-speed base voices",
+  "modelRevision": "1939ad2a8e416c0acfeecc08a694d14ef25f2231",
+  "generation": {
+    "speed": 1,
+    "isolatedWordPunctuation": "none",
+    "tempoChanges": false
+  },
+  "voices": {
+    "natural": {
+      "voice": "bf_emma",
+      "files": [
+        "natural-welcome-01.bin",
+        "natural-words-01.bin",
+        "natural-sentences-01.bin"
+      ],
+      "clips": {
+        "hello! i am your spelloid. shall we practise together? a little go, a little grow!": {
+          "file": "natural-welcome-01.bin",
+          "offset": 0,
+          "length": 254400,
+          "sampleRate": 24000
+        },
+        "spell.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 254400,
+          "length": 45600,
+          "sampleRate": 24000
+        },
+        "brilliant! you have got it!": {
+          "file": "natural-welcome-01.bin",
+          "offset": 300000,
+          "length": 106800,
+          "sampleRate": 24000
+        },
+        "lovely work! you remembered that word!": {
+          "file": "natural-welcome-01.bin",
+          "offset": 406800,
+          "length": 144000,
+          "sampleRate": 24000
+        },
+        "a brave try! listen once more, and have another go.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 550800,
+          "length": 183600,
+          "sampleRate": 24000
+        },
+        "we can come back to that word. keep going!": {
+          "file": "natural-welcome-01.bin",
+          "offset": 734400,
+          "length": 154800,
+          "sampleRate": 24000
+        },
+        "a new badge! you have unlocked more ways to make me your own!": {
+          "file": "natural-welcome-01.bin",
+          "offset": 889200,
+          "length": 181200,
+          "sampleRate": 24000
+        },
+        "every word complete! you did it! our egg is ready to hatch!": {
+          "file": "natural-welcome-01.bin",
+          "offset": 1070400,
+          "length": 195600,
+          "sampleRate": 24000
+        },
+        "look at the word. say it with me. cover it when you are ready.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 1266000,
+          "length": 186000,
+          "sampleRate": 24000
+        },
+        "can you build my word with the letters?": {
+          "file": "natural-welcome-01.bin",
+          "offset": 1452000,
+          "length": 136800,
+          "sampleRate": 24000
+        },
+        "which word fits the sentence?": {
+          "file": "natural-welcome-01.bin",
+          "offset": 1588800,
+          "length": 121200,
+          "sampleRate": 24000
+        },
+        "which word matches the meaning?": {
+          "file": "natural-welcome-01.bin",
+          "offset": 1710000,
+          "length": 122400,
+          "sampleRate": 24000
+        },
+        "no new badges in this round. we are just practising for fun!": {
+          "file": "natural-welcome-01.bin",
+          "offset": 1832400,
+          "length": 207600,
+          "sampleRate": 24000
+        },
+        "you gave it a go! shall we keep playing or update your pal?": {
+          "file": "natural-welcome-01.bin",
+          "offset": 2040000,
+          "length": 181200,
+          "sampleRate": 24000
+        },
+        "you made me! let us get spelling together.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 2221200,
+          "length": 142800,
+          "sampleRate": 24000
+        },
+        "a tiny wiggle! tap the egg gently to help our baby hatch.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 2364000,
+          "length": 204000,
+          "sampleRate": 24000
+        },
+        "forgotten": {
+          "file": "natural-welcome-01.bin",
+          "offset": 2568000,
+          "length": 55200,
+          "sampleRate": 24000
+        },
+        "i had forgotten my lunch.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 2623200,
+          "length": 112800,
+          "sampleRate": 24000
+        },
+        "forgetting": {
+          "file": "natural-welcome-01.bin",
+          "offset": 2736000,
+          "length": 52800,
+          "sampleRate": 24000
+        },
+        "i keep forgetting where my socks are.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 2788800,
+          "length": 138000,
+          "sampleRate": 24000
+        },
+        "gardener": {
+          "file": "natural-welcome-01.bin",
+          "offset": 2926800,
+          "length": 52800,
+          "sampleRate": 24000
+        },
+        "the gardener planted some flowers.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 2979600,
+          "length": 134400,
+          "sampleRate": 24000
+        },
+        "gardening": {
+          "file": "natural-welcome-01.bin",
+          "offset": 3114000,
+          "length": 58800,
+          "sampleRate": 24000
+        },
+        "we enjoy gardening together.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 3172800,
+          "length": 123600,
+          "sampleRate": 24000
+        },
+        "beginner": {
+          "file": "natural-welcome-01.bin",
+          "offset": 3296400,
+          "length": 49200,
+          "sampleRate": 24000
+        },
+        "i am a beginner at swimming.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 3345600,
+          "length": 114000,
+          "sampleRate": 24000
+        },
+        "beginning": {
+          "file": "natural-welcome-01.bin",
+          "offset": 3459600,
+          "length": 55200,
+          "sampleRate": 24000
+        },
+        "i liked the beginning of the story.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 3514800,
+          "length": 129600,
+          "sampleRate": 24000
+        },
+        "prefer": {
+          "file": "natural-welcome-01.bin",
+          "offset": 3644400,
+          "length": 48000,
+          "sampleRate": 24000
+        },
+        "i prefer apples to pears.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 3692400,
+          "length": 121200,
+          "sampleRate": 24000
+        },
+        "preferred": {
+          "file": "natural-welcome-01.bin",
+          "offset": 3813600,
+          "length": 52800,
+          "sampleRate": 24000
+        },
+        "she preferred the blue hat.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 3866400,
+          "length": 109200,
+          "sampleRate": 24000
+        },
+        "limiting": {
+          "file": "natural-welcome-01.bin",
+          "offset": 3975600,
+          "length": 52800,
+          "sampleRate": 24000
+        },
+        "we are limiting our screen time.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 4028400,
+          "length": 122400,
+          "sampleRate": 24000
+        },
+        "limited": {
+          "file": "natural-welcome-01.bin",
+          "offset": 4150800,
+          "length": 50400,
+          "sampleRate": 24000
+        },
+        "we have limited space for toys.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 4201200,
+          "length": 132000,
+          "sampleRate": 24000
+        },
+        "happiest": {
+          "file": "natural-welcome-01.bin",
+          "offset": 4333200,
+          "length": 51600,
+          "sampleRate": 24000
+        },
+        "i am happiest when we play together.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 4384800,
+          "length": 135600,
+          "sampleRate": 24000
+        },
+        "happier": {
+          "file": "natural-welcome-01.bin",
+          "offset": 4520400,
+          "length": 44400,
+          "sampleRate": 24000
+        },
+        "he felt happier after a hug.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 4564800,
+          "length": 122400,
+          "sampleRate": 24000
+        },
+        "benefited": {
+          "file": "natural-welcome-01.bin",
+          "offset": 4687200,
+          "length": 62400,
+          "sampleRate": 24000
+        },
+        "the plants benefited from the rain.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 4749600,
+          "length": 129600,
+          "sampleRate": 24000
+        },
+        "drizzling": {
+          "file": "natural-welcome-01.bin",
+          "offset": 4879200,
+          "length": 54000,
+          "sampleRate": 24000
+        },
+        "it was drizzling when we went out.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 4933200,
+          "length": 122400,
+          "sampleRate": 24000
+        },
+        "multiplying": {
+          "file": "natural-welcome-01.bin",
+          "offset": 5055600,
+          "length": 81600,
+          "sampleRate": 24000
+        },
+        "we are multiplying numbers at school.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 5137200,
+          "length": 133200,
+          "sampleRate": 24000
+        },
+        "not remembered.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 5270400,
+          "length": 84000,
+          "sampleRate": 24000
+        },
+        "i had blank my lunch.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 5354400,
+          "length": 105600,
+          "sampleRate": 24000
+        },
+        "not remembering something.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 5460000,
+          "length": 112800,
+          "sampleRate": 24000
+        },
+        "i keep blank where my socks are.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 5572800,
+          "length": 128400,
+          "sampleRate": 24000
+        },
+        "someone who looks after plants and gardens.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 5701200,
+          "length": 151200,
+          "sampleRate": 24000
+        },
+        "the blank planted some flowers.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 5852400,
+          "length": 124800,
+          "sampleRate": 24000
+        },
+        "growing plants and looking after a garden.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 5977200,
+          "length": 147600,
+          "sampleRate": 24000
+        },
+        "we enjoy blank together.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 6124800,
+          "length": 115200,
+          "sampleRate": 24000
+        },
+        "someone who is just starting to learn something.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 6240000,
+          "length": 153600,
+          "sampleRate": 24000
+        },
+        "i am a blank at swimming.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 6393600,
+          "length": 106800,
+          "sampleRate": 24000
+        },
+        "the start of something.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 6500400,
+          "length": 98400,
+          "sampleRate": 24000
+        },
+        "i liked the blank of the story.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 6598800,
+          "length": 123600,
+          "sampleRate": 24000
+        },
+        "to like one thing more than another.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 6722400,
+          "length": 124800,
+          "sampleRate": 24000
+        },
+        "i blank apples to pears.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 6847200,
+          "length": 120000,
+          "sampleRate": 24000
+        },
+        "liked one thing more than another.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 6967200,
+          "length": 120000,
+          "sampleRate": 24000
+        },
+        "she blank the blue hat.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 7087200,
+          "length": 105600,
+          "sampleRate": 24000
+        },
+        "keeping the amount or size of something small.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 7192800,
+          "length": 165600,
+          "sampleRate": 24000
+        },
+        "we are blank our screen time.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 7358400,
+          "length": 118800,
+          "sampleRate": 24000
+        },
+        "only a small amount, number or size.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 7477200,
+          "length": 146400,
+          "sampleRate": 24000
+        },
+        "we have blank space for toys.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 7623600,
+          "length": 126000,
+          "sampleRate": 24000
+        },
+        "feeling the most happy.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 7749600,
+          "length": 103200,
+          "sampleRate": 24000
+        },
+        "i am blank when we play together.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 7852800,
+          "length": 127200,
+          "sampleRate": 24000
+        },
+        "feeling more happy.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 7980000,
+          "length": 96000,
+          "sampleRate": 24000
+        },
+        "he felt blank after a hug.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 8076000,
+          "length": 118800,
+          "sampleRate": 24000
+        },
+        "was helped by something.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 8194800,
+          "length": 105600,
+          "sampleRate": 24000
+        },
+        "the plants blank from the rain.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 8300400,
+          "length": 118800,
+          "sampleRate": 24000
+        },
+        "raining very lightly in tiny drops.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 8419200,
+          "length": 147600,
+          "sampleRate": 24000
+        },
+        "it was blank when we went out.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 8566800,
+          "length": 117600,
+          "sampleRate": 24000
+        },
+        "finding the total in equal groups, like three groups of two.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 8684400,
+          "length": 201600,
+          "sampleRate": 24000
+        },
+        "we are blank numbers at school.": {
+          "file": "natural-welcome-01.bin",
+          "offset": 8886000,
+          "length": 122400,
+          "sampleRate": 24000
+        },
+        "said": {
+          "file": "natural-words-01.bin",
+          "offset": 0,
+          "length": 36000,
+          "sampleRate": 24000
+        },
+        "come": {
+          "file": "natural-words-01.bin",
+          "offset": 36000,
+          "length": 34800,
+          "sampleRate": 24000
+        },
+        "some": {
+          "file": "natural-words-01.bin",
+          "offset": 70800,
+          "length": 36000,
+          "sampleRate": 24000
+        },
+        "one": {
+          "file": "natural-words-01.bin",
+          "offset": 106800,
+          "length": 36000,
+          "sampleRate": 24000
+        },
+        "once": {
+          "file": "natural-words-01.bin",
+          "offset": 142800,
+          "length": 39600,
+          "sampleRate": 24000
+        },
+        "friend": {
+          "file": "natural-words-01.bin",
+          "offset": 182400,
+          "length": 43200,
+          "sampleRate": 24000
+        },
+        "school": {
+          "file": "natural-words-01.bin",
+          "offset": 225600,
+          "length": 39600,
+          "sampleRate": 24000
+        },
+        "house": {
+          "file": "natural-words-01.bin",
+          "offset": 265200,
+          "length": 38400,
+          "sampleRate": 24000
+        },
+        "love": {
+          "file": "natural-words-01.bin",
+          "offset": 303600,
+          "length": 37200,
+          "sampleRate": 24000
+        },
+        "today": {
+          "file": "natural-words-01.bin",
+          "offset": 340800,
+          "length": 45600,
+          "sampleRate": 24000
+        },
+        "rain": {
+          "file": "natural-words-01.bin",
+          "offset": 386400,
+          "length": 37200,
+          "sampleRate": 24000
+        },
+        "train": {
+          "file": "natural-words-01.bin",
+          "offset": 423600,
+          "length": 43200,
+          "sampleRate": 24000
+        },
+        "coin": {
+          "file": "natural-words-01.bin",
+          "offset": 466800,
+          "length": 40800,
+          "sampleRate": 24000
+        },
+        "toy": {
+          "file": "natural-words-01.bin",
+          "offset": 507600,
+          "length": 34800,
+          "sampleRate": 24000
+        },
+        "boat": {
+          "file": "natural-words-01.bin",
+          "offset": 542400,
+          "length": 34800,
+          "sampleRate": 24000
+        },
+        "coat": {
+          "file": "natural-words-01.bin",
+          "offset": 577200,
+          "length": 37200,
+          "sampleRate": 24000
+        },
+        "night": {
+          "file": "natural-words-01.bin",
+          "offset": 614400,
+          "length": 38400,
+          "sampleRate": 24000
+        },
+        "light": {
+          "file": "natural-words-01.bin",
+          "offset": 652800,
+          "length": 37200,
+          "sampleRate": 24000
+        },
+        "bird": {
+          "file": "natural-words-01.bin",
+          "offset": 690000,
+          "length": 37200,
+          "sampleRate": 24000
+        },
+        "girl": {
+          "file": "natural-words-01.bin",
+          "offset": 727200,
+          "length": 34800,
+          "sampleRate": 24000
+        },
+        "tree": {
+          "file": "natural-words-01.bin",
+          "offset": 762000,
+          "length": 38400,
+          "sampleRate": 24000
+        },
+        "green": {
+          "file": "natural-words-01.bin",
+          "offset": 800400,
+          "length": 44400,
+          "sampleRate": 24000
+        },
+        "moon": {
+          "file": "natural-words-01.bin",
+          "offset": 844800,
+          "length": 42000,
+          "sampleRate": 24000
+        },
+        "book": {
+          "file": "natural-words-01.bin",
+          "offset": 886800,
+          "length": 30000,
+          "sampleRate": 24000
+        },
+        "chair": {
+          "file": "natural-words-01.bin",
+          "offset": 916800,
+          "length": 33600,
+          "sampleRate": 24000
+        },
+        "hair": {
+          "file": "natural-words-01.bin",
+          "offset": 950400,
+          "length": 36000,
+          "sampleRate": 24000
+        },
+        "happy": {
+          "file": "natural-words-01.bin",
+          "offset": 986400,
+          "length": 39600,
+          "sampleRate": 24000
+        },
+        "family": {
+          "file": "natural-words-01.bin",
+          "offset": 1026000,
+          "length": 43200,
+          "sampleRate": 24000
+        },
+        "carrot": {
+          "file": "natural-words-01.bin",
+          "offset": 1069200,
+          "length": 40800,
+          "sampleRate": 24000
+        },
+        "garden": {
+          "file": "natural-words-01.bin",
+          "offset": 1110000,
+          "length": 45600,
+          "sampleRate": 24000
+        },
+        "park": {
+          "file": "natural-words-01.bin",
+          "offset": 1155600,
+          "length": 33600,
+          "sampleRate": 24000
+        },
+        "snow": {
+          "file": "natural-words-01.bin",
+          "offset": 1189200,
+          "length": 36000,
+          "sampleRate": 24000
+        },
+        "because": {
+          "file": "natural-words-01.bin",
+          "offset": 1225200,
+          "length": 44400,
+          "sampleRate": 24000
+        },
+        "beautiful": {
+          "file": "natural-words-01.bin",
+          "offset": 1269600,
+          "length": 50400,
+          "sampleRate": 24000
+        },
+        "people": {
+          "file": "natural-words-01.bin",
+          "offset": 1320000,
+          "length": 40800,
+          "sampleRate": 24000
+        },
+        "children": {
+          "file": "natural-words-01.bin",
+          "offset": 1360800,
+          "length": 54000,
+          "sampleRate": 24000
+        },
+        "every": {
+          "file": "natural-words-01.bin",
+          "offset": 1414800,
+          "length": 38400,
+          "sampleRate": 24000
+        },
+        "everybody": {
+          "file": "natural-words-01.bin",
+          "offset": 1453200,
+          "length": 52800,
+          "sampleRate": 24000
+        },
+        "pretty": {
+          "file": "natural-words-01.bin",
+          "offset": 1506000,
+          "length": 42000,
+          "sampleRate": 24000
+        },
+        "great": {
+          "file": "natural-words-01.bin",
+          "offset": 1548000,
+          "length": 40800,
+          "sampleRate": 24000
+        },
+        "break": {
+          "file": "natural-words-01.bin",
+          "offset": 1588800,
+          "length": 36000,
+          "sampleRate": 24000
+        },
+        "steak": {
+          "file": "natural-words-01.bin",
+          "offset": 1624800,
+          "length": 37200,
+          "sampleRate": 24000
+        },
+        "after": {
+          "file": "natural-words-01.bin",
+          "offset": 1662000,
+          "length": 40800,
+          "sampleRate": 24000
+        },
+        "fast": {
+          "file": "natural-words-01.bin",
+          "offset": 1702800,
+          "length": 38400,
+          "sampleRate": 24000
+        },
+        "last": {
+          "file": "natural-words-01.bin",
+          "offset": 1741200,
+          "length": 40800,
+          "sampleRate": 24000
+        },
+        "past": {
+          "file": "natural-words-01.bin",
+          "offset": 1782000,
+          "length": 39600,
+          "sampleRate": 24000
+        },
+        "father": {
+          "file": "natural-words-01.bin",
+          "offset": 1821600,
+          "length": 39600,
+          "sampleRate": 24000
+        },
+        "class": {
+          "file": "natural-words-01.bin",
+          "offset": 1861200,
+          "length": 37200,
+          "sampleRate": 24000
+        },
+        "grass": {
+          "file": "natural-words-01.bin",
+          "offset": 1898400,
+          "length": 38400,
+          "sampleRate": 24000
+        },
+        "pass": {
+          "file": "natural-words-01.bin",
+          "offset": 1936800,
+          "length": 36000,
+          "sampleRate": 24000
+        },
+        "plant": {
+          "file": "natural-words-01.bin",
+          "offset": 1972800,
+          "length": 39600,
+          "sampleRate": 24000
+        },
+        "path": {
+          "file": "natural-words-01.bin",
+          "offset": 2012400,
+          "length": 34800,
+          "sampleRate": 24000
+        },
+        "bath": {
+          "file": "natural-words-01.bin",
+          "offset": 2047200,
+          "length": 33600,
+          "sampleRate": 24000
+        },
+        "hour": {
+          "file": "natural-words-01.bin",
+          "offset": 2080800,
+          "length": 37200,
+          "sampleRate": 24000
+        },
+        "move": {
+          "file": "natural-words-01.bin",
+          "offset": 2118000,
+          "length": 38400,
+          "sampleRate": 24000
+        },
+        "improve": {
+          "file": "natural-words-01.bin",
+          "offset": 2156400,
+          "length": 51600,
+          "sampleRate": 24000
+        },
+        "sure": {
+          "file": "natural-words-01.bin",
+          "offset": 2208000,
+          "length": 32400,
+          "sampleRate": 24000
+        },
+        "sugar": {
+          "file": "natural-words-01.bin",
+          "offset": 2240400,
+          "length": 37200,
+          "sampleRate": 24000
+        },
+        "eye": {
+          "file": "natural-words-01.bin",
+          "offset": 2277600,
+          "length": 36000,
+          "sampleRate": 24000
+        },
+        "could": {
+          "file": "natural-words-01.bin",
+          "offset": 2313600,
+          "length": 36000,
+          "sampleRate": 24000
+        },
+        "should": {
+          "file": "natural-words-01.bin",
+          "offset": 2349600,
+          "length": 33600,
+          "sampleRate": 24000
+        },
+        "would": {
+          "file": "natural-words-01.bin",
+          "offset": 2383200,
+          "length": 36000,
+          "sampleRate": 24000
+        },
+        "busy": {
+          "file": "natural-words-01.bin",
+          "offset": 2419200,
+          "length": 36000,
+          "sampleRate": 24000
+        },
+        "water": {
+          "file": "natural-words-01.bin",
+          "offset": 2455200,
+          "length": 43200,
+          "sampleRate": 24000
+        },
+        "accident": {
+          "file": "natural-words-01.bin",
+          "offset": 2498400,
+          "length": 57600,
+          "sampleRate": 24000
+        },
+        "address": {
+          "file": "natural-words-01.bin",
+          "offset": 2556000,
+          "length": 45600,
+          "sampleRate": 24000
+        },
+        "answer": {
+          "file": "natural-words-01.bin",
+          "offset": 2601600,
+          "length": 42000,
+          "sampleRate": 24000
+        },
+        "appear": {
+          "file": "natural-words-01.bin",
+          "offset": 2643600,
+          "length": 42000,
+          "sampleRate": 24000
+        },
+        "arrive": {
+          "file": "natural-words-01.bin",
+          "offset": 2685600,
+          "length": 44400,
+          "sampleRate": 24000
+        },
+        "believe": {
+          "file": "natural-words-01.bin",
+          "offset": 2730000,
+          "length": 45600,
+          "sampleRate": 24000
+        },
+        "bicycle": {
+          "file": "natural-words-01.bin",
+          "offset": 2775600,
+          "length": 50400,
+          "sampleRate": 24000
+        },
+        "breath": {
+          "file": "natural-words-01.bin",
+          "offset": 2826000,
+          "length": 34800,
+          "sampleRate": 24000
+        },
+        "breathe": {
+          "file": "natural-words-01.bin",
+          "offset": 2860800,
+          "length": 48000,
+          "sampleRate": 24000
+        },
+        "build": {
+          "file": "natural-words-01.bin",
+          "offset": 2908800,
+          "length": 38400,
+          "sampleRate": 24000
+        },
+        "calendar": {
+          "file": "natural-words-01.bin",
+          "offset": 2947200,
+          "length": 55200,
+          "sampleRate": 24000
+        },
+        "caught": {
+          "file": "natural-words-01.bin",
+          "offset": 3002400,
+          "length": 36000,
+          "sampleRate": 24000
+        },
+        "centre": {
+          "file": "natural-words-01.bin",
+          "offset": 3038400,
+          "length": 44400,
+          "sampleRate": 24000
+        },
+        "century": {
+          "file": "natural-words-01.bin",
+          "offset": 3082800,
+          "length": 52800,
+          "sampleRate": 24000
+        },
+        "certain": {
+          "file": "natural-words-01.bin",
+          "offset": 3135600,
+          "length": 45600,
+          "sampleRate": 24000
+        },
+        "circle": {
+          "file": "natural-words-01.bin",
+          "offset": 3181200,
+          "length": 42000,
+          "sampleRate": 24000
+        },
+        "complete": {
+          "file": "natural-words-01.bin",
+          "offset": 3223200,
+          "length": 58800,
+          "sampleRate": 24000
+        },
+        "consider": {
+          "file": "natural-words-01.bin",
+          "offset": 3282000,
+          "length": 50400,
+          "sampleRate": 24000
+        },
+        "continue": {
+          "file": "natural-words-01.bin",
+          "offset": 3332400,
+          "length": 64800,
+          "sampleRate": 24000
+        },
+        "decide": {
+          "file": "natural-words-01.bin",
+          "offset": 3397200,
+          "length": 51600,
+          "sampleRate": 24000
+        },
+        "describe": {
+          "file": "natural-words-01.bin",
+          "offset": 3448800,
+          "length": 56400,
+          "sampleRate": 24000
+        },
+        "different": {
+          "file": "natural-words-01.bin",
+          "offset": 3505200,
+          "length": 52800,
+          "sampleRate": 24000
+        },
+        "difficult": {
+          "file": "natural-words-01.bin",
+          "offset": 3558000,
+          "length": 51600,
+          "sampleRate": 24000
+        },
+        "disappear": {
+          "file": "natural-words-01.bin",
+          "offset": 3609600,
+          "length": 58800,
+          "sampleRate": 24000
+        },
+        "early": {
+          "file": "natural-words-01.bin",
+          "offset": 3668400,
+          "length": 37200,
+          "sampleRate": 24000
+        },
+        "earth": {
+          "file": "natural-words-01.bin",
+          "offset": 3705600,
+          "length": 33600,
+          "sampleRate": 24000
+        },
+        "enough": {
+          "file": "natural-words-01.bin",
+          "offset": 3739200,
+          "length": 37200,
+          "sampleRate": 24000
+        },
+        "exercise": {
+          "file": "natural-words-01.bin",
+          "offset": 3776400,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "favourite": {
+          "file": "natural-words-01.bin",
+          "offset": 3844800,
+          "length": 45600,
+          "sampleRate": 24000
+        },
+        "fruit": {
+          "file": "natural-words-01.bin",
+          "offset": 3890400,
+          "length": 37200,
+          "sampleRate": 24000
+        },
+        "imagine": {
+          "file": "natural-words-01.bin",
+          "offset": 3927600,
+          "length": 60000,
+          "sampleRate": 24000
+        },
+        "accompany": {
+          "file": "natural-words-01.bin",
+          "offset": 3987600,
+          "length": 58800,
+          "sampleRate": 24000
+        },
+        "achieve": {
+          "file": "natural-words-01.bin",
+          "offset": 4046400,
+          "length": 46800,
+          "sampleRate": 24000
+        },
+        "ancient": {
+          "file": "natural-words-01.bin",
+          "offset": 4093200,
+          "length": 55200,
+          "sampleRate": 24000
+        },
+        "apparent": {
+          "file": "natural-words-01.bin",
+          "offset": 4148400,
+          "length": 51600,
+          "sampleRate": 24000
+        },
+        "appreciate": {
+          "file": "natural-words-01.bin",
+          "offset": 4200000,
+          "length": 70800,
+          "sampleRate": 24000
+        },
+        "attached": {
+          "file": "natural-words-01.bin",
+          "offset": 4270800,
+          "length": 46800,
+          "sampleRate": 24000
+        },
+        "available": {
+          "file": "natural-words-01.bin",
+          "offset": 4317600,
+          "length": 51600,
+          "sampleRate": 24000
+        },
+        "average": {
+          "file": "natural-words-01.bin",
+          "offset": 4369200,
+          "length": 45600,
+          "sampleRate": 24000
+        },
+        "awkward": {
+          "file": "natural-words-01.bin",
+          "offset": 4414800,
+          "length": 43200,
+          "sampleRate": 24000
+        },
+        "bargain": {
+          "file": "natural-words-01.bin",
+          "offset": 4458000,
+          "length": 43200,
+          "sampleRate": 24000
+        },
+        "bruise": {
+          "file": "natural-words-01.bin",
+          "offset": 4501200,
+          "length": 40800,
+          "sampleRate": 24000
+        },
+        "category": {
+          "file": "natural-words-01.bin",
+          "offset": 4542000,
+          "length": 61200,
+          "sampleRate": 24000
+        },
+        "cemetery": {
+          "file": "natural-words-01.bin",
+          "offset": 4603200,
+          "length": 56400,
+          "sampleRate": 24000
+        },
+        "committee": {
+          "file": "natural-words-01.bin",
+          "offset": 4659600,
+          "length": 51600,
+          "sampleRate": 24000
+        },
+        "communicate": {
+          "file": "natural-words-01.bin",
+          "offset": 4711200,
+          "length": 72000,
+          "sampleRate": 24000
+        },
+        "community": {
+          "file": "natural-words-01.bin",
+          "offset": 4783200,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "competition": {
+          "file": "natural-words-01.bin",
+          "offset": 4851600,
+          "length": 74400,
+          "sampleRate": 24000
+        },
+        "conscience": {
+          "file": "natural-words-01.bin",
+          "offset": 4926000,
+          "length": 52800,
+          "sampleRate": 24000
+        },
+        "conscious": {
+          "file": "natural-words-01.bin",
+          "offset": 4978800,
+          "length": 57600,
+          "sampleRate": 24000
+        },
+        "curiosity": {
+          "file": "natural-words-01.bin",
+          "offset": 5036400,
+          "length": 73200,
+          "sampleRate": 24000
+        },
+        "definite": {
+          "file": "natural-words-01.bin",
+          "offset": 5109600,
+          "length": 50400,
+          "sampleRate": 24000
+        },
+        "desperate": {
+          "file": "natural-words-01.bin",
+          "offset": 5160000,
+          "length": 51600,
+          "sampleRate": 24000
+        },
+        "determined": {
+          "file": "natural-words-01.bin",
+          "offset": 5211600,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "develop": {
+          "file": "natural-words-01.bin",
+          "offset": 5280000,
+          "length": 44400,
+          "sampleRate": 24000
+        },
+        "dictionary": {
+          "file": "natural-words-01.bin",
+          "offset": 5324400,
+          "length": 63600,
+          "sampleRate": 24000
+        },
+        "disastrous": {
+          "file": "natural-words-01.bin",
+          "offset": 5388000,
+          "length": 67200,
+          "sampleRate": 24000
+        },
+        "embarrass": {
+          "file": "natural-words-01.bin",
+          "offset": 5455200,
+          "length": 50400,
+          "sampleRate": 24000
+        },
+        "environment": {
+          "file": "natural-words-01.bin",
+          "offset": 5505600,
+          "length": 74400,
+          "sampleRate": 24000
+        },
+        "equipment": {
+          "file": "natural-words-01.bin",
+          "offset": 5580000,
+          "length": 61200,
+          "sampleRate": 24000
+        },
+        "especially": {
+          "file": "natural-words-01.bin",
+          "offset": 5641200,
+          "length": 57600,
+          "sampleRate": 24000
+        },
+        "excellent": {
+          "file": "natural-words-01.bin",
+          "offset": 5698800,
+          "length": 55200,
+          "sampleRate": 24000
+        },
+        "explanation": {
+          "file": "natural-words-01.bin",
+          "offset": 5754000,
+          "length": 78000,
+          "sampleRate": 24000
+        },
+        "mum said we could play.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 0,
+          "length": 104400,
+          "sampleRate": 24000
+        },
+        "please come and sit with me.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 104400,
+          "length": 110400,
+          "sampleRate": 24000
+        },
+        "i put some fruit in my bowl.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 214800,
+          "length": 118800,
+          "sampleRate": 24000
+        },
+        "i have one red sock.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 333600,
+          "length": 108000,
+          "sampleRate": 24000
+        },
+        "we went to the zoo once.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 441600,
+          "length": 109200,
+          "sampleRate": 24000
+        },
+        "my friend likes to draw.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 550800,
+          "length": 109200,
+          "sampleRate": 24000
+        },
+        "we walk to school together.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 660000,
+          "length": 111600,
+          "sampleRate": 24000
+        },
+        "our house has a blue door.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 771600,
+          "length": 114000,
+          "sampleRate": 24000
+        },
+        "i love my family.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 885600,
+          "length": 100800,
+          "sampleRate": 24000
+        },
+        "we are painting today.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 986400,
+          "length": 105600,
+          "sampleRate": 24000
+        },
+        "the rain made a big puddle.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 1092000,
+          "length": 109200,
+          "sampleRate": 24000
+        },
+        "the train stopped at the station.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 1201200,
+          "length": 121200,
+          "sampleRate": 24000
+        },
+        "i found a coin on the path.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 1322400,
+          "length": 112800,
+          "sampleRate": 24000
+        },
+        "i put my toy in the box.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 1435200,
+          "length": 114000,
+          "sampleRate": 24000
+        },
+        "the boat sailed across the lake.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 1549200,
+          "length": 120000,
+          "sampleRate": 24000
+        },
+        "i wore my coat outside.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 1669200,
+          "length": 117600,
+          "sampleRate": 24000
+        },
+        "we saw stars at night.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 1786800,
+          "length": 111600,
+          "sampleRate": 24000
+        },
+        "please turn on the light.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 1898400,
+          "length": 109200,
+          "sampleRate": 24000
+        },
+        "a bird sat in the tree.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 2007600,
+          "length": 108000,
+          "sampleRate": 24000
+        },
+        "the girl kicked the ball.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 2115600,
+          "length": 98400,
+          "sampleRate": 24000
+        },
+        "the tree has green leaves.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 2214000,
+          "length": 118800,
+          "sampleRate": 24000
+        },
+        "my boots are green.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 2332800,
+          "length": 96000,
+          "sampleRate": 24000
+        },
+        "the moon shone above us.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 2428800,
+          "length": 102000,
+          "sampleRate": 24000
+        },
+        "we read a funny book.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 2530800,
+          "length": 104400,
+          "sampleRate": 24000
+        },
+        "i sat on the chair.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 2635200,
+          "length": 99600,
+          "sampleRate": 24000
+        },
+        "i brushed my hair.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 2734800,
+          "length": 100800,
+          "sampleRate": 24000
+        },
+        "i feel happy when we play.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 2835600,
+          "length": 114000,
+          "sampleRate": 24000
+        },
+        "my family ate lunch together.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 2949600,
+          "length": 123600,
+          "sampleRate": 24000
+        },
+        "the rabbit ate a carrot.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 3073200,
+          "length": 111600,
+          "sampleRate": 24000
+        },
+        "we planted seeds in the garden.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 3184800,
+          "length": 126000,
+          "sampleRate": 24000
+        },
+        "we went to the park.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 3310800,
+          "length": 94800,
+          "sampleRate": 24000
+        },
+        "the snow covered the grass.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 3405600,
+          "length": 114000,
+          "sampleRate": 24000
+        },
+        "i wore boots because it was wet.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 3519600,
+          "length": 127200,
+          "sampleRate": 24000
+        },
+        "the flower is beautiful.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 3646800,
+          "length": 108000,
+          "sampleRate": 24000
+        },
+        "many people came to the park.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 3754800,
+          "length": 124800,
+          "sampleRate": 24000
+        },
+        "the children played together.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 3879600,
+          "length": 110400,
+          "sampleRate": 24000
+        },
+        "i watered every plant.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 3990000,
+          "length": 112800,
+          "sampleRate": 24000
+        },
+        "there is a seat for everybody.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 4102800,
+          "length": 120000,
+          "sampleRate": 24000
+        },
+        "the bird has pretty feathers.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 4222800,
+          "length": 115200,
+          "sampleRate": 24000
+        },
+        "we had a great day.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 4338000,
+          "length": 96000,
+          "sampleRate": 24000
+        },
+        "be careful not to break the cup.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 4434000,
+          "length": 124800,
+          "sampleRate": 24000
+        },
+        "dad cooked a steak.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 4558800,
+          "length": 98400,
+          "sampleRate": 24000
+        },
+        "we read after lunch.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 4657200,
+          "length": 108000,
+          "sampleRate": 24000
+        },
+        "the rabbit can run fast.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 4765200,
+          "length": 115200,
+          "sampleRate": 24000
+        },
+        "i was last in the line.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 4880400,
+          "length": 110400,
+          "sampleRate": 24000
+        },
+        "we learned about life in the past.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 4990800,
+          "length": 126000,
+          "sampleRate": 24000
+        },
+        "my father helped me bake.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 5116800,
+          "length": 112800,
+          "sampleRate": 24000
+        },
+        "our class made a poster.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 5229600,
+          "length": 110400,
+          "sampleRate": 24000
+        },
+        "the grass feels soft.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 5340000,
+          "length": 102000,
+          "sampleRate": 24000
+        },
+        "please pass me the ball.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 5442000,
+          "length": 102000,
+          "sampleRate": 24000
+        },
+        "we grew a plant in a pot.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 5544000,
+          "length": 110400,
+          "sampleRate": 24000
+        },
+        "the path leads to the pond.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 5654400,
+          "length": 110400,
+          "sampleRate": 24000
+        },
+        "i had a warm bath.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 5764800,
+          "length": 102000,
+          "sampleRate": 24000
+        },
+        "we played for an hour.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 5866800,
+          "length": 98400,
+          "sampleRate": 24000
+        },
+        "please move your chair closer.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 5965200,
+          "length": 126000,
+          "sampleRate": 24000
+        },
+        "practice helps me improve.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 6091200,
+          "length": 115200,
+          "sampleRate": 24000
+        },
+        "i am sure my bag is here.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 6206400,
+          "length": 118800,
+          "sampleRate": 24000
+        },
+        "we added sugar to the cake.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 6325200,
+          "length": 117600,
+          "sampleRate": 24000
+        },
+        "a speck of dust got in my eye.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 6442800,
+          "length": 129600,
+          "sampleRate": 24000
+        },
+        "i could hear the birds.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 6572400,
+          "length": 102000,
+          "sampleRate": 24000
+        },
+        "we should put our toys away.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 6674400,
+          "length": 116400,
+          "sampleRate": 24000
+        },
+        "i would like a turn.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 6790800,
+          "length": 98400,
+          "sampleRate": 24000
+        },
+        "the gardener was busy today.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 6889200,
+          "length": 118800,
+          "sampleRate": 24000
+        },
+        "i filled my bottle with water.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 7008000,
+          "length": 130800,
+          "sampleRate": 24000
+        },
+        "spilling the juice was an accident.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 7138800,
+          "length": 132000,
+          "sampleRate": 24000
+        },
+        "i wrote our address on the card.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 7270800,
+          "length": 124800,
+          "sampleRate": 24000
+        },
+        "i knew the answer to the question.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 7395600,
+          "length": 124800,
+          "sampleRate": 24000
+        },
+        "stars appear when the sky gets dark.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 7520400,
+          "length": 139200,
+          "sampleRate": 24000
+        },
+        "we will arrive before lunch.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 7659600,
+          "length": 115200,
+          "sampleRate": 24000
+        },
+        "i believe you can do it.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 7774800,
+          "length": 111600,
+          "sampleRate": 24000
+        },
+        "i rode my bicycle to the park.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 7886400,
+          "length": 133200,
+          "sampleRate": 24000
+        },
+        "i took a deep breath.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 8019600,
+          "length": 97200,
+          "sampleRate": 24000
+        },
+        "we breathe through our nose or mouth.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 8116800,
+          "length": 134400,
+          "sampleRate": 24000
+        },
+        "we will build a tall tower.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 8251200,
+          "length": 109200,
+          "sampleRate": 24000
+        },
+        "i marked my birthday on the calendar.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 8360400,
+          "length": 135600,
+          "sampleRate": 24000
+        },
+        "i caught the ball with both hands.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 8496000,
+          "length": 129600,
+          "sampleRate": 24000
+        },
+        "put the bowl in the centre of the table.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 8625600,
+          "length": 138000,
+          "sampleRate": 24000
+        },
+        "a century is a very long time.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 8763600,
+          "length": 136800,
+          "sampleRate": 24000
+        },
+        "i am certain that this is my coat.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 8900400,
+          "length": 136800,
+          "sampleRate": 24000
+        },
+        "i drew a circle around the star.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 9037200,
+          "length": 124800,
+          "sampleRate": 24000
+        },
+        "my picture is complete.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 9162000,
+          "length": 116400,
+          "sampleRate": 24000
+        },
+        "we will consider which game to play.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 9278400,
+          "length": 133200,
+          "sampleRate": 24000
+        },
+        "we can continue our story tomorrow.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 9411600,
+          "length": 135600,
+          "sampleRate": 24000
+        },
+        "i must decide which book to read.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 9547200,
+          "length": 135600,
+          "sampleRate": 24000
+        },
+        "can you describe your favourite toy?": {
+          "file": "natural-sentences-01.bin",
+          "offset": 9682800,
+          "length": 138000,
+          "sampleRate": 24000
+        },
+        "we chose different colours.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 9820800,
+          "length": 109200,
+          "sampleRate": 24000
+        },
+        "the puzzle was difficult at first.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 9930000,
+          "length": 126000,
+          "sampleRate": 24000
+        },
+        "we watched the rabbit disappear behind a tree.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 10056000,
+          "length": 150000,
+          "sampleRate": 24000
+        },
+        "we got to school early.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 10206000,
+          "length": 108000,
+          "sampleRate": 24000
+        },
+        "the earth travels around the sun.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 10314000,
+          "length": 124800,
+          "sampleRate": 24000
+        },
+        "we have enough cups for everyone.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 10438800,
+          "length": 122400,
+          "sampleRate": 24000
+        },
+        "running is good exercise.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 10561200,
+          "length": 122400,
+          "sampleRate": 24000
+        },
+        "this is my favourite story.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 10683600,
+          "length": 121200,
+          "sampleRate": 24000
+        },
+        "we shared a bowl of fruit.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 10804800,
+          "length": 112800,
+          "sampleRate": 24000
+        },
+        "i can imagine a purple monster.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 10917600,
+          "length": 126000,
+          "sampleRate": 24000
+        },
+        "dad will accompany us on the walk.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 11043600,
+          "length": 134400,
+          "sampleRate": 24000
+        },
+        "practice helps us achieve our goals.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 11178000,
+          "length": 139200,
+          "sampleRate": 24000
+        },
+        "we saw an ancient stone wall.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 11317200,
+          "length": 126000,
+          "sampleRate": 24000
+        },
+        "it became apparent that the dog was tired.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 11443200,
+          "length": 151200,
+          "sampleRate": 24000
+        },
+        "i appreciate your help with my picture.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 11594400,
+          "length": 144000,
+          "sampleRate": 24000
+        },
+        "the note was attached to my bag.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 11738400,
+          "length": 127200,
+          "sampleRate": 24000
+        },
+        "there are crayons available on the table.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 11865600,
+          "length": 145200,
+          "sampleRate": 24000
+        },
+        "we worked out the average score.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 12010800,
+          "length": 117600,
+          "sampleRate": 24000
+        },
+        "the big box was awkward to carry.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 12128400,
+          "length": 128400,
+          "sampleRate": 24000
+        },
+        "the book was a bargain.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 12256800,
+          "length": 100800,
+          "sampleRate": 24000
+        },
+        "i have a bruise on my knee.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 12357600,
+          "length": 112800,
+          "sampleRate": 24000
+        },
+        "put each animal in the right category.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 12470400,
+          "length": 142800,
+          "sampleRate": 24000
+        },
+        "we walked past the cemetery.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 12613200,
+          "length": 116400,
+          "sampleRate": 24000
+        },
+        "the school committee planned a fair.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 12729600,
+          "length": 126000,
+          "sampleRate": 24000
+        },
+        "we can communicate with words and signs.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 12855600,
+          "length": 152400,
+          "sampleRate": 24000
+        },
+        "our community planted some trees.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 13008000,
+          "length": 136800,
+          "sampleRate": 24000
+        },
+        "i entered a drawing competition.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 13144800,
+          "length": 135600,
+          "sampleRate": 24000
+        },
+        "my conscience told me to be honest.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 13280400,
+          "length": 135600,
+          "sampleRate": 24000
+        },
+        "the sleepy cat was still conscious.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 13416000,
+          "length": 130800,
+          "sampleRate": 24000
+        },
+        "my curiosity made me open the old box.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 13546800,
+          "length": 163200,
+          "sampleRate": 24000
+        },
+        "we made a definite plan for saturday.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 13710000,
+          "length": 139200,
+          "sampleRate": 24000
+        },
+        "the thirsty dog was desperate for water.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 13849200,
+          "length": 152400,
+          "sampleRate": 24000
+        },
+        "i was determined to finish the puzzle.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 14001600,
+          "length": 136800,
+          "sampleRate": 24000
+        },
+        "seeds develop into plants.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 14138400,
+          "length": 117600,
+          "sampleRate": 24000
+        },
+        "we looked up the word in a dictionary.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 14256000,
+          "length": 128400,
+          "sampleRate": 24000
+        },
+        "the flood had a disastrous effect on the farm.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 14384400,
+          "length": 168000,
+          "sampleRate": 24000
+        },
+        "i did not want to embarrass my friend.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 14552400,
+          "length": 140400,
+          "sampleRate": 24000
+        },
+        "we can help the environment by picking up litter.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 14692800,
+          "length": 163200,
+          "sampleRate": 24000
+        },
+        "we put away the sports equipment.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 14856000,
+          "length": 123600,
+          "sampleRate": 24000
+        },
+        "i like fruit, especially strawberries.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 14979600,
+          "length": 146400,
+          "sampleRate": 24000
+        },
+        "you made an excellent model.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 15126000,
+          "length": 112800,
+          "sampleRate": 24000
+        },
+        "the teacher gave a clear explanation.": {
+          "file": "natural-sentences-01.bin",
+          "offset": 15238800,
+          "length": 144000,
+          "sampleRate": 24000
+        }
+      }
+    },
+    "bella": {
+      "voice": "af_bella",
+      "files": [
+        "bella-welcome-01.bin",
+        "bella-words-01.bin",
+        "bella-sentences-01.bin"
+      ],
+      "clips": {
+        "hello! i am your spelloid. shall we practise together? a little go, a little grow!": {
+          "file": "bella-welcome-01.bin",
+          "offset": 0,
+          "length": 268800,
+          "sampleRate": 24000
+        },
+        "spell.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 268800,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "brilliant! you have got it!": {
+          "file": "bella-welcome-01.bin",
+          "offset": 337200,
+          "length": 111600,
+          "sampleRate": 24000
+        },
+        "lovely work! you remembered that word!": {
+          "file": "bella-welcome-01.bin",
+          "offset": 448800,
+          "length": 151200,
+          "sampleRate": 24000
+        },
+        "a brave try! listen once more, and have another go.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 600000,
+          "length": 198000,
+          "sampleRate": 24000
+        },
+        "we can come back to that word. keep going!": {
+          "file": "bella-welcome-01.bin",
+          "offset": 798000,
+          "length": 156000,
+          "sampleRate": 24000
+        },
+        "a new badge! you have unlocked more ways to make me your own!": {
+          "file": "bella-welcome-01.bin",
+          "offset": 954000,
+          "length": 199200,
+          "sampleRate": 24000
+        },
+        "every word complete! you did it! our egg is ready to hatch!": {
+          "file": "bella-welcome-01.bin",
+          "offset": 1153200,
+          "length": 204000,
+          "sampleRate": 24000
+        },
+        "look at the word. say it with me. cover it when you are ready.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 1357200,
+          "length": 196800,
+          "sampleRate": 24000
+        },
+        "can you build my word with the letters?": {
+          "file": "bella-welcome-01.bin",
+          "offset": 1554000,
+          "length": 127200,
+          "sampleRate": 24000
+        },
+        "which word fits the sentence?": {
+          "file": "bella-welcome-01.bin",
+          "offset": 1681200,
+          "length": 112800,
+          "sampleRate": 24000
+        },
+        "which word matches the meaning?": {
+          "file": "bella-welcome-01.bin",
+          "offset": 1794000,
+          "length": 115200,
+          "sampleRate": 24000
+        },
+        "no new badges in this round. we are just practising for fun!": {
+          "file": "bella-welcome-01.bin",
+          "offset": 1909200,
+          "length": 213600,
+          "sampleRate": 24000
+        },
+        "you gave it a go! shall we keep playing or update your pal?": {
+          "file": "bella-welcome-01.bin",
+          "offset": 2122800,
+          "length": 196800,
+          "sampleRate": 24000
+        },
+        "you made me! let us get spelling together.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 2319600,
+          "length": 156000,
+          "sampleRate": 24000
+        },
+        "a tiny wiggle! tap the egg gently to help our baby hatch.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 2475600,
+          "length": 218400,
+          "sampleRate": 24000
+        },
+        "forgotten": {
+          "file": "bella-welcome-01.bin",
+          "offset": 2694000,
+          "length": 74400,
+          "sampleRate": 24000
+        },
+        "i had forgotten my lunch.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 2768400,
+          "length": 103200,
+          "sampleRate": 24000
+        },
+        "forgetting": {
+          "file": "bella-welcome-01.bin",
+          "offset": 2871600,
+          "length": 73200,
+          "sampleRate": 24000
+        },
+        "i keep forgetting where my socks are.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 2944800,
+          "length": 129600,
+          "sampleRate": 24000
+        },
+        "gardener": {
+          "file": "bella-welcome-01.bin",
+          "offset": 3074400,
+          "length": 72000,
+          "sampleRate": 24000
+        },
+        "the gardener planted some flowers.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 3146400,
+          "length": 134400,
+          "sampleRate": 24000
+        },
+        "gardening": {
+          "file": "bella-welcome-01.bin",
+          "offset": 3280800,
+          "length": 72000,
+          "sampleRate": 24000
+        },
+        "we enjoy gardening together.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 3352800,
+          "length": 118800,
+          "sampleRate": 24000
+        },
+        "beginner": {
+          "file": "bella-welcome-01.bin",
+          "offset": 3471600,
+          "length": 72000,
+          "sampleRate": 24000
+        },
+        "i am a beginner at swimming.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 3543600,
+          "length": 104400,
+          "sampleRate": 24000
+        },
+        "beginning": {
+          "file": "bella-welcome-01.bin",
+          "offset": 3648000,
+          "length": 72000,
+          "sampleRate": 24000
+        },
+        "i liked the beginning of the story.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 3720000,
+          "length": 120000,
+          "sampleRate": 24000
+        },
+        "prefer": {
+          "file": "bella-welcome-01.bin",
+          "offset": 3840000,
+          "length": 69600,
+          "sampleRate": 24000
+        },
+        "i prefer apples to pears.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 3909600,
+          "length": 114000,
+          "sampleRate": 24000
+        },
+        "preferred": {
+          "file": "bella-welcome-01.bin",
+          "offset": 4023600,
+          "length": 70800,
+          "sampleRate": 24000
+        },
+        "she preferred the blue hat.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 4094400,
+          "length": 102000,
+          "sampleRate": 24000
+        },
+        "limiting": {
+          "file": "bella-welcome-01.bin",
+          "offset": 4196400,
+          "length": 69600,
+          "sampleRate": 24000
+        },
+        "we are limiting our screen time.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 4266000,
+          "length": 116400,
+          "sampleRate": 24000
+        },
+        "limited": {
+          "file": "bella-welcome-01.bin",
+          "offset": 4382400,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "we have limited space for toys.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 4450800,
+          "length": 126000,
+          "sampleRate": 24000
+        },
+        "happiest": {
+          "file": "bella-welcome-01.bin",
+          "offset": 4576800,
+          "length": 70800,
+          "sampleRate": 24000
+        },
+        "i am happiest when we play together.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 4647600,
+          "length": 139200,
+          "sampleRate": 24000
+        },
+        "happier": {
+          "file": "bella-welcome-01.bin",
+          "offset": 4786800,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "he felt happier after a hug.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 4855200,
+          "length": 116400,
+          "sampleRate": 24000
+        },
+        "benefited": {
+          "file": "bella-welcome-01.bin",
+          "offset": 4971600,
+          "length": 74400,
+          "sampleRate": 24000
+        },
+        "the plants benefited from the rain.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 5046000,
+          "length": 128400,
+          "sampleRate": 24000
+        },
+        "drizzling": {
+          "file": "bella-welcome-01.bin",
+          "offset": 5174400,
+          "length": 72000,
+          "sampleRate": 24000
+        },
+        "it was drizzling when we went out.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 5246400,
+          "length": 120000,
+          "sampleRate": 24000
+        },
+        "multiplying": {
+          "file": "bella-welcome-01.bin",
+          "offset": 5366400,
+          "length": 84000,
+          "sampleRate": 24000
+        },
+        "we are multiplying numbers at school.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 5450400,
+          "length": 130800,
+          "sampleRate": 24000
+        },
+        "not remembered.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 5581200,
+          "length": 82800,
+          "sampleRate": 24000
+        },
+        "i had blank my lunch.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 5664000,
+          "length": 100800,
+          "sampleRate": 24000
+        },
+        "not remembering something.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 5764800,
+          "length": 105600,
+          "sampleRate": 24000
+        },
+        "i keep blank where my socks are.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 5870400,
+          "length": 124800,
+          "sampleRate": 24000
+        },
+        "someone who looks after plants and gardens.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 5995200,
+          "length": 157200,
+          "sampleRate": 24000
+        },
+        "the blank planted some flowers.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 6152400,
+          "length": 121200,
+          "sampleRate": 24000
+        },
+        "growing plants and looking after a garden.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 6273600,
+          "length": 163200,
+          "sampleRate": 24000
+        },
+        "we enjoy blank together.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 6436800,
+          "length": 108000,
+          "sampleRate": 24000
+        },
+        "someone who is just starting to learn something.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 6544800,
+          "length": 148800,
+          "sampleRate": 24000
+        },
+        "i am a blank at swimming.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 6693600,
+          "length": 99600,
+          "sampleRate": 24000
+        },
+        "the start of something.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 6793200,
+          "length": 91200,
+          "sampleRate": 24000
+        },
+        "i liked the blank of the story.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 6884400,
+          "length": 115200,
+          "sampleRate": 24000
+        },
+        "to like one thing more than another.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 6999600,
+          "length": 122400,
+          "sampleRate": 24000
+        },
+        "i blank apples to pears.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 7122000,
+          "length": 112800,
+          "sampleRate": 24000
+        },
+        "liked one thing more than another.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 7234800,
+          "length": 118800,
+          "sampleRate": 24000
+        },
+        "she blank the blue hat.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 7353600,
+          "length": 99600,
+          "sampleRate": 24000
+        },
+        "keeping the amount or size of something small.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 7453200,
+          "length": 166800,
+          "sampleRate": 24000
+        },
+        "we are blank our screen time.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 7620000,
+          "length": 112800,
+          "sampleRate": 24000
+        },
+        "only a small amount, number or size.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 7732800,
+          "length": 153600,
+          "sampleRate": 24000
+        },
+        "we have blank space for toys.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 7886400,
+          "length": 121200,
+          "sampleRate": 24000
+        },
+        "feeling the most happy.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 8007600,
+          "length": 99600,
+          "sampleRate": 24000
+        },
+        "i am blank when we play together.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 8107200,
+          "length": 130800,
+          "sampleRate": 24000
+        },
+        "feeling more happy.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 8238000,
+          "length": 91200,
+          "sampleRate": 24000
+        },
+        "he felt blank after a hug.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 8329200,
+          "length": 115200,
+          "sampleRate": 24000
+        },
+        "was helped by something.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 8444400,
+          "length": 102000,
+          "sampleRate": 24000
+        },
+        "the plants blank from the rain.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 8546400,
+          "length": 111600,
+          "sampleRate": 24000
+        },
+        "raining very lightly in tiny drops.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 8658000,
+          "length": 148800,
+          "sampleRate": 24000
+        },
+        "it was blank when we went out.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 8806800,
+          "length": 109200,
+          "sampleRate": 24000
+        },
+        "finding the total in equal groups, like three groups of two.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 8916000,
+          "length": 211200,
+          "sampleRate": 24000
+        },
+        "we are blank numbers at school.": {
+          "file": "bella-welcome-01.bin",
+          "offset": 9127200,
+          "length": 111600,
+          "sampleRate": 24000
+        },
+        "said": {
+          "file": "bella-words-01.bin",
+          "offset": 0,
+          "length": 63600,
+          "sampleRate": 24000
+        },
+        "come": {
+          "file": "bella-words-01.bin",
+          "offset": 63600,
+          "length": 63600,
+          "sampleRate": 24000
+        },
+        "some": {
+          "file": "bella-words-01.bin",
+          "offset": 127200,
+          "length": 63600,
+          "sampleRate": 24000
+        },
+        "one": {
+          "file": "bella-words-01.bin",
+          "offset": 190800,
+          "length": 61200,
+          "sampleRate": 24000
+        },
+        "once": {
+          "file": "bella-words-01.bin",
+          "offset": 252000,
+          "length": 64800,
+          "sampleRate": 24000
+        },
+        "friend": {
+          "file": "bella-words-01.bin",
+          "offset": 316800,
+          "length": 67200,
+          "sampleRate": 24000
+        },
+        "school": {
+          "file": "bella-words-01.bin",
+          "offset": 384000,
+          "length": 70800,
+          "sampleRate": 24000
+        },
+        "house": {
+          "file": "bella-words-01.bin",
+          "offset": 454800,
+          "length": 61200,
+          "sampleRate": 24000
+        },
+        "love": {
+          "file": "bella-words-01.bin",
+          "offset": 516000,
+          "length": 64800,
+          "sampleRate": 24000
+        },
+        "today": {
+          "file": "bella-words-01.bin",
+          "offset": 580800,
+          "length": 67200,
+          "sampleRate": 24000
+        },
+        "rain": {
+          "file": "bella-words-01.bin",
+          "offset": 648000,
+          "length": 66000,
+          "sampleRate": 24000
+        },
+        "train": {
+          "file": "bella-words-01.bin",
+          "offset": 714000,
+          "length": 67200,
+          "sampleRate": 24000
+        },
+        "coin": {
+          "file": "bella-words-01.bin",
+          "offset": 781200,
+          "length": 66000,
+          "sampleRate": 24000
+        },
+        "toy": {
+          "file": "bella-words-01.bin",
+          "offset": 847200,
+          "length": 62400,
+          "sampleRate": 24000
+        },
+        "boat": {
+          "file": "bella-words-01.bin",
+          "offset": 909600,
+          "length": 61200,
+          "sampleRate": 24000
+        },
+        "coat": {
+          "file": "bella-words-01.bin",
+          "offset": 970800,
+          "length": 58800,
+          "sampleRate": 24000
+        },
+        "night": {
+          "file": "bella-words-01.bin",
+          "offset": 1029600,
+          "length": 63600,
+          "sampleRate": 24000
+        },
+        "light": {
+          "file": "bella-words-01.bin",
+          "offset": 1093200,
+          "length": 63600,
+          "sampleRate": 24000
+        },
+        "bird": {
+          "file": "bella-words-01.bin",
+          "offset": 1156800,
+          "length": 61200,
+          "sampleRate": 24000
+        },
+        "girl": {
+          "file": "bella-words-01.bin",
+          "offset": 1218000,
+          "length": 43200,
+          "sampleRate": 24000
+        },
+        "tree": {
+          "file": "bella-words-01.bin",
+          "offset": 1261200,
+          "length": 66000,
+          "sampleRate": 24000
+        },
+        "green": {
+          "file": "bella-words-01.bin",
+          "offset": 1327200,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "moon": {
+          "file": "bella-words-01.bin",
+          "offset": 1395600,
+          "length": 67200,
+          "sampleRate": 24000
+        },
+        "book": {
+          "file": "bella-words-01.bin",
+          "offset": 1462800,
+          "length": 55200,
+          "sampleRate": 24000
+        },
+        "chair": {
+          "file": "bella-words-01.bin",
+          "offset": 1518000,
+          "length": 64800,
+          "sampleRate": 24000
+        },
+        "hair": {
+          "file": "bella-words-01.bin",
+          "offset": 1582800,
+          "length": 60000,
+          "sampleRate": 24000
+        },
+        "happy": {
+          "file": "bella-words-01.bin",
+          "offset": 1642800,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "family": {
+          "file": "bella-words-01.bin",
+          "offset": 1711200,
+          "length": 69600,
+          "sampleRate": 24000
+        },
+        "carrot": {
+          "file": "bella-words-01.bin",
+          "offset": 1780800,
+          "length": 62400,
+          "sampleRate": 24000
+        },
+        "garden": {
+          "file": "bella-words-01.bin",
+          "offset": 1843200,
+          "length": 69600,
+          "sampleRate": 24000
+        },
+        "park": {
+          "file": "bella-words-01.bin",
+          "offset": 1912800,
+          "length": 61200,
+          "sampleRate": 24000
+        },
+        "snow": {
+          "file": "bella-words-01.bin",
+          "offset": 1974000,
+          "length": 67200,
+          "sampleRate": 24000
+        },
+        "because": {
+          "file": "bella-words-01.bin",
+          "offset": 2041200,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "beautiful": {
+          "file": "bella-words-01.bin",
+          "offset": 2109600,
+          "length": 70800,
+          "sampleRate": 24000
+        },
+        "people": {
+          "file": "bella-words-01.bin",
+          "offset": 2180400,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "children": {
+          "file": "bella-words-01.bin",
+          "offset": 2248800,
+          "length": 72000,
+          "sampleRate": 24000
+        },
+        "every": {
+          "file": "bella-words-01.bin",
+          "offset": 2320800,
+          "length": 69600,
+          "sampleRate": 24000
+        },
+        "everybody": {
+          "file": "bella-words-01.bin",
+          "offset": 2390400,
+          "length": 76800,
+          "sampleRate": 24000
+        },
+        "pretty": {
+          "file": "bella-words-01.bin",
+          "offset": 2467200,
+          "length": 67200,
+          "sampleRate": 24000
+        },
+        "great": {
+          "file": "bella-words-01.bin",
+          "offset": 2534400,
+          "length": 63600,
+          "sampleRate": 24000
+        },
+        "break": {
+          "file": "bella-words-01.bin",
+          "offset": 2598000,
+          "length": 62400,
+          "sampleRate": 24000
+        },
+        "steak": {
+          "file": "bella-words-01.bin",
+          "offset": 2660400,
+          "length": 63600,
+          "sampleRate": 24000
+        },
+        "after": {
+          "file": "bella-words-01.bin",
+          "offset": 2724000,
+          "length": 73200,
+          "sampleRate": 24000
+        },
+        "fast": {
+          "file": "bella-words-01.bin",
+          "offset": 2797200,
+          "length": 64800,
+          "sampleRate": 24000
+        },
+        "last": {
+          "file": "bella-words-01.bin",
+          "offset": 2862000,
+          "length": 67200,
+          "sampleRate": 24000
+        },
+        "past": {
+          "file": "bella-words-01.bin",
+          "offset": 2929200,
+          "length": 67200,
+          "sampleRate": 24000
+        },
+        "father": {
+          "file": "bella-words-01.bin",
+          "offset": 2996400,
+          "length": 70800,
+          "sampleRate": 24000
+        },
+        "class": {
+          "file": "bella-words-01.bin",
+          "offset": 3067200,
+          "length": 66000,
+          "sampleRate": 24000
+        },
+        "grass": {
+          "file": "bella-words-01.bin",
+          "offset": 3133200,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "pass": {
+          "file": "bella-words-01.bin",
+          "offset": 3201600,
+          "length": 66000,
+          "sampleRate": 24000
+        },
+        "plant": {
+          "file": "bella-words-01.bin",
+          "offset": 3267600,
+          "length": 62400,
+          "sampleRate": 24000
+        },
+        "path": {
+          "file": "bella-words-01.bin",
+          "offset": 3330000,
+          "length": 61200,
+          "sampleRate": 24000
+        },
+        "bath": {
+          "file": "bella-words-01.bin",
+          "offset": 3391200,
+          "length": 61200,
+          "sampleRate": 24000
+        },
+        "hour": {
+          "file": "bella-words-01.bin",
+          "offset": 3452400,
+          "length": 64800,
+          "sampleRate": 24000
+        },
+        "move": {
+          "file": "bella-words-01.bin",
+          "offset": 3517200,
+          "length": 64800,
+          "sampleRate": 24000
+        },
+        "improve": {
+          "file": "bella-words-01.bin",
+          "offset": 3582000,
+          "length": 73200,
+          "sampleRate": 24000
+        },
+        "sure": {
+          "file": "bella-words-01.bin",
+          "offset": 3655200,
+          "length": 62400,
+          "sampleRate": 24000
+        },
+        "sugar": {
+          "file": "bella-words-01.bin",
+          "offset": 3717600,
+          "length": 69600,
+          "sampleRate": 24000
+        },
+        "eye": {
+          "file": "bella-words-01.bin",
+          "offset": 3787200,
+          "length": 63600,
+          "sampleRate": 24000
+        },
+        "could": {
+          "file": "bella-words-01.bin",
+          "offset": 3850800,
+          "length": 62400,
+          "sampleRate": 24000
+        },
+        "should": {
+          "file": "bella-words-01.bin",
+          "offset": 3913200,
+          "length": 62400,
+          "sampleRate": 24000
+        },
+        "would": {
+          "file": "bella-words-01.bin",
+          "offset": 3975600,
+          "length": 62400,
+          "sampleRate": 24000
+        },
+        "busy": {
+          "file": "bella-words-01.bin",
+          "offset": 4038000,
+          "length": 67200,
+          "sampleRate": 24000
+        },
+        "water": {
+          "file": "bella-words-01.bin",
+          "offset": 4105200,
+          "length": 64800,
+          "sampleRate": 24000
+        },
+        "accident": {
+          "file": "bella-words-01.bin",
+          "offset": 4170000,
+          "length": 73200,
+          "sampleRate": 24000
+        },
+        "address": {
+          "file": "bella-words-01.bin",
+          "offset": 4243200,
+          "length": 69600,
+          "sampleRate": 24000
+        },
+        "answer": {
+          "file": "bella-words-01.bin",
+          "offset": 4312800,
+          "length": 75600,
+          "sampleRate": 24000
+        },
+        "appear": {
+          "file": "bella-words-01.bin",
+          "offset": 4388400,
+          "length": 64800,
+          "sampleRate": 24000
+        },
+        "arrive": {
+          "file": "bella-words-01.bin",
+          "offset": 4453200,
+          "length": 69600,
+          "sampleRate": 24000
+        },
+        "believe": {
+          "file": "bella-words-01.bin",
+          "offset": 4522800,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "bicycle": {
+          "file": "bella-words-01.bin",
+          "offset": 4591200,
+          "length": 73200,
+          "sampleRate": 24000
+        },
+        "breath": {
+          "file": "bella-words-01.bin",
+          "offset": 4664400,
+          "length": 61200,
+          "sampleRate": 24000
+        },
+        "breathe": {
+          "file": "bella-words-01.bin",
+          "offset": 4725600,
+          "length": 67200,
+          "sampleRate": 24000
+        },
+        "build": {
+          "file": "bella-words-01.bin",
+          "offset": 4792800,
+          "length": 62400,
+          "sampleRate": 24000
+        },
+        "calendar": {
+          "file": "bella-words-01.bin",
+          "offset": 4855200,
+          "length": 73200,
+          "sampleRate": 24000
+        },
+        "caught": {
+          "file": "bella-words-01.bin",
+          "offset": 4928400,
+          "length": 58800,
+          "sampleRate": 24000
+        },
+        "centre": {
+          "file": "bella-words-01.bin",
+          "offset": 4987200,
+          "length": 75600,
+          "sampleRate": 24000
+        },
+        "century": {
+          "file": "bella-words-01.bin",
+          "offset": 5062800,
+          "length": 72000,
+          "sampleRate": 24000
+        },
+        "certain": {
+          "file": "bella-words-01.bin",
+          "offset": 5134800,
+          "length": 72000,
+          "sampleRate": 24000
+        },
+        "circle": {
+          "file": "bella-words-01.bin",
+          "offset": 5206800,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "complete": {
+          "file": "bella-words-01.bin",
+          "offset": 5275200,
+          "length": 70800,
+          "sampleRate": 24000
+        },
+        "consider": {
+          "file": "bella-words-01.bin",
+          "offset": 5346000,
+          "length": 75600,
+          "sampleRate": 24000
+        },
+        "continue": {
+          "file": "bella-words-01.bin",
+          "offset": 5421600,
+          "length": 73200,
+          "sampleRate": 24000
+        },
+        "decide": {
+          "file": "bella-words-01.bin",
+          "offset": 5494800,
+          "length": 72000,
+          "sampleRate": 24000
+        },
+        "describe": {
+          "file": "bella-words-01.bin",
+          "offset": 5566800,
+          "length": 80400,
+          "sampleRate": 24000
+        },
+        "different": {
+          "file": "bella-words-01.bin",
+          "offset": 5647200,
+          "length": 69600,
+          "sampleRate": 24000
+        },
+        "difficult": {
+          "file": "bella-words-01.bin",
+          "offset": 5716800,
+          "length": 69600,
+          "sampleRate": 24000
+        },
+        "disappear": {
+          "file": "bella-words-01.bin",
+          "offset": 5786400,
+          "length": 73200,
+          "sampleRate": 24000
+        },
+        "early": {
+          "file": "bella-words-01.bin",
+          "offset": 5859600,
+          "length": 67200,
+          "sampleRate": 24000
+        },
+        "earth": {
+          "file": "bella-words-01.bin",
+          "offset": 5926800,
+          "length": 61200,
+          "sampleRate": 24000
+        },
+        "enough": {
+          "file": "bella-words-01.bin",
+          "offset": 5988000,
+          "length": 62400,
+          "sampleRate": 24000
+        },
+        "exercise": {
+          "file": "bella-words-01.bin",
+          "offset": 6050400,
+          "length": 79200,
+          "sampleRate": 24000
+        },
+        "favourite": {
+          "file": "bella-words-01.bin",
+          "offset": 6129600,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "fruit": {
+          "file": "bella-words-01.bin",
+          "offset": 6198000,
+          "length": 61200,
+          "sampleRate": 24000
+        },
+        "imagine": {
+          "file": "bella-words-01.bin",
+          "offset": 6259200,
+          "length": 75600,
+          "sampleRate": 24000
+        },
+        "accompany": {
+          "file": "bella-words-01.bin",
+          "offset": 6334800,
+          "length": 75600,
+          "sampleRate": 24000
+        },
+        "achieve": {
+          "file": "bella-words-01.bin",
+          "offset": 6410400,
+          "length": 73200,
+          "sampleRate": 24000
+        },
+        "ancient": {
+          "file": "bella-words-01.bin",
+          "offset": 6483600,
+          "length": 69600,
+          "sampleRate": 24000
+        },
+        "apparent": {
+          "file": "bella-words-01.bin",
+          "offset": 6553200,
+          "length": 70800,
+          "sampleRate": 24000
+        },
+        "appreciate": {
+          "file": "bella-words-01.bin",
+          "offset": 6624000,
+          "length": 75600,
+          "sampleRate": 24000
+        },
+        "attached": {
+          "file": "bella-words-01.bin",
+          "offset": 6699600,
+          "length": 70800,
+          "sampleRate": 24000
+        },
+        "available": {
+          "file": "bella-words-01.bin",
+          "offset": 6770400,
+          "length": 73200,
+          "sampleRate": 24000
+        },
+        "average": {
+          "file": "bella-words-01.bin",
+          "offset": 6843600,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "awkward": {
+          "file": "bella-words-01.bin",
+          "offset": 6912000,
+          "length": 69600,
+          "sampleRate": 24000
+        },
+        "bargain": {
+          "file": "bella-words-01.bin",
+          "offset": 6981600,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "bruise": {
+          "file": "bella-words-01.bin",
+          "offset": 7050000,
+          "length": 70800,
+          "sampleRate": 24000
+        },
+        "category": {
+          "file": "bella-words-01.bin",
+          "offset": 7120800,
+          "length": 72000,
+          "sampleRate": 24000
+        },
+        "cemetery": {
+          "file": "bella-words-01.bin",
+          "offset": 7192800,
+          "length": 76800,
+          "sampleRate": 24000
+        },
+        "committee": {
+          "file": "bella-words-01.bin",
+          "offset": 7269600,
+          "length": 69600,
+          "sampleRate": 24000
+        },
+        "communicate": {
+          "file": "bella-words-01.bin",
+          "offset": 7339200,
+          "length": 76800,
+          "sampleRate": 24000
+        },
+        "community": {
+          "file": "bella-words-01.bin",
+          "offset": 7416000,
+          "length": 70800,
+          "sampleRate": 24000
+        },
+        "competition": {
+          "file": "bella-words-01.bin",
+          "offset": 7486800,
+          "length": 78000,
+          "sampleRate": 24000
+        },
+        "conscience": {
+          "file": "bella-words-01.bin",
+          "offset": 7564800,
+          "length": 74400,
+          "sampleRate": 24000
+        },
+        "conscious": {
+          "file": "bella-words-01.bin",
+          "offset": 7639200,
+          "length": 74400,
+          "sampleRate": 24000
+        },
+        "curiosity": {
+          "file": "bella-words-01.bin",
+          "offset": 7713600,
+          "length": 81600,
+          "sampleRate": 24000
+        },
+        "definite": {
+          "file": "bella-words-01.bin",
+          "offset": 7795200,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "desperate": {
+          "file": "bella-words-01.bin",
+          "offset": 7863600,
+          "length": 72000,
+          "sampleRate": 24000
+        },
+        "determined": {
+          "file": "bella-words-01.bin",
+          "offset": 7935600,
+          "length": 74400,
+          "sampleRate": 24000
+        },
+        "develop": {
+          "file": "bella-words-01.bin",
+          "offset": 8010000,
+          "length": 64800,
+          "sampleRate": 24000
+        },
+        "dictionary": {
+          "file": "bella-words-01.bin",
+          "offset": 8074800,
+          "length": 76800,
+          "sampleRate": 24000
+        },
+        "disastrous": {
+          "file": "bella-words-01.bin",
+          "offset": 8151600,
+          "length": 80400,
+          "sampleRate": 24000
+        },
+        "embarrass": {
+          "file": "bella-words-01.bin",
+          "offset": 8232000,
+          "length": 73200,
+          "sampleRate": 24000
+        },
+        "environment": {
+          "file": "bella-words-01.bin",
+          "offset": 8305200,
+          "length": 76800,
+          "sampleRate": 24000
+        },
+        "equipment": {
+          "file": "bella-words-01.bin",
+          "offset": 8382000,
+          "length": 70800,
+          "sampleRate": 24000
+        },
+        "especially": {
+          "file": "bella-words-01.bin",
+          "offset": 8452800,
+          "length": 79200,
+          "sampleRate": 24000
+        },
+        "excellent": {
+          "file": "bella-words-01.bin",
+          "offset": 8532000,
+          "length": 72000,
+          "sampleRate": 24000
+        },
+        "explanation": {
+          "file": "bella-words-01.bin",
+          "offset": 8604000,
+          "length": 85200,
+          "sampleRate": 24000
+        },
+        "mum said we could play.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 0,
+          "length": 96000,
+          "sampleRate": 24000
+        },
+        "please come and sit with me.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 96000,
+          "length": 103200,
+          "sampleRate": 24000
+        },
+        "i put some fruit in my bowl.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 199200,
+          "length": 111600,
+          "sampleRate": 24000
+        },
+        "i have one red sock.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 310800,
+          "length": 103200,
+          "sampleRate": 24000
+        },
+        "we went to the zoo once.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 414000,
+          "length": 97200,
+          "sampleRate": 24000
+        },
+        "my friend likes to draw.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 511200,
+          "length": 104400,
+          "sampleRate": 24000
+        },
+        "we walk to school together.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 615600,
+          "length": 106800,
+          "sampleRate": 24000
+        },
+        "our house has a blue door.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 722400,
+          "length": 114000,
+          "sampleRate": 24000
+        },
+        "i love my family.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 836400,
+          "length": 96000,
+          "sampleRate": 24000
+        },
+        "we are painting today.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 932400,
+          "length": 99600,
+          "sampleRate": 24000
+        },
+        "the rain made a big puddle.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 1032000,
+          "length": 109200,
+          "sampleRate": 24000
+        },
+        "the train stopped at the station.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 1141200,
+          "length": 117600,
+          "sampleRate": 24000
+        },
+        "i found a coin on the path.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 1258800,
+          "length": 106800,
+          "sampleRate": 24000
+        },
+        "i put my toy in the box.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 1365600,
+          "length": 108000,
+          "sampleRate": 24000
+        },
+        "the boat sailed across the lake.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 1473600,
+          "length": 117600,
+          "sampleRate": 24000
+        },
+        "i wore my coat outside.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 1591200,
+          "length": 110400,
+          "sampleRate": 24000
+        },
+        "we saw stars at night.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 1701600,
+          "length": 99600,
+          "sampleRate": 24000
+        },
+        "please turn on the light.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 1801200,
+          "length": 99600,
+          "sampleRate": 24000
+        },
+        "a bird sat in the tree.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 1900800,
+          "length": 103200,
+          "sampleRate": 24000
+        },
+        "the girl kicked the ball.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 2004000,
+          "length": 94800,
+          "sampleRate": 24000
+        },
+        "the tree has green leaves.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 2098800,
+          "length": 104400,
+          "sampleRate": 24000
+        },
+        "my boots are green.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 2203200,
+          "length": 93600,
+          "sampleRate": 24000
+        },
+        "the moon shone above us.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 2296800,
+          "length": 97200,
+          "sampleRate": 24000
+        },
+        "we read a funny book.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 2394000,
+          "length": 94800,
+          "sampleRate": 24000
+        },
+        "i sat on the chair.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 2488800,
+          "length": 91200,
+          "sampleRate": 24000
+        },
+        "i brushed my hair.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 2580000,
+          "length": 90000,
+          "sampleRate": 24000
+        },
+        "i feel happy when we play.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 2670000,
+          "length": 105600,
+          "sampleRate": 24000
+        },
+        "my family ate lunch together.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 2775600,
+          "length": 122400,
+          "sampleRate": 24000
+        },
+        "the rabbit ate a carrot.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 2898000,
+          "length": 99600,
+          "sampleRate": 24000
+        },
+        "we planted seeds in the garden.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 2997600,
+          "length": 126000,
+          "sampleRate": 24000
+        },
+        "we went to the park.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 3123600,
+          "length": 87600,
+          "sampleRate": 24000
+        },
+        "the snow covered the grass.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 3211200,
+          "length": 105600,
+          "sampleRate": 24000
+        },
+        "i wore boots because it was wet.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 3316800,
+          "length": 123600,
+          "sampleRate": 24000
+        },
+        "the flower is beautiful.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 3440400,
+          "length": 102000,
+          "sampleRate": 24000
+        },
+        "many people came to the park.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 3542400,
+          "length": 111600,
+          "sampleRate": 24000
+        },
+        "the children played together.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 3654000,
+          "length": 108000,
+          "sampleRate": 24000
+        },
+        "i watered every plant.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 3762000,
+          "length": 102000,
+          "sampleRate": 24000
+        },
+        "there is a seat for everybody.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 3864000,
+          "length": 115200,
+          "sampleRate": 24000
+        },
+        "the bird has pretty feathers.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 3979200,
+          "length": 108000,
+          "sampleRate": 24000
+        },
+        "we had a great day.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 4087200,
+          "length": 88800,
+          "sampleRate": 24000
+        },
+        "be careful not to break the cup.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 4176000,
+          "length": 121200,
+          "sampleRate": 24000
+        },
+        "dad cooked a steak.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 4297200,
+          "length": 92400,
+          "sampleRate": 24000
+        },
+        "we read after lunch.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 4389600,
+          "length": 96000,
+          "sampleRate": 24000
+        },
+        "the rabbit can run fast.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 4485600,
+          "length": 103200,
+          "sampleRate": 24000
+        },
+        "i was last in the line.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 4588800,
+          "length": 100800,
+          "sampleRate": 24000
+        },
+        "we learned about life in the past.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 4689600,
+          "length": 115200,
+          "sampleRate": 24000
+        },
+        "my father helped me bake.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 4804800,
+          "length": 105600,
+          "sampleRate": 24000
+        },
+        "our class made a poster.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 4910400,
+          "length": 105600,
+          "sampleRate": 24000
+        },
+        "the grass feels soft.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 5016000,
+          "length": 98400,
+          "sampleRate": 24000
+        },
+        "please pass me the ball.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 5114400,
+          "length": 102000,
+          "sampleRate": 24000
+        },
+        "we grew a plant in a pot.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 5216400,
+          "length": 104400,
+          "sampleRate": 24000
+        },
+        "the path leads to the pond.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 5320800,
+          "length": 110400,
+          "sampleRate": 24000
+        },
+        "i had a warm bath.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 5431200,
+          "length": 92400,
+          "sampleRate": 24000
+        },
+        "we played for an hour.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 5523600,
+          "length": 97200,
+          "sampleRate": 24000
+        },
+        "please move your chair closer.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 5620800,
+          "length": 110400,
+          "sampleRate": 24000
+        },
+        "practice helps me improve.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 5731200,
+          "length": 111600,
+          "sampleRate": 24000
+        },
+        "i am sure my bag is here.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 5842800,
+          "length": 106800,
+          "sampleRate": 24000
+        },
+        "we added sugar to the cake.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 5949600,
+          "length": 108000,
+          "sampleRate": 24000
+        },
+        "a speck of dust got in my eye.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 6057600,
+          "length": 127200,
+          "sampleRate": 24000
+        },
+        "i could hear the birds.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 6184800,
+          "length": 92400,
+          "sampleRate": 24000
+        },
+        "we should put our toys away.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 6277200,
+          "length": 111600,
+          "sampleRate": 24000
+        },
+        "i would like a turn.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 6388800,
+          "length": 90000,
+          "sampleRate": 24000
+        },
+        "the gardener was busy today.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 6478800,
+          "length": 114000,
+          "sampleRate": 24000
+        },
+        "i filled my bottle with water.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 6592800,
+          "length": 123600,
+          "sampleRate": 24000
+        },
+        "spilling the juice was an accident.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 6716400,
+          "length": 130800,
+          "sampleRate": 24000
+        },
+        "i wrote our address on the card.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 6847200,
+          "length": 115200,
+          "sampleRate": 24000
+        },
+        "i knew the answer to the question.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 6962400,
+          "length": 121200,
+          "sampleRate": 24000
+        },
+        "stars appear when the sky gets dark.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 7083600,
+          "length": 133200,
+          "sampleRate": 24000
+        },
+        "we will arrive before lunch.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 7216800,
+          "length": 105600,
+          "sampleRate": 24000
+        },
+        "i believe you can do it.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 7322400,
+          "length": 103200,
+          "sampleRate": 24000
+        },
+        "i rode my bicycle to the park.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 7425600,
+          "length": 128400,
+          "sampleRate": 24000
+        },
+        "i took a deep breath.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 7554000,
+          "length": 92400,
+          "sampleRate": 24000
+        },
+        "we breathe through our nose or mouth.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 7646400,
+          "length": 128400,
+          "sampleRate": 24000
+        },
+        "we will build a tall tower.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 7774800,
+          "length": 103200,
+          "sampleRate": 24000
+        },
+        "i marked my birthday on the calendar.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 7878000,
+          "length": 132000,
+          "sampleRate": 24000
+        },
+        "i caught the ball with both hands.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 8010000,
+          "length": 121200,
+          "sampleRate": 24000
+        },
+        "put the bowl in the centre of the table.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 8131200,
+          "length": 133200,
+          "sampleRate": 24000
+        },
+        "a century is a very long time.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 8264400,
+          "length": 145200,
+          "sampleRate": 24000
+        },
+        "i am certain that this is my coat.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 8409600,
+          "length": 126000,
+          "sampleRate": 24000
+        },
+        "i drew a circle around the star.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 8535600,
+          "length": 121200,
+          "sampleRate": 24000
+        },
+        "my picture is complete.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 8656800,
+          "length": 106800,
+          "sampleRate": 24000
+        },
+        "we will consider which game to play.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 8763600,
+          "length": 127200,
+          "sampleRate": 24000
+        },
+        "we can continue our story tomorrow.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 8890800,
+          "length": 134400,
+          "sampleRate": 24000
+        },
+        "i must decide which book to read.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 9025200,
+          "length": 126000,
+          "sampleRate": 24000
+        },
+        "can you describe your favourite toy?": {
+          "file": "bella-sentences-01.bin",
+          "offset": 9151200,
+          "length": 124800,
+          "sampleRate": 24000
+        },
+        "we chose different colours.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 9276000,
+          "length": 106800,
+          "sampleRate": 24000
+        },
+        "the puzzle was difficult at first.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 9382800,
+          "length": 120000,
+          "sampleRate": 24000
+        },
+        "we watched the rabbit disappear behind a tree.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 9502800,
+          "length": 162000,
+          "sampleRate": 24000
+        },
+        "we got to school early.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 9664800,
+          "length": 98400,
+          "sampleRate": 24000
+        },
+        "the earth travels around the sun.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 9763200,
+          "length": 120000,
+          "sampleRate": 24000
+        },
+        "we have enough cups for everyone.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 9883200,
+          "length": 115200,
+          "sampleRate": 24000
+        },
+        "running is good exercise.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 9998400,
+          "length": 114000,
+          "sampleRate": 24000
+        },
+        "this is my favourite story.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 10112400,
+          "length": 114000,
+          "sampleRate": 24000
+        },
+        "we shared a bowl of fruit.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 10226400,
+          "length": 103200,
+          "sampleRate": 24000
+        },
+        "i can imagine a purple monster.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 10329600,
+          "length": 127200,
+          "sampleRate": 24000
+        },
+        "dad will accompany us on the walk.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 10456800,
+          "length": 122400,
+          "sampleRate": 24000
+        },
+        "practice helps us achieve our goals.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 10579200,
+          "length": 135600,
+          "sampleRate": 24000
+        },
+        "we saw an ancient stone wall.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 10714800,
+          "length": 116400,
+          "sampleRate": 24000
+        },
+        "it became apparent that the dog was tired.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 10831200,
+          "length": 154800,
+          "sampleRate": 24000
+        },
+        "i appreciate your help with my picture.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 10986000,
+          "length": 141600,
+          "sampleRate": 24000
+        },
+        "the note was attached to my bag.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 11127600,
+          "length": 123600,
+          "sampleRate": 24000
+        },
+        "there are crayons available on the table.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 11251200,
+          "length": 151200,
+          "sampleRate": 24000
+        },
+        "we worked out the average score.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 11402400,
+          "length": 118800,
+          "sampleRate": 24000
+        },
+        "the big box was awkward to carry.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 11521200,
+          "length": 126000,
+          "sampleRate": 24000
+        },
+        "the book was a bargain.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 11647200,
+          "length": 92400,
+          "sampleRate": 24000
+        },
+        "i have a bruise on my knee.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 11739600,
+          "length": 103200,
+          "sampleRate": 24000
+        },
+        "put each animal in the right category.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 11842800,
+          "length": 139200,
+          "sampleRate": 24000
+        },
+        "we walked past the cemetery.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 11982000,
+          "length": 114000,
+          "sampleRate": 24000
+        },
+        "the school committee planned a fair.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 12096000,
+          "length": 120000,
+          "sampleRate": 24000
+        },
+        "we can communicate with words and signs.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 12216000,
+          "length": 150000,
+          "sampleRate": 24000
+        },
+        "our community planted some trees.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 12366000,
+          "length": 135600,
+          "sampleRate": 24000
+        },
+        "i entered a drawing competition.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 12501600,
+          "length": 128400,
+          "sampleRate": 24000
+        },
+        "my conscience told me to be honest.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 12630000,
+          "length": 134400,
+          "sampleRate": 24000
+        },
+        "the sleepy cat was still conscious.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 12764400,
+          "length": 127200,
+          "sampleRate": 24000
+        },
+        "my curiosity made me open the old box.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 12891600,
+          "length": 175200,
+          "sampleRate": 24000
+        },
+        "we made a definite plan for saturday.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 13066800,
+          "length": 138000,
+          "sampleRate": 24000
+        },
+        "the thirsty dog was desperate for water.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 13204800,
+          "length": 156000,
+          "sampleRate": 24000
+        },
+        "i was determined to finish the puzzle.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 13360800,
+          "length": 145200,
+          "sampleRate": 24000
+        },
+        "seeds develop into plants.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 13506000,
+          "length": 117600,
+          "sampleRate": 24000
+        },
+        "we looked up the word in a dictionary.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 13623600,
+          "length": 124800,
+          "sampleRate": 24000
+        },
+        "the flood had a disastrous effect on the farm.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 13748400,
+          "length": 171600,
+          "sampleRate": 24000
+        },
+        "i did not want to embarrass my friend.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 13920000,
+          "length": 139200,
+          "sampleRate": 24000
+        },
+        "we can help the environment by picking up litter.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 14059200,
+          "length": 170400,
+          "sampleRate": 24000
+        },
+        "we put away the sports equipment.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 14229600,
+          "length": 116400,
+          "sampleRate": 24000
+        },
+        "i like fruit, especially strawberries.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 14346000,
+          "length": 154800,
+          "sampleRate": 24000
+        },
+        "you made an excellent model.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 14500800,
+          "length": 110400,
+          "sampleRate": 24000
+        },
+        "the teacher gave a clear explanation.": {
+          "file": "bella-sentences-01.bin",
+          "offset": 14611200,
+          "length": 142800,
+          "sampleRate": 24000
+        }
+      }
+    },
+    "heart": {
+      "voice": "af_heart",
+      "files": [
+        "heart-welcome-01.bin",
+        "heart-words-01.bin",
+        "heart-sentences-01.bin"
+      ],
+      "clips": {
+        "hello! i am your spelloid. shall we practise together? a little go, a little grow!": {
+          "file": "heart-welcome-01.bin",
+          "offset": 0,
+          "length": 243600,
+          "sampleRate": 24000
+        },
+        "spell.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 243600,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "brilliant! you have got it!": {
+          "file": "heart-welcome-01.bin",
+          "offset": 312000,
+          "length": 97200,
+          "sampleRate": 24000
+        },
+        "lovely work! you remembered that word!": {
+          "file": "heart-welcome-01.bin",
+          "offset": 409200,
+          "length": 135600,
+          "sampleRate": 24000
+        },
+        "a brave try! listen once more, and have another go.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 544800,
+          "length": 183600,
+          "sampleRate": 24000
+        },
+        "we can come back to that word. keep going!": {
+          "file": "heart-welcome-01.bin",
+          "offset": 728400,
+          "length": 144000,
+          "sampleRate": 24000
+        },
+        "a new badge! you have unlocked more ways to make me your own!": {
+          "file": "heart-welcome-01.bin",
+          "offset": 872400,
+          "length": 182400,
+          "sampleRate": 24000
+        },
+        "every word complete! you did it! our egg is ready to hatch!": {
+          "file": "heart-welcome-01.bin",
+          "offset": 1054800,
+          "length": 186000,
+          "sampleRate": 24000
+        },
+        "look at the word. say it with me. cover it when you are ready.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 1240800,
+          "length": 181200,
+          "sampleRate": 24000
+        },
+        "can you build my word with the letters?": {
+          "file": "heart-welcome-01.bin",
+          "offset": 1422000,
+          "length": 120000,
+          "sampleRate": 24000
+        },
+        "which word fits the sentence?": {
+          "file": "heart-welcome-01.bin",
+          "offset": 1542000,
+          "length": 102000,
+          "sampleRate": 24000
+        },
+        "which word matches the meaning?": {
+          "file": "heart-welcome-01.bin",
+          "offset": 1644000,
+          "length": 104400,
+          "sampleRate": 24000
+        },
+        "no new badges in this round. we are just practising for fun!": {
+          "file": "heart-welcome-01.bin",
+          "offset": 1748400,
+          "length": 199200,
+          "sampleRate": 24000
+        },
+        "you gave it a go! shall we keep playing or update your pal?": {
+          "file": "heart-welcome-01.bin",
+          "offset": 1947600,
+          "length": 180000,
+          "sampleRate": 24000
+        },
+        "you made me! let us get spelling together.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 2127600,
+          "length": 142800,
+          "sampleRate": 24000
+        },
+        "a tiny wiggle! tap the egg gently to help our baby hatch.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 2270400,
+          "length": 201600,
+          "sampleRate": 24000
+        },
+        "forgotten": {
+          "file": "heart-welcome-01.bin",
+          "offset": 2472000,
+          "length": 73200,
+          "sampleRate": 24000
+        },
+        "i had forgotten my lunch.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 2545200,
+          "length": 94800,
+          "sampleRate": 24000
+        },
+        "forgetting": {
+          "file": "heart-welcome-01.bin",
+          "offset": 2640000,
+          "length": 72000,
+          "sampleRate": 24000
+        },
+        "i keep forgetting where my socks are.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 2712000,
+          "length": 117600,
+          "sampleRate": 24000
+        },
+        "gardener": {
+          "file": "heart-welcome-01.bin",
+          "offset": 2829600,
+          "length": 69600,
+          "sampleRate": 24000
+        },
+        "the gardener planted some flowers.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 2899200,
+          "length": 118800,
+          "sampleRate": 24000
+        },
+        "gardening": {
+          "file": "heart-welcome-01.bin",
+          "offset": 3018000,
+          "length": 70800,
+          "sampleRate": 24000
+        },
+        "we enjoy gardening together.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 3088800,
+          "length": 110400,
+          "sampleRate": 24000
+        },
+        "beginner": {
+          "file": "heart-welcome-01.bin",
+          "offset": 3199200,
+          "length": 70800,
+          "sampleRate": 24000
+        },
+        "i am a beginner at swimming.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 3270000,
+          "length": 98400,
+          "sampleRate": 24000
+        },
+        "beginning": {
+          "file": "heart-welcome-01.bin",
+          "offset": 3368400,
+          "length": 69600,
+          "sampleRate": 24000
+        },
+        "i liked the beginning of the story.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 3438000,
+          "length": 114000,
+          "sampleRate": 24000
+        },
+        "prefer": {
+          "file": "heart-welcome-01.bin",
+          "offset": 3552000,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "i prefer apples to pears.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 3620400,
+          "length": 106800,
+          "sampleRate": 24000
+        },
+        "preferred": {
+          "file": "heart-welcome-01.bin",
+          "offset": 3727200,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "she preferred the blue hat.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 3795600,
+          "length": 92400,
+          "sampleRate": 24000
+        },
+        "limiting": {
+          "file": "heart-welcome-01.bin",
+          "offset": 3888000,
+          "length": 67200,
+          "sampleRate": 24000
+        },
+        "we are limiting our screen time.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 3955200,
+          "length": 109200,
+          "sampleRate": 24000
+        },
+        "limited": {
+          "file": "heart-welcome-01.bin",
+          "offset": 4064400,
+          "length": 67200,
+          "sampleRate": 24000
+        },
+        "we have limited space for toys.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 4131600,
+          "length": 115200,
+          "sampleRate": 24000
+        },
+        "happiest": {
+          "file": "heart-welcome-01.bin",
+          "offset": 4246800,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "i am happiest when we play together.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 4315200,
+          "length": 127200,
+          "sampleRate": 24000
+        },
+        "happier": {
+          "file": "heart-welcome-01.bin",
+          "offset": 4442400,
+          "length": 67200,
+          "sampleRate": 24000
+        },
+        "he felt happier after a hug.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 4509600,
+          "length": 111600,
+          "sampleRate": 24000
+        },
+        "benefited": {
+          "file": "heart-welcome-01.bin",
+          "offset": 4621200,
+          "length": 70800,
+          "sampleRate": 24000
+        },
+        "the plants benefited from the rain.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 4692000,
+          "length": 117600,
+          "sampleRate": 24000
+        },
+        "drizzling": {
+          "file": "heart-welcome-01.bin",
+          "offset": 4809600,
+          "length": 70800,
+          "sampleRate": 24000
+        },
+        "it was drizzling when we went out.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 4880400,
+          "length": 109200,
+          "sampleRate": 24000
+        },
+        "multiplying": {
+          "file": "heart-welcome-01.bin",
+          "offset": 4989600,
+          "length": 80400,
+          "sampleRate": 24000
+        },
+        "we are multiplying numbers at school.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 5070000,
+          "length": 121200,
+          "sampleRate": 24000
+        },
+        "not remembered.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 5191200,
+          "length": 78000,
+          "sampleRate": 24000
+        },
+        "i had blank my lunch.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 5269200,
+          "length": 92400,
+          "sampleRate": 24000
+        },
+        "not remembering something.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 5361600,
+          "length": 98400,
+          "sampleRate": 24000
+        },
+        "i keep blank where my socks are.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 5460000,
+          "length": 112800,
+          "sampleRate": 24000
+        },
+        "someone who looks after plants and gardens.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 5572800,
+          "length": 140400,
+          "sampleRate": 24000
+        },
+        "the blank planted some flowers.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 5713200,
+          "length": 110400,
+          "sampleRate": 24000
+        },
+        "growing plants and looking after a garden.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 5823600,
+          "length": 146400,
+          "sampleRate": 24000
+        },
+        "we enjoy blank together.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 5970000,
+          "length": 99600,
+          "sampleRate": 24000
+        },
+        "someone who is just starting to learn something.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 6069600,
+          "length": 139200,
+          "sampleRate": 24000
+        },
+        "i am a blank at swimming.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 6208800,
+          "length": 91200,
+          "sampleRate": 24000
+        },
+        "the start of something.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 6300000,
+          "length": 85200,
+          "sampleRate": 24000
+        },
+        "i liked the blank of the story.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 6385200,
+          "length": 105600,
+          "sampleRate": 24000
+        },
+        "to like one thing more than another.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 6490800,
+          "length": 115200,
+          "sampleRate": 24000
+        },
+        "i blank apples to pears.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 6606000,
+          "length": 103200,
+          "sampleRate": 24000
+        },
+        "liked one thing more than another.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 6709200,
+          "length": 108000,
+          "sampleRate": 24000
+        },
+        "she blank the blue hat.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 6817200,
+          "length": 90000,
+          "sampleRate": 24000
+        },
+        "keeping the amount or size of something small.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 6907200,
+          "length": 154800,
+          "sampleRate": 24000
+        },
+        "we are blank our screen time.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 7062000,
+          "length": 104400,
+          "sampleRate": 24000
+        },
+        "only a small amount, number or size.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 7166400,
+          "length": 138000,
+          "sampleRate": 24000
+        },
+        "we have blank space for toys.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 7304400,
+          "length": 110400,
+          "sampleRate": 24000
+        },
+        "feeling the most happy.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 7414800,
+          "length": 93600,
+          "sampleRate": 24000
+        },
+        "i am blank when we play together.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 7508400,
+          "length": 116400,
+          "sampleRate": 24000
+        },
+        "feeling more happy.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 7624800,
+          "length": 87600,
+          "sampleRate": 24000
+        },
+        "he felt blank after a hug.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 7712400,
+          "length": 109200,
+          "sampleRate": 24000
+        },
+        "was helped by something.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 7821600,
+          "length": 92400,
+          "sampleRate": 24000
+        },
+        "the plants blank from the rain.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 7914000,
+          "length": 102000,
+          "sampleRate": 24000
+        },
+        "raining very lightly in tiny drops.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 8016000,
+          "length": 141600,
+          "sampleRate": 24000
+        },
+        "it was blank when we went out.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 8157600,
+          "length": 99600,
+          "sampleRate": 24000
+        },
+        "finding the total in equal groups, like three groups of two.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 8257200,
+          "length": 193200,
+          "sampleRate": 24000
+        },
+        "we are blank numbers at school.": {
+          "file": "heart-welcome-01.bin",
+          "offset": 8450400,
+          "length": 106800,
+          "sampleRate": 24000
+        },
+        "said": {
+          "file": "heart-words-01.bin",
+          "offset": 0,
+          "length": 63600,
+          "sampleRate": 24000
+        },
+        "come": {
+          "file": "heart-words-01.bin",
+          "offset": 63600,
+          "length": 63600,
+          "sampleRate": 24000
+        },
+        "some": {
+          "file": "heart-words-01.bin",
+          "offset": 127200,
+          "length": 63600,
+          "sampleRate": 24000
+        },
+        "one": {
+          "file": "heart-words-01.bin",
+          "offset": 190800,
+          "length": 61200,
+          "sampleRate": 24000
+        },
+        "once": {
+          "file": "heart-words-01.bin",
+          "offset": 252000,
+          "length": 66000,
+          "sampleRate": 24000
+        },
+        "friend": {
+          "file": "heart-words-01.bin",
+          "offset": 318000,
+          "length": 66000,
+          "sampleRate": 24000
+        },
+        "school": {
+          "file": "heart-words-01.bin",
+          "offset": 384000,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "house": {
+          "file": "heart-words-01.bin",
+          "offset": 452400,
+          "length": 61200,
+          "sampleRate": 24000
+        },
+        "love": {
+          "file": "heart-words-01.bin",
+          "offset": 513600,
+          "length": 64800,
+          "sampleRate": 24000
+        },
+        "today": {
+          "file": "heart-words-01.bin",
+          "offset": 578400,
+          "length": 67200,
+          "sampleRate": 24000
+        },
+        "rain": {
+          "file": "heart-words-01.bin",
+          "offset": 645600,
+          "length": 66000,
+          "sampleRate": 24000
+        },
+        "train": {
+          "file": "heart-words-01.bin",
+          "offset": 711600,
+          "length": 66000,
+          "sampleRate": 24000
+        },
+        "coin": {
+          "file": "heart-words-01.bin",
+          "offset": 777600,
+          "length": 67200,
+          "sampleRate": 24000
+        },
+        "toy": {
+          "file": "heart-words-01.bin",
+          "offset": 844800,
+          "length": 62400,
+          "sampleRate": 24000
+        },
+        "boat": {
+          "file": "heart-words-01.bin",
+          "offset": 907200,
+          "length": 60000,
+          "sampleRate": 24000
+        },
+        "coat": {
+          "file": "heart-words-01.bin",
+          "offset": 967200,
+          "length": 58800,
+          "sampleRate": 24000
+        },
+        "night": {
+          "file": "heart-words-01.bin",
+          "offset": 1026000,
+          "length": 63600,
+          "sampleRate": 24000
+        },
+        "light": {
+          "file": "heart-words-01.bin",
+          "offset": 1089600,
+          "length": 61200,
+          "sampleRate": 24000
+        },
+        "bird": {
+          "file": "heart-words-01.bin",
+          "offset": 1150800,
+          "length": 60000,
+          "sampleRate": 24000
+        },
+        "girl": {
+          "file": "heart-words-01.bin",
+          "offset": 1210800,
+          "length": 42000,
+          "sampleRate": 24000
+        },
+        "tree": {
+          "file": "heart-words-01.bin",
+          "offset": 1252800,
+          "length": 64800,
+          "sampleRate": 24000
+        },
+        "green": {
+          "file": "heart-words-01.bin",
+          "offset": 1317600,
+          "length": 67200,
+          "sampleRate": 24000
+        },
+        "moon": {
+          "file": "heart-words-01.bin",
+          "offset": 1384800,
+          "length": 67200,
+          "sampleRate": 24000
+        },
+        "book": {
+          "file": "heart-words-01.bin",
+          "offset": 1452000,
+          "length": 55200,
+          "sampleRate": 24000
+        },
+        "chair": {
+          "file": "heart-words-01.bin",
+          "offset": 1507200,
+          "length": 63600,
+          "sampleRate": 24000
+        },
+        "hair": {
+          "file": "heart-words-01.bin",
+          "offset": 1570800,
+          "length": 60000,
+          "sampleRate": 24000
+        },
+        "happy": {
+          "file": "heart-words-01.bin",
+          "offset": 1630800,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "family": {
+          "file": "heart-words-01.bin",
+          "offset": 1699200,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "carrot": {
+          "file": "heart-words-01.bin",
+          "offset": 1767600,
+          "length": 62400,
+          "sampleRate": 24000
+        },
+        "garden": {
+          "file": "heart-words-01.bin",
+          "offset": 1830000,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "park": {
+          "file": "heart-words-01.bin",
+          "offset": 1898400,
+          "length": 62400,
+          "sampleRate": 24000
+        },
+        "snow": {
+          "file": "heart-words-01.bin",
+          "offset": 1960800,
+          "length": 66000,
+          "sampleRate": 24000
+        },
+        "because": {
+          "file": "heart-words-01.bin",
+          "offset": 2026800,
+          "length": 67200,
+          "sampleRate": 24000
+        },
+        "beautiful": {
+          "file": "heart-words-01.bin",
+          "offset": 2094000,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "people": {
+          "file": "heart-words-01.bin",
+          "offset": 2162400,
+          "length": 66000,
+          "sampleRate": 24000
+        },
+        "children": {
+          "file": "heart-words-01.bin",
+          "offset": 2228400,
+          "length": 69600,
+          "sampleRate": 24000
+        },
+        "every": {
+          "file": "heart-words-01.bin",
+          "offset": 2298000,
+          "length": 69600,
+          "sampleRate": 24000
+        },
+        "everybody": {
+          "file": "heart-words-01.bin",
+          "offset": 2367600,
+          "length": 76800,
+          "sampleRate": 24000
+        },
+        "pretty": {
+          "file": "heart-words-01.bin",
+          "offset": 2444400,
+          "length": 67200,
+          "sampleRate": 24000
+        },
+        "great": {
+          "file": "heart-words-01.bin",
+          "offset": 2511600,
+          "length": 63600,
+          "sampleRate": 24000
+        },
+        "break": {
+          "file": "heart-words-01.bin",
+          "offset": 2575200,
+          "length": 62400,
+          "sampleRate": 24000
+        },
+        "steak": {
+          "file": "heart-words-01.bin",
+          "offset": 2637600,
+          "length": 62400,
+          "sampleRate": 24000
+        },
+        "after": {
+          "file": "heart-words-01.bin",
+          "offset": 2700000,
+          "length": 73200,
+          "sampleRate": 24000
+        },
+        "fast": {
+          "file": "heart-words-01.bin",
+          "offset": 2773200,
+          "length": 64800,
+          "sampleRate": 24000
+        },
+        "last": {
+          "file": "heart-words-01.bin",
+          "offset": 2838000,
+          "length": 66000,
+          "sampleRate": 24000
+        },
+        "past": {
+          "file": "heart-words-01.bin",
+          "offset": 2904000,
+          "length": 66000,
+          "sampleRate": 24000
+        },
+        "father": {
+          "file": "heart-words-01.bin",
+          "offset": 2970000,
+          "length": 69600,
+          "sampleRate": 24000
+        },
+        "class": {
+          "file": "heart-words-01.bin",
+          "offset": 3039600,
+          "length": 64800,
+          "sampleRate": 24000
+        },
+        "grass": {
+          "file": "heart-words-01.bin",
+          "offset": 3104400,
+          "length": 66000,
+          "sampleRate": 24000
+        },
+        "pass": {
+          "file": "heart-words-01.bin",
+          "offset": 3170400,
+          "length": 64800,
+          "sampleRate": 24000
+        },
+        "plant": {
+          "file": "heart-words-01.bin",
+          "offset": 3235200,
+          "length": 62400,
+          "sampleRate": 24000
+        },
+        "path": {
+          "file": "heart-words-01.bin",
+          "offset": 3297600,
+          "length": 60000,
+          "sampleRate": 24000
+        },
+        "bath": {
+          "file": "heart-words-01.bin",
+          "offset": 3357600,
+          "length": 61200,
+          "sampleRate": 24000
+        },
+        "hour": {
+          "file": "heart-words-01.bin",
+          "offset": 3418800,
+          "length": 64800,
+          "sampleRate": 24000
+        },
+        "move": {
+          "file": "heart-words-01.bin",
+          "offset": 3483600,
+          "length": 66000,
+          "sampleRate": 24000
+        },
+        "improve": {
+          "file": "heart-words-01.bin",
+          "offset": 3549600,
+          "length": 73200,
+          "sampleRate": 24000
+        },
+        "sure": {
+          "file": "heart-words-01.bin",
+          "offset": 3622800,
+          "length": 61200,
+          "sampleRate": 24000
+        },
+        "sugar": {
+          "file": "heart-words-01.bin",
+          "offset": 3684000,
+          "length": 69600,
+          "sampleRate": 24000
+        },
+        "eye": {
+          "file": "heart-words-01.bin",
+          "offset": 3753600,
+          "length": 63600,
+          "sampleRate": 24000
+        },
+        "could": {
+          "file": "heart-words-01.bin",
+          "offset": 3817200,
+          "length": 62400,
+          "sampleRate": 24000
+        },
+        "should": {
+          "file": "heart-words-01.bin",
+          "offset": 3879600,
+          "length": 61200,
+          "sampleRate": 24000
+        },
+        "would": {
+          "file": "heart-words-01.bin",
+          "offset": 3940800,
+          "length": 61200,
+          "sampleRate": 24000
+        },
+        "busy": {
+          "file": "heart-words-01.bin",
+          "offset": 4002000,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "water": {
+          "file": "heart-words-01.bin",
+          "offset": 4070400,
+          "length": 64800,
+          "sampleRate": 24000
+        },
+        "accident": {
+          "file": "heart-words-01.bin",
+          "offset": 4135200,
+          "length": 73200,
+          "sampleRate": 24000
+        },
+        "address": {
+          "file": "heart-words-01.bin",
+          "offset": 4208400,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "answer": {
+          "file": "heart-words-01.bin",
+          "offset": 4276800,
+          "length": 75600,
+          "sampleRate": 24000
+        },
+        "appear": {
+          "file": "heart-words-01.bin",
+          "offset": 4352400,
+          "length": 66000,
+          "sampleRate": 24000
+        },
+        "arrive": {
+          "file": "heart-words-01.bin",
+          "offset": 4418400,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "believe": {
+          "file": "heart-words-01.bin",
+          "offset": 4486800,
+          "length": 67200,
+          "sampleRate": 24000
+        },
+        "bicycle": {
+          "file": "heart-words-01.bin",
+          "offset": 4554000,
+          "length": 73200,
+          "sampleRate": 24000
+        },
+        "breath": {
+          "file": "heart-words-01.bin",
+          "offset": 4627200,
+          "length": 61200,
+          "sampleRate": 24000
+        },
+        "breathe": {
+          "file": "heart-words-01.bin",
+          "offset": 4688400,
+          "length": 66000,
+          "sampleRate": 24000
+        },
+        "build": {
+          "file": "heart-words-01.bin",
+          "offset": 4754400,
+          "length": 62400,
+          "sampleRate": 24000
+        },
+        "calendar": {
+          "file": "heart-words-01.bin",
+          "offset": 4816800,
+          "length": 70800,
+          "sampleRate": 24000
+        },
+        "caught": {
+          "file": "heart-words-01.bin",
+          "offset": 4887600,
+          "length": 57600,
+          "sampleRate": 24000
+        },
+        "centre": {
+          "file": "heart-words-01.bin",
+          "offset": 4945200,
+          "length": 73200,
+          "sampleRate": 24000
+        },
+        "century": {
+          "file": "heart-words-01.bin",
+          "offset": 5018400,
+          "length": 70800,
+          "sampleRate": 24000
+        },
+        "certain": {
+          "file": "heart-words-01.bin",
+          "offset": 5089200,
+          "length": 72000,
+          "sampleRate": 24000
+        },
+        "circle": {
+          "file": "heart-words-01.bin",
+          "offset": 5161200,
+          "length": 67200,
+          "sampleRate": 24000
+        },
+        "complete": {
+          "file": "heart-words-01.bin",
+          "offset": 5228400,
+          "length": 69600,
+          "sampleRate": 24000
+        },
+        "consider": {
+          "file": "heart-words-01.bin",
+          "offset": 5298000,
+          "length": 74400,
+          "sampleRate": 24000
+        },
+        "continue": {
+          "file": "heart-words-01.bin",
+          "offset": 5372400,
+          "length": 72000,
+          "sampleRate": 24000
+        },
+        "decide": {
+          "file": "heart-words-01.bin",
+          "offset": 5444400,
+          "length": 72000,
+          "sampleRate": 24000
+        },
+        "describe": {
+          "file": "heart-words-01.bin",
+          "offset": 5516400,
+          "length": 79200,
+          "sampleRate": 24000
+        },
+        "different": {
+          "file": "heart-words-01.bin",
+          "offset": 5595600,
+          "length": 69600,
+          "sampleRate": 24000
+        },
+        "difficult": {
+          "file": "heart-words-01.bin",
+          "offset": 5665200,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "disappear": {
+          "file": "heart-words-01.bin",
+          "offset": 5733600,
+          "length": 72000,
+          "sampleRate": 24000
+        },
+        "early": {
+          "file": "heart-words-01.bin",
+          "offset": 5805600,
+          "length": 66000,
+          "sampleRate": 24000
+        },
+        "earth": {
+          "file": "heart-words-01.bin",
+          "offset": 5871600,
+          "length": 61200,
+          "sampleRate": 24000
+        },
+        "enough": {
+          "file": "heart-words-01.bin",
+          "offset": 5932800,
+          "length": 61200,
+          "sampleRate": 24000
+        },
+        "exercise": {
+          "file": "heart-words-01.bin",
+          "offset": 5994000,
+          "length": 80400,
+          "sampleRate": 24000
+        },
+        "favourite": {
+          "file": "heart-words-01.bin",
+          "offset": 6074400,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "fruit": {
+          "file": "heart-words-01.bin",
+          "offset": 6142800,
+          "length": 61200,
+          "sampleRate": 24000
+        },
+        "imagine": {
+          "file": "heart-words-01.bin",
+          "offset": 6204000,
+          "length": 76800,
+          "sampleRate": 24000
+        },
+        "accompany": {
+          "file": "heart-words-01.bin",
+          "offset": 6280800,
+          "length": 73200,
+          "sampleRate": 24000
+        },
+        "achieve": {
+          "file": "heart-words-01.bin",
+          "offset": 6354000,
+          "length": 73200,
+          "sampleRate": 24000
+        },
+        "ancient": {
+          "file": "heart-words-01.bin",
+          "offset": 6427200,
+          "length": 67200,
+          "sampleRate": 24000
+        },
+        "apparent": {
+          "file": "heart-words-01.bin",
+          "offset": 6494400,
+          "length": 69600,
+          "sampleRate": 24000
+        },
+        "appreciate": {
+          "file": "heart-words-01.bin",
+          "offset": 6564000,
+          "length": 74400,
+          "sampleRate": 24000
+        },
+        "attached": {
+          "file": "heart-words-01.bin",
+          "offset": 6638400,
+          "length": 70800,
+          "sampleRate": 24000
+        },
+        "available": {
+          "file": "heart-words-01.bin",
+          "offset": 6709200,
+          "length": 69600,
+          "sampleRate": 24000
+        },
+        "average": {
+          "file": "heart-words-01.bin",
+          "offset": 6778800,
+          "length": 67200,
+          "sampleRate": 24000
+        },
+        "awkward": {
+          "file": "heart-words-01.bin",
+          "offset": 6846000,
+          "length": 69600,
+          "sampleRate": 24000
+        },
+        "bargain": {
+          "file": "heart-words-01.bin",
+          "offset": 6915600,
+          "length": 67200,
+          "sampleRate": 24000
+        },
+        "bruise": {
+          "file": "heart-words-01.bin",
+          "offset": 6982800,
+          "length": 70800,
+          "sampleRate": 24000
+        },
+        "category": {
+          "file": "heart-words-01.bin",
+          "offset": 7053600,
+          "length": 69600,
+          "sampleRate": 24000
+        },
+        "cemetery": {
+          "file": "heart-words-01.bin",
+          "offset": 7123200,
+          "length": 74400,
+          "sampleRate": 24000
+        },
+        "committee": {
+          "file": "heart-words-01.bin",
+          "offset": 7197600,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "communicate": {
+          "file": "heart-words-01.bin",
+          "offset": 7266000,
+          "length": 73200,
+          "sampleRate": 24000
+        },
+        "community": {
+          "file": "heart-words-01.bin",
+          "offset": 7339200,
+          "length": 69600,
+          "sampleRate": 24000
+        },
+        "competition": {
+          "file": "heart-words-01.bin",
+          "offset": 7408800,
+          "length": 73200,
+          "sampleRate": 24000
+        },
+        "conscience": {
+          "file": "heart-words-01.bin",
+          "offset": 7482000,
+          "length": 70800,
+          "sampleRate": 24000
+        },
+        "conscious": {
+          "file": "heart-words-01.bin",
+          "offset": 7552800,
+          "length": 72000,
+          "sampleRate": 24000
+        },
+        "curiosity": {
+          "file": "heart-words-01.bin",
+          "offset": 7624800,
+          "length": 80400,
+          "sampleRate": 24000
+        },
+        "definite": {
+          "file": "heart-words-01.bin",
+          "offset": 7705200,
+          "length": 69600,
+          "sampleRate": 24000
+        },
+        "desperate": {
+          "file": "heart-words-01.bin",
+          "offset": 7774800,
+          "length": 69600,
+          "sampleRate": 24000
+        },
+        "determined": {
+          "file": "heart-words-01.bin",
+          "offset": 7844400,
+          "length": 73200,
+          "sampleRate": 24000
+        },
+        "develop": {
+          "file": "heart-words-01.bin",
+          "offset": 7917600,
+          "length": 64800,
+          "sampleRate": 24000
+        },
+        "dictionary": {
+          "file": "heart-words-01.bin",
+          "offset": 7982400,
+          "length": 74400,
+          "sampleRate": 24000
+        },
+        "disastrous": {
+          "file": "heart-words-01.bin",
+          "offset": 8056800,
+          "length": 78000,
+          "sampleRate": 24000
+        },
+        "embarrass": {
+          "file": "heart-words-01.bin",
+          "offset": 8134800,
+          "length": 72000,
+          "sampleRate": 24000
+        },
+        "environment": {
+          "file": "heart-words-01.bin",
+          "offset": 8206800,
+          "length": 74400,
+          "sampleRate": 24000
+        },
+        "equipment": {
+          "file": "heart-words-01.bin",
+          "offset": 8281200,
+          "length": 67200,
+          "sampleRate": 24000
+        },
+        "especially": {
+          "file": "heart-words-01.bin",
+          "offset": 8348400,
+          "length": 76800,
+          "sampleRate": 24000
+        },
+        "excellent": {
+          "file": "heart-words-01.bin",
+          "offset": 8425200,
+          "length": 69600,
+          "sampleRate": 24000
+        },
+        "explanation": {
+          "file": "heart-words-01.bin",
+          "offset": 8494800,
+          "length": 80400,
+          "sampleRate": 24000
+        },
+        "mum said we could play.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 0,
+          "length": 86400,
+          "sampleRate": 24000
+        },
+        "please come and sit with me.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 86400,
+          "length": 94800,
+          "sampleRate": 24000
+        },
+        "i put some fruit in my bowl.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 181200,
+          "length": 99600,
+          "sampleRate": 24000
+        },
+        "i have one red sock.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 280800,
+          "length": 96000,
+          "sampleRate": 24000
+        },
+        "we went to the zoo once.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 376800,
+          "length": 94800,
+          "sampleRate": 24000
+        },
+        "my friend likes to draw.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 471600,
+          "length": 93600,
+          "sampleRate": 24000
+        },
+        "we walk to school together.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 565200,
+          "length": 97200,
+          "sampleRate": 24000
+        },
+        "our house has a blue door.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 662400,
+          "length": 102000,
+          "sampleRate": 24000
+        },
+        "i love my family.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 764400,
+          "length": 92400,
+          "sampleRate": 24000
+        },
+        "we are painting today.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 856800,
+          "length": 91200,
+          "sampleRate": 24000
+        },
+        "the rain made a big puddle.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 948000,
+          "length": 98400,
+          "sampleRate": 24000
+        },
+        "the train stopped at the station.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 1046400,
+          "length": 112800,
+          "sampleRate": 24000
+        },
+        "i found a coin on the path.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 1159200,
+          "length": 100800,
+          "sampleRate": 24000
+        },
+        "i put my toy in the box.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 1260000,
+          "length": 102000,
+          "sampleRate": 24000
+        },
+        "the boat sailed across the lake.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 1362000,
+          "length": 108000,
+          "sampleRate": 24000
+        },
+        "i wore my coat outside.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 1470000,
+          "length": 100800,
+          "sampleRate": 24000
+        },
+        "we saw stars at night.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 1570800,
+          "length": 93600,
+          "sampleRate": 24000
+        },
+        "please turn on the light.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 1664400,
+          "length": 90000,
+          "sampleRate": 24000
+        },
+        "a bird sat in the tree.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 1754400,
+          "length": 96000,
+          "sampleRate": 24000
+        },
+        "the girl kicked the ball.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 1850400,
+          "length": 88800,
+          "sampleRate": 24000
+        },
+        "the tree has green leaves.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 1939200,
+          "length": 99600,
+          "sampleRate": 24000
+        },
+        "my boots are green.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 2038800,
+          "length": 84000,
+          "sampleRate": 24000
+        },
+        "the moon shone above us.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 2122800,
+          "length": 92400,
+          "sampleRate": 24000
+        },
+        "we read a funny book.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 2215200,
+          "length": 87600,
+          "sampleRate": 24000
+        },
+        "i sat on the chair.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 2302800,
+          "length": 82800,
+          "sampleRate": 24000
+        },
+        "i brushed my hair.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 2385600,
+          "length": 84000,
+          "sampleRate": 24000
+        },
+        "i feel happy when we play.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 2469600,
+          "length": 97200,
+          "sampleRate": 24000
+        },
+        "my family ate lunch together.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 2566800,
+          "length": 112800,
+          "sampleRate": 24000
+        },
+        "the rabbit ate a carrot.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 2679600,
+          "length": 93600,
+          "sampleRate": 24000
+        },
+        "we planted seeds in the garden.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 2773200,
+          "length": 112800,
+          "sampleRate": 24000
+        },
+        "we went to the park.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 2886000,
+          "length": 82800,
+          "sampleRate": 24000
+        },
+        "the snow covered the grass.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 2968800,
+          "length": 100800,
+          "sampleRate": 24000
+        },
+        "i wore boots because it was wet.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 3069600,
+          "length": 114000,
+          "sampleRate": 24000
+        },
+        "the flower is beautiful.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 3183600,
+          "length": 96000,
+          "sampleRate": 24000
+        },
+        "many people came to the park.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 3279600,
+          "length": 105600,
+          "sampleRate": 24000
+        },
+        "the children played together.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 3385200,
+          "length": 100800,
+          "sampleRate": 24000
+        },
+        "i watered every plant.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 3486000,
+          "length": 93600,
+          "sampleRate": 24000
+        },
+        "there is a seat for everybody.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 3579600,
+          "length": 106800,
+          "sampleRate": 24000
+        },
+        "the bird has pretty feathers.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 3686400,
+          "length": 103200,
+          "sampleRate": 24000
+        },
+        "we had a great day.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 3789600,
+          "length": 84000,
+          "sampleRate": 24000
+        },
+        "be careful not to break the cup.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 3873600,
+          "length": 106800,
+          "sampleRate": 24000
+        },
+        "dad cooked a steak.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 3980400,
+          "length": 85200,
+          "sampleRate": 24000
+        },
+        "we read after lunch.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 4065600,
+          "length": 91200,
+          "sampleRate": 24000
+        },
+        "the rabbit can run fast.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 4156800,
+          "length": 97200,
+          "sampleRate": 24000
+        },
+        "i was last in the line.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 4254000,
+          "length": 92400,
+          "sampleRate": 24000
+        },
+        "we learned about life in the past.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 4346400,
+          "length": 108000,
+          "sampleRate": 24000
+        },
+        "my father helped me bake.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 4454400,
+          "length": 99600,
+          "sampleRate": 24000
+        },
+        "our class made a poster.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 4554000,
+          "length": 97200,
+          "sampleRate": 24000
+        },
+        "the grass feels soft.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 4651200,
+          "length": 91200,
+          "sampleRate": 24000
+        },
+        "please pass me the ball.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 4742400,
+          "length": 91200,
+          "sampleRate": 24000
+        },
+        "we grew a plant in a pot.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 4833600,
+          "length": 100800,
+          "sampleRate": 24000
+        },
+        "the path leads to the pond.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 4934400,
+          "length": 100800,
+          "sampleRate": 24000
+        },
+        "i had a warm bath.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 5035200,
+          "length": 85200,
+          "sampleRate": 24000
+        },
+        "we played for an hour.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 5120400,
+          "length": 86400,
+          "sampleRate": 24000
+        },
+        "please move your chair closer.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 5206800,
+          "length": 104400,
+          "sampleRate": 24000
+        },
+        "practice helps me improve.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 5311200,
+          "length": 105600,
+          "sampleRate": 24000
+        },
+        "i am sure my bag is here.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 5416800,
+          "length": 97200,
+          "sampleRate": 24000
+        },
+        "we added sugar to the cake.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 5514000,
+          "length": 104400,
+          "sampleRate": 24000
+        },
+        "a speck of dust got in my eye.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 5618400,
+          "length": 116400,
+          "sampleRate": 24000
+        },
+        "i could hear the birds.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 5734800,
+          "length": 86400,
+          "sampleRate": 24000
+        },
+        "we should put our toys away.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 5821200,
+          "length": 100800,
+          "sampleRate": 24000
+        },
+        "i would like a turn.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 5922000,
+          "length": 84000,
+          "sampleRate": 24000
+        },
+        "the gardener was busy today.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 6006000,
+          "length": 106800,
+          "sampleRate": 24000
+        },
+        "i filled my bottle with water.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 6112800,
+          "length": 110400,
+          "sampleRate": 24000
+        },
+        "spilling the juice was an accident.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 6223200,
+          "length": 121200,
+          "sampleRate": 24000
+        },
+        "i wrote our address on the card.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 6344400,
+          "length": 112800,
+          "sampleRate": 24000
+        },
+        "i knew the answer to the question.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 6457200,
+          "length": 111600,
+          "sampleRate": 24000
+        },
+        "stars appear when the sky gets dark.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 6568800,
+          "length": 124800,
+          "sampleRate": 24000
+        },
+        "we will arrive before lunch.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 6693600,
+          "length": 99600,
+          "sampleRate": 24000
+        },
+        "i believe you can do it.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 6793200,
+          "length": 96000,
+          "sampleRate": 24000
+        },
+        "i rode my bicycle to the park.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 6889200,
+          "length": 118800,
+          "sampleRate": 24000
+        },
+        "i took a deep breath.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 7008000,
+          "length": 86400,
+          "sampleRate": 24000
+        },
+        "we breathe through our nose or mouth.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 7094400,
+          "length": 117600,
+          "sampleRate": 24000
+        },
+        "we will build a tall tower.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 7212000,
+          "length": 93600,
+          "sampleRate": 24000
+        },
+        "i marked my birthday on the calendar.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 7305600,
+          "length": 124800,
+          "sampleRate": 24000
+        },
+        "i caught the ball with both hands.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 7430400,
+          "length": 114000,
+          "sampleRate": 24000
+        },
+        "put the bowl in the centre of the table.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 7544400,
+          "length": 124800,
+          "sampleRate": 24000
+        },
+        "a century is a very long time.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 7669200,
+          "length": 130800,
+          "sampleRate": 24000
+        },
+        "i am certain that this is my coat.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 7800000,
+          "length": 115200,
+          "sampleRate": 24000
+        },
+        "i drew a circle around the star.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 7915200,
+          "length": 111600,
+          "sampleRate": 24000
+        },
+        "my picture is complete.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 8026800,
+          "length": 98400,
+          "sampleRate": 24000
+        },
+        "we will consider which game to play.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 8125200,
+          "length": 117600,
+          "sampleRate": 24000
+        },
+        "we can continue our story tomorrow.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 8242800,
+          "length": 124800,
+          "sampleRate": 24000
+        },
+        "i must decide which book to read.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 8367600,
+          "length": 114000,
+          "sampleRate": 24000
+        },
+        "can you describe your favourite toy?": {
+          "file": "heart-sentences-01.bin",
+          "offset": 8481600,
+          "length": 115200,
+          "sampleRate": 24000
+        },
+        "we chose different colours.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 8596800,
+          "length": 97200,
+          "sampleRate": 24000
+        },
+        "the puzzle was difficult at first.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 8694000,
+          "length": 116400,
+          "sampleRate": 24000
+        },
+        "we watched the rabbit disappear behind a tree.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 8810400,
+          "length": 145200,
+          "sampleRate": 24000
+        },
+        "we got to school early.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 8955600,
+          "length": 88800,
+          "sampleRate": 24000
+        },
+        "the earth travels around the sun.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 9044400,
+          "length": 114000,
+          "sampleRate": 24000
+        },
+        "we have enough cups for everyone.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 9158400,
+          "length": 110400,
+          "sampleRate": 24000
+        },
+        "running is good exercise.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 9268800,
+          "length": 106800,
+          "sampleRate": 24000
+        },
+        "this is my favourite story.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 9375600,
+          "length": 109200,
+          "sampleRate": 24000
+        },
+        "we shared a bowl of fruit.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 9484800,
+          "length": 93600,
+          "sampleRate": 24000
+        },
+        "i can imagine a purple monster.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 9578400,
+          "length": 117600,
+          "sampleRate": 24000
+        },
+        "dad will accompany us on the walk.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 9696000,
+          "length": 116400,
+          "sampleRate": 24000
+        },
+        "practice helps us achieve our goals.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 9812400,
+          "length": 126000,
+          "sampleRate": 24000
+        },
+        "we saw an ancient stone wall.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 9938400,
+          "length": 106800,
+          "sampleRate": 24000
+        },
+        "it became apparent that the dog was tired.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 10045200,
+          "length": 141600,
+          "sampleRate": 24000
+        },
+        "i appreciate your help with my picture.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 10186800,
+          "length": 130800,
+          "sampleRate": 24000
+        },
+        "the note was attached to my bag.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 10317600,
+          "length": 115200,
+          "sampleRate": 24000
+        },
+        "there are crayons available on the table.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 10432800,
+          "length": 135600,
+          "sampleRate": 24000
+        },
+        "we worked out the average score.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 10568400,
+          "length": 108000,
+          "sampleRate": 24000
+        },
+        "the big box was awkward to carry.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 10676400,
+          "length": 120000,
+          "sampleRate": 24000
+        },
+        "the book was a bargain.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 10796400,
+          "length": 87600,
+          "sampleRate": 24000
+        },
+        "i have a bruise on my knee.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 10884000,
+          "length": 97200,
+          "sampleRate": 24000
+        },
+        "put each animal in the right category.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 10981200,
+          "length": 135600,
+          "sampleRate": 24000
+        },
+        "we walked past the cemetery.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 11116800,
+          "length": 105600,
+          "sampleRate": 24000
+        },
+        "the school committee planned a fair.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 11222400,
+          "length": 110400,
+          "sampleRate": 24000
+        },
+        "we can communicate with words and signs.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 11332800,
+          "length": 138000,
+          "sampleRate": 24000
+        },
+        "our community planted some trees.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 11470800,
+          "length": 122400,
+          "sampleRate": 24000
+        },
+        "i entered a drawing competition.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 11593200,
+          "length": 117600,
+          "sampleRate": 24000
+        },
+        "my conscience told me to be honest.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 11710800,
+          "length": 120000,
+          "sampleRate": 24000
+        },
+        "the sleepy cat was still conscious.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 11830800,
+          "length": 116400,
+          "sampleRate": 24000
+        },
+        "my curiosity made me open the old box.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 11947200,
+          "length": 157200,
+          "sampleRate": 24000
+        },
+        "we made a definite plan for saturday.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 12104400,
+          "length": 126000,
+          "sampleRate": 24000
+        },
+        "the thirsty dog was desperate for water.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 12230400,
+          "length": 142800,
+          "sampleRate": 24000
+        },
+        "i was determined to finish the puzzle.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 12373200,
+          "length": 129600,
+          "sampleRate": 24000
+        },
+        "seeds develop into plants.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 12502800,
+          "length": 108000,
+          "sampleRate": 24000
+        },
+        "we looked up the word in a dictionary.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 12610800,
+          "length": 115200,
+          "sampleRate": 24000
+        },
+        "the flood had a disastrous effect on the farm.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 12726000,
+          "length": 154800,
+          "sampleRate": 24000
+        },
+        "i did not want to embarrass my friend.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 12880800,
+          "length": 126000,
+          "sampleRate": 24000
+        },
+        "we can help the environment by picking up litter.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 13006800,
+          "length": 156000,
+          "sampleRate": 24000
+        },
+        "we put away the sports equipment.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 13162800,
+          "length": 109200,
+          "sampleRate": 24000
+        },
+        "i like fruit, especially strawberries.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 13272000,
+          "length": 136800,
+          "sampleRate": 24000
+        },
+        "you made an excellent model.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 13408800,
+          "length": 104400,
+          "sampleRate": 24000
+        },
+        "the teacher gave a clear explanation.": {
+          "file": "heart-sentences-01.bin",
+          "offset": 13513200,
+          "length": 130800,
+          "sampleRate": 24000
+        }
+      }
+    }
+  },
+  "files": {
+    "natural-welcome-01.bin": {
+      "bytes": 9008400,
+      "sha256": "a59bb69e15510644c0f7919a85d5e7705c43f2e7f709f0a8999b236999d7a4eb"
+    },
+    "natural-words-01.bin": {
+      "bytes": 5832000,
+      "sha256": "817abc48df2d40a04d213be4d9230d05fe2a4161187cbbf76d0a2629fdbfa26c"
+    },
+    "natural-sentences-01.bin": {
+      "bytes": 15382800,
+      "sha256": "6b381427ba9c20c94d2db8c5bba4bc158793fef9cecd68f9abdc8a1ffdbc3013"
+    },
+    "bella-welcome-01.bin": {
+      "bytes": 9238800,
+      "sha256": "6d1f3741094bb10790fc21bf9261100a9ce1f93bff2b1bbed09da650a11aad7a"
+    },
+    "bella-words-01.bin": {
+      "bytes": 8689200,
+      "sha256": "c4903ecf99931ed30ddd0dbb98458759f42400d441017a3f6003defdc88f042a"
+    },
+    "bella-sentences-01.bin": {
+      "bytes": 14754000,
+      "sha256": "ef3f8d796ae4ca241d17c1f7d0c53c5b7a49074b7615ef959daa59cb1fa3cac9"
+    },
+    "heart-welcome-01.bin": {
+      "bytes": 8557200,
+      "sha256": "51fb3e69da67284a01bdcee38d7170f86f384533ad191c0cb002ed0863b0d82e"
+    },
+    "heart-words-01.bin": {
+      "bytes": 8575200,
+      "sha256": "d849564db3d07c8e618dc26acdb8a3b9202605c43be1576273bf6e19befd59b1"
+    },
+    "heart-sentences-01.bin": {
+      "bytes": 13644000,
+      "sha256": "8bc2dc02889a69ccf4ec7cb6b308db4d5d7164a7dd53c329c6ca604313c6091f"
+    }
+  }
+}

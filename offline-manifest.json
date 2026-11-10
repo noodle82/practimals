@@ -1,7 +1,19 @@
 {
   "version": "0.10.0",
-  "cacheName": "spelloids-v10-afa0c70dae28",
+  "cacheName": "spelloids-v10-5336e1f3b973",
   "files": [
+    {
+      "path": "retry-policy.js"
+    },
+    {
+      "path": "school-lexicon.js"
+    },
+    {
+      "path": "content-rules.js"
+    },
+    {
+      "path": "word-content.js"
+    },
     {
       "path": "platform-compat.js"
     },

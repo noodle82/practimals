@@ -1,0 +1,5 @@
+{
+  "superseded": true,
+  "replacement": "OFFLINE-WORDS-VALIDATION.json",
+  "reason": "Earlier patch still allowed online dictionary suggestions and retained unchecked saved text."
+}

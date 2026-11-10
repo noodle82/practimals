@@ -1,0 +1,32 @@
+SPELLOIDS — FREE, OFFLINE WORD-CONTENT REPAIR
+
+This replaces the earlier small definition fix. Do not upload the old definition-fix ZIP afterwards.
+
+WHAT CHANGED
+- NEW: One retry in every spelling challenge and the whole-list practice test. First mistakes reset the answer/tiles; second mistakes move on automatically. Unfinished words remain for later practice.
+- NEW: Confirmed customisation choices and used accessory categories disappear from the main screen. Owned accessories and eyes remain inside the folded My collection. The preview stays visible beside iPad choices.
+- NEW: The first Choose my Spelloid action is at the top of This Week and disappears after starting.
+- Removed the online dictionary fallback entirely. No paid service or word-preparation network request.
+- Bundled 1,159 original simple meaning/example pairs, including 1,076 distinct forms from England's spelling appendix. The reference set also tracks your nine extra example words. Both KS2 statutory lists and their alternatives are covered, together with KS1/common-exception/example words.
+- Replaced or withheld old unchecked dictionary text automatically, including archived teaching lists. Differing earlier text remains available only inside Grown-ups for review. Old text marked 'parent review' is not treated as checked.
+- Parent edits made with this update are marked explicitly and retained. Examples must contain the exact target spelling; selected US spellings and unsuitable wording are rejected.
+- Unknown words still work in spelling rounds. A grown-up must supply their teaching content before meaning or missing-word rounds can begin. No invented definitions or generic fake examples are substituted.
+
+This is the combined word-content + practice/customisation update. Use this latest ZIP only.
+
+UPLOAD TO YOUR EXISTING REPOSITORY
+1. Extract this ZIP. Open the extracted folder.
+2. At https://github.com/noodle82/practimals choose Add file > Upload files.
+3. Upload the CONTENTS of the extracted folder to the TOP LEVEL of the repository, replacing matching files, then commit. Include the new .js files and the inner scripts, tests and lexicon folders. Do not upload an enclosing spelloids-offline-words-upload folder.
+4. There are fewer than 100 files in this patch. You do not need to upload audio, vendor or fonts again. Do not delete your existing repository contents.
+5. Wait for the GitHub Pages deployment to finish, then open your site and refresh. If the old page is still visible, refresh once more to activate the new cache. Do not clear browser/site data: that would remove progress.
+6. Open Grown-ups. Your existing list should now show complete meanings and sentences for the covered words without re-entering it. Check the counters and examples. Do not select Start a new spelling week merely to apply this repair.
+
+NEW APPLE BUILDS
+A future Codemagic build from the updated branch will include this repair. An app build already uploaded to TestFlight will not change until you build/upload a newer version. This patch does not alter your Bundle ID, signing integration or publishing settings.
+
+VALIDATION
+102 automated checks passed; static build succeeds. Actual browser upgrade tests reproduced the Linux/flavor and abortion examples and confirmed the active text and spoken questions were repaired. Existing week ID, progress, identity and child-made scrapbook survived. Parent edit persistence and offline unknown-word reporting were exercised. These content checks are not a substitute for specialist educational review; physical iOS/Safari validation remains separate. Nothing was uploaded to GitHub or Apple by preparing this ZIP.
+
+COVERAGE LIMIT
+The appendix is England's reference, not a universal list of every spelling any UK school may set. Unsupported words are flagged for parent input. Full attribution and corpus details are in lexicon/README.md.

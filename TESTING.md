@@ -1,3 +1,17 @@
+# Practice-flow and customisation validation
+
+102 automated checks pass. A dedicated muted browser exercised all six spelling challenges: one clean retry, a second error advancing automatically, and no challenge completion for twice-missed words. Build-word tiles returned to their original order with no disabled tiles left over. A correct retry earned its light. The one-word whole-list practice test finished automatically after a second error with a zero score. Leaving during auto-advance cancelled it without awarding mastery.
+
+Onboarding launch was visible above the weekly list at 820px. Confirmed name/shape/voice controls disappeared and the spelling button became enabled. Body colour, antennae, finishing touch and a claimed hat category disappeared after selection. Owned hats could still be removed/re-equipped from the folded collection. Antenna previews stayed within the screen at 820x1180 and 1024x768 with no horizontal overflow. No browser runtime exceptions. These are desktop browser checks at iPad sizes, not physical iPad testing.
+
+# Offline word-content repair validation
+
+10 November 2026: 102 automated checks pass. All 1,085 tracked word forms have a meaning and an exact-target example. This includes 1,076 appendix forms plus nine additional supplied words; total bank size is 1,159.
+
+A dedicated muted browser was seeded with the reported Linux/flavor and abortion examples. Reopening repaired the active teaching text automatically while retaining the week ID, progress, identity locks and scrapbook. Real parent edits survived save/resave. Unknown words stayed flagged with networking disabled; incomplete meaning/sentence modules were blocked. Actual missing-word gameplay and its speech payload used the repaired examples. No browser runtime exceptions. Static build succeeds and includes the new modules in its offline manifest.
+
+Original speech assets and approved voice profiles are unchanged. Automated content checks catch missing fields, target mismatches and selected wording problems; they are not a substitute for specialist educational review. Safari/iOS device behaviour still needs device validation. The following sections record earlier v10 testing, not additional checks performed for this repair.
+
 # Spelloids v0.10 validation
 
 Validated on 10 November 2026. No website, repository or Apple app record was published or changed.

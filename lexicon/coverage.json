@@ -1,0 +1,19 @@
+{
+  "source": "https://assets.publishing.service.gov.uk/media/5a7ccc06ed915d63cc65ce61/English_Appendix_1_-_Spelling.pdf",
+  "appendixWordForms": 1076,
+  "additionalTrackedWords": [
+    "benefited",
+    "conclusion",
+    "drizzling",
+    "endeavour",
+    "flavour",
+    "glamour",
+    "multiplying",
+    "persuasion",
+    "supervision"
+  ],
+  "trackedWordForms": 1085,
+  "covered": 1085,
+  "totalBankWords": 1159,
+  "missing": []
+}

@@ -1,6 +1,14 @@
-# Spelloids · spelling prototype v0.10
+# Spelloids · spelling prototype v0.10 — offline word-content repair
 
 Spelling practice for ages 5–10, with a child-created alien, six ways to master each weekly word, a growing game den and a family record. Multiploids remains the possible future tables companion.
+
+## Offline word-content repair
+
+This source replaces the earlier dictionary-based suggestion system. It also upgrades previously saved teaching words on opening, including archived lists and family records. Unverified older text is kept as a parent-only draft; it is never treated as an approved parent edit simply because it is nonempty. Week IDs, scores, word mastery, clothes and children’s scrapbook writing are preserved. Explicit parent edits are marked and retained. Example sentences must include the exact assigned spelling.
+
+Both KS2 statutory lists are covered, with their alternative forms, together with KS1 examples/common-exception words and the appendix’s illustrated spelling examples. This is England’s reference, not an exhaustive list of every spelling that any UK teacher might set. The DfE document supplies spelling guidance and words; the simple meanings and sentences are original app content. Unknown words remain available in spelling rounds, but meaning and missing-sentence rounds wait for parent input. Further details and attribution: lexicon/README.md.
+
+Use the small **spelloids-offline-words-upload.zip** to update an existing v10 repository. Follow its OFFLINE-WORDS-INSTRUCTIONS.txt; no audio/vendor upload is required.
 
 ## Open and upload
 
@@ -85,7 +93,7 @@ Questions still give an example sentence, pause, say Spell, then the isolated ta
 
 ## iPhone/iPad and Codemagic
 
-See **CODEMAGIC-SETUP.md** for GitHub connection, Apple API integration, distribution signing and TestFlight submission. This package adds a pinned Capacitor 8.6.0 wrapper, package-lock.json, opaque app icon and root codemagic.yaml. The Bundle ID is **com.spelloids.spelling** and the Apple integration is named **spelloids-apple**. The native Xcode project is generated on Codemagic’s Mac, with the app assets bundled locally. Node 22+ is required for native preparation.
+See **CODEMAGIC-SETUP.md** for GitHub connection, Apple API integration, distribution signing and TestFlight submission. This package adds a pinned Capacitor 8.6.0 wrapper, package-lock.json, opaque app icon and root codemagic.yaml. The Bundle ID is **com.spelloids.spelling** and the Apple integration is named **Codemagic**. The native Xcode project is generated on Codemagic’s Mac, with the app assets bundled locally. Node 22+ is required for native preparation.
 
 The workflow uploads a signed build to App Store Connect once you configure the account/signing and run it. It does not automatically submit public App Store review or external Beta App Review. You must add the processed build to an external group and submit it in TestFlight. No Apple upload, signing or GitHub publishing has been performed here. macOS compilation and a physical iPad test remain necessary.
 
@@ -110,6 +118,12 @@ The Studio remains available at **?view=studio** and the neutral colour comparis
 
 Saved-data key **practimals-spelling-v4** is deliberately retained for compatibility, with schema version 10. This remains device/browser storage with two profiles; no school accounts or cloud sync. Use the same browser/site to keep progress. Full storage displays a save notice rather than silently promising persistence. Keyboard fields request autocorrect, capitalisation, spellcheck and autocomplete off; some tablet keyboards have their own suggestion settings.
 
-The speech SDK/model and runtime are bundled under vendor/speech with their upstream licence/source notices. Analytics are disabled; speech, fonts and practice-pack data are local. Unknown manually entered words may use an optional dictionary lookup that sends only the word; parents can edit all suggestions. Photo preview is available, but photo-to-text is not connected.
+The speech SDK/model and runtime are bundled under vendor/speech with their upstream licence/source notices. Analytics are disabled; speech, fonts and practice-pack data are local. Word preparation is fully offline. The authored bank contains 1,159 words including 1,076 distinct appendix word forms, plus existing app vocabulary and reported words. Unknown words need an explicit parent meaning and example. No dictionary requests are made. Parents can edit all teaching text. Photo preview is available, but photo-to-text is not connected.
 
 WebGL/WebAssembly are needed for the full model/voice experience; unsupported graphics get an SVG character fallback. Real tablet performance, voice taste, audio permissions and keyboard behaviour still require physical-device review. No account connections, App Store submissions or publishing were performed.
+
+## Practice and customisation update
+
+All six spelling challenges and the whole-list practice test offer one retry after a wrong answer. The first error clears typed/arranged answers; letter tiles return to the same original bank positions. A second error moves on automatically after a short pause. The missed word stays unfinished and available in a later module visit. Empty answers and manual skips do not consume the retry. Correct retries can complete a challenge; test scores use the final submitted answer. Drawings/sentences remain ungraded. The Secret Den's arcade and memory rules are separate from the spelling-question flow.
+
+The new-week Choose my Spelloid action is above the weekly content. Confirmed name, shape, voice, body colour, antennae and finishing choices disappear from the main creation controls. A claimed hat/coat/shoes/accessory category folds away independently; its owned items remain changeable inside My collection, with eye colours. Badges remain in a folded album. The preview stays beside the choices at iPad portrait/landscape widths. New weeks still reset the weekly identity choices.

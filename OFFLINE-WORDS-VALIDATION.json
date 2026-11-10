@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-10",
+  "automatedChecks": 102,
+  "appendixForms": 1076,
+  "trackedForms": 1085,
+  "bankWords": 1159,
+  "missingTracked": [],
+  "browser": {
+    "legacyUnsafeTextReplaced": true,
+    "progressAndScrapbookRetained": true,
+    "parentEditPersists": true,
+    "unknownWordOfflineReport": true,
+    "childGameAndSpeechChecked": true,
+    "runtimeExceptions": 0
+  },
+  "notPerformed": [
+    "Real iOS build on Windows",
+    "Educational specialist review of all entries"
+  ],
+  "publication": "Prepared locally; not uploaded to GitHub or Apple",
+  "practiceFlow": {
+    "allSixModulesChecked": true,
+    "originalTilePositionsRestored": true,
+    "secondErrorAutoAdvances": true,
+    "missedWordsRemainUnfinished": true,
+    "correctRetryCompletesChallenge": true,
+    "wholeListTestChecked": true,
+    "navigationCancelsAutoAdvance": true
+  },
+  "customisation": {
+    "topStartAction": true,
+    "completedControlsHidden": true,
+    "ownedAccessoriesRemainChangeable": true,
+    "ipadPortraitAndLandscapePreviewVisible": true,
+    "physicalIpadTested": false
+  }
+}

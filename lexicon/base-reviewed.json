@@ -1,0 +1,1222 @@
+{
+  "apple": {
+    "meaning": "A round fruit with skin, crunchy flesh and seeds inside.",
+    "sentence": ""
+  },
+  "bird": {
+    "meaning": "An animal with feathers and a beak.",
+    "sentence": "A bird sat in the tree."
+  },
+  "book": {
+    "meaning": "Pages joined together for reading.",
+    "sentence": "We read a funny book."
+  },
+  "box": {
+    "meaning": "A container used to hold things.",
+    "sentence": ""
+  },
+  "fish": {
+    "meaning": "An animal that lives in water and breathes through gills.",
+    "sentence": ""
+  },
+  "tree": {
+    "meaning": "A tall plant with a wooden trunk.",
+    "sentence": "The tree has green leaves."
+  },
+  "moon": {
+    "meaning": "The round object that travels around Earth.",
+    "sentence": "The moon shone above us."
+  },
+  "star": {
+    "meaning": "A huge glowing ball of hot gas, far away in space.",
+    "sentence": ""
+  },
+  "house": {
+    "meaning": "A building where people live.",
+    "sentence": "Our house has a blue door."
+  },
+  "happy": {
+    "meaning": "Feeling pleased and good.",
+    "sentence": "I feel happy when we play."
+  },
+  "sad": {
+    "meaning": "Feeling unhappy.",
+    "sentence": ""
+  },
+  "kind": {
+    "meaning": "Caring about others and trying to help them.",
+    "sentence": ""
+  },
+  "jump": {
+    "meaning": "To push yourself off the ground with your feet.",
+    "sentence": ""
+  },
+  "play": {
+    "meaning": "To do something for fun.",
+    "sentence": ""
+  },
+  "water": {
+    "meaning": "The clear liquid we drink.",
+    "sentence": "I filled my bottle with water."
+  },
+  "light": {
+    "meaning": "What lets you see things.",
+    "sentence": "Please turn on the light."
+  },
+  "night": {
+    "meaning": "The dark part of the day.",
+    "sentence": "We saw stars at night."
+  },
+  "small": {
+    "meaning": "Not big.",
+    "sentence": ""
+  },
+  "little": {
+    "meaning": "Small in size or amount.",
+    "sentence": ""
+  },
+  "big": {
+    "meaning": "Large in size.",
+    "sentence": ""
+  },
+  "brave": {
+    "meaning": "Trying to do something even when it feels scary.",
+    "sentence": ""
+  },
+  "quiet": {
+    "meaning": "Making very little sound.",
+    "sentence": ""
+  },
+  "loud": {
+    "meaning": "Making a lot of sound.",
+    "sentence": ""
+  },
+  "quick": {
+    "meaning": "Moving or happening fast.",
+    "sentence": ""
+  },
+  "slow": {
+    "meaning": "Moving or happening without much speed.",
+    "sentence": ""
+  },
+  "soft": {
+    "meaning": "Easy to press or squash, or gentle to touch.",
+    "sentence": ""
+  },
+  "hard": {
+    "meaning": "Firm and difficult to bend or squash.",
+    "sentence": ""
+  },
+  "warm": {
+    "meaning": "A little hot, in a comfortable way.",
+    "sentence": ""
+  },
+  "cold": {
+    "meaning": "Having very little warmth.",
+    "sentence": ""
+  },
+  "cloud": {
+    "meaning": "A group of tiny water drops or ice crystals floating in the sky.",
+    "sentence": ""
+  },
+  "flower": {
+    "meaning": "The part of a plant that often has colourful petals.",
+    "sentence": ""
+  },
+  "river": {
+    "meaning": "A long stream of water flowing across the land.",
+    "sentence": ""
+  },
+  "forest": {
+    "meaning": "A large area with lots of trees.",
+    "sentence": ""
+  },
+  "magic": {
+    "meaning": "Amazing things in stories that happen in ways we cannot explain.",
+    "sentence": ""
+  },
+  "animal": {
+    "meaning": "A living thing that eats food and can usually move around.",
+    "sentence": ""
+  },
+  "people": {
+    "meaning": "More than one person.",
+    "sentence": "Many people came to the park."
+  },
+  "family": {
+    "meaning": "People who belong together and care for each other.",
+    "sentence": "My family ate lunch together."
+  },
+  "mother": {
+    "meaning": "A female parent.",
+    "sentence": ""
+  },
+  "father": {
+    "meaning": "A dad.",
+    "sentence": "My father helped me bake."
+  },
+  "brother": {
+    "meaning": "A boy or man who has a parent in common with you.",
+    "sentence": ""
+  },
+  "sister": {
+    "meaning": "A girl or woman who has a parent in common with you.",
+    "sentence": ""
+  },
+  "teacher": {
+    "meaning": "Someone who helps others learn.",
+    "sentence": ""
+  },
+  "learn": {
+    "meaning": "To find out or become able to do something.",
+    "sentence": ""
+  },
+  "practice": {
+    "meaning": "Doing something again to get better at it.",
+    "sentence": ""
+  },
+  "practise": {
+    "meaning": "To do something again to get better at it.",
+    "sentence": ""
+  },
+  "answer": {
+    "meaning": "Something you say or write in reply.",
+    "sentence": "I knew the answer to the question."
+  },
+  "question": {
+    "meaning": "Something you ask when you want to know more.",
+    "sentence": ""
+  },
+  "remember": {
+    "meaning": "To bring something you know back into your mind.",
+    "sentence": ""
+  },
+  "forget": {
+    "meaning": "To be unable to remember something.",
+    "sentence": ""
+  },
+  "careful": {
+    "meaning": "Taking time and paying attention to avoid mistakes or harm.",
+    "sentence": ""
+  },
+  "wonderful": {
+    "meaning": "Very good or lovely.",
+    "sentence": ""
+  },
+  "special": {
+    "meaning": "Different from usual in a way that matters.",
+    "sentence": ""
+  },
+  "important": {
+    "meaning": "Something that matters a lot.",
+    "sentence": ""
+  },
+  "possible": {
+    "meaning": "Something that can happen or be done.",
+    "sentence": ""
+  },
+  "impossible": {
+    "meaning": "Something that cannot happen or be done.",
+    "sentence": ""
+  },
+  "believe": {
+    "meaning": "To think that something is true.",
+    "sentence": "I believe you can do it."
+  },
+  "thought": {
+    "meaning": "An idea in your mind.",
+    "sentence": ""
+  },
+  "through": {
+    "meaning": "From one side or end to the other.",
+    "sentence": ""
+  },
+  "where": {
+    "meaning": "A word we use to ask about a place.",
+    "sentence": ""
+  },
+  "their": {
+    "meaning": "Belonging to them.",
+    "sentence": ""
+  },
+  "there": {
+    "meaning": "In or at that place.",
+    "sentence": ""
+  },
+  "which": {
+    "meaning": "A word we use to ask someone to choose.",
+    "sentence": ""
+  },
+  "colour": {
+    "meaning": "What makes red, blue and yellow look different.",
+    "sentence": "The flower was a bright yellow colour."
+  },
+  "number": {
+    "meaning": "A word or sign that tells us how many or how much.",
+    "sentence": ""
+  },
+  "multiply": {
+    "meaning": "To find the total in a number of equal groups.",
+    "sentence": ""
+  },
+  "equal": {
+    "meaning": "The same in size, amount or value.",
+    "sentence": ""
+  },
+  "group": {
+    "meaning": "Things or people that are together.",
+    "sentence": ""
+  },
+  "sentence": {
+    "meaning": "Words put together to express an idea.",
+    "sentence": ""
+  },
+  "picture": {
+    "meaning": "Something drawn, painted or photographed.",
+    "sentence": ""
+  },
+  "tomorrow": {
+    "meaning": "The day after today.",
+    "sentence": ""
+  },
+  "yesterday": {
+    "meaning": "The day before today.",
+    "sentence": ""
+  },
+  "today": {
+    "meaning": "The day that is happening now.",
+    "sentence": "We are painting today."
+  },
+  "morning": {
+    "meaning": "The early part of the day.",
+    "sentence": ""
+  },
+  "evening": {
+    "meaning": "The part of the day before night.",
+    "sentence": ""
+  },
+  "always": {
+    "meaning": "Every time.",
+    "sentence": ""
+  },
+  "sometimes": {
+    "meaning": "On some occasions, but not every time.",
+    "sentence": ""
+  },
+  "again": {
+    "meaning": "One more time.",
+    "sentence": ""
+  },
+  "begin": {
+    "meaning": "To start.",
+    "sentence": ""
+  },
+  "finish": {
+    "meaning": "To reach the end of something.",
+    "sentence": ""
+  },
+  "journey": {
+    "meaning": "Travelling from one place to another.",
+    "sentence": "Our journey to the beach took an hour."
+  },
+  "treasure": {
+    "meaning": "Something valuable or special to someone.",
+    "sentence": ""
+  },
+  "island": {
+    "meaning": "Land with water all around it.",
+    "sentence": ""
+  },
+  "crystal": {
+    "meaning": "A solid with a regular shape, often with flat sides.",
+    "sentence": ""
+  },
+  "firefly": {
+    "meaning": "A small beetle that can make light from its body.",
+    "sentence": ""
+  },
+  "baby": {
+    "meaning": "A very young child or animal.",
+    "sentence": ""
+  },
+  "rare": {
+    "meaning": "Not found or seen very often.",
+    "sentence": ""
+  },
+  "collect": {
+    "meaning": "To bring things together and keep them.",
+    "sentence": ""
+  },
+  "enjoy": {
+    "meaning": "To like doing or experiencing something.",
+    "sentence": ""
+  },
+  "excited": {
+    "meaning": "Feeling very happy and eager about something.",
+    "sentence": ""
+  },
+  "excellent": {
+    "meaning": "Very good.",
+    "sentence": "You made an excellent model."
+  },
+  "patient": {
+    "meaning": "Able to wait calmly or keep trying without getting upset.",
+    "sentence": ""
+  },
+  "gently": {
+    "meaning": "In a careful and kind way.",
+    "sentence": ""
+  },
+  "quickly": {
+    "meaning": "At a fast speed.",
+    "sentence": ""
+  },
+  "slowly": {
+    "meaning": "Without moving or happening fast.",
+    "sentence": ""
+  },
+  "probably": {
+    "meaning": "Something that is likely to happen or be true.",
+    "sentence": ""
+  },
+  "actually": {
+    "meaning": "A word used to say what is really true.",
+    "sentence": ""
+  },
+  "separate": {
+    "meaning": "Not joined or mixed together.",
+    "sentence": ""
+  },
+  "surprise": {
+    "meaning": "Something you did not expect.",
+    "sentence": ""
+  },
+  "continue": {
+    "meaning": "To keep going.",
+    "sentence": "We can continue our story tomorrow."
+  },
+  "complete": {
+    "meaning": "Finished, with nothing left to do.",
+    "sentence": "My picture is complete."
+  },
+  "knowledge": {
+    "meaning": "Things you know or understand.",
+    "sentence": ""
+  },
+  "bicycle": {
+    "meaning": "A vehicle with two wheels that you pedal.",
+    "sentence": "I rode my bicycle to the park."
+  },
+  "circle": {
+    "meaning": "A round shape with no corners.",
+    "sentence": "I drew a circle around the star."
+  },
+  "triangle": {
+    "meaning": "A flat shape with three straight sides and three corners.",
+    "sentence": ""
+  },
+  "square": {
+    "meaning": "A flat shape with four equal sides and four square corners.",
+    "sentence": ""
+  },
+  "enough": {
+    "meaning": "As much as you need.",
+    "sentence": "We have enough cups for everyone."
+  },
+  "laugh": {
+    "meaning": "To make happy sounds because something is funny.",
+    "sentence": ""
+  },
+  "caught": {
+    "meaning": "Held or stopped something that was moving.",
+    "sentence": "I caught the ball with both hands."
+  },
+  "taught": {
+    "meaning": "Helped someone learn something.",
+    "sentence": ""
+  },
+  "brought": {
+    "meaning": "Carried or took something to a place.",
+    "sentence": ""
+  },
+  "bought": {
+    "meaning": "Got something by paying for it.",
+    "sentence": ""
+  },
+  "rough": {
+    "meaning": "Not smooth, or not gentle.",
+    "sentence": ""
+  },
+  "tough": {
+    "meaning": "Strong or difficult to damage.",
+    "sentence": ""
+  },
+  "though": {
+    "meaning": "A word that can mean although or even so.",
+    "sentence": ""
+  },
+  "thoughtful": {
+    "meaning": "Thinking carefully, or showing care for others.",
+    "sentence": ""
+  },
+  "length": {
+    "meaning": "How long something is.",
+    "sentence": ""
+  },
+  "height": {
+    "meaning": "How tall something is.",
+    "sentence": ""
+  },
+  "weight": {
+    "meaning": "How heavy something is.",
+    "sentence": ""
+  },
+  "straight": {
+    "meaning": "Without bending or curving.",
+    "sentence": ""
+  },
+  "strange": {
+    "meaning": "Unusual or not familiar.",
+    "sentence": ""
+  },
+  "strength": {
+    "meaning": "The power to do something difficult.",
+    "sentence": ""
+  },
+  "beautifully": {
+    "meaning": "In a lovely way.",
+    "sentence": ""
+  },
+  "wonder": {
+    "meaning": "To think about something because you want to know more.",
+    "sentence": ""
+  },
+  "courage": {
+    "meaning": "The strength to try something even when you feel afraid.",
+    "sentence": ""
+  },
+  "courageous": {
+    "meaning": "Brave; willing to try something even when it feels scary.",
+    "sentence": ""
+  },
+  "said": {
+    "meaning": "Told someone something using words.",
+    "sentence": "Mum said we could play."
+  },
+  "says": {
+    "meaning": "Uses words to tell someone something.",
+    "sentence": ""
+  },
+  "was": {
+    "meaning": "A word that tells us how someone or something used to be.",
+    "sentence": ""
+  },
+  "were": {
+    "meaning": "A word that tells us how people or things used to be.",
+    "sentence": ""
+  },
+  "come": {
+    "meaning": "To move towards someone.",
+    "sentence": "Please come and sit with me."
+  },
+  "some": {
+    "meaning": "An amount without saying exactly how much.",
+    "sentence": "I put some fruit in my bowl."
+  },
+  "once": {
+    "meaning": "One time.",
+    "sentence": "We went to the zoo once."
+  },
+  "one": {
+    "meaning": "The number for a single thing.",
+    "sentence": "I have one red sock."
+  },
+  "two": {
+    "meaning": "One more than one.",
+    "sentence": ""
+  },
+  "does": {
+    "meaning": "A form of do, as in she does her homework.",
+    "sentence": ""
+  },
+  "goes": {
+    "meaning": "Moves or travels to a place.",
+    "sentence": ""
+  },
+  "here": {
+    "meaning": "In this place.",
+    "sentence": ""
+  },
+  "every": {
+    "meaning": "Each one in a group.",
+    "sentence": "I watered every plant."
+  },
+  "very": {
+    "meaning": "A word that makes a description stronger, as in very big.",
+    "sentence": ""
+  },
+  "could": {
+    "meaning": "Was able to, or might be able to.",
+    "sentence": "I could hear the birds."
+  },
+  "would": {
+    "meaning": "A word used to say what someone wants or might do.",
+    "sentence": "I would like a turn."
+  },
+  "should": {
+    "meaning": "A word used to say what is a good idea.",
+    "sentence": "We should put our toys away."
+  },
+  "want": {
+    "meaning": "To wish for something.",
+    "sentence": ""
+  },
+  "look": {
+    "meaning": "To use your eyes to see something.",
+    "sentence": ""
+  },
+  "love": {
+    "meaning": "To care about someone or something a lot.",
+    "sentence": "I love my family."
+  },
+  "move": {
+    "meaning": "To change where something is.",
+    "sentence": "Please move your chair closer."
+  },
+  "improve": {
+    "meaning": "To get better at something.",
+    "sentence": "Practice helps me improve."
+  },
+  "imagine": {
+    "meaning": "To make a picture or idea in your mind.",
+    "sentence": "I can imagine a purple monster."
+  },
+  "understand": {
+    "meaning": "To know what something means or how it works.",
+    "sentence": ""
+  },
+  "listen": {
+    "meaning": "To pay attention to a sound or to what someone says.",
+    "sentence": ""
+  },
+  "describe": {
+    "meaning": "To say what something is like.",
+    "sentence": "Can you describe your favourite toy?"
+  },
+  "explain": {
+    "meaning": "To help someone understand something.",
+    "sentence": ""
+  },
+  "honest": {
+    "meaning": "Telling the truth.",
+    "sentence": ""
+  },
+  "honesty": {
+    "meaning": "Telling the truth and being fair.",
+    "sentence": ""
+  },
+  "respect": {
+    "meaning": "Treating someone or something with care.",
+    "sentence": ""
+  },
+  "responsible": {
+    "meaning": "Someone you can trust to do what needs to be done.",
+    "sentence": ""
+  },
+  "delight": {
+    "meaning": "A feeling of great happiness.",
+    "sentence": ""
+  },
+  "delighted": {
+    "meaning": "Very pleased and happy.",
+    "sentence": ""
+  },
+  "mysterious": {
+    "meaning": "Hard to explain or understand, making you curious.",
+    "sentence": ""
+  },
+  "ancient": {
+    "meaning": "Very old.",
+    "sentence": "We saw an ancient stone wall."
+  },
+  "enchanting": {
+    "meaning": "So lovely or interesting that it holds your attention.",
+    "sentence": ""
+  },
+  "sparkle": {
+    "meaning": "To shine with little flashes of light.",
+    "sentence": ""
+  },
+  "glow": {
+    "meaning": "To shine with a soft, steady light.",
+    "sentence": ""
+  },
+  "whisper": {
+    "meaning": "To speak very quietly.",
+    "sentence": ""
+  },
+  "whispering": {
+    "meaning": "Speaking very quietly.",
+    "sentence": ""
+  },
+  "breathe": {
+    "meaning": "To take air in and let it out.",
+    "sentence": "We breathe through our nose or mouth."
+  },
+  "breath": {
+    "meaning": "Air that goes into or out of your body.",
+    "sentence": "I took a deep breath."
+  },
+  "necessary": {
+    "meaning": "Something that is needed.",
+    "sentence": ""
+  },
+  "immediately": {
+    "meaning": "Straight away, without waiting.",
+    "sentence": ""
+  },
+  "occasionally": {
+    "meaning": "Sometimes, but not often.",
+    "sentence": ""
+  },
+  "especially": {
+    "meaning": "More than usual or more than other things.",
+    "sentence": "I like fruit, especially strawberries."
+  },
+  "environment": {
+    "meaning": "The places and conditions around living things.",
+    "sentence": "We can help the environment by picking up litter."
+  },
+  "community": {
+    "meaning": "People who live in the same place or share something.",
+    "sentence": "Our community planted some trees."
+  },
+  "opportunity": {
+    "meaning": "A chance to do something.",
+    "sentence": ""
+  },
+  "identity": {
+    "meaning": "The things that make you who you are.",
+    "sentence": ""
+  },
+  "recognise": {
+    "meaning": "To know someone or something because you have seen it before.",
+    "sentence": ""
+  },
+  "rhythm": {
+    "meaning": "A pattern of beats or sounds.",
+    "sentence": ""
+  },
+  "rhyme": {
+    "meaning": "Words that end with the same sound, like cat and hat.",
+    "sentence": ""
+  },
+  "queue": {
+    "meaning": "A line of people waiting for their turn.",
+    "sentence": ""
+  },
+  "can't": {
+    "meaning": "A short way of saying cannot.",
+    "sentence": ""
+  },
+  "don't": {
+    "meaning": "A short way of saying do not.",
+    "sentence": ""
+  },
+  "it's": {
+    "meaning": "A short way of saying it is or it has.",
+    "sentence": ""
+  },
+  "they're": {
+    "meaning": "A short way of saying they are.",
+    "sentence": ""
+  },
+  "we're": {
+    "meaning": "A short way of saying we are.",
+    "sentence": ""
+  },
+  "accident": {
+    "meaning": "Something that happens without being planned.",
+    "sentence": "Spilling the juice was an accident."
+  },
+  "accompany": {
+    "meaning": "To go somewhere with someone.",
+    "sentence": "Dad will accompany us on the walk."
+  },
+  "achieve": {
+    "meaning": "To succeed at something you worked for.",
+    "sentence": "Practice helps us achieve our goals."
+  },
+  "address": {
+    "meaning": "Details that tell where someone lives.",
+    "sentence": "I wrote our address on the card."
+  },
+  "adventure": {
+    "meaning": "An exciting experience or journey.",
+    "sentence": "Our woodland walk became an adventure."
+  },
+  "after": {
+    "meaning": "Later than something else.",
+    "sentence": "We read after lunch."
+  },
+  "apparent": {
+    "meaning": "Easy to see or notice.",
+    "sentence": "It became apparent that the dog was tired."
+  },
+  "appear": {
+    "meaning": "To come into view.",
+    "sentence": "Stars appear when the sky gets dark."
+  },
+  "appreciate": {
+    "meaning": "To feel thankful for something.",
+    "sentence": "I appreciate your help with my picture."
+  },
+  "arrive": {
+    "meaning": "To reach the place you are going.",
+    "sentence": "We will arrive before lunch."
+  },
+  "attached": {
+    "meaning": "Joined or fixed to something.",
+    "sentence": "The note was attached to my bag."
+  },
+  "available": {
+    "meaning": "Ready to be used.",
+    "sentence": "There are crayons available on the table."
+  },
+  "average": {
+    "meaning": "An amount found by sharing a total equally.",
+    "sentence": "We worked out the average score."
+  },
+  "awkward": {
+    "meaning": "Difficult to use, move or deal with.",
+    "sentence": "The big box was awkward to carry."
+  },
+  "bargain": {
+    "meaning": "Something bought for a good, low price.",
+    "sentence": "The book was a bargain."
+  },
+  "bath": {
+    "meaning": "A large tub for washing yourself.",
+    "sentence": "I had a warm bath."
+  },
+  "beautiful": {
+    "meaning": "Lovely to look at, hear or experience.",
+    "sentence": "The butterfly had beautiful wings."
+  },
+  "because": {
+    "meaning": "A word that tells us the reason for something.",
+    "sentence": "I wore boots because it was muddy."
+  },
+  "beginner": {
+    "meaning": "Someone who is just starting to learn something.",
+    "sentence": "I am a beginner at swimming."
+  },
+  "beginning": {
+    "meaning": "The start of something.",
+    "sentence": "I liked the beginning of the story."
+  },
+  "benefited": {
+    "meaning": "Was helped by something.",
+    "sentence": "The plants benefited from the rain."
+  },
+  "boat": {
+    "meaning": "Something that carries people on water.",
+    "sentence": "The boat sailed across the lake."
+  },
+  "break": {
+    "meaning": "To split or damage something.",
+    "sentence": "Be careful not to break the cup."
+  },
+  "bright": {
+    "meaning": "Giving out lots of light, or full of light.",
+    "sentence": "The bright star lit up the sky."
+  },
+  "bruise": {
+    "meaning": "A dark mark under your skin after a bump.",
+    "sentence": "I have a bruise on my knee."
+  },
+  "build": {
+    "meaning": "To make something by putting parts together.",
+    "sentence": "We will build a tall tower."
+  },
+  "busy": {
+    "meaning": "Having lots to do.",
+    "sentence": "The gardener was busy today."
+  },
+  "calendar": {
+    "meaning": "A chart showing days, weeks and months.",
+    "sentence": "I marked my birthday on the calendar."
+  },
+  "carrot": {
+    "meaning": "A long crunchy vegetable, often orange.",
+    "sentence": "The rabbit ate a carrot."
+  },
+  "category": {
+    "meaning": "A group of things that are alike.",
+    "sentence": "Put each animal in the right category."
+  },
+  "cemetery": {
+    "meaning": "A place where people are buried.",
+    "sentence": "We walked past the cemetery."
+  },
+  "centre": {
+    "meaning": "The middle of something.",
+    "sentence": "Put the bowl in the centre of the table."
+  },
+  "century": {
+    "meaning": "One hundred years.",
+    "sentence": "A century is a very long time."
+  },
+  "certain": {
+    "meaning": "Sure that something is true.",
+    "sentence": "I am certain that this is my coat."
+  },
+  "chair": {
+    "meaning": "A seat with a back.",
+    "sentence": "I sat on the chair."
+  },
+  "children": {
+    "meaning": "More than one child.",
+    "sentence": "The children played together."
+  },
+  "class": {
+    "meaning": "A group of children learning together.",
+    "sentence": "Our class made a poster."
+  },
+  "coat": {
+    "meaning": "Clothes you wear over other clothes to stay warm.",
+    "sentence": "I wore my coat outside."
+  },
+  "coin": {
+    "meaning": "A small metal piece of money.",
+    "sentence": "I found a coin on the path."
+  },
+  "committee": {
+    "meaning": "A group chosen to make plans or decisions.",
+    "sentence": "The school committee planned a fair."
+  },
+  "communicate": {
+    "meaning": "To share information or ideas.",
+    "sentence": "We can communicate with words and signs."
+  },
+  "competition": {
+    "meaning": "An event where people try to do best.",
+    "sentence": "I entered a drawing competition."
+  },
+  "conclusion": {
+    "meaning": "The end of something, or a final decision.",
+    "sentence": "The story had a happy conclusion."
+  },
+  "confusion": {
+    "meaning": "Feeling mixed up or unsure about something.",
+    "sentence": "There was confusion about whose turn it was."
+  },
+  "conscience": {
+    "meaning": "Your feeling about what is right and wrong.",
+    "sentence": "My conscience told me to be honest."
+  },
+  "conscious": {
+    "meaning": "Awake and aware of what is around you.",
+    "sentence": "The sleepy cat was still conscious."
+  },
+  "consider": {
+    "meaning": "To think carefully about something.",
+    "sentence": "We will consider which game to play."
+  },
+  "curiosity": {
+    "meaning": "Wanting to find out more.",
+    "sentence": "My curiosity made me open the old box."
+  },
+  "curious": {
+    "meaning": "Wanting to find out more about something.",
+    "sentence": "The curious rabbit peeked inside the box."
+  },
+  "decide": {
+    "meaning": "To choose after thinking.",
+    "sentence": "I must decide which book to read."
+  },
+  "definite": {
+    "meaning": "Clear and certain.",
+    "sentence": "We made a definite plan for Saturday."
+  },
+  "desperate": {
+    "meaning": "Wanting or needing something very much.",
+    "sentence": "The thirsty dog was desperate for water."
+  },
+  "determined": {
+    "meaning": "Trying hard and not giving up.",
+    "sentence": "I was determined to finish the puzzle."
+  },
+  "develop": {
+    "meaning": "To grow or become better.",
+    "sentence": "Seeds develop into plants."
+  },
+  "dictionary": {
+    "meaning": "A book or tool that explains words.",
+    "sentence": "We looked up the word in a dictionary."
+  },
+  "different": {
+    "meaning": "Not the same as something else.",
+    "sentence": "We each chose a different colour."
+  },
+  "difficult": {
+    "meaning": "Hard to do or understand.",
+    "sentence": "The puzzle was difficult at first."
+  },
+  "disappear": {
+    "meaning": "To go out of sight.",
+    "sentence": "We watched the rabbit disappear behind a tree."
+  },
+  "disastrous": {
+    "meaning": "Going very badly and causing serious trouble.",
+    "sentence": "The flood had a disastrous effect on the farm."
+  },
+  "drizzling": {
+    "meaning": "Raining very lightly in tiny drops.",
+    "sentence": "It was drizzling when we went out."
+  },
+  "early": {
+    "meaning": "Before the usual time.",
+    "sentence": "We got to school early."
+  },
+  "earth": {
+    "meaning": "The planet where we live.",
+    "sentence": "The earth travels around the Sun."
+  },
+  "embarrass": {
+    "meaning": "To make someone feel shy or uncomfortable.",
+    "sentence": "I did not want to embarrass my friend."
+  },
+  "endeavour": {
+    "meaning": "To try hard to do something.",
+    "sentence": "I will endeavour to finish the puzzle."
+  },
+  "enormous": {
+    "meaning": "Very, very big.",
+    "sentence": "An enormous elephant walked past."
+  },
+  "equipment": {
+    "meaning": "Things you need to do a job or activity.",
+    "sentence": "We put away the sports equipment."
+  },
+  "everybody": {
+    "meaning": "All the people.",
+    "sentence": "There is a seat for everybody."
+  },
+  "exercise": {
+    "meaning": "Movement that helps keep your body healthy.",
+    "sentence": "Running is good exercise."
+  },
+  "explanation": {
+    "meaning": "Words that help someone understand something.",
+    "sentence": "The teacher gave a clear explanation."
+  },
+  "eye": {
+    "meaning": "The part of your body you see with.",
+    "sentence": "A speck of dust got in my eye."
+  },
+  "fast": {
+    "meaning": "Moving quickly.",
+    "sentence": "The rabbit can run fast."
+  },
+  "favourite": {
+    "meaning": "The one you like best.",
+    "sentence": "Blue is my favourite colour."
+  },
+  "flavour": {
+    "meaning": "The taste of a food or drink.",
+    "sentence": "This ice cream has a strawberry flavour."
+  },
+  "forgetting": {
+    "meaning": "Not remembering something.",
+    "sentence": "I keep forgetting where my socks are."
+  },
+  "forgotten": {
+    "meaning": "Not remembered.",
+    "sentence": "I had forgotten my lunch."
+  },
+  "friend": {
+    "meaning": "Someone you like and enjoy spending time with.",
+    "sentence": "My friend helped me build a tower."
+  },
+  "fruit": {
+    "meaning": "The part of a plant that holds seeds and is often food.",
+    "sentence": "We shared a bowl of fruit."
+  },
+  "garden": {
+    "meaning": "A place where people grow flowers, vegetables or other plants.",
+    "sentence": "We planted seeds in the garden."
+  },
+  "gardener": {
+    "meaning": "Someone who looks after plants and gardens.",
+    "sentence": "The gardener planted some flowers."
+  },
+  "gardening": {
+    "meaning": "Growing plants and looking after a garden.",
+    "sentence": "We enjoy gardening together."
+  },
+  "girl": {
+    "meaning": "A female child.",
+    "sentence": "The girl kicked the ball."
+  },
+  "glamour": {
+    "meaning": "A special beauty or style that seems exciting.",
+    "sentence": "The sparkling dress added glamour to the show."
+  },
+  "grass": {
+    "meaning": "Small green plants that cover the ground.",
+    "sentence": "The grass feels soft."
+  },
+  "great": {
+    "meaning": "Very good or very big.",
+    "sentence": "We had a great day."
+  },
+  "green": {
+    "meaning": "The colour of grass.",
+    "sentence": "My boots are green."
+  },
+  "hair": {
+    "meaning": "The strands that grow on your head.",
+    "sentence": "I brushed my hair."
+  },
+  "happier": {
+    "meaning": "Feeling more happy.",
+    "sentence": "He felt happier after a hug."
+  },
+  "happiest": {
+    "meaning": "Feeling the most happy.",
+    "sentence": "I am happiest when we play together."
+  },
+  "hour": {
+    "meaning": "Sixty minutes.",
+    "sentence": "We played for an hour."
+  },
+  "last": {
+    "meaning": "Coming after all the others.",
+    "sentence": "I was last in the line."
+  },
+  "limited": {
+    "meaning": "Only a small amount, number or size.",
+    "sentence": "We have limited space for toys."
+  },
+  "limiting": {
+    "meaning": "Keeping the amount or size of something small.",
+    "sentence": "We are limiting our screen time."
+  },
+  "multiplying": {
+    "meaning": "Finding the total in equal groups, like three groups of two.",
+    "sentence": "We are multiplying numbers at school."
+  },
+  "neighbour": {
+    "meaning": "Someone who lives near you.",
+    "sentence": "Our neighbour helped us water the plants."
+  },
+  "park": {
+    "meaning": "An outdoor place where people can play or walk.",
+    "sentence": "We went to the park."
+  },
+  "pass": {
+    "meaning": "To move something to someone else.",
+    "sentence": "Please pass me the ball."
+  },
+  "past": {
+    "meaning": "The time before now.",
+    "sentence": "We learned about life in the past."
+  },
+  "path": {
+    "meaning": "A track you walk along.",
+    "sentence": "The path leads to the pond."
+  },
+  "persuasion": {
+    "meaning": "Getting someone to agree by talking and giving reasons.",
+    "sentence": "With some persuasion, Dad agreed to play another game."
+  },
+  "plant": {
+    "meaning": "A living thing that grows leaves and roots.",
+    "sentence": "We grew a plant in a pot."
+  },
+  "prefer": {
+    "meaning": "To like one thing more than another.",
+    "sentence": "I prefer apples to pears."
+  },
+  "preferred": {
+    "meaning": "Liked one thing more than another.",
+    "sentence": "She preferred the blue hat."
+  },
+  "pretty": {
+    "meaning": "Lovely to look at.",
+    "sentence": "The bird has pretty feathers."
+  },
+  "rain": {
+    "meaning": "Drops of water that fall from clouds.",
+    "sentence": "The rain made little puddles."
+  },
+  "school": {
+    "meaning": "A place where children learn together.",
+    "sentence": "We read a funny story at school."
+  },
+  "snow": {
+    "meaning": "Soft white frozen water that falls from clouds.",
+    "sentence": "The snow covered the grass."
+  },
+  "steak": {
+    "meaning": "A thick slice of meat.",
+    "sentence": "Dad cooked a steak."
+  },
+  "sugar": {
+    "meaning": "Sweet grains used in food.",
+    "sentence": "We added sugar to the cake."
+  },
+  "sun": {
+    "meaning": "The star that gives our world light and warmth.",
+    "sentence": "The sun shone over the garden."
+  },
+  "supervision": {
+    "meaning": "Watching over someone to help keep them safe.",
+    "sentence": "We used the scissors with an adult's supervision."
+  },
+  "sure": {
+    "meaning": "Feeling that something is true.",
+    "sentence": "I am sure my bag is here."
+  },
+  "television": {
+    "meaning": "A screen that shows programmes and films.",
+    "sentence": "We watched a nature programme on television."
+  },
+  "toy": {
+    "meaning": "Something you play with.",
+    "sentence": "I put my toy in the box."
+  },
+  "train": {
+    "meaning": "Vehicles joined together that run on rails.",
+    "sentence": "The train stopped at the station."
+  },
+  "cat": {
+    "meaning": "A small furry animal that says meow.",
+    "sentence": "The cat curled up on the rug."
+  },
+  "dog": {
+    "meaning": "An animal often kept as a pet that barks.",
+    "sentence": "Our dog loves going for walks."
+  },
+  "ship": {
+    "meaning": "A large boat that carries people or things.",
+    "sentence": "The ship sailed across the sea."
+  },
+  "gentle": {
+    "meaning": "Careful and kind, without being rough.",
+    "sentence": "Be gentle when you stroke the kitten."
+  },
+  "together": {
+    "meaning": "With someone else, rather than alone.",
+    "sentence": "We built the den together."
+  },
+  "discover": {
+    "meaning": "To find or learn something you did not know before.",
+    "sentence": "I hope we discover a new path."
+  },
+  "cheerful": {
+    "meaning": "Feeling happy or showing happiness.",
+    "sentence": "Her cheerful smile made me smile too."
+  }
+}

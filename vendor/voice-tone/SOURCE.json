@@ -1,0 +1,7 @@
+{
+  "source": "https://github.com/Signalsmith-Audio/signalsmith-stretch",
+  "file": "web/emscripten/main.js",
+  "sha256": "ad9374a2b4fa24b1d1e9d9e7d246a9c7ff11f433164c9be8df21b4b8a5d3f6b3",
+  "licence": "MIT",
+  "modification": "ES module default export added. Audio tempo remains 1."
+}

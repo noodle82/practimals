@@ -1,0 +1,80 @@
+{
+  "stage": "Implemented in local Spelloids v0.10 source; Apple build not uploaded",
+  "defaultBeforeChoice": {
+    "id": "natural-british",
+    "baseVoice": "bf_emma",
+    "sample": "spelloids-voice-comparison/bubbles-fresh-three-words.wav",
+    "pitchProcessing": false,
+    "speed": 1,
+    "isolatedWordPunctuation": "none",
+    "approvedAs": "C",
+    "appVoiceId": "natural"
+  },
+  "retainedCandidates": [
+    {
+      "id": "soft-sprite",
+      "sample": "spelloids-voice-tones/1-soft-sprite.wav",
+      "pitchSemitones": 2,
+      "formantSemitones": 1,
+      "appVoiceId": "bubbles"
+    },
+    {
+      "id": "little-monster",
+      "sample": "spelloids-voice-tones/2-little-monster.wav",
+      "pitchSemitones": 4,
+      "formantSemitones": 2.5,
+      "appVoiceId": "mallow"
+    },
+    {
+      "id": "bella",
+      "baseVoice": "af_bella",
+      "sample": "spelloids-voice-alternatives/b-bella-greeting-and-words.wav",
+      "pitchProcessing": false,
+      "accent": "American English",
+      "appVoiceId": "bella"
+    },
+    {
+      "id": "heart-2-playfully-higher",
+      "baseVoice": "af_heart",
+      "sample": "spelloids-heart-voice-variations/heart-2-playfully-higher.wav",
+      "pitchSemitones": 4,
+      "formantSemitones": 2.5,
+      "speed": 1,
+      "accent": "American English",
+      "approved": true,
+      "appVoiceId": "heart2"
+    },
+    {
+      "id": "heart-3-c-bright",
+      "baseVoice": "af_heart",
+      "sample": "spelloids-heart-3-tone-variations/heart-3-c-bright.wav",
+      "pitchSemitones": -3,
+      "formantSemitones": 4,
+      "speed": 1,
+      "accent": "American English",
+      "approved": true,
+      "appVoiceId": "heart3c"
+    }
+  ],
+  "heartAuditions": {
+    "baseVoice": "af_heart",
+    "directory": "spelloids-heart-voice-variations",
+    "choices": [
+      "heart-1-gently-higher",
+      "heart-2-playfully-higher",
+      "heart-3-gently-lower"
+    ]
+  },
+  "tempoRule": "Do not adjust speed. Pitch processing preserves original sample counts and pause lengths.",
+  "heart3ToneAuditions": {
+    "directory": "spelloids-heart-3-tone-variations",
+    "pitchSemitones": -3,
+    "tempoRatio": 1,
+    "choices": [
+      "heart-3-a-rounded",
+      "heart-3-b-natural",
+      "heart-3-c-bright"
+    ],
+    "selected": "heart-3-c-bright"
+  }
+}

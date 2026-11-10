@@ -55,7 +55,7 @@ function react(element,kind){
 }
 export function bindPalInteractions(){
  const cleanups=[];
- document.querySelectorAll('[data-pal]').forEach(element=>{
+ document.querySelectorAll('[data-pal]').forEach(element=>{if(element.closest('[data-baby-play]'))return;
   const gesture=createPalGesture({react:kind=>react(element,kind),stop:()=>{if(reactingElement===element)stopPalInteraction();}});
   activeGestures.add(gesture);
   const handlers={

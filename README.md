@@ -1,63 +1,101 @@
-# Practimals · spelling first · v0.5
+# Practimals · v0.6
 
-Weekly spelling practice for children aged 5–10, with a funny, customisable alien companion. Times tables and fantasy worlds remain parked.
+Weekly spelling practice for ages 5–10. Colourful challenges, a cleaner little alien, practice badges and a personal family wall. The name remains Practimals.
 
-## Upload to GitHub Pages
+## Upload to GitHub
 
-Use **practimals-v5-github-upload.zip**. Extract it on your computer. Upload **all the extracted contents** to the repository root, alongside the existing index.html, and commit the replacement files. Include the entire vendor and tests folders. Upload the contents, not the ZIP or an extra enclosing folder.
+Extract **practimals-v6-github-upload.zip** and upload **all extracted files and folders** into the existing repository root, alongside index.html. Replace matching files. Include vendor and tests. Do not upload the ZIP itself or an extra enclosing folder.
 
-This upload package contains no hidden folders. The .github folder is not needed to serve the app. Existing unrelated repository files can remain; there is no need to delete the repository or clear browser data.
+The upload ZIP has no hidden files or folders. Keep existing unrelated repository files; the .github folder is not required to serve the app. Existing check workflows can run the updated tests and build. The included workflow in the complete source archive checks and builds only; it does not deploy.
 
-For a simple static site, GitHub Pages can serve the main branch / (root). This package is source code; it does not publish itself. The optional workflow in the complete source archive runs checks and builds, but does not deploy a site.
+For a simple static GitHub Pages site, serve main / (root). All runtime modules, Three.js and its licence are bundled. The app needs HTTP, so use Pages or a local server rather than double-clicking index.html.
 
-## Run or build locally
+Node.js 20 or later, no dependency installation needed:
 
-Requires Node.js 20 or later. No dependency installation is needed; Three.js is bundled locally with its MIT licence.
+- `npm start` — local server on http://127.0.0.1:4173/.
+- `npm test` — 51 automated tests.
+- `npm run build` — standalone static output in dist/.
 
-- `npm start` serves http://127.0.0.1:4173/.
-- `npm test` runs 41 domain, voice and gesture tests.
-- `npm run build` creates a self-contained static site in dist/.
+## Colours, symbols and phone layout
 
-Use a server or GitHub Pages, rather than double-clicking index.html. JavaScript modules need HTTP.
+Open **Colours** in the header for a single-page comparison of **Soft stone** and **Warm oat**. Choosing one saves it on this device. Both retain the pastel game cards. Neutral surfaces replace the purple background; Fredoka and DM Sans remain.
 
-## The weekly learning loop
+The original Aa, music, blocks, missing-letter, gap and question-mark symbols are back. Each word shows six of these: grey before completion and the matching activity colour afterwards. A word is complete only after all six independent correct answers. Showing an answer, retrying, drawing or writing a sentence cannot fake a challenge completion.
 
-The supplied example set is saved automatically for both profiles: forgotten, forgetting, gardener, gardening, beginner, beginning, prefer, preferred, limiting, limited, happiest, happier, benefited, drizzling, multiplying.
+Word labels measure available space and reduce their font size where necessary, with wrapping and sensible phone layouts. Game titles and controls wrap. Layouts were checked at 320, 375, 390, 430, 768 and 1024 pixels; this is not a guarantee for every physical browser or accessibility text-size setting.
 
-Parents can replace the list with 1–20 words, set a school test date and edit all meanings and example sentences. Common words have offline glossary meanings; other words use a dictionary suggestion for parent review. Only the word is sent to the dictionary. Photo preview is available, but automatic photo transcription is not connected.
+## Weekly words and spoken questions
 
-The six core challenges are look/cover/check, hear/spell, letter building, missing letters, sentence gaps and meaning matches. Each word needs one independent correct response in **each** challenge to turn green. Six small dashboard lights show exactly what is done. Incorrect answers and shown answers do not earn a challenge light; no lights are taken away. Older versions' attempts cannot prove which challenges were correct, so they are not converted into green lights.
+The requested 15-word example remains the default: forgotten, forgetting, gardener, gardening, beginner, beginning, prefer, preferred, limiting, limited, happiest, happier, benefited, drizzling, multiplying.
 
-Every full round covers the complete assigned list, in shuffled order. A round paused on the same day resumes remaining words. Starting another activity avoids repeating the previous starting word when possible. Multiple-choice distractors also come only from the assigned list. Drawing and creating sentences are optional bonus activities on a selected weekly word.
+Parents can use 1–20 assigned words, choose a school-test date and edit simple meanings and example sentences. Six full-list methods use only those target words; multiple-choice distractors also come from the same list. Partial rounds resume that day's remaining words. Creative sentence and drawing activities remain, including rubber, brush, stamps and undo/redo. Text fields request keyboard autocorrect and spellcheck off; a tablet keyboard may keep its own suggestion strip.
 
-Look/cover uses a visible sliding cover over the word. Practice and test text fields request autocorrect, spellcheck, capitalisation and autocomplete off. Some tablet keyboards may still display suggestions; those are controlled by the device and may need turning off in keyboard settings.
+Spelling prompts read the example sentence, pause, then say **Spell**, followed by the word as its own slower utterance. Hear again repeats just that word. Meaning and sentence-gap games retain spoken clues so the automatic question does not disclose the answer. The practice test uses the same clear word delivery.
 
-## Customisation is the main reward
+Bubbles, Mallow and Ziggle select distinct actual female English device voices when there are enough installed, as well as having different pace, phrasing and pitch. Their names and underlying device voice are visible in My pal. When fewer than three suitable voices exist, styles share voices; no male default is substituted. **These are temporary speech tests, not finished cute alien voices.** Pitch and pace changes cannot deliver a convincing character voice by themselves. Purpose-made recorded or generated character voices remain a separate design task. There are no bespoke recorded voices or hosted speech service in this build. Word delivery is slower and steadier than the cheerful question/feedback voice.
 
-A completed full-list round earns one wardrobe credit per activity per day. A saved drawing or own sentence earns one creative credit per activity per day. Correctness is needed for green word lights; **having a go** earns the round credit. Repeating a completed round still gives practice but does not farm extra same-day credits.
+Device voice reference: https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/getVoices
 
-Lifetime completed-game credits unlock hats (1), coats (3), shoes (5), glasses (7), gloves (9) and earrings (11). Each unlocked category offers a choice of three items once per spelling week. Owned clothes remain available to wear or remove. New colours unlock at 2, 4, 6, 8, 10, 12 and 18 games, with rainbow at 24. Four starter colours, six eye colours and three creature shapes are freely available. Games and belongings carry across weeks; the first creature starts without clothes.
+## Practice badges and a monster for each spelling set
 
-Choose Bubbles, Mallow or Ziggle in My pal to hear three playful pitch/pace styles. These use an explicitly selected female English device voice; they are not bespoke recordings or guaranteed child voices. Sound varies across browsers and tablets. If none is available, enable an English female voice in the device settings or use a grown-up to read. Grown-ups can choose a base voice. The child’s actual Practimal name appears in question bubbles.
+A new spelling set starts with a grey Bobble, no antennae, no freckles and no clothing equipped. Owned accessories stay in the wardrobe.
 
-Tap the monster for an oof, double-tap to giggle, or hold for a purr. The visible **Dance** button avoids gesture confusion. Keyboard: Enter/space to greet, G to giggle, hold P to purr, D to dance. Yawn, silly cross-eyes and eye roll also have buttons and occasional idle appearances. Automatic funny expressions are suppressed while questions are being asked. Reduced-motion preferences are respected.
+Different answered word/method questions count once per day, including brave incorrect attempts. Repeated guesses on the same question do not farm questions. Revealing an answer without an attempt does not count. Whole-list practice-test answers count as questions; den games and baby care do not.
 
-## Eggs and the nursery
+Badges arrive at 10, 20, 30, 40, 50, 60, 75 and 90 answered questions in the current set:
 
-Each spelling week supplies one egg. Its cracks reflect completed challenge lights, never calendar time. For this 15-word list, all **90 lights** are needed. The final challenge invites the child into a three-step hatch scene. The school test date is only a reminder and a date for school records.
+- Badge 1 opens a body colour and shape choice.
+- Badge 2 opens an antenna choice.
+- Badge 3 opens optional freckles.
+- Badges 1–6 open the hat, coat, shoe, glasses, glove and earring collections respectively.
+- Badge 8 earns rainbow for the colour library. It remains available in future sets after that set's first badge.
 
-Babies stay in the nursery across weeks. Feed a berry, cuddle, tuck into a cot or wake them up. They never become hungry or unhappy through absence. **Teach a weekly word** starts a normal spelling round with the baby learning alongside the child; correctly answered words join that baby's word collection. Care itself does not grant wardrobe credits. Six baby variants include common, rare and super-rare appearances.
+Colour, shape and antenna selections are each **one choice for the spelling set** and are saved immediately. All regular colour and shape options are offered at their relevant badge. Accessories, eye colours, voice and optional freckles can change; chosen accessories stay owned. A wardrobe badge opens the collection, rather than restricting the child to one accessory from it.
 
-**My egg → Preview a hatch** shows the full scene and a temporary super-rare baby. You can try feeding, cuddling and the cot. Previewing does not grant a real baby, complete a word or change real progress. Close the preview to return to the real family. If you choose to practise from the preview, normal spelling practice is recorded.
+At hatching, the current body identity is frozen, including any default grey/no-antenna choices. The child is invited to finish the monster first. Starting a new spelling set in Grown-ups resets the body choices and creates another egg, while keeping owned accessories, baby care, school records and family portraits. Highest badge collections stay unlocked across sets.
 
-## Actual school tests
+Existing v4/v5 monsters are preserved on migration rather than stripped of chosen colours or clothes. Prior attempts are not invented as successful challenges or today's question count.
 
-Grown-ups can record a school test date, tick the words that were wrong and save notes. The score is calculated from that week's list. Records retain the complete list and wrong words even after starting another week. These records are separate from the app's shuffled whole-list practice tests.
+## Cleaner adults, inherited babies and the hatch
 
-## Storage and migration
+Hard-coded white eye sparkle spots are removed. Faces use smoother, less glossy materials; freckles are optional. Adults keep tap/oof, double-tap/giggle, hold/purr and the Dance button, plus funny expression buttons and occasional idle faces. Keyboard: Enter/space to greet, G to giggle, hold P to purr, D to dance. Reduced-motion preferences are respected.
 
-Profiles, spelling lists, progress, wardrobe, pictures, babies and school records save in this browser's localStorage, under the existing practimals-spelling-v4 key. Version 5 migrates that data, preserving names, owned items and babies. It loads the requested example list on the first upgrade; a different previous list is archived and can be loaded back into the parent editor, including its saved meanings.
+All six successful challenges for every word unlock the egg: **90 completions for this 15-word set**. Calendar time never hatches it. The final round invites the child to finish their monster and visit the nursery.
 
-There are no accounts, cloud sync, school sharing or server database. Clearing browser data clears this device's saved progress. The example list itself is bundled in sample.js and remains the default for a fresh browser. Standard speech may rely on the device's installed or online voices. Google Fonts supplies Fredoka and DM Sans when online; local fallback fonts are included in CSS.
+Tap the egg four times to add cracks, then watch it rumble, split and reveal the baby. The baby inherits the actual colour, shape, eye colour, antennae and optional freckles of that spelling set's adult, without clothes. It has a rounder, shorter body, larger eyes, shorter arms and smaller antennae. Babies no longer use an unrelated random rare-creature appearance.
 
-WebGL enables the fitted 3D wardrobe and facial animations. Unsupported browsers show a simpler SVG character; the detailed wardrobe requires WebGL.
+In the nursery:
+
+- Drag the berry spoon with a finger or mouse to the mouth to feed it. Enter on the spoon provides a keyboard alternative.
+- Tap the baby five times to rock it to sleep. A cot button also allows direct bedtime/wake-up.
+- Cuddle, rename it or teach it weekly words. Learned words are saved in that baby's own collection.
+- There is no hunger timer or loss of happiness while away.
+
+**Preview a hatch** uses a temporary baby and does not complete words, grant a real baby or alter real care. If you choose to practise from the preview, ordinary spelling progress is recorded. Close preview returns to the real family.
+
+## Family wall and school records
+
+Hatching saves one framed illustration of the adult embracing its inherited baby. It preserves the adult's appearance at hatching, the creature names, achievement date and exact spelling list. Tap a frame to see the names and words. A saved school test result for that set also appears there. Later weeks and changed accessories cannot rewrite old portraits; renaming a baby deliberately updates its portrait's name.
+
+The wall records completed spelling sets at hatching; it does not claim that a child passed the real school test. Grown-ups can separately record the school score, wrong words and notes. Existing legacy babies are retained, but the app does not invent historical portraits when their original adult appearance is unknown.
+
+## Secret den: two starter games and a growing library
+
+Ten different answered questions in a day open that day's den. Once all words are green, it stays open every day for that spelling set. The gate is checked when entering and during play. Access is local practice logic, not an account or parental-security mechanism.
+
+Two starter games:
+
+1. **Word Rocket** — drag up/down or use arrows to avoid asteroids and fly through the assigned word capsules.
+2. **Cloud Hopper** — steer left/right to bounce onto word clouds and collect the list.
+
+Each run reshuffles the weekly words and generates a different course. The rider is the live 3D monster with the child's actual body and equipped accessories. Three chances, pause/resume, new-course replay and word collection are included. Completing a game never marks spelling challenges correct.
+
+Each additional spelling set adds a new course edition to the library, using the two existing engines. Moon editions have lower gravity and moving clouds; later rocket editions add drifting comets. These are course/physics variants, not a promise of an unlimited library of distinct game engines. More game types can be developed later.
+
+## Storage and limits
+
+Data stays in this browser's localStorage under the existing practimals-spelling-v4 key, with schema version 6. There are two child profiles, no accounts, cloud sync or school sharing. Clearing browser storage clears local progress; the supplied example list remains bundled for fresh profiles.
+
+Common meanings work offline; unfamiliar words may use a dictionary suggestion for parent review, sending only the word. Photo preview remains available, but photo transcription is not connected. Google Fonts is used when online, with local CSS font fallbacks. Device speech can depend on installed/online voices. WebGL is needed for the full fitted 3D wardrobe; unsupported devices use a simpler SVG view.
+
+A desktop Chromium walkthrough and simulated touch were used. Physical iPad/Android voice sound, finger feel and keyboard behaviour still need trying on the intended tablet.

@@ -1,0 +1,24 @@
+// Weekly identity, practice badges and the den are independent of the UI.
+export const BODY_COLOURS=['grey','mint','lilac','peach','blue','rose','aqua','lemon','coral','berry','gold','moon','rainbow'];
+export const BODY_SHAPES=['bobble','blip','wiggle'];
+export const FEELERS=['none','sprout','curly','floppy'];
+export const BADGE_STEPS=[10,20,30,40,50,60,75,90];
+export function lookOf(p){return {species:p.species||'bobble',colour:p.colour||'grey',eyeColour:p.eyeColour||'violet',antennae:p.antennae||'none',freckles:!!p.freckles,palName:p.palName||'Bobble',wearing:{...p.wearing}};}
+export function allGreen(p){return !!p.words?.length&&p.words.every(w=>['study','listen','build','letters','gap','meaning'].every(m=>p.week?.progress[w.word]?.passed?.includes(m)));}
+export function weekAnswers(p){return p.week?.answers?.length||0;}
+export function badgeCount(p){return BADGE_STEPS.filter(n=>weekAnswers(p)>=n).length;}
+export function dailyCount(p,day){return p.dailyPractice?.[day]?.length||0;}
+export function denAccess(p,day){const count=dailyCount(p,day);return{open:count>=10||allGreen(p),unlimited:allGreen(p),count,remaining:Math.max(0,10-count)};}
+export function recordAttempt(p,word,method,day){if(!p.week||!p.words.some(w=>w.word===word))throw Error('Use an assigned word.');if(!['study','listen','build','letters','gap','meaning','test'].includes(method))return false;p.week.answers??=[];p.dailyPractice??={};const key=p.week.id+':'+method+':'+word;const dayKeys=p.dailyPractice[day]??=[];if(dayKeys.includes(key))return false;dayKeys.push(key);p.week.answers.push({word,method,day});p.unlockedBadgeLevel=Math.max(p.unlockedBadgeLevel||0,badgeCount(p));return true;}
+export function beginIdentity(p){p.species='bobble';p.colour='grey';p.antennae='none';p.freckles=false;p.wearing=Object.fromEntries(['hat','coat','shoes','glasses','gloves','earrings'].map(k=>[k,null]));p.week.answers=[];p.week.design={locks:{},look:lookOf(p)};p.portraits??=[];p.dailyPractice??={};p.setCount=(p.setCount||0)+1;p.denLibrary??=[{id:'rocket',engine:'rocket',name:'Word Rocket',edition:1},{id:'bounce',engine:'bounce',name:'Cloud Hopper',edition:1}];if(p.setCount>1){const n=p.setCount;p.denLibrary.push({id:'edition-'+n,engine:n%2?'rocket':'bounce',name:n%2?'Comet Trail':'Moon Bounce',edition:n});}}
+export function migrateJourney(p){p.portraits??=[];p.dailyPractice??={};p.setCount??=1;p.denLibrary??=[{id:'rocket',engine:'rocket',name:'Word Rocket',edition:1},{id:'bounce',engine:'bounce',name:'Cloud Hopper',edition:1}];if(p.week&&!p.week.design){p.antennae=p.antennae||'sprout';p.week.answers=[];p.week.design={locks:{colour:p.colour!=='grey',species:true,antennae:true},look:lookOf(p)};}p.journeyVersion=6;}
+export function identityAvailable(p,kind,value){if(!p.week||p.week.design?.locks[kind])return false;const badge=badgeCount(p);return kind==='colour'?BODY_COLOURS.includes(value)&&badge>=1&&(value!=='rainbow'||(p.unlockedBadgeLevel||badge)>=8):kind==='species'?BODY_SHAPES.includes(value)&&badge>=1:kind==='antennae'?FEELERS.includes(value)&&badge>=2:false;}
+export function chooseIdentity(p,kind,value){if(!identityAvailable(p,kind,value))return false;p[kind]=value;p.week.design.locks[kind]=true;p.week.design.look=lookOf(p);return true;}
+export function canFreckle(p){return Math.max(badgeCount(p),p.unlockedBadgeLevel||0)>=3||!!p.freckles;}
+export function rememberLook(p){if(p.week?.design)p.week.design.look=lookOf(p);}
+export function inheritedBaby(egg){const parent=egg.parent||{species:'bobble',colour:'grey',eyeColour:'violet',antennae:'none',palName:'Bobble'};return{...parent,palName:'Little '+parent.palName,wearing:{}};}
+export function addPortrait(p,egg,baby,day){if(p.portraits.some(x=>x.weekId===egg.id))return;p.portraits.unshift({id:globalThis.crypto.randomUUID(),weekId:egg.id,date:day,adult:structuredClone(egg.parent||lookOf(p)),baby:structuredClone({...baby.look,palName:baby.name}),babyId:baby.id,words:structuredClone(egg.words||p.words),complete:true});}
+export function rockBaby(baby){baby.care??={feeds:0,cuddles:0,asleep:false};if(baby.care.asleep)return{asleep:true,rocks:baby.care.rocks||0};baby.care.rocks=(baby.care.rocks||0)+1;if(baby.care.rocks>=5){baby.care.asleep=true;baby.care.rocks=0;}return{asleep:baby.care.asleep,rocks:baby.care.rocks};}
+// Freshly generated positions and word order keep both games replayable.
+export function makeRun(words,random=Math.random){const targets=words.map(w=>typeof w==='string'?w:w.word);for(let i=targets.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[targets[i],targets[j]]=[targets[j],targets[i]];}return{targets,collected:[],hazards:Array.from({length:24},()=>({x:.7+random()*7,y:.12+random()*.72,size:.025+random()*.025})),seed:random()};}
+export function collectRunWord(run,word){if(!run.targets.includes(word)||run.collected.includes(word))return false;run.collected.push(word);return true;}

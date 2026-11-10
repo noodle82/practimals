@@ -1,0 +1,64 @@
+SPELLOIDS: SMALL WEBSITE DEFINITION FIX
+
+This patch adds simple offline meanings and examples for all 12 reported words, reuses the existing curriculum glossary for typed lists, fills missing examples on resave, and reports/retries missing dictionary meanings. It does not cover every possible English word: unknown words still use the dictionary or need parent review.
+
+1. Extract this ZIP.
+2. Upload the five top-level .js/.json app files into the TOP LEVEL of noodle82/practimals, replacing matching files, and commit.
+3. Upload the inner tests folder at the repository top level to add the new check. No audio or vendor upload is needed. This instruction file may stay on your computer.
+4. After GitHub Pages has finished deploying, reopen the website and refresh it. If the old screen remains, refresh once more so the new website cache takes control. Keep site data: clearing it would remove saved progress.
+5. Open Grown-ups and leave your weekly list unchanged. Press Save list & suggest meanings. Do not choose Start a new spelling week just to repair definitions.
+6. Check the report: your 12 example words should have 12 meanings and 12 example sentences. Existing nonempty parent text is preserved. Review suggestions against the school meaning.
+
+This patch was tested with the dictionary blocked: all 12 reported words and every built-in curriculum word have local meanings and examples. Existing week ID, progress, monster choices, scrapbook entries and parent text survived a real browser resave. Missing lookup failures and the retry flow were also tested. All 99 automated checks passed. The original v10 source and Apple build configuration were kept separate; an existing Codemagic build is not changed by this download. A later Codemagic build will incorporate the patch if you upload it to its branch.
+
+The live dictionary returned definitions for all the reported examples during diagnosis. The parent's earlier browser failure was not reproduced, so it is not attributed to a particular network cause. Several original results had no example sentence.
+
+SIMPLE MEANINGS AND SENTENCES
+
+ENDEAVOUR
+To try hard to do something.
+I will endeavour to finish the puzzle.
+
+GLAMOUR
+A special beauty or style that seems exciting.
+The sparkling dress added glamour to the show.
+
+CONCLUSION
+The end of something, or a final decision.
+The story had a happy conclusion.
+
+FAVOURITE
+The one you like best.
+Blue is my favourite colour.
+
+FLAVOUR
+The taste of a food or drink.
+This ice cream has a strawberry flavour.
+
+JOURNEY
+Travelling from one place to another.
+Our journey to the beach took an hour.
+
+NEIGHBOUR
+Someone who lives near you.
+Our neighbour helped us water the plants.
+
+CONFUSION
+Feeling mixed up or unsure about something.
+There was confusion about whose turn it was.
+
+PERSUASION
+Getting someone to agree by talking and giving reasons.
+With some persuasion, Dad agreed to play another game.
+
+SUPERVISION
+Watching over someone to help keep them safe.
+We used the scissors with an adult's supervision.
+
+TELEVISION
+A screen that shows programmes and films.
+We watched a nature programme on television.
+
+COLOUR
+What makes red, blue and yellow look different.
+The flower was a bright yellow colour.

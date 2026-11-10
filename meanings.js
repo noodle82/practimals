@@ -1,3 +1,4 @@
+import{PACK_WORDS}from'./curriculum.js';
 import{SAMPLE_WORDS}from'./sample.js';
 import{WORDS}from'./learning.js';
 const PRIMARY={
@@ -6,26 +7,79 @@ const PRIMARY={
 Object.assign(PRIMARY,{
  courage:'The strength to try something even when you feel afraid.',courageous:'Brave; willing to try something even when it feels scary.',said:'Told someone something using words.',says:'Uses words to tell someone something.',was:'A word that tells us how someone or something used to be.',were:'A word that tells us how people or things used to be.',come:'To move towards someone or somewhere.',some:'An amount or number of things, without saying exactly how many.',once:'One time, or at a time in the past.',one:'The number we use when there is just a single thing.',two:'One more than one.',does:'A form of do, as in she does her homework.',goes:'Moves or travels to a place.',here:'In this place.',every:'All the people or things in a group, one by one.',very:'A word that makes a description stronger, as in very big.',could:'Was able to do something, or might be able to do it.',would:'A word we use to talk about what might happen or what we want.',should:'A word we use to say what is a good idea to do.',want:'To wish for something.',look:'To use your eyes to see something.',love:'A strong feeling of care for someone or something.',move:'To change position or go somewhere.',improve:'To become better at something.',imagine:'To make a picture or idea in your mind.',understand:'To know what something means or how it works.',listen:'To pay attention to a sound or to what someone says.',describe:'To say or write what something is like.',explain:'To help someone understand something.',honest:'Telling the truth.',honesty:'Telling the truth and being fair.',respect:'Treating someone or something with care.',responsible:'Someone you can trust to do what needs to be done.',delight:'A feeling of great happiness.',delighted:'Very pleased and happy.',mysterious:'Hard to explain or understand, making you curious.',ancient:'Very old, from a long time ago.',enchanting:'So lovely or interesting that it holds your attention.',sparkle:'To shine with little flashes of light.',glow:'To shine with a soft, steady light.',whisper:'To speak very quietly.',whispering:'Speaking very quietly.',breathe:'To take air into your body and let it out.',breath:'The air you take in or let out when you breathe.',necessary:'Something that is needed.',immediately:'Straight away, without waiting.',occasionally:'Sometimes, but not often.',especially:'More than usual, or more than other things.',environment:'The places and conditions where living things live.',community:'People who live in the same place or share something.',opportunity:'A chance to do something.',identity:'The things that make you who you are.',recognise:'To know someone or something because you have seen it before.',rhythm:'A pattern of beats or sounds.',rhyme:'Words that end with the same sound, like cat and hat.',queue:'A line of people waiting for their turn.',"can't":'A short way of saying cannot.',"don't":'A short way of saying do not.',"it's":'A short way of saying it is or it has.',"they're":'A short way of saying they are.',"we're":'A short way of saying we are.'
 });
-export function localWord(word){const sample=SAMPLE_WORDS.find(w=>w.word===word);if(sample)return{...sample};return WORDS[word]?{word,...WORDS[word],meaningSource:'Starter glossary'}:PRIMARY[word]?{word,meaning:PRIMARY[word],meaningSource:'Primary glossary'}:{word,meaning:''};}
+const WEEKLY_HELP={
+  "endeavour": {
+    "meaning": "To try hard to do something.",
+    "sentence": "I will endeavour to finish the puzzle."
+  },
+  "glamour": {
+    "meaning": "A special beauty or style that seems exciting.",
+    "sentence": "The sparkling dress added glamour to the show."
+  },
+  "conclusion": {
+    "meaning": "The end of something, or a final decision.",
+    "sentence": "The story had a happy conclusion."
+  },
+  "favourite": {
+    "meaning": "The one you like best.",
+    "sentence": "Blue is my favourite colour."
+  },
+  "flavour": {
+    "meaning": "The taste of a food or drink.",
+    "sentence": "This ice cream has a strawberry flavour."
+  },
+  "journey": {
+    "meaning": "Travelling from one place to another.",
+    "sentence": "Our journey to the beach took an hour."
+  },
+  "neighbour": {
+    "meaning": "Someone who lives near you.",
+    "sentence": "Our neighbour helped us water the plants."
+  },
+  "confusion": {
+    "meaning": "Feeling mixed up or unsure about something.",
+    "sentence": "There was confusion about whose turn it was."
+  },
+  "persuasion": {
+    "meaning": "Getting someone to agree by talking and giving reasons.",
+    "sentence": "With some persuasion, Dad agreed to play another game."
+  },
+  "supervision": {
+    "meaning": "Watching over someone to help keep them safe.",
+    "sentence": "We used the scissors with an adult's supervision."
+  },
+  "television": {
+    "meaning": "A screen that shows programmes and films.",
+    "sentence": "We watched a nature programme on television."
+  },
+  "colour": {
+    "meaning": "What makes red, blue and yellow look different.",
+    "sentence": "The flower was a bright yellow colour."
+  }
+};
+const curriculum=new Map(Object.values(PACK_WORDS).flat().map(w=>[w.word,w]));
+const normalise=word=>String(word??'').trim().replace(/[’‘]/g,"'").toLowerCase();
+export function localWord(raw){const word=normalise(raw);if(WEEKLY_HELP[word])return{word,...WEEKLY_HELP[word],meaningSource:'Spelloids simple glossary',lookupStatus:'local'};const sample=SAMPLE_WORDS.find(w=>w.word===word);if(sample)return{...sample,lookupStatus:'local'};if(WORDS[word])return{word,...WORDS[word],meaningSource:'Starter glossary',lookupStatus:'local'};if(curriculum.has(word))return{...curriculum.get(word),meaningSource:'Curriculum glossary',lookupStatus:'local'};return PRIMARY[word]?{word,meaning:PRIMARY[word],sentence:'',meaningSource:'Primary glossary',lookupStatus:'local'}:{word,meaning:'',sentence:''};}
+export function meaningSummary(words){const missingMeanings=words.filter(w=>!String(w.meaning||'').trim()).map(w=>w.word),missingSentences=words.filter(w=>!String(w.sentence||'').trim()).map(w=>w.word);return{total:words.length,meanings:words.length-missingMeanings.length,sentences:words.length-missingSentences.length,missingMeanings,missingSentences};}
+export function lookupMessage(status){return{offline:'Connect to the internet to try the dictionary, or add a meaning.',timeout:'The dictionary took too long. Please try again.',network:'The dictionary could not be reached. Please try again.',notFound:'The dictionary has no entry for this word.',rateLimited:'The dictionary is busy. Please try again shortly.',unavailable:'The dictionary is unavailable. Please try again later.',noSimpleDefinition:'No suitable short meaning was found. Please add one.',invalidResponse:'The dictionary returned an unreadable result. Please try again.'}[status]||'';}
 export function simpleMeaning(text){
  return String(text).replace(/\bcease remembering\b/gi,'not remember').replace(/\bcease\b/gi,'stop').replace(/\([^)]*\)/g,'').replace(/\[[^\]]*\]/g,'').replace(/\butili[sz]e\b/gi,'use').replace(/\bapproximately\b/gi,'about').replace(/\bsufficient\b/gi,'enough').replace(/\bpossess\b/gi,'have').replace(/\bcommence\b/gi,'begin').replace(/\bterminate\b/gi,'end').replace(/\bindividual\b/gi,'person').replace(/\s+/g,' ').trim();
 }
-export async function suggestMeaning(word,{fetcher=globalThis.fetch}={}){
- const sample=SAMPLE_WORDS.find(w=>w.word===word);if(sample)return{...sample};
- if(WORDS[word])return{word,...WORDS[word],meaningSource:'Starter glossary'};
- if(PRIMARY[word])return{word,meaning:PRIMARY[word],meaningSource:'Primary glossary'};
- if(!fetcher)return{word,meaning:'',meaningSource:'Needs a parent meaning'};
- const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),5000);
+export async function suggestMeaning(raw,{fetcher=globalThis.fetch}={}){
+ const word=normalise(raw),local=localWord(word);if(local.meaning)return local;
+ const missing=status=>({word,meaning:'',sentence:'',meaningSource:'Needs a parent meaning',lookupStatus:status});
+ if(!fetcher||globalThis.navigator?.onLine===false)return missing('offline');
+ const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),5000);let failure='network';
  try{
   const response=await fetcher('https://api.dictionaryapi.dev/api/v2/entries/en/'+encodeURIComponent(word),{signal:controller.signal});
-  if(!response.ok)throw Error('No entry');const entries=await response.json();if(!Array.isArray(entries))throw Error('No entry');
+  if(!response.ok)return missing(response.status===404?'notFound':response.status===429?'rateLimited':'unavailable');
+  failure='invalidResponse';const entries=await response.json();if(!Array.isArray(entries))return missing('invalidResponse');
   const candidates=entries.flatMap(e=>Array.isArray(e.meanings)?e.meanings.flatMap(m=>Array.isArray(m.definitions)?m.definitions.map(d=>({...d,license:e.license,source:e.sourceUrls?.[0]})):[]):[]).filter(d=>typeof d.definition==='string').map(d=>({...d,simple:simpleMeaning(d.definition)})).filter(d=>d.simple.length>8&&d.simple.split(' ').length<=28&&!/\b(vulgar|sexual|intercourse|genital|obscene|excrement)\b/i.test(d.simple));
   candidates.sort((a,b)=>a.simple.split(' ').length-b.simple.split(' ').length);
-  if(!candidates.length)throw Error('No short meaning');const best=candidates[0];return{word,meaning:best.simple,sentence:typeof best.example==='string'?best.example:'',meaningSource:'Dictionary suggestion · parent review',meaningLicense:best.license?.name||'',meaningLicenseUrl:best.license?.url||'',meaningAttribution:typeof best.source==='string'&&/^https?:\/\//.test(best.source)?best.source:''};
- }catch{return{word,meaning:'',meaningSource:'Needs a parent meaning'};}finally{clearTimeout(timer);}
+  if(!candidates.length)return missing('noSimpleDefinition');const best=candidates[0];return{word,meaning:best.simple,sentence:typeof best.example==='string'?best.example:'',meaningSource:'Dictionary suggestion · parent review',lookupStatus:'dictionary',meaningLicense:best.license?.name||'',meaningLicenseUrl:best.license?.url||'',meaningAttribution:typeof best.source==='string'&&/^https?:\/\//.test(best.source)?best.source:''};
+ }catch(error){return missing(controller.signal.aborted||error?.name==='AbortError'?'timeout':failure);}finally{clearTimeout(timer);}
 }
 export async function suggestWordList(words,previous=[],options={}){
- const old=new Map(previous.map(x=>[x.word,x]));
- const output=new Array(words.length);let cursor=0;
- await Promise.all(Array.from({length:Math.min(4,words.length)},async()=>{while(cursor<words.length){const i=cursor++,word=words[i],saved=old.get(word);output[i]=saved?.meaning?saved:await suggestMeaning(word,options);}}));return output;
+ const old=new Map(previous.map(x=>[normalise(x.word),x])),output=new Array(words.length);let cursor=0;
+ await Promise.all(Array.from({length:Math.min(4,words.length)},async()=>{while(cursor<words.length){const i=cursor++,word=normalise(words[i]),saved=old.get(word),suggestion=saved?.meaning?localWord(word):await suggestMeaning(word,options);output[i]={...(saved?.meaning?{...suggestion,...saved}:{...saved,...suggestion}),word,meaning:saved?.meaning||suggestion.meaning||'',sentence:saved?.sentence||suggestion.sentence||''};if(!output[i].meaning&&suggestion.lookupStatus)output[i].lookupStatus=suggestion.lookupStatus;}}));return output;
 }

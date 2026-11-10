@@ -1,0 +1,23 @@
+[
+  {
+    "family": "Caveat",
+    "id": "handwriting",
+    "file": "handwriting.ttf",
+    "url": "https://fonts.gstatic.com/s/caveat/v23/WnznHAc5bAfYB2QRah7pcpNvOx-pjfJ9SII.ttf",
+    "licenseURL": "https://raw.githubusercontent.com/google/fonts/main/ofl/caveat/OFL.txt"
+  },
+  {
+    "family": "Pacifico",
+    "id": "joined",
+    "file": "joined.ttf",
+    "url": "https://fonts.gstatic.com/s/pacifico/v23/FwZY7-Qmy14u9lezJ96A.ttf",
+    "licenseURL": "https://raw.githubusercontent.com/google/fonts/main/ofl/pacifico/OFL.txt"
+  },
+  {
+    "family": "Chewy",
+    "id": "silly",
+    "file": "silly.ttf",
+    "url": "https://fonts.gstatic.com/s/chewy/v18/uK_94ruUb-k-wk5x.ttf",
+    "licenseURL": "https://raw.githubusercontent.com/google/fonts/main/apache/chewy/LICENSE.txt"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "family": "DM Sans",
+    "file": "body.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/dmsans/DMSans%5Bopsz%2Cwght%5D.ttf",
+    "sha": "c672f98060af9b2c85fca704ebd5ad9a8717c1df"
+  },
+  {
+    "family": "Fredoka",
+    "file": "headings.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/fredoka/Fredoka%5Bwdth%2Cwght%5D.ttf",
+    "sha": "349b6ecef8a358ede29b7bf74a08196be5d71b25"
+  }
+]

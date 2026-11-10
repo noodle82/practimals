@@ -1,0 +1,31 @@
+{
+  "bytes": 92361116,
+  "sha256": "fbae9257e1e05ffc727e951ef9b9c98418e6d79f1c9b6b13bd59f5c9028a1478",
+  "parts": [
+    {
+      "file": "model-01.bin",
+      "bytes": 20971520,
+      "sha256": "66c70ebf9d505502851a9316b3dd81d1e00c9bf6d9232e5c1ed1cb66ca4d847f"
+    },
+    {
+      "file": "model-02.bin",
+      "bytes": 20971520,
+      "sha256": "4793ad6ef4a249d909e315843c7b5d1fb4ec364dc52cfa8ae27dbac9eaf34690"
+    },
+    {
+      "file": "model-03.bin",
+      "bytes": 20971520,
+      "sha256": "11ef5498fcb27f47597631b293712d3a0c2aa9c6a24f198b4667859cbf99d3fc"
+    },
+    {
+      "file": "model-04.bin",
+      "bytes": 20971520,
+      "sha256": "46cc37347a6ddd92919b625f6ca9fedc3a4e6b6636b6e6bff20b976318ca31a0"
+    },
+    {
+      "file": "model-05.bin",
+      "bytes": 8475036,
+      "sha256": "6a38f960b86121c94c201cab83953f49a0b42f238e63b66c7739f76c0b123ad9"
+    }
+  ]
+}

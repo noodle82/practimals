@@ -1,0 +1,21 @@
+import fs from'node:fs';import path from'node:path';import{execFileSync}from'node:child_process';import{fileURLToPath}from'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');process.chdir(root);
+const config=JSON.parse(fs.readFileSync('capacitor.config.json')),pkg=JSON.parse(fs.readFileSync('package.json'));
+if(config.appId!=='com.spelloids.spelling')throw Error('The native app and Codemagic signing Bundle IDs must both be com.spelloids.spelling.');
+const rawBuild=process.env.IOS_BUILD_NUMBER||String(Number(process.env.PROJECT_BUILD_NUMBER||process.env.BUILD_NUMBER||0)+1);
+if(!/^\d+$/.test(rawBuild)||Number(rawBuild)<1)throw Error('IOS_BUILD_NUMBER must be a positive whole number.');
+if(process.argv.includes('--check')){console.log('Native configuration valid:',config.appId,pkg.version,'build',rawBuild);process.exit(0);}
+if(process.platform!=='darwin')throw Error('Create the Apple build on Codemagic’s macOS machine. On this computer, use npm start for the web preview.');
+const run=(file,args)=>execFileSync(file,args,{cwd:root,stdio:'inherit'}),cap=path.join(root,'node_modules','@capacitor','cli','bin','capacitor');
+run(process.execPath,['build.js']);
+if(!fs.existsSync('ios/App/App.xcodeproj'))run(process.execPath,[cap,'add','ios','--packagemanager','CocoaPods']);
+run(process.execPath,[cap,'sync','ios']);
+const project='ios/App/App.xcodeproj/project.pbxproj';let text=fs.readFileSync(project,'utf8');
+if(!/CURRENT_PROJECT_VERSION\s*=/.test(text)||!/MARKETING_VERSION\s*=/.test(text))throw Error('Unexpected Xcode project template.');
+text=text.replace(/CURRENT_PROJECT_VERSION\s*=\s*[^;]+;/g,'CURRENT_PROJECT_VERSION = '+Number(rawBuild)+';').replace(/MARKETING_VERSION\s*=\s*[^;]+;/g,'MARKETING_VERSION = '+pkg.version+';');fs.writeFileSync(project,text);
+const plist='ios/App/App/Info.plist';let info=fs.readFileSync(plist,'utf8');
+const values={NSCameraUsageDescription:'Take a photo of the weekly spelling list.',NSPhotoLibraryUsageDescription:'Choose a photo of the weekly spelling list.',ITSAppUsesNonExemptEncryption:false};
+for(const[key,value]of Object.entries(values))if(!info.includes('<key>'+key+'</key>')){const at=info.lastIndexOf('</dict>');if(at<0)throw Error('Invalid Info.plist');info=info.slice(0,at)+'\t<key>'+key+'</key>\n\t'+(value===false?'<false/>':'<string>'+value+'</string>')+'\n'+info.slice(at);};fs.writeFileSync(plist,info);
+const icon='ios/App/App/Assets.xcassets/AppIcon.appiconset';fs.mkdirSync(icon,{recursive:true});fs.copyFileSync('native/AppIcon.png',icon+'/AppIcon-512@2x.png');
+fs.writeFileSync(icon+'/Contents.json',JSON.stringify({images:[{filename:'AppIcon-512@2x.png',idiom:'universal',platform:'ios',size:'1024x1024'}],info:{author:'xcode',version:1}},null,2));
+console.log('Prepared Spelloids',pkg.version,'build',Number(rawBuild),'for iPhone and iPad. Assets and voices are bundled locally.');

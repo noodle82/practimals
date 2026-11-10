@@ -1,3 +1,7 @@
+# This Week dashboard checks
+
+Browser checks passed at 820x1180, 1024x768, 768x1024, 1366x900, 390x844 and 320x740. Confirmed: spellings/challenges/Spelloid align side by side above 700px, creative extras follow below, exactly six core plus two creative modules, exactly one bottom test button, no horizontal page overflow, readable untruncated words and progress icons below the words inside each tile. A 20-word set retained all 120 progress icons. Word details/progress, activity instructions, drawing and the bottom test button were exercised. No runtime exceptions. These are browser viewport checks, not physical iPad testing.
+
 # Practice-flow and customisation validation
 
 102 automated checks pass. A dedicated muted browser exercised all six spelling challenges: one clean retry, a second error advancing automatically, and no challenge completion for twice-missed words. Build-word tiles returned to their original order with no disabled tiles left over. A correct retry earned its light. The one-word whole-list practice test finished automatically after a second error with a zero score. Leaving during auto-advance cancelled it without awarding mastery.

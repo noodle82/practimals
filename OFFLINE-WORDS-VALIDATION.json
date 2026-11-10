@@ -33,5 +33,41 @@
     "ownedAccessoriesRemainChangeable": true,
     "ipadPortraitAndLandscapePreviewVisible": true,
     "physicalIpadTested": false
+  },
+  "dashboard": {
+    "viewports": [
+      [
+        820,
+        1180
+      ],
+      [
+        1024,
+        768
+      ],
+      [
+        768,
+        1024
+      ],
+      [
+        1366,
+        900
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        740
+      ]
+    ],
+    "threeColumnsOnTablet": true,
+    "sixCoreTwoCreative": true,
+    "oneBottomTestButton": true,
+    "descriptionsMovedIntoActivities": true,
+    "label": "Your Spelloid",
+    "twentyWordSetChecked": true,
+    "wordAndIconBoundsChecked": true,
+    "runtimeExceptions": 0
   }
 }

@@ -1996,6 +1996,144 @@
           "offset": 15238800,
           "length": 144000,
           "sampleRate": 24000
+        },
+        "endeavour": {
+          "file": "v11-weekly-natural.pcm",
+          "offset": 0,
+          "length": 44400,
+          "sampleRate": 24000
+        },
+        "i will endeavour to finish the puzzle.": {
+          "file": "v11-weekly-natural.pcm",
+          "offset": 44400,
+          "length": 133200,
+          "sampleRate": 24000
+        },
+        "glamour": {
+          "file": "v11-weekly-natural.pcm",
+          "offset": 177600,
+          "length": 42000,
+          "sampleRate": 24000
+        },
+        "the sparkling dress added glamour to the show.": {
+          "file": "v11-weekly-natural.pcm",
+          "offset": 219600,
+          "length": 158400,
+          "sampleRate": 24000
+        },
+        "conclusion": {
+          "file": "v11-weekly-natural.pcm",
+          "offset": 378000,
+          "length": 72000,
+          "sampleRate": 24000
+        },
+        "the story had a happy conclusion.": {
+          "file": "v11-weekly-natural.pcm",
+          "offset": 450000,
+          "length": 130800,
+          "sampleRate": 24000
+        },
+        "blue is my favourite colour.": {
+          "file": "v11-weekly-natural.pcm",
+          "offset": 580800,
+          "length": 120000,
+          "sampleRate": 24000
+        },
+        "flavour": {
+          "file": "v11-weekly-natural.pcm",
+          "offset": 700800,
+          "length": 40800,
+          "sampleRate": 24000
+        },
+        "this ice cream has a strawberry flavour.": {
+          "file": "v11-weekly-natural.pcm",
+          "offset": 741600,
+          "length": 140400,
+          "sampleRate": 24000
+        },
+        "journey": {
+          "file": "v11-weekly-natural.pcm",
+          "offset": 882000,
+          "length": 46800,
+          "sampleRate": 24000
+        },
+        "our journey to the beach took an hour.": {
+          "file": "v11-weekly-natural.pcm",
+          "offset": 928800,
+          "length": 130800,
+          "sampleRate": 24000
+        },
+        "neighbour": {
+          "file": "v11-weekly-natural.pcm",
+          "offset": 1059600,
+          "length": 42000,
+          "sampleRate": 24000
+        },
+        "our neighbour helped us water the plants.": {
+          "file": "v11-weekly-natural.pcm",
+          "offset": 1101600,
+          "length": 132000,
+          "sampleRate": 24000
+        },
+        "confusion": {
+          "file": "v11-weekly-natural.pcm",
+          "offset": 1233600,
+          "length": 70800,
+          "sampleRate": 24000
+        },
+        "there was confusion about whose turn it was.": {
+          "file": "v11-weekly-natural.pcm",
+          "offset": 1304400,
+          "length": 153600,
+          "sampleRate": 24000
+        },
+        "persuasion": {
+          "file": "v11-weekly-natural.pcm",
+          "offset": 1458000,
+          "length": 62400,
+          "sampleRate": 24000
+        },
+        "with some persuasion, dad agreed to play another game.": {
+          "file": "v11-weekly-natural.pcm",
+          "offset": 1520400,
+          "length": 183600,
+          "sampleRate": 24000
+        },
+        "supervision": {
+          "file": "v11-weekly-natural.pcm",
+          "offset": 1704000,
+          "length": 61200,
+          "sampleRate": 24000
+        },
+        "we used the scissors with an adult's supervision.": {
+          "file": "v11-weekly-natural.pcm",
+          "offset": 1765200,
+          "length": 159600,
+          "sampleRate": 24000
+        },
+        "television": {
+          "file": "v11-weekly-natural.pcm",
+          "offset": 1924800,
+          "length": 64800,
+          "sampleRate": 24000
+        },
+        "we watched a nature programme on television.": {
+          "file": "v11-weekly-natural.pcm",
+          "offset": 1989600,
+          "length": 148800,
+          "sampleRate": 24000
+        },
+        "colour": {
+          "file": "v11-weekly-natural.pcm",
+          "offset": 2138400,
+          "length": 36000,
+          "sampleRate": 24000
+        },
+        "the flower was a bright yellow colour.": {
+          "file": "v11-weekly-natural.pcm",
+          "offset": 2174400,
+          "length": 134400,
+          "sampleRate": 24000
         }
       }
     },
@@ -3985,6 +4123,144 @@
           "file": "bella-sentences-01.bin",
           "offset": 14611200,
           "length": 142800,
+          "sampleRate": 24000
+        },
+        "endeavour": {
+          "file": "v11-weekly-bella.pcm",
+          "offset": 0,
+          "length": 72000,
+          "sampleRate": 24000
+        },
+        "i will endeavour to finish the puzzle.": {
+          "file": "v11-weekly-bella.pcm",
+          "offset": 72000,
+          "length": 128400,
+          "sampleRate": 24000
+        },
+        "glamour": {
+          "file": "v11-weekly-bella.pcm",
+          "offset": 200400,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "the sparkling dress added glamour to the show.": {
+          "file": "v11-weekly-bella.pcm",
+          "offset": 268800,
+          "length": 159600,
+          "sampleRate": 24000
+        },
+        "conclusion": {
+          "file": "v11-weekly-bella.pcm",
+          "offset": 428400,
+          "length": 73200,
+          "sampleRate": 24000
+        },
+        "the story had a happy conclusion.": {
+          "file": "v11-weekly-bella.pcm",
+          "offset": 501600,
+          "length": 138000,
+          "sampleRate": 24000
+        },
+        "blue is my favourite colour.": {
+          "file": "v11-weekly-bella.pcm",
+          "offset": 639600,
+          "length": 108000,
+          "sampleRate": 24000
+        },
+        "flavour": {
+          "file": "v11-weekly-bella.pcm",
+          "offset": 747600,
+          "length": 70800,
+          "sampleRate": 24000
+        },
+        "this ice cream has a strawberry flavour.": {
+          "file": "v11-weekly-bella.pcm",
+          "offset": 818400,
+          "length": 150000,
+          "sampleRate": 24000
+        },
+        "journey": {
+          "file": "v11-weekly-bella.pcm",
+          "offset": 968400,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "our journey to the beach took an hour.": {
+          "file": "v11-weekly-bella.pcm",
+          "offset": 1036800,
+          "length": 128400,
+          "sampleRate": 24000
+        },
+        "neighbour": {
+          "file": "v11-weekly-bella.pcm",
+          "offset": 1165200,
+          "length": 69600,
+          "sampleRate": 24000
+        },
+        "our neighbour helped us water the plants.": {
+          "file": "v11-weekly-bella.pcm",
+          "offset": 1234800,
+          "length": 129600,
+          "sampleRate": 24000
+        },
+        "confusion": {
+          "file": "v11-weekly-bella.pcm",
+          "offset": 1364400,
+          "length": 75600,
+          "sampleRate": 24000
+        },
+        "there was confusion about whose turn it was.": {
+          "file": "v11-weekly-bella.pcm",
+          "offset": 1440000,
+          "length": 152400,
+          "sampleRate": 24000
+        },
+        "persuasion": {
+          "file": "v11-weekly-bella.pcm",
+          "offset": 1592400,
+          "length": 75600,
+          "sampleRate": 24000
+        },
+        "with some persuasion, dad agreed to play another game.": {
+          "file": "v11-weekly-bella.pcm",
+          "offset": 1668000,
+          "length": 195600,
+          "sampleRate": 24000
+        },
+        "supervision": {
+          "file": "v11-weekly-bella.pcm",
+          "offset": 1863600,
+          "length": 78000,
+          "sampleRate": 24000
+        },
+        "we used the scissors with an adult's supervision.": {
+          "file": "v11-weekly-bella.pcm",
+          "offset": 1941600,
+          "length": 171600,
+          "sampleRate": 24000
+        },
+        "television": {
+          "file": "v11-weekly-bella.pcm",
+          "offset": 2113200,
+          "length": 73200,
+          "sampleRate": 24000
+        },
+        "we watched a nature programme on television.": {
+          "file": "v11-weekly-bella.pcm",
+          "offset": 2186400,
+          "length": 156000,
+          "sampleRate": 24000
+        },
+        "colour": {
+          "file": "v11-weekly-bella.pcm",
+          "offset": 2342400,
+          "length": 66000,
+          "sampleRate": 24000
+        },
+        "the flower was a bright yellow colour.": {
+          "file": "v11-weekly-bella.pcm",
+          "offset": 2408400,
+          "length": 135600,
           "sampleRate": 24000
         }
       }
@@ -5976,6 +6252,144 @@
           "offset": 13513200,
           "length": 130800,
           "sampleRate": 24000
+        },
+        "endeavour": {
+          "file": "v11-weekly-heart.pcm",
+          "offset": 0,
+          "length": 72000,
+          "sampleRate": 24000
+        },
+        "i will endeavour to finish the puzzle.": {
+          "file": "v11-weekly-heart.pcm",
+          "offset": 72000,
+          "length": 120000,
+          "sampleRate": 24000
+        },
+        "glamour": {
+          "file": "v11-weekly-heart.pcm",
+          "offset": 192000,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "the sparkling dress added glamour to the show.": {
+          "file": "v11-weekly-heart.pcm",
+          "offset": 260400,
+          "length": 146400,
+          "sampleRate": 24000
+        },
+        "conclusion": {
+          "file": "v11-weekly-heart.pcm",
+          "offset": 406800,
+          "length": 72000,
+          "sampleRate": 24000
+        },
+        "the story had a happy conclusion.": {
+          "file": "v11-weekly-heart.pcm",
+          "offset": 478800,
+          "length": 121200,
+          "sampleRate": 24000
+        },
+        "blue is my favourite colour.": {
+          "file": "v11-weekly-heart.pcm",
+          "offset": 600000,
+          "length": 104400,
+          "sampleRate": 24000
+        },
+        "flavour": {
+          "file": "v11-weekly-heart.pcm",
+          "offset": 704400,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "this ice cream has a strawberry flavour.": {
+          "file": "v11-weekly-heart.pcm",
+          "offset": 772800,
+          "length": 139200,
+          "sampleRate": 24000
+        },
+        "journey": {
+          "file": "v11-weekly-heart.pcm",
+          "offset": 912000,
+          "length": 67200,
+          "sampleRate": 24000
+        },
+        "our journey to the beach took an hour.": {
+          "file": "v11-weekly-heart.pcm",
+          "offset": 979200,
+          "length": 118800,
+          "sampleRate": 24000
+        },
+        "neighbour": {
+          "file": "v11-weekly-heart.pcm",
+          "offset": 1098000,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "our neighbour helped us water the plants.": {
+          "file": "v11-weekly-heart.pcm",
+          "offset": 1166400,
+          "length": 117600,
+          "sampleRate": 24000
+        },
+        "confusion": {
+          "file": "v11-weekly-heart.pcm",
+          "offset": 1284000,
+          "length": 74400,
+          "sampleRate": 24000
+        },
+        "there was confusion about whose turn it was.": {
+          "file": "v11-weekly-heart.pcm",
+          "offset": 1358400,
+          "length": 144000,
+          "sampleRate": 24000
+        },
+        "persuasion": {
+          "file": "v11-weekly-heart.pcm",
+          "offset": 1502400,
+          "length": 74400,
+          "sampleRate": 24000
+        },
+        "with some persuasion, dad agreed to play another game.": {
+          "file": "v11-weekly-heart.pcm",
+          "offset": 1576800,
+          "length": 180000,
+          "sampleRate": 24000
+        },
+        "supervision": {
+          "file": "v11-weekly-heart.pcm",
+          "offset": 1756800,
+          "length": 76800,
+          "sampleRate": 24000
+        },
+        "we used the scissors with an adult's supervision.": {
+          "file": "v11-weekly-heart.pcm",
+          "offset": 1833600,
+          "length": 154800,
+          "sampleRate": 24000
+        },
+        "television": {
+          "file": "v11-weekly-heart.pcm",
+          "offset": 1988400,
+          "length": 69600,
+          "sampleRate": 24000
+        },
+        "we watched a nature programme on television.": {
+          "file": "v11-weekly-heart.pcm",
+          "offset": 2058000,
+          "length": 141600,
+          "sampleRate": 24000
+        },
+        "colour": {
+          "file": "v11-weekly-heart.pcm",
+          "offset": 2199600,
+          "length": 66000,
+          "sampleRate": 24000
+        },
+        "the flower was a bright yellow colour.": {
+          "file": "v11-weekly-heart.pcm",
+          "offset": 2265600,
+          "length": 127200,
+          "sampleRate": 24000
         }
       }
     }
@@ -6016,6 +6430,18 @@
     "heart-sentences-01.bin": {
       "bytes": 13644000,
       "sha256": "8bc2dc02889a69ccf4ec7cb6b308db4d5d7164a7dd53c329c6ca604313c6091f"
+    },
+    "v11-weekly-natural.pcm": {
+      "bytes": 2308800,
+      "sha256": "ed0906ff943e9c301889a117e400a77cdf8e70e09d635df21edbb4827347f444"
+    },
+    "v11-weekly-bella.pcm": {
+      "bytes": 2544000,
+      "sha256": "cb29ceae04b8e5deaaa3a236b380f7f002938c925ae2625a8b20ce2e7406d548"
+    },
+    "v11-weekly-heart.pcm": {
+      "bytes": 2392800,
+      "sha256": "41c7f3fdda60892fd842d813e2e2427fed1ee9ff69bc53fc12428b0671fa69d5"
     }
   }
 }

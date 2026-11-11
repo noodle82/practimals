@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-11",
+  "automatedChecks": 109,
+  "den": {
+    "twoStarterGames": true,
+    "oneCompleteModuleRequired": true,
+    "realRocketLaunch": true
+  },
+  "previews": {
+    "savedOutfitUnchangedUntilConfirm": true,
+    "cancelRestores": true,
+    "finishConfirmation": true
+  },
+  "nursery": {
+    "allBabiesVisible": true,
+    "perBabyCarePersists": true,
+    "learningRewardsUnchanged": true,
+    "ipadAndPhoneViewports": true
+  },
+  "speech": {
+    "reportedWords": 12,
+    "approvedVoiceOptionsChecked": 6,
+    "renderChecks": 72,
+    "actualWebAudioPlaybackCompleted": true,
+    "localGenerationChecked": true,
+    "persistsAcrossReload": true,
+    "speedUnchanged": true,
+    "noPaidService": true,
+    "physicalIpadTested": false,
+    "exactPhysicalIpadFailureReproduced": false
+  },
+  "publication": "Prepared locally; no GitHub/Apple writes"
+}

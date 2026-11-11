@@ -1,0 +1,28 @@
+SPELLOIDS v0.11 — DEN, SPEECH, PREVIEWS AND CRECHE
+
+This is one combined update. It includes the earlier offline word-content repair, retry rules and This Week dashboard. Use this ZIP instead of the previous update ZIP.
+
+UPLOAD
+1. Extract spelloids-v11-update.zip.
+2. Upload ALL the extracted contents into the TOP LEVEL of your existing noodle82/practimals repository, replacing matching files. Do not upload the enclosing folder or the ZIP itself.
+3. IMPORTANT: Upload the included audio folder too. It contains an updated manifest and three SMALL additional recording files. Keep all your existing audio files. The large vendor files and previous audio banks are unchanged and do not need uploading again.
+4. Commit. Wait for GitHub Pages build/deployment to show a green tick.
+5. Reload the website, wait a few seconds, then reload again if the old layout remains. Do not clear website data: that would erase saved progress. No new spelling week or list re-entry is needed to apply the update.
+
+CHANGES
+- Word Rocket and Cloud Hopper are included from the start. Complete EVERY weekly word in ANY ONE of the six core modules to open the Den for this spelling set. Attempts, drawing/sentence activities and test scores alone do not open it. The whole-list test remains a useful practice check.
+- New clothes can be tried on the actual Spelloid without claiming or saving them. Confirm the chosen item when happy. Name/shape/voice/colour/antennae still have their existing confirmation steps; the freckles/earrings finishing choice now previews and confirms too. Completed choices fold away.
+- Nursery is now a creche showing every collected baby for the current child on this device. Choose one for strawberries, gentle rocking, a teddy, dummy, bottle or fresh nappy. The bottle visibly empties. Each baby's care is saved separately. No hunger/neglect timer or learning-point farming. Demo babies remain previews only.
+- Your twelve reported spellings now have ready-made word AND sentence recordings in the three approved base voices. All six existing voice options use these banks at their unchanged speaking speed. This avoids running word generation for that reported list.
+- Speech prepares a target spelling BEFORE playing its introduction, so an introduction is no longer treated as proof that the word is available. An unavailable optional context sentence does not block a ready target word. Hear my list still attempts every word. Browser playback is checked and interrupted audio offers a retry.
+- For OTHER new spellings, Grown-ups > Prepare this week's spoken words generates them locally and keeps audio on this device. Preparation is free; no API key or paid voice service. The website needs the speech files downloaded once before offline use. The native build bundles those files.
+
+IPAD CHECK
+After deployment, use Hear the word for endeavour, glamour and conclusion. Try your chosen voice as well as Natural. If any is still silent, note the word, selected voice and whether a speech message appears. The recordings and Web Audio paths passed desktop browser tests; a physical iPad was not available here, so Safari-specific output is not claimed as physically verified.
+
+VERIFICATION
+109 automated tests pass. Browser checks covered module gating and real Word Rocket launch; visible clothing previews versus saved ownership; confirm/cancel; finishing-touch confirmation; all-baby thumbnails and per-baby care across reload; asleep/drinking guards; tablet/phone layout.
+All 12 reported words rendered with audible non-clipping samples in ALL SIX voice options without invoking generation. Actual Web Audio playback (muted automated browser) completed context, Spell cue and target for endeavour/glamour/conclusion. An additional unrecorded word generated locally and survived reload without starting its generation engine again. New audio banks passed their size/hash checks.
+
+STATE AND APPLE
+Existing weekly progress, identities, wardrobe, babies, family wall and scrapbook are preserved on each device/browser. Devices still do not sync. This prepares files only: nothing has been uploaded to GitHub or Apple. A future Codemagic build from the updated branch includes v0.11; an already uploaded TestFlight build needs a new build. Bundle ID and signing setup are unchanged.

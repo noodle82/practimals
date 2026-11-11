@@ -1,7 +1,16 @@
 {
-  "version": "0.10.0",
-  "cacheName": "spelloids-v10-8d6d42f38b7b",
+  "version": "0.11.0",
+  "cacheName": "spelloids-v11-89e83f79e45e",
   "files": [
+    {
+      "path": "v11.css"
+    },
+    {
+      "path": "speech-store.js"
+    },
+    {
+      "path": "nursery-care.js"
+    },
     {
       "path": "dashboard.css"
     },
@@ -193,6 +202,15 @@
     },
     {
       "path": "audio/natural-words-01.bin"
+    },
+    {
+      "path": "audio/v11-weekly-bella.pcm"
+    },
+    {
+      "path": "audio/v11-weekly-heart.pcm"
+    },
+    {
+      "path": "audio/v11-weekly-natural.pcm"
     },
     {
       "path": "vendor/LICENSE"

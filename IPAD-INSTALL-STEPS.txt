@@ -1,0 +1,36 @@
+SPELLOIDS — FAMILY IPAD VIA AD HOC + DIAWI
+Prepared 12 November 2026 for the current Spelloids 0.14.0 source.
+
+START HERE: APPLE PROFILE
+Your daughter's iPad is already registered from Multiploids. Do not register it again or change its Apple account age. Reuse a valid distribution certificate whose private key already exists in the same Codemagic account.
+1. Open https://developer.apple.com/account/resources/profiles/list
+2. If Spelloids Family Ad Hoc already exists and includes the correct certificate/iPad, use it. Otherwise: + → Distribution / Ad Hoc → existing App ID com.spelloids.spelling → matching distribution certificate → tick the registered daughter's iPad → name Spelloids Family Ad Hoc → Generate → Download.
+The Multiploids profile is for a different Bundle ID and cannot sign Spelloids.
+3. In the same Codemagic account used for Multiploids, open signing identities / iOS provisioning profiles. Fetch the new profile or upload its .mobileprovision file. If asked for a reference name, use spelloids_family_adhoc. Check type ad_hoc, Bundle ID com.spelloids.spelling and a green matching-certificate indicator. Keep the App Store profile as well.
+
+GITHUB: ONLY ONE FILE NEEDS UPLOADING
+4. Extract this ZIP. Upload ONLY codemagic.yaml to the TOP LEVEL of noodle82/practimals on main, replacing the existing file. This is the Spelloids repository; do not upload to Multiploids. This file was merged against the current local v14 workflow. If you separately edited the live workflow since then, preserve those edits when merging the new ios-family-adhoc block.
+Keep all application files. If the v14 application update is not uploaded yet, upload that update too: this small package adds signing/build configuration only. Keep certificates, private keys and .mobileprovision files out of GitHub.
+
+BUILD THE FAMILY VERSION
+5. In Codemagic open the practimals/Spelloids application, select main, refresh its configuration, then select Spelloids Family iPad — Ad Hoc. Start the build.
+The app version remains 0.14.0. The build number uses IOS_BUILD_NUMBER if set; otherwise Codemagic's PROJECT_BUILD_NUMBER/BUILD_NUMBER plus one. Remove a stale fixed override, or set IOS_BUILD_NUMBER to a fresh positive integer higher than the last Spelloids build if necessary. No Apple build counter was available locally to verify the actual next value.
+6. When that family build succeeds, open Artifacts and download App.ipa (the .ipa file, not the dSYM or artifacts ZIP). Confirm this is from the family workflow, not the TestFlight workflow.
+
+DIAWI AND IPAD INSTALL
+7. On your PC, upload that newly built IPA to https://www.diawi.com/ and generate a fresh private installation link/QR. Keep any public listing option off. Open the link in SAFARI on the registered iPad. The embedded profile already contains the iPad identity; you do not need to type its UDID into Diawi.
+8. If Diawi says Download application and Safari offers to save App.ipa into Files, cancel. As in your successful Multiploids install: tap Safari's page menu immediately LEFT of the address bar → Request Mobile Website (possibly under …) → reload. Use Install application and confirm the iOS Install prompt. An IPA saved into Files is not an installation.
+9. Wait for the Spelloids icon to finish installing, then open it. If the iPad explicitly requests Developer Mode, use Settings → Privacy & Security → Developer Mode, restart and confirm. It may already be enabled from Multiploids. No enterprise-trust or extra configuration profile is part of this workflow.
+
+ADULT TESTERS
+Select Spelloids iOS TestFlight for adult testers. Its existing app_store signing and publishing block are preserved unchanged, including manual beta-review submission. The new family workflow has NO publishing block: it produces a signed IPA artifact without uploading to App Store Connect or starting TestFlight review.
+
+PROGRESS AND VERIFICATION
+Keep any existing native Spelloids app installed when updating. Use the same Bundle ID/team; do not routinely delete/reinstall or clear storage. Browser/Safari progress does not automatically transfer into the installed app. Multiploids remains separate because it has a different Bundle ID.
+This package preserves bundled offline assets, camera/photo permissions, version and native preparation script. Native configuration and tests were checked locally; workflow validation is recorded in VALIDATION.json. Windows cannot prove macOS signing or installation. No app has been signed, uploaded to GitHub/Apple/Diawi or installed by this work.
+
+OFFICIAL REFERENCES
+Apple Ad Hoc profiles: https://developer.apple.com/help/account/provisioning-profiles/create-an-ad-hoc-provisioning-profile/
+Codemagic iOS signing: https://docs.codemagic.io/yaml-code-signing/signing-ios/
+Diawi installation help: https://webapp.diawi.com/help
+The Request Mobile Website workaround comes from your successful Multiploids session, not a universal promise from Diawi's documentation.

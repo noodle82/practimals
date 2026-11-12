@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-12",
+  "version": "0.14.0",
+  "bundleId": "com.spelloids.spelling",
+  "automatedAppTests": 133,
+  "workflowChecks": {
+    "mode": "Structural checks and exact comparison to supplied candidate; Codemagic server schema/signing not executed",
+    "originalTestFlightBytesUnchanged": true,
+    "exactCandidateFamilyBlock": true,
+    "separateAdHocSigning": true,
+    "matchingCertificateModeOnly": true,
+    "noFamilyPublishing": true,
+    "correctWorkspaceAndScheme": true,
+    "onlyExistingNpmScripts": true
+  },
+  "native": {
+    "localBundledAssets": true,
+    "cameraPhotoDescriptionsRetained": true,
+    "projectCounterExample": "147 -> 148",
+    "explicitOverrideExample": "149 -> 149",
+    "invalidZeroRejected": true,
+    "actualNextCloudBuildNumberVerified": false
+  },
+  "macosBuildRun": false,
+  "signedIpaCreated": false,
+  "githubUploaded": false,
+  "diawiUploaded": false,
+  "physicalIpadInstalled": false
+}

@@ -236,6 +236,10 @@ export const SCHOOL_WORDS={
     "meaning": "The body part between your shoulder and hand.",
     "sentence": "I raised my arm to answer the question."
   },
+  "armour": {
+    "meaning": "A strong covering that protects a person or animal.",
+    "sentence": "The knight wore shiny armour."
+  },
   "around": {
     "meaning": "On different sides of something, or nearby.",
     "sentence": "We sat around the table to play a game."
@@ -1476,6 +1480,10 @@ export const SCHOOL_WORDS={
     "meaning": "Words that help someone understand something.",
     "sentence": "The teacher gave a clear explanation."
   },
+  "explosion": {
+    "meaning": "Something bursting suddenly with a loud bang.",
+    "sentence": "The science video showed an explosion on the Sun."
+  },
   "expression": {
     "meaning": "A look or words that show a feeling or idea.",
     "sentence": "Her happy expression showed that she liked the present."
@@ -2119,6 +2127,10 @@ export const SCHOOL_WORDS={
   "humorous": {
     "meaning": "Funny or amusing.",
     "sentence": "We read a humorous poem about a penguin."
+  },
+  "humour": {
+    "meaning": "The funny side of something that makes us laugh.",
+    "sentence": "The silly poem was full of humour."
   },
   "hunted": {
     "meaning": "Looked carefully for something.",
@@ -3512,6 +3524,10 @@ export const SCHOOL_WORDS={
     "meaning": "To go or give something back.",
     "sentence": "Please return the book to the library."
   },
+  "revision": {
+    "meaning": "Looking again at something you have learned.",
+    "sentence": "We did some revision before our spelling test."
+  },
   "rhyme": {
     "meaning": "Words that end with the same sound, like cat and hat.",
     "sentence": "Cat and hat rhyme with each other."
@@ -3551,6 +3567,10 @@ export const SCHOOL_WORDS={
   "rule": {
     "meaning": "An instruction that tells you what is allowed.",
     "sentence": "Our first rule is to take turns."
+  },
+  "rumour": {
+    "meaning": "A story people share that might not be true.",
+    "sentence": "The rumour about a new school pet was not true."
   },
   "runner": {
     "meaning": "Someone who runs.",

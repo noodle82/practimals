@@ -1,3 +1,3 @@
-# v0.12 validation
+# v0.13 validation
 
-113 automated checks pass. Real local OCR recognised all twelve printed test words, then worked again after an offline reload. Browser checks exercised the intro, gate, handoff, voice choices, list cancellation/restart, all six core question layouts, milestone gallery, shape sound bindings and rainbow previews. No runtime exceptions in these checks. See VALIDATION-V12.json. Physical iPad camera/Safari sound and native iOS build remain device checks.
+125 automated tests pass. Browser checks cover optional baseline, one-attempt test recording without rewards, score comparisons, correct-only slower badges, eight feedback phrases, real tenth-keepsake unlock, special preview/confirm, nursery wall/floor, outfit data/persistence, retry resets and no phone/tablet overflow. All five special body finishes rendered. Real supplied-photo OCR found 20 candidates, 19 exact with glamour flagged for correction; the clear 12-word regression was exact. Local OCR worked after an offline reload. Recording hashes/non-silent samples passed. See VALIDATION-V13.json. Physical iPad camera/audio and native iOS build still need device testing.

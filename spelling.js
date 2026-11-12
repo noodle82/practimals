@@ -1,3 +1,4 @@
+import{savePracticeTest}from'./test-records.js';
 import{wordPattern}from'./content-rules.js';
 import{newId}from'./platform-compat.js';
 import{syncDenMilestones,allGreen,beginIdentity,rememberLook,lookOf,inheritedBaby,addPortrait,badgeCount,recordAttempt}from'./journey.js';
@@ -27,13 +28,13 @@ export function setWeek(p,words,testDate,{newWeek=false,today=localDay(),random=
  if(words.some(x=>!x.word)||new Set(words.map(x=>x.word)).size!==words.length)throw Error('Check your weekly spelling list.');
  const fresh=!p.week||newWeek,changed=p.words.map(x=>x.word).join('\n')!==words.map(x=>x.word).join('\n');
  if(fresh){if(p.week){const oldEgg=p.eggs.find(e=>e.id===p.week.eggId);if(oldEgg?.hatched||allGreen(p)||p.week.denResult){p.completedCycles=(p.completedCycles||0)+1;}p.archivedCycles??=[];p.archivedCycles.unshift({week:structuredClone(p.week),words:structuredClone(p.words),look:lookOf(p),scrapbook:structuredClone(p.scrapbook||[])});}syncEgg(p);const baby=babyPick(random);p.week={id,start:today,testDate,progress:{},rounds:{},games:[],claimed:{},eggId:id};p.eggs.push({id,start:today,testDate,babyId:baby.id,hatched:false});}
- else{p.week.testDate=testDate;p.week.progress=Object.fromEntries(Object.entries(p.week.progress).filter(([word])=>words.some(x=>x.word===word)));if(changed){p.week.rounds={};delete p.week.denResult;}const egg=p.eggs.find(e=>e.id===p.week.eggId);if(egg)egg.testDate=testDate;}
+ else{p.week.testDate=testDate;p.week.progress=Object.fromEntries(Object.entries(p.week.progress).filter(([word])=>words.some(x=>x.word===word)));if(changed){p.week.legacyBadgeFloor=Math.max(p.week.legacyBadgeFloor||0,badgeCount(p));p.week.answers=(p.week.answers||[]).filter(a=>words.some(w=>w.word===a.word));p.week.rounds={};delete p.week.denResult;delete p.week.baselineDismissed;}const egg=p.eggs.find(e=>e.id===p.week.eggId);if(egg)egg.testDate=testDate;}
  p.words=words;if(fresh){p.scrapbook=[];beginIdentity(p);}syncEgg(p);return p.week;
 }
 export function orderedWords(p,method,day=localDay(),random=Math.random){if(!p.week)return[];const remaining=p.words.filter(w=>!p.week.progress[w.word]?.passed?.includes(method));return shuffle(remaining.length?remaining:p.words,random);}
 export function recordWord(p,word,method,{correct=false,assisted=false,day=localDay()}={}){
  if(!p.week||!p.words.some(x=>x.word===word)||!METHODS[method])throw Error('Use a word from this week’s list.');
- if(!assisted)recordAttempt(p,word,method,day);
+ if(correct&&!assisted)recordAttempt(p,word,method,day,{correct:true});
  const data=p.week.progress[word]??={tries:0,correct:0,spelled:false,methods:[]};data.tries++;if(correct)data.correct++;
  if(correct&&!assisted&&['listen','study','build','letters'].includes(method))data.spelled=true;
  data.methods=[...new Set([...data.methods,method])];
@@ -63,4 +64,4 @@ export function careForBaby(baby,action){baby.care??={feeds:0,cuddles:0,asleep:f
 export function choicesFor(p,word,random=Math.random){if(!p.words.some(x=>x.word===word))throw Error('Word is not assigned.');const others=p.words.filter(x=>x.word!==word).map(x=>x.word);for(let i=others.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[others[i],others[j]]=[others[j],others[i]];}const choices=[word,...others.slice(0,3)];for(let i=choices.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[choices[i],choices[j]]=[choices[j],choices[i]];}return choices;}
 export function gapFor(entry){const rx=wordPattern(entry.word,'gi');if(entry.sentence&&rx.test(entry.sentence))return entry.sentence.replace(rx,(_,before)=>before+'_____');return 'Ask a grown-up to add an example sentence for this weekly word.';}
 
-export function markTest(p,answers,weekId,order=p.words.map(w=>w.word)){if(order.length!==p.words.length||new Set(order).size!==p.words.length||order.some(w=>!p.words.some(x=>x.word===w)))throw Error("Use every weekly word once.");if(!p.week||p.week.id!==weekId||answers.length!==p.words.length||answers.some(x=>!x.trim()))throw Error('Complete the current weekly list.');const results=order.map((word,i)=>({word,answer:answers[i],correct:word===answers[i].trim().toLowerCase()}));const result={date:localDay(),weekId,score:results.filter(x=>x.correct).length,total:p.words.length,results};if(result.score>=Math.max(1,result.total-3)&&(!p.week.denResult||result.score>p.week.denResult.score))p.week.denResult=structuredClone(result);const portrait=p.portraits?.find(f=>f.weekId===weekId);if(portrait){portrait.stats??={};portrait.stats.tests=[structuredClone(result),...(portrait.stats.tests||[])];}p.testHistory.unshift(result);p.testHistory=p.testHistory.slice(0,20);return result;}
+export function markTest(p,answers,weekId,order=p.words.map(w=>w.word)){return savePracticeTest(p,answers,weekId,order);}

@@ -1,7 +1,22 @@
 {
-  "version": "0.12.0",
-  "cacheName": "spelloids-v12-185616cd6c83",
+  "version": "0.13.0",
+  "cacheName": "spelloids-v13-04d841aaddc8",
   "files": [
+    {
+      "path": "v13.css"
+    },
+    {
+      "path": "special-rewards.js"
+    },
+    {
+      "path": "practice-feedback.js"
+    },
+    {
+      "path": "test-records.js"
+    },
+    {
+      "path": "photo-crop.js"
+    },
     {
       "path": "v12.css"
     },
@@ -229,6 +244,18 @@
     },
     {
       "path": "audio/v11-weekly-natural.pcm"
+    },
+    {
+      "path": "audio/v13-feedback-heart.pcm"
+    },
+    {
+      "path": "audio/v13-feedback-natural.pcm"
+    },
+    {
+      "path": "audio/v13-photo-words-heart.pcm"
+    },
+    {
+      "path": "audio/v13-photo-words-natural.pcm"
     },
     {
       "path": "vendor/LICENSE"

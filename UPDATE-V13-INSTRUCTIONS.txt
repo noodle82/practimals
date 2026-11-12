@@ -1,0 +1,32 @@
+SPELLOIDS v0.13 — SCRAPBOOK SPECIALS, TEST PROGRESS AND NURSERY
+
+UPLOAD
+1. Extract spelloids-v13-update.zip.
+2. Upload ALL extracted contents to the TOP LEVEL of your EXISTING GitHub repository, replacing matching files. Upload the contents, not the outer folder or ZIP. Do not delete existing files.
+3. IMPORTANT: Include audio/manifest.json and all four included audio/v13-*.pcm files. These contain the new feedback and extra spelling recordings. Keep all earlier audio files and the vendor/ocr folder from v12.
+4. Commit and wait for the GitHub Pages deployment to finish. Reload, wait a few seconds, then reload again if the old version remains. Do not clear website data: it holds saved progress.
+5. To update TestFlight, run a new Codemagic build from the updated branch. This ZIP does not change your signing settings, Bundle ID or Apple certificates, and does not publish a build itself.
+
+SCRAPBOOK SPECIALS
+Ten saved drawings and/or sentences in a spelling set unlock one new special finish. The sequence is Rainbow, Stardust (sparkly), Galaxy, Aurora, Sunset shimmer. Only one new finish is awarded per set, even after more than ten keepsakes. The next set offers the next finish, so there are five sets of rewards. Earned finishes stay in the collection and can be previewed and confirmed now or in later sets. Ordinary weekly identity choices remain locked. A rainbow already earned in an older version is retained.
+
+TESTS AND THE OPTIONAL STARTING CHECK
+Each new set suggests See what I know already, with Start practising alongside. This is optional and never blocks learning. Whole-list tests accept ONE answer per word, move straight on, and mark the full list at the end. No retry, hints, badge credit or green challenge lights are awarded by a test. Finishing saves the score and original wrong answers. The first recorded test is the reference for later score comparisons for that set.
+The new Test results page replaces Family wall in the navigation. It shows starting checks, later practice tests and parent-entered school results, including wrong words and answer details. Older results are retained.
+
+BADGES AND FEEDBACK
+Badge 1 still celebrates agreeing to learn. Further badges count correct independent answers to DIFFERENT core challenges only. Wrong answers, assisted answers, repeats, tests and creative work add no badge credit. For a 15-word set the badge thresholds are 0, 11, 23, 36, 50, 63, 77 and 90 correct challenges. Thresholds scale with list size; the last badge needs all six challenges for every word. Earlier earned badges and confirmed choices are preserved during upgrade.
+Eight varied success phrases, three gentle retry prompts and two move-on prompts have local recordings for all three selectable voices, with unchanged speed. First mistakes reset the tiles/answer and offer another go; second mistakes move on without passing the word. A spoken move-on message is allowed to finish before navigation.
+Return-to-learning buttons use the same teal green as Back to Spelling Hub.
+
+THE NURSERY
+All collected babies sit on the nursery floor. The wall above holds clickable parent-and-baby pictures, which still open the old spelling list, stats and archived scrapbook. Tapping a baby opens care/dressing. Starry onesie and cosy hoodie outfits are changeable and save separately for each baby. They do not rewrite its inherited look or achievement portrait. Existing feeding, teddy, dummy, bottle and nappy care remain.
+
+PHOTO READER
+The reader now finds a pale sheet, offers a draggable/resizable crop with optional sliders, enlarges the selection and improves faint-text contrast. It reads just that area. Results remain editable before Use these checked spellings and Save/Hand to child.
+Against the photograph extracted from your supplied screenshot it found twenty words, with nineteen exact and one flagged glarnour (perhaps glamour). No spelling is silently changed. A clearer twelve-word printed regression sheet read all twelve exactly. Low-confidence or oversized results request a better crop rather than offering a long list of fragments. Printed photos still require parent review; small print, handwriting, glare and perspective can cause errors. Physical iPad camera/Safari output have not been tested here.
+Five additional simple meanings/examples and ready speech for armour, rumour, humour, revision and explosion are also included, covering the full list visible in that photo. Everything remains free and local; no dictionary or photo service is called.
+
+VALIDATION AND SAVED DATA
+125 automated tests pass. Browser checks exercised baseline/test recording and comparison, correct-only badges, eight different success phrases, tenth-keepsake reward/confirmation, nursery picture dialogs, baby outfit persistence/model data, retry tile resets, tablet/phone overflow and all five 3D finishes. Real OCR was tested against your screenshot photograph and the printed regression; the reader also worked after an offline reload.
+Automated audio checks verify recordings and non-silent samples; a physical iPad listening test and native build remain for you to check. Browser and installed-app data still do not sync. The saved-data key and schema remain compatible with v12. Nothing has been uploaded to GitHub or Apple by this work.

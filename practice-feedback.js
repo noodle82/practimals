@@ -1,0 +1,4 @@
+export const CORRECT_PHRASES=['Lovely spelling! You got it.','Well done! That is right.','Great thinking! You spelled it.','You did it! Nicely remembered.','Spot on! Keep going.','Wonderful work! That is correct.','A lovely bit of spelling!','Yes! You remembered that word.'];
+export const RETRY_PHRASES=['Not quite yet. Let’s listen and try once more.','A good try. Have another listen, then one more go.','That is not quite right. Take your time and try again.'];
+export const NEXT_PHRASES=['Not quite this time. Let’s try the next word. We can come back later.','That one needs more practice. Let’s try our next word together.'];
+export function feedbackPhrase(kind,index=0){const list=kind==='correct'?CORRECT_PHRASES:kind==='retry'?RETRY_PHRASES:NEXT_PHRASES;return list[Math.abs(index)%list.length];}

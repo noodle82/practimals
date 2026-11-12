@@ -1,57 +1,25 @@
-# Spelloids v0.12
+# Spelloids v0.13
 
-Tablet-first spelling practice for ages 5–10. See UPDATE-V12-INSTRUCTIONS.txt for upload steps, current behaviour and device-test limits.
+Spelling practice for ages 5–10, using only the assigned weekly list.
 
-## New in this release
-
-A Spelloid mascot logo and intro, Spelling Hub navigation, local photo-list recognition with parent review, parent handoff, three renamed voice choices, shape-specific sounds, stop/restart for Hear my list, clearer confirmations, illustrated milestone-locked Den games and Badge 8 rainbow colour. All six core challenges still determine green words; saved progress and weekly identity locks remain compatible.
-
-## Local photo recognition
-
-Tesseract.js 6.0.1 with Tesseract core 6.0.0 and English tessdata_fast is bundled in vendor/ocr. Photos stay on the device. Results require review; no handwriting accuracy guarantee. Runtime files need downloading once for website offline use. Versions, file hashes, source links and licences are in vendor/ocr/SOURCES.json and accompanying licence files. Official documentation: https://github.com/naptha/tesseract.js/blob/master/docs/api.md and https://github.com/naptha/tesseract.js/blob/master/docs/local-installation.md .
-
-## Build and verification
-
-Node 22+: npm start, npm test, npm run build. Static output is dist/. Package version is 0.12.0. Storage remains practimals-spelling-v4, schema 10. Bundle ID and existing signing configuration are unchanged. See VALIDATION-V12.json and TESTING.md.
-
-## Earlier features
-
-The following v11 notes remain historical context; v12 instructions take precedence where behaviour changed (particularly voice choices and Den milestones).
-
-# Spelloids v0.11
-
-Tablet-first spelling practice for ages 5–10. Children work only with their assigned weekly list, build a Spelloid through practice badges and collect its baby after making every word green.
-
-## Install this update
-
-Follow UPDATE-V11-INSTRUCTIONS.txt. The small update ZIP includes the previous dashboard/content changes plus the new features below. Include its audio folder; these are additional recordings, not replacement large downloads. Keep saved site data and existing audio/vendor assets. Nothing is published by this source package.
+See UPDATE-V13-INSTRUCTIONS.txt for upload instructions, feature rules and verification limits. Preserve the existing repository assets and saved website data. Upload the new audio files too.
 
 ## Learning and rewards
 
-Parents enter 1–20 words and a school-test date, or choose a curriculum pack in Grown-ups. The offline authored glossary has 1,159 meanings/example pairs including the tracked England spelling-appendix words and supplied examples. Unsupported words need a parent meaning and exact-target sentence. No online dictionary fallback is used. Definitions can have different school meanings; parents can edit them. See lexicon/README.md for coverage, limits and Crown copyright/OGL attribution.
+Six core challenge passes make each word green. A practice question offers one retry, with no credit for misses, assisted answers or repeated passes. Badge 1 celebrates starting; seven later badges use progressively spaced correct-challenge thresholds. Drawing/sentence work is separate: ten keepsakes per spelling set earn one permanent special finish, across five sets. Existing collections survive upgrades.
 
-All six core modules must be passed for each word to turn green. One wrong answer gives a clean retry; a second moves on and keeps that word unfinished. Showing/skipping answers does not award a challenge light. Drawing and writing a sentence are creative scrapbook extras. The full-list test remains available at the bottom of This Week.
+Whole-list tests use one attempt per word and grant no badges or challenge lights. An optional starting check gives the first recorded reference score. Test results stores practice and school records with wrong words. The nursery combines babies, care, outfits and clickable family pictures/archived scrapbooks.
 
-The Den contains two included starter games, Word Rocket and Cloud Hopper. It opens after all weekly words pass in any one of the six core modules. Attempts and whole-list test scores alone do not unlock it. A new set needs its own completed module. Existing cycle-based additions to the library remain. Den/care play does not award spelling mastery.
+## Speech and photos
 
-## Preview before confirming
+Three voices retain their v12 settings and speed. New local audio/v13-feedback-*.pcm banks contain eight positive phrases, three retry and two move-on prompts. audio/v13-photo-words-*.pcm adds five supplied-list words and examples. Every voice choice uses these banks. New spellings outside the recordings still generate locally using the existing offline engine.
 
-Newly earned clothes preview on the actual Spelloid. Trying them on does not save, claim or equip the reward. Confirm the chosen item to keep it. Weekly identity choices stay fixed after confirmation; owned accessories and eye colours remain changeable in My collection. Freckles/earrings now preview and confirm too.
+Tesseract.js 6.0.1 / core 6.0.0 remains bundled in vendor/ocr. Automatic paper detection, adjustable crop, enlargement, contrast and stricter extraction reduce background fragments. Words must be reviewed. Uncertain recognition is flagged, with no silent dictionary substitution. Versions/hashes/licences remain in vendor/ocr/SOURCES.json. The app never uploads photos. Website runtime files must be available once before offline use.
 
-## Nursery and creche
+## Build and state
 
-All collected babies for the current profile are visible together, retaining the inherited look from their spelling sets. Selecting one opens a live care area with strawberries, rocking, cuddles, a teddy, dummy, drinking bottle and fresh nappy. Care saves independently per baby. Only the selected baby has a live renderer; thumbnails share one studio to avoid creating a WebGL context for every baby. Demo hatches do not add babies to real progress. No neglect timers.
+Node 22+: npm start, npm test, npm run build. Static output: dist/. Package version: 0.13.0. Storage key: practimals-spelling-v4; schema: 10. Compatible additions preserve progress, wardrobes, babies, portraits, scrapbooks and test results. No browser/app/cloud sync has been added. Capacitor/Codemagic signing configuration and com.spelloids.spelling remain unchanged.
 
-## Speech
+The authored glossary has 1,164 entries; see lexicon/README.md for curriculum coverage, attribution and limits. Update TSV teaching sources and run node scripts/build-word-bank.mjs when maintaining it.
 
-The six approved options and natural speaking speed remain. The twelve reported words (endeavour, glamour, conclusion, favourite, flavour, journey, neighbour, confusion, persuasion, supervision, television, colour) now have word and context recordings in all three base banks. Additional files are audio/v11-weekly-*.pcm and the updated manifest.
-
-Target audio is prepared before any spelling introduction plays. A missing optional context does not prevent a ready spelling from being heard. Other unrecorded words generate on-device; Grown-ups can prepare a whole list before a lesson. Generated raw audio is retained in a bounded IndexedDB cache so reloading does not require regenerating it. Browser audio resumes are checked, suspended/interrupted playback is reported, and failed automatic questions are retained for a retry. No paid service, remote generation or device-TTS voice substitution. Website offline use requires its assets downloaded once.
-
-The parent's symptom was narrowed to the newer list: sounds/introductions were audible but target words were silent. This pointed to the unrecorded-word path, not a general volume issue. Browser generation and actual sample playback have been checked; the exact physical iPad failure was not reproduced here. See VALIDATION-V11.json. Background audio recovery also accounts for WebKit's reported interrupted-state behaviour: https://bugs.webkit.org/show_bug.cgi?id=273511 . This report does not establish the parent's specific cause.
-
-## Run and build
-
-Node 22+: npm start, npm test, npm run build. Static app output is dist/. Capacitor/Codemagic configuration retains com.spelloids.spelling and the existing Codemagic integration. package.json is 0.11.0; the saved journey schema stays compatible with v10. No state reset or account/cloud-sync service is added. See CODEMAGIC-SETUP.md for native setup.
-
-Earlier feature/testing notes are retained in README-v10-history.md. Current release behaviour and instructions take precedence. Physical Safari/iPad and native iOS verification remain device tests.
+125 tests and desktop-browser checks passed; see VALIDATION-V13.json and TESTING.md. Physical iPad camera/audio and native iOS builds were not run here. Nothing has been published by preparing this package.

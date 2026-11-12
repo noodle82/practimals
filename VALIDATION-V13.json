@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-12",
+  "automatedChecks": 125,
+  "baseline": {
+    "optional": true,
+    "firstAttemptOnly": true,
+    "noBadgeCredit": true,
+    "noMasteryCredit": true,
+    "wrongAnswersSaved": true,
+    "comparisonChecked": true
+  },
+  "rewards": {
+    "correctIndependentCoreOnly": true,
+    "repeatFarmingBlocked": true,
+    "tenRealCreationsChecked": true,
+    "oneSpecialPerSet": true,
+    "fiveSetSequenceTested": true,
+    "persistentCollection": true,
+    "legacyRewardsPreserved": true
+  },
+  "nursery": {
+    "combinedWallAndFloor": true,
+    "frameDialogs": true,
+    "perBabyOutfits": true,
+    "onesieAndHoodieRendered": true
+  },
+  "feedback": {
+    "successPhrases": 8,
+    "retryPhrases": 3,
+    "nextPhrases": 2,
+    "bundledForEverySelectableVoice": true,
+    "speedUnchanged": true
+  },
+  "photo": {
+    "suppliedScreenshotPhotoTested": true,
+    "candidates": 20,
+    "exact": 19,
+    "flagged": "glarnour (perhaps glamour)",
+    "clearRegressionExact": 12,
+    "parentReviewRequired": true,
+    "offlineReload": true
+  },
+  "browser": {
+    "ipadLandscape": true,
+    "phoneAndPortraitNoOverflow": true,
+    "realRetryResetAndMoveOn": true,
+    "zeroRuntimeExceptions": true
+  },
+  "physicalIpadTested": false,
+  "nativeBuildTested": false,
+  "stateSchema": 10,
+  "publication": "Local files only; no GitHub/Apple publication"
+}

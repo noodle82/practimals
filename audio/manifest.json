@@ -2134,6 +2134,144 @@
           "offset": 2174400,
           "length": 134400,
           "sampleRate": 24000
+        },
+        "lovely spelling! you got it.": {
+          "file": "v13-feedback-natural.pcm",
+          "offset": 0,
+          "length": 121200,
+          "sampleRate": 24000
+        },
+        "well done! that is right.": {
+          "file": "v13-feedback-natural.pcm",
+          "offset": 121200,
+          "length": 112800,
+          "sampleRate": 24000
+        },
+        "great thinking! you spelled it.": {
+          "file": "v13-feedback-natural.pcm",
+          "offset": 234000,
+          "length": 117600,
+          "sampleRate": 24000
+        },
+        "you did it! nicely remembered.": {
+          "file": "v13-feedback-natural.pcm",
+          "offset": 351600,
+          "length": 123600,
+          "sampleRate": 24000
+        },
+        "spot on! keep going.": {
+          "file": "v13-feedback-natural.pcm",
+          "offset": 475200,
+          "length": 104400,
+          "sampleRate": 24000
+        },
+        "wonderful work! that is correct.": {
+          "file": "v13-feedback-natural.pcm",
+          "offset": 579600,
+          "length": 134400,
+          "sampleRate": 24000
+        },
+        "a lovely bit of spelling!": {
+          "file": "v13-feedback-natural.pcm",
+          "offset": 714000,
+          "length": 106800,
+          "sampleRate": 24000
+        },
+        "yes! you remembered that word.": {
+          "file": "v13-feedback-natural.pcm",
+          "offset": 820800,
+          "length": 123600,
+          "sampleRate": 24000
+        },
+        "not quite yet. let’s listen and try once more.": {
+          "file": "v13-feedback-natural.pcm",
+          "offset": 944400,
+          "length": 171600,
+          "sampleRate": 24000
+        },
+        "a good try. have another listen, then one more go.": {
+          "file": "v13-feedback-natural.pcm",
+          "offset": 1116000,
+          "length": 175200,
+          "sampleRate": 24000
+        },
+        "that is not quite right. take your time and try again.": {
+          "file": "v13-feedback-natural.pcm",
+          "offset": 1291200,
+          "length": 183600,
+          "sampleRate": 24000
+        },
+        "not quite this time. let’s try the next word. we can come back later.": {
+          "file": "v13-feedback-natural.pcm",
+          "offset": 1474800,
+          "length": 225600,
+          "sampleRate": 24000
+        },
+        "that one needs more practice. let’s try our next word together.": {
+          "file": "v13-feedback-natural.pcm",
+          "offset": 1700400,
+          "length": 211200,
+          "sampleRate": 24000
+        },
+        "armour": {
+          "file": "v13-photo-words-natural.pcm",
+          "offset": 0,
+          "length": 37200,
+          "sampleRate": 24000
+        },
+        "the knight wore shiny armour.": {
+          "file": "v13-photo-words-natural.pcm",
+          "offset": 37200,
+          "length": 117600,
+          "sampleRate": 24000
+        },
+        "rumour": {
+          "file": "v13-photo-words-natural.pcm",
+          "offset": 154800,
+          "length": 44400,
+          "sampleRate": 24000
+        },
+        "the rumour about a new school pet was not true.": {
+          "file": "v13-photo-words-natural.pcm",
+          "offset": 199200,
+          "length": 156000,
+          "sampleRate": 24000
+        },
+        "humour": {
+          "file": "v13-photo-words-natural.pcm",
+          "offset": 355200,
+          "length": 42000,
+          "sampleRate": 24000
+        },
+        "the silly poem was full of humour.": {
+          "file": "v13-photo-words-natural.pcm",
+          "offset": 397200,
+          "length": 126000,
+          "sampleRate": 24000
+        },
+        "revision": {
+          "file": "v13-photo-words-natural.pcm",
+          "offset": 523200,
+          "length": 56400,
+          "sampleRate": 24000
+        },
+        "we did some revision before our spelling test.": {
+          "file": "v13-photo-words-natural.pcm",
+          "offset": 579600,
+          "length": 158400,
+          "sampleRate": 24000
+        },
+        "explosion": {
+          "file": "v13-photo-words-natural.pcm",
+          "offset": 738000,
+          "length": 62400,
+          "sampleRate": 24000
+        },
+        "the science video showed an explosion on the sun.": {
+          "file": "v13-photo-words-natural.pcm",
+          "offset": 800400,
+          "length": 172800,
+          "sampleRate": 24000
         }
       }
     },
@@ -6390,6 +6528,144 @@
           "offset": 2265600,
           "length": 127200,
           "sampleRate": 24000
+        },
+        "lovely spelling! you got it.": {
+          "file": "v13-feedback-heart.pcm",
+          "offset": 0,
+          "length": 112800,
+          "sampleRate": 24000
+        },
+        "well done! that is right.": {
+          "file": "v13-feedback-heart.pcm",
+          "offset": 112800,
+          "length": 97200,
+          "sampleRate": 24000
+        },
+        "great thinking! you spelled it.": {
+          "file": "v13-feedback-heart.pcm",
+          "offset": 210000,
+          "length": 105600,
+          "sampleRate": 24000
+        },
+        "you did it! nicely remembered.": {
+          "file": "v13-feedback-heart.pcm",
+          "offset": 315600,
+          "length": 117600,
+          "sampleRate": 24000
+        },
+        "spot on! keep going.": {
+          "file": "v13-feedback-heart.pcm",
+          "offset": 433200,
+          "length": 92400,
+          "sampleRate": 24000
+        },
+        "wonderful work! that is correct.": {
+          "file": "v13-feedback-heart.pcm",
+          "offset": 525600,
+          "length": 123600,
+          "sampleRate": 24000
+        },
+        "a lovely bit of spelling!": {
+          "file": "v13-feedback-heart.pcm",
+          "offset": 649200,
+          "length": 96000,
+          "sampleRate": 24000
+        },
+        "yes! you remembered that word.": {
+          "file": "v13-feedback-heart.pcm",
+          "offset": 745200,
+          "length": 112800,
+          "sampleRate": 24000
+        },
+        "not quite yet. let’s listen and try once more.": {
+          "file": "v13-feedback-heart.pcm",
+          "offset": 858000,
+          "length": 164400,
+          "sampleRate": 24000
+        },
+        "a good try. have another listen, then one more go.": {
+          "file": "v13-feedback-heart.pcm",
+          "offset": 1022400,
+          "length": 166800,
+          "sampleRate": 24000
+        },
+        "that is not quite right. take your time and try again.": {
+          "file": "v13-feedback-heart.pcm",
+          "offset": 1189200,
+          "length": 169200,
+          "sampleRate": 24000
+        },
+        "not quite this time. let’s try the next word. we can come back later.": {
+          "file": "v13-feedback-heart.pcm",
+          "offset": 1358400,
+          "length": 222000,
+          "sampleRate": 24000
+        },
+        "that one needs more practice. let’s try our next word together.": {
+          "file": "v13-feedback-heart.pcm",
+          "offset": 1580400,
+          "length": 199200,
+          "sampleRate": 24000
+        },
+        "armour": {
+          "file": "v13-photo-words-heart.pcm",
+          "offset": 0,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "the knight wore shiny armour.": {
+          "file": "v13-photo-words-heart.pcm",
+          "offset": 68400,
+          "length": 100800,
+          "sampleRate": 24000
+        },
+        "rumour": {
+          "file": "v13-photo-words-heart.pcm",
+          "offset": 169200,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "the rumour about a new school pet was not true.": {
+          "file": "v13-photo-words-heart.pcm",
+          "offset": 237600,
+          "length": 152400,
+          "sampleRate": 24000
+        },
+        "humour": {
+          "file": "v13-photo-words-heart.pcm",
+          "offset": 390000,
+          "length": 67200,
+          "sampleRate": 24000
+        },
+        "the silly poem was full of humour.": {
+          "file": "v13-photo-words-heart.pcm",
+          "offset": 457200,
+          "length": 115200,
+          "sampleRate": 24000
+        },
+        "revision": {
+          "file": "v13-photo-words-heart.pcm",
+          "offset": 572400,
+          "length": 73200,
+          "sampleRate": 24000
+        },
+        "we did some revision before our spelling test.": {
+          "file": "v13-photo-words-heart.pcm",
+          "offset": 645600,
+          "length": 154800,
+          "sampleRate": 24000
+        },
+        "explosion": {
+          "file": "v13-photo-words-heart.pcm",
+          "offset": 800400,
+          "length": 76800,
+          "sampleRate": 24000
+        },
+        "the science video showed an explosion on the sun.": {
+          "file": "v13-photo-words-heart.pcm",
+          "offset": 877200,
+          "length": 160800,
+          "sampleRate": 24000
         }
       }
     }
@@ -6442,6 +6718,22 @@
     "v11-weekly-heart.pcm": {
       "bytes": 2392800,
       "sha256": "41c7f3fdda60892fd842d813e2e2427fed1ee9ff69bc53fc12428b0671fa69d5"
+    },
+    "v13-feedback-natural.pcm": {
+      "bytes": 1911600,
+      "sha256": "8777a8dd927a0b63d47d2938f9167a21a12c08e4661e120f3dbb6a793b4cb613"
+    },
+    "v13-feedback-heart.pcm": {
+      "bytes": 1779600,
+      "sha256": "bb1a2bab9e92ca0c1834f7d0849dbfadb3a2beccdd5a8cf05ade8061846cefef"
+    },
+    "v13-photo-words-natural.pcm": {
+      "bytes": 973200,
+      "sha256": "ceb5d7fd4e87dc72cfa698b316ff3e5526c5b0bc5eed06a70b7523d6a228e72e"
+    },
+    "v13-photo-words-heart.pcm": {
+      "bytes": 1038000,
+      "sha256": "d6cee75317faec908b24b45a230b36204ca958a6b4454e0efa78756814259803"
     }
   }
 }

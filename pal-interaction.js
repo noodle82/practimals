@@ -29,6 +29,7 @@ function vowel(pitch,start,duration,formant=650){
 function playSound(kind,species='blob'){const profile=shapeSound(species);
  if(!enabled)return;
  stopPurr();
+ if(kind==='burp'){vowel(190,0,.28,520);tone(95,.24,.04,'triangle',55,.09);return;}
  if(kind==='munch'){[0,.18,.36].forEach(t=>tone(160,.08,t,'triangle',95,.055));return;}
  if(kind==='babyhello'){const ctx=audioReady();if(ctx){const helloGain=ctx.createGain();helloGain.gain.value=4;helloGain.connect(master);scheduleBabyHello(ctx,helloGain);}return;}
  if(kind==='oof'){const f=profile.hello;vowel(f,0,.18,profile.resonance);tone(f*.51,.14,.04,'sine',f*.43,.05);}

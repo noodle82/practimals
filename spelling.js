@@ -1,3 +1,4 @@
+import{nextEggColour}from'./egg-look.js';
 import{savePracticeTest}from'./test-records.js';
 import{wordPattern}from'./content-rules.js';
 import{newId}from'./platform-compat.js';
@@ -27,7 +28,7 @@ export function setWeek(p,words,testDate,{newWeek=false,today=localDay(),random=
  if(!Array.isArray(words)||words.length<1||words.length>20)throw Error('Add between 1 and 20 weekly spellings.');
  if(words.some(x=>!x.word)||new Set(words.map(x=>x.word)).size!==words.length)throw Error('Check your weekly spelling list.');
  const fresh=!p.week||newWeek,changed=p.words.map(x=>x.word).join('\n')!==words.map(x=>x.word).join('\n');
- if(fresh){if(p.week){const oldEgg=p.eggs.find(e=>e.id===p.week.eggId);if(oldEgg?.hatched||allGreen(p)||p.week.denResult){p.completedCycles=(p.completedCycles||0)+1;}p.archivedCycles??=[];p.archivedCycles.unshift({week:structuredClone(p.week),words:structuredClone(p.words),look:lookOf(p),scrapbook:structuredClone(p.scrapbook||[])});}syncEgg(p);const baby=babyPick(random);p.week={id,start:today,testDate,progress:{},rounds:{},games:[],claimed:{},eggId:id};p.eggs.push({id,start:today,testDate,babyId:baby.id,hatched:false});}
+ if(fresh){if(p.week){const oldEgg=p.eggs.find(e=>e.id===p.week.eggId);if(oldEgg?.hatched||allGreen(p)||p.week.denResult){p.completedCycles=(p.completedCycles||0)+1;}p.archivedCycles??=[];p.archivedCycles.unshift({week:structuredClone(p.week),words:structuredClone(p.words),look:lookOf(p),scrapbook:structuredClone(p.scrapbook||[])});}syncEgg(p);const baby=babyPick(random);p.week={id,start:today,testDate,progress:{},rounds:{},games:[],claimed:{},eggId:id};p.eggs.push({id,shellColour:nextEggColour(p.eggs.at(-1)?.shellColour),start:today,testDate,babyId:baby.id,hatched:false});}
  else{p.week.testDate=testDate;p.week.progress=Object.fromEntries(Object.entries(p.week.progress).filter(([word])=>words.some(x=>x.word===word)));if(changed){p.week.legacyBadgeFloor=Math.max(p.week.legacyBadgeFloor||0,badgeCount(p));p.week.answers=(p.week.answers||[]).filter(a=>words.some(w=>w.word===a.word));p.week.rounds={};delete p.week.denResult;delete p.week.baselineDismissed;}const egg=p.eggs.find(e=>e.id===p.week.eggId);if(egg)egg.testDate=testDate;}
  p.words=words;if(fresh){p.scrapbook=[];beginIdentity(p);}syncEgg(p);return p.week;
 }

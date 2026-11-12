@@ -1,7 +1,22 @@
 {
-  "version": "0.13.0",
-  "cacheName": "spelloids-v13-04d841aaddc8",
+  "version": "0.14.0",
+  "cacheName": "spelloids-v14-cca74fb13f8d",
   "files": [
+    {
+      "path": "parent-review.js"
+    },
+    {
+      "path": "v14.css"
+    },
+    {
+      "path": "egg-look.js"
+    },
+    {
+      "path": "care-drag.js"
+    },
+    {
+      "path": "hatch-tap.js"
+    },
     {
       "path": "v13.css"
     },

@@ -1,0 +1,24 @@
+SPELLOIDS v0.14 — NAVIGATION, EGG, BABY PLAY AND GROWN-UP CHECKS
+
+INSTALL
+1. Extract spelloids-v14-update.zip.
+2. Upload ALL extracted contents into the TOP LEVEL of your EXISTING GitHub repository, replacing matching files. Upload the contents, not the enclosing folder or ZIP. Keep all existing files, audio, vendor and fonts. Include the audio folder in this ZIP: the v13 additions are included again, so this one upload covers both updates.
+3. Commit, wait for the Pages deployment to finish, then reload. If the previous version remains, wait a few seconds and reload again. Do not clear website data: it stores progress.
+4. The native TestFlight app needs a NEW Codemagic build from the updated branch. Updating GitHub Pages does not update an installed native app. Signing settings, Bundle ID and Apple certificates are unchanged.
+
+WHAT CHANGED
+- Top navigation returns to its normal purple/neutral style. The redundant return link above challenges, sentences, drawings and whole-list tests is removed; the green Back to Spelling Hub button remains beneath the Spelloid. Nursery also has a clear green return button near the top of the egg companion.
+- The nursery egg is always visible beside the family room on tablets/desktop, above it on phones. Clear green progress shows completed challenge lights, percentage and green words. A new spelling set gets a different shell colour from a rotating palette of six; colours stay fixed for each egg. Existing eggs receive stable colours without changing their learning progress.
+- Cracking controls handle rapid touch taps and prevent double-tap zoom on the egg. Normal page zoom remains available outside these controls. The preview still requires four taps and does not add a real baby.
+- Drag the teddy, dummy, bottle, fresh nappy, onesie or hoodie onto the baby. Bottles/dummies go to the mouth; other things go onto the body. Drop outside and nothing is applied. A pointer tap gives a drag hint. Keyboard users can focus an item and press Enter. Dragging near the top/bottom scrolls the page when needed.
+- The bottle aligns with the mouth and the baby brings a hand forward to hold it. Milk decreases during a 3.6-second drink, then the baby burps and returns to play. A full drink counts once. Leaving before finishing cancels it without a delayed reward or burp. Sleeping babies cannot drink. Baby care does not earn spelling rewards.
+- Onesie fabric follows the sculpted torso and covers both arms, hands/fingers and feet for every baby shape. The hoodie fit is refined. A saved nappy stays underneath clothes and is only shown when undressed. Dress choices and care stay separate for each baby.
+- In Grown-ups, words needing a meaning or example are highlighted in red, with red fields and a clear action message. Flags update while editing and also check that examples include the exact target spelling. The list still needs saving after edits.
+- Start a new spelling week is now a distinct berry-rose button. It opens a confirmation pop-up explaining that challenge lights/badges restart, the child gets a grey blob and new egg, and the old set/scrapbook is archived. Collected babies, outfits, special colours, family pictures and test results remain saved. Keep this week/Escape cancels; only Yes, start a new week performs the reset. Save list & prepare meanings remains the way to edit the current set.
+
+CHECKS
+133 automated tests pass. Browser checks covered navigation, a visible coloured egg, real mouse and emulated touch drags, rejected drops, drinking/burp timing and saved counters, cancellation on leaving, hidden nappies under both outfits and fully covered onesie limb meshes for all three shapes. Four real rapid touch events cracked the preview without changing viewport scale or adding a baby. Parent checks covered red missing-field flags, live correction, modal cancellation preserving the week/editor, confirmation-only reset, a changed egg colour and preserved babies. Phone/tablet portrait overflow checks passed with no runtime exceptions.
+Physical iPad Safari/TestFlight gestures and sound still need a device check; browser touch emulation is not a physical iPad test. Existing photo reader, spelling content, voices, scrapbook rewards, test results and badge rules remain from v13.
+
+SAVED DATA
+The saved-data key and schema stay compatible. This update itself does not start a new week or remove progress. Browser and native-app data still do not sync automatically. Nothing has been uploaded to GitHub or Apple by preparing these files.

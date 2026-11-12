@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-12",
+  "automatedChecks": 133,
+  "navigation": {
+    "normalHeaderStyle": true,
+    "duplicateActivityLinksRemoved": true,
+    "underSpelloidReturnRetained": true
+  },
+  "egg": {
+    "alwaysVisible": true,
+    "stablePalettePerEgg": true,
+    "differentNextSet": true,
+    "clearProgress": true,
+    "rapidTouchPreviewNoZoom": true,
+    "previewDoesNotAddBaby": true
+  },
+  "care": {
+    "realMouseDrags": true,
+    "emulatedTouchDrags": true,
+    "outsideDropRejected": true,
+    "drinkMs": 3600,
+    "burpMs": 900,
+    "fullBottleCountsOnce": true,
+    "interruptedDrinkCancels": true,
+    "onesieAllLimbMeshesCoveredForAllThreeShapes": true,
+    "nappyHiddenUnderClothes": true
+  },
+  "parents": {
+    "redMissingMeaningAndExample": true,
+    "liveCorrection": true,
+    "distinctNewWeekColour": true,
+    "confirmationBeforeReset": true,
+    "cancelKeepsWeekAndEditor": true,
+    "confirmPreservesCollectedBabies": true
+  },
+  "browser": {
+    "phoneAndTabletPortraitNoOverflow": true,
+    "zeroRuntimeExceptions": true
+  },
+  "physicalIpadTested": false,
+  "nativeBuildTested": false,
+  "stateSchema": 10,
+  "publication": "Prepared locally; no GitHub or Apple publication"
+}

@@ -1,3 +1,4 @@
+import{shapeSound}from'./species-sounds.js';
 import{scheduleBabyHello}from'./baby-sounds.js';
 let characterVoice='bubbles';export function setCharacterVoice(style){characterVoice=style||'bubbles';}
 import { createPalGesture } from './pal-gestures.js';
@@ -25,14 +26,14 @@ function vowel(pitch,start,duration,formant=650){
  gain.gain.setValueAtTime(0,at);gain.gain.linearRampToValueAtTime(.38,at+.025);gain.gain.exponentialRampToValueAtTime(.001,at+duration);
  voice.connect(filter);filter.connect(gain);gain.connect(master);voice.start(at);voice.stop(at+duration+.02);
 }
-function playSound(kind){
+function playSound(kind,species='blob'){const profile=shapeSound(species);
  if(!enabled)return;
  stopPurr();
  if(kind==='munch'){[0,.18,.36].forEach(t=>tone(160,.08,t,'triangle',95,.055));return;}
  if(kind==='babyhello'){const ctx=audioReady();if(ctx){const helloGain=ctx.createGain();helloGain.gain.value=4;helloGain.connect(master);scheduleBabyHello(ctx,helloGain);}return;}
- if(kind==='oof'){const f={bubbles:430,mallow:355,ziggle:540}[characterVoice]||430;vowel(f,0,.18,f*2.4);tone(f*.51,.14,.04,'sine',f*.43,.05);}
- if(kind==='giggle'){[0,.13,.27,.42,.58].forEach((t,i)=>{vowel(({bubbles:630,mallow:490,ziggle:760}[characterVoice]||630)+(i%2)*85,t,.095,1400+(i%2)*180);tone(650+i*45,.1,t,'sine',840,.1);});}
- if(kind==='dance'){[392,523,659,523,440,587,784,587].forEach((f,i)=>tone(f,.22,i*.2,'triangle',f,.16));}
+ if(kind==='oof'){const f=profile.hello;vowel(f,0,.18,profile.resonance);tone(f*.51,.14,.04,'sine',f*.43,.05);}
+ if(kind==='giggle'){[0,.13,.27,.42,.58].forEach((t,i)=>{vowel(profile.giggle+(i%2)*85,t,.095,profile.resonance+(i%2)*180);tone(650+i*45,.1,t,'sine',840,.1);});}
+ if(kind==='dance'){profile.dance.forEach((f,i)=>tone(f,.22,i*profile.beat,profile.instrument,f,.16));}
  if(kind==='celebrate'){[523,659,784,1046].forEach((f,i)=>tone(f,.35,i*.11,'sine',f,.25));}
  if(kind==='travel'){[220,330,440,660].forEach((f,i)=>tone(f,.5,i*.09,'sine',f*1.5,.15));}
  if(kind==='purr'){
@@ -54,7 +55,7 @@ function react(element,kind){
  stopPalInteraction();reactingElement=element;currentReaction=kind;
  element.dataset.reaction=kind;
  element.querySelector('.pal-reaction').textContent={oof:'Oof! Hello, you!',giggle:'Hee-hee! That tickles!',purr:'Prrrr… happy here.',celebrate:'We did it together!',dance:'Wiggle, wobble, woo!',yawn:'Aaaah… big stretch!',cross:'Can your eyes do this?',roll:'Where did my eyebrows go?'}[kind]||'';
- playSound(kind);
+ let species='blob';try{species=JSON.parse(element.querySelector('[data-monster]').dataset.monster).species;}catch{}playSound(kind,species);
  if(kind!=='purr')timers.push(setTimeout(()=>stopPalInteraction(),kind==='dance'?4000:['yawn','cross','roll'].includes(kind)?2600:kind==='giggle'?1300:950));
 }
 export function bindPalInteractions(){

@@ -1,3 +1,23 @@
+# Spelloids v0.12
+
+Tablet-first spelling practice for ages 5–10. See UPDATE-V12-INSTRUCTIONS.txt for upload steps, current behaviour and device-test limits.
+
+## New in this release
+
+A Spelloid mascot logo and intro, Spelling Hub navigation, local photo-list recognition with parent review, parent handoff, three renamed voice choices, shape-specific sounds, stop/restart for Hear my list, clearer confirmations, illustrated milestone-locked Den games and Badge 8 rainbow colour. All six core challenges still determine green words; saved progress and weekly identity locks remain compatible.
+
+## Local photo recognition
+
+Tesseract.js 6.0.1 with Tesseract core 6.0.0 and English tessdata_fast is bundled in vendor/ocr. Photos stay on the device. Results require review; no handwriting accuracy guarantee. Runtime files need downloading once for website offline use. Versions, file hashes, source links and licences are in vendor/ocr/SOURCES.json and accompanying licence files. Official documentation: https://github.com/naptha/tesseract.js/blob/master/docs/api.md and https://github.com/naptha/tesseract.js/blob/master/docs/local-installation.md .
+
+## Build and verification
+
+Node 22+: npm start, npm test, npm run build. Static output is dist/. Package version is 0.12.0. Storage remains practimals-spelling-v4, schema 10. Bundle ID and existing signing configuration are unchanged. See VALIDATION-V12.json and TESTING.md.
+
+## Earlier features
+
+The following v11 notes remain historical context; v12 instructions take precedence where behaviour changed (particularly voice choices and Den milestones).
+
 # Spelloids v0.11
 
 Tablet-first spelling practice for ages 5–10. Children work only with their assigned weekly list, build a Spelloid through practice badges and collect its baby after making every word green.

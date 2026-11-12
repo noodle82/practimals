@@ -1,6 +1,6 @@
 import{wordPattern}from'./content-rules.js';
 import{newId}from'./platform-compat.js';
-import{allGreen,beginIdentity,rememberLook,lookOf,inheritedBaby,addPortrait,badgeCount,recordAttempt}from'./journey.js';
+import{syncDenMilestones,allGreen,beginIdentity,rememberLook,lookOf,inheritedBaby,addPortrait,badgeCount,recordAttempt}from'./journey.js';
 import{localDay}from'./learning.js';
 export const METHODS={study:{title:'Look, cover, check',description:'Look at your word. Say it. Cover it and try.',icon:'Aa'},listen:{title:'Hear & spell',description:'Listen carefully, then spell your weekly words.',icon:'♫'},build:{title:'Build the word',description:'Put the letters in the right order.',icon:'▦'},letters:{title:'Missing letters',description:'Find the letters hiding in your words.',icon:'a_c'},gap:{title:'What’s the missing word?',description:'Complete a sentence using your weekly words.',icon:'___'},meaning:{title:'Match the meaning',description:'Choose the weekly word that fits the clue.',icon:'?'},sentence:{title:'Make a sentence',description:'Choose one of your words and give it a sentence.',icon:'✎'},draw:{title:'Draw your word',description:'Make a picture to help a word stick.',icon:'✿'}};
 export const WARDROBE={hat:{title:'A hat',after:1,items:[{id:'hat-bucket-lilac',label:'Lilac bucket hat',style:'bucket',colour:'#a48ad6'},{id:'hat-beanie-coral',label:'Coral bobble hat',style:'beanie',colour:'#ed947e'},{id:'hat-party-gold',label:'Golden party hat',style:'party',colour:'#eec66d'}]},coat:{title:'A coat',after:3,items:[{id:'coat-rain-mint',label:'Mint raincoat',style:'rain',colour:'#68bba6'},{id:'coat-hoodie-lilac',label:'Lilac hoodie',style:'hoodie',colour:'#9d85c5'},{id:'coat-puffer-blue',label:'Blue puffer',style:'puffer',colour:'#79a9d3'}]},shoes:{title:'Some shoes',after:5,items:[{id:'shoes-trainers-red',label:'Red trainers',style:'trainers',colour:'#df7c7b'},{id:'shoes-boots-yellow',label:'Yellow boots',style:'boots',colour:'#e3b653'},{id:'shoes-slippers-purple',label:'Purple slippers',style:'slippers',colour:'#ac8ac8'}]}};
@@ -38,7 +38,7 @@ export function recordWord(p,word,method,{correct=false,assisted=false,day=local
  if(correct&&!assisted&&['listen','study','build','letters'].includes(method))data.spelled=true;
  data.methods=[...new Set([...data.methods,method])];
  if(correct&&!assisted&&REQUIRED_METHODS.includes(method))data.passed=[...new Set([...(data.passed||[]),method])];
- syncEgg(p);
+ syncEgg(p);syncDenMilestones(p);
 }
 export function completeWord(p,word,method,day=localDay()){
  if(!p.words.some(x=>x.word===word)||!METHODS[method])throw Error('Use the weekly list.');

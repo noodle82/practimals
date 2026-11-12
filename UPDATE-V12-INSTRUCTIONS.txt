@@ -1,0 +1,24 @@
+SPELLOIDS v0.12 — UPLOAD INSTRUCTIONS
+
+Update your existing repository. Do not delete its contents or clear website data.
+1. Extract spelloids-v12-update.zip.
+2. In GitHub, upload the extracted CONTENTS into the repository's top level, replacing matching files. Do not upload the outer folder or ZIP.
+3. Include vendor/ocr: this NEW folder makes photo reading work locally. Keep all existing vendor files. Include the audio folder too: these are the small v11 additions, included again for safety. Keep all previous audio files.
+4. Include native/AppIcon.png for the new Apple icon. Your signing and Codemagic settings are unchanged.
+5. Commit, wait for the Pages deployment to finish, then reload. If the old version persists, wait a few seconds and reload again. Do not clear site data: that erases progress.
+
+WHAT CHANGED
+- Spelloid logo, matching app icon and short intro: Little practice, big confidence.
+- Grown-ups gate: square root of 144 (12). A clear Spellings ready — hand to child action saves and checks the list before returning to play.
+- Take a photo or choose a picture, rotate if needed, read locally and review/edit the detected words before using them. Printed lists work best; handwriting and poor photos need corrections. Photos are not uploaded to a service. The reader files must be available once before offline use; preparing the full offline app includes them.
+- Hear my list is an on/off button: tap again to stop; tap once more to restart from the beginning.
+- Three voice choices: Bumble, Fizzlet and Mallow. Speaking speed stays unchanged. Retired choices migrate to retained voices without resetting weekly progress or unlocking a locked choice. Body shapes have different hello, giggle and dance sounds.
+- Confirm voice is spaced below the choices. This Week is now Spelling Hub. Hub and module navigation land at the useful content; modules have a prominent teal Back to Spelling Hub button.
+- Den has illustrated previews, grey locked games and explicit milestones. One complete core module opens Word Rocket and Cloud Hopper; two open Word Nest; three open Memory Mates; four open Monster Bingo. Previously earned games remain collected; a new set still needs one completed module to reopen the Den. Cycle rewards also remain.
+- Rainbow is visible as a locked colour until Badge 8, Rainbow keeper. Once earned it stays available. A colour already confirmed for this set stays fixed; choose rainbow for the next Spelloid.
+
+CHECKS AND LIMITS
+113 automated checks passed. Browser checks covered all six core module layouts at iPad landscape size, phone/portrait overflow, the intro, gate/handoff, voice spacing, list stop/restart, milestones and previews. Real local OCR read all 12 printed test words exactly and repeated successfully after an offline reload. Actual shape sound bindings were checked; automated browser sound was muted.
+A physical iPad camera, physical Safari output and native Apple build were not tested here. Please check camera permission/photo import and Hear the word on your iPad after deployment. No claim of improved real-device speech clarity is made solely from these checks.
+
+Existing progress, wardrobe, babies, scrapbook and family wall retain their compatible storage format. Browser and installed-app data still do not sync automatically. Nothing has been published to GitHub or Apple; an installed TestFlight version requires a new Codemagic build.

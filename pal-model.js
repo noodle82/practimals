@@ -18,7 +18,7 @@ export function buildPal(p){
  // A sculpted, asymmetric silhouette with a soft tummy, rather than a scaled primitive.
  const geometry=new T.SphereGeometry(1,96,64),positions=geometry.attributes.position,colours=[];
  for(let i=0;i<positions.count;i++){const x=positions.getX(i),y=positions.getY(i),z=positions.getZ(i),belly=blob?1+.14*(1-y*y):p.species==='wiggle'?1+.12*y-.07*Math.cos(y*3):1+.065*Math.cos(y*3);const floor=blob&&y<-.68?-.68+(y+.68)*.38:y;const wobble=blob?.018:p.species==='wiggle'?.065:p.species==='blip'?.035:.025;positions.setXYZ(i,x*belly+wobble*Math.sin(y*3.5)*(1-y*y),floor+(blob?0:.018*x*(1-y*y)),z*(1+.055*Math.cos(y*3)));
-  const tone=p.colour==='rainbow'?new T.Color().setHSL((.86-(y+1)*.46+x*.04+1)%1,.49,.73):new T.Color('#ffffff').multiplyScalar(.90+.10*(y+1)/2);colours.push(tone.r,tone.g,tone.b);}
+  const tone=p.colour==='rainbow'?new T.Color().setHSL((.86-(y+1)*.46+x*.04+1)%1,.83,.57):new T.Color('#ffffff').multiplyScalar(.90+.10*(y+1)/2);colours.push(tone.r,tone.g,tone.b);}
  geometry.setAttribute('color',new T.Float32BufferAttribute(colours,3));geometry.computeVertexNormals();const bodySkin=skin.clone();bodySkin.vertexColors=true;if(p.colour==='rainbow')bodySkin.color.set('#ffffff');const torso=new T.Mesh(geometry,bodySkin);torso.position.y=centreY;torso.scale.set(...shape);body.add(torso);
  const front=(x,y)=>shape[2]*Math.sqrt(Math.max(.12,1-(x/shape[0])**2-((y-centreY)/shape[1])**2));
  const arms=[],feet=[];

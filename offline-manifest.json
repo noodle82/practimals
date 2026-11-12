@@ -1,7 +1,25 @@
 {
-  "version": "0.11.0",
-  "cacheName": "spelloids-v11-89e83f79e45e",
+  "version": "0.12.0",
+  "cacheName": "spelloids-v12-185616cd6c83",
   "files": [
+    {
+      "path": "v12.css"
+    },
+    {
+      "path": "brand-mark.svg"
+    },
+    {
+      "path": "photo-words.js"
+    },
+    {
+      "path": "navigation.js"
+    },
+    {
+      "path": "den-gallery.js"
+    },
+    {
+      "path": "species-sounds.js"
+    },
     {
       "path": "v11.css"
     },
@@ -214,6 +232,51 @@
     },
     {
       "path": "vendor/LICENSE"
+    },
+    {
+      "path": "vendor/ocr/core/tesseract-core-lstm.wasm"
+    },
+    {
+      "path": "vendor/ocr/core/tesseract-core-lstm.wasm.js"
+    },
+    {
+      "path": "vendor/ocr/core/tesseract-core-simd-lstm.wasm"
+    },
+    {
+      "path": "vendor/ocr/core/tesseract-core-simd-lstm.wasm.js"
+    },
+    {
+      "path": "vendor/ocr/core/tesseract-core-simd.wasm"
+    },
+    {
+      "path": "vendor/ocr/core/tesseract-core-simd.wasm.js"
+    },
+    {
+      "path": "vendor/ocr/core/tesseract-core.wasm"
+    },
+    {
+      "path": "vendor/ocr/core/tesseract-core.wasm.js"
+    },
+    {
+      "path": "vendor/ocr/lang/eng.traineddata.gz"
+    },
+    {
+      "path": "vendor/ocr/SOURCES.json"
+    },
+    {
+      "path": "vendor/ocr/tessdata-LICENSE.txt"
+    },
+    {
+      "path": "vendor/ocr/tesseract.js-core-LICENSE.txt"
+    },
+    {
+      "path": "vendor/ocr/tesseract.js-LICENSE.txt"
+    },
+    {
+      "path": "vendor/ocr/tesseract.min.js"
+    },
+    {
+      "path": "vendor/ocr/worker.min.js"
     },
     {
       "path": "vendor/speech/kokoro.web.js"

@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-12",
+  "automatedChecks": 113,
+  "photo": {
+    "realPrintedWords": 12,
+    "exactRecognition": true,
+    "reviewBeforeSave": true,
+    "workerCancellation": true,
+    "offlineReload": true,
+    "handwritingVerified": false
+  },
+  "browser": {
+    "intro": true,
+    "parentGateAndHandoff": true,
+    "threeVoiceChoices": true,
+    "voiceConfirmSpacing": true,
+    "listStopRestart": true,
+    "staleCompletionGuard": true,
+    "sixCoreQuestionLayouts": true,
+    "ipadLandscape": true,
+    "phoneAndPortraitNoHorizontalOverflow": true,
+    "denMilestones": true,
+    "shapeSoundBindings": true,
+    "rainbowPreview": true
+  },
+  "physicalIpadTested": false,
+  "nativeBuildTested": false,
+  "speakingSpeedChanged": false,
+  "state": {
+    "key": "practimals-spelling-v4",
+    "schema": 10,
+    "reset": false
+  },
+  "publication": "Local files only; no GitHub or Apple publication"
+}

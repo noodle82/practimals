@@ -1,0 +1,25 @@
+SPELLOIDS v0.15 — DRAG ON, TAP OFF; SOFT BABY PROPS; SPEECH HELP
+
+UPLOAD
+1. Extract spelloids-v15-update.zip.
+2. Upload ALL extracted contents to the TOP LEVEL of your EXISTING practimals/Spelloids GitHub repository, replacing matching files. Upload the contents, not the ZIP or outer folder. Keep existing files, audio, vendor and fonts.
+3. Include the audio folder: the small v13 recording additions are included again, so this single ZIP includes all app changes since v12. Do not delete earlier audio banks.
+4. Commit, wait for Pages deployment, then reload. Wait a few seconds and reload again if the older version remains. Do not clear website data: that stores progress.
+5. To update your daughter's INSTALLED app, run Spelloids Family iPad — Ad Hoc in Codemagic after uploading, download the new IPA and create a fresh Diawi installation link. Adult testers continue using Spelloids iOS TestFlight. This app update deliberately does not overwrite codemagic.yaml or signing settings. If you have not added the family workflow yet, use the separate spelloids-family-ipad-setup package from the previous step.
+
+NURSERY CONTROLS
+- Drag the nappy, teddy or dummy onto the baby to put it on. When it is on, tap that SAME item in the menu to take it off. Its selected state and small label change to Tap to take off. A tap on an unused item gives a drag hint rather than putting it on. No extra removal buttons below.
+- Putting clothes on stays drag-and-drop. Take clothes off (the hanger) is now a normal tap action.
+- Moon pyjamas join the starry onesie and cosy hoodie. These peach pyjamas have a small moon detail and full sleeves/feet. All three remain changeable and save separately for each baby.
+- The nappy and teddy on the baby are now lit 3D objects, not flat picture overlays. The smaller teddy uses soft rounded plush shapes. The nappy follows the body, with cloth folds and a CLOSED decorative safety pin. Its saved state remains underneath outfits, and it only shows when undressed. Menu pictures use soft matching shading.
+- Existing bottle drinking/burp, strawberry dragging, sleep and care remain. Care does not earn spelling badges or green lights.
+
+GROWN-UP SPEECH HELP
+The large voice section is replaced by a CLOSED Speech & offline help section. It retains Read practice questions aloud and Prepare this week's spoken words. The website also offers Prepare speech for offline use; the native app instead explains that those files are already bundled.
+These are troubleshooting/preparation tools for new words that are slow or silent, not weekly voice-selection controls. Voice previews and the review link have been removed from this section. The child still chooses the Spelloid voice when creating the weekly character, as before.
+
+CHECKS AND SAVED DATA
+136 automated checks pass. Browser checks covered real mouse drag-on/tap-off for all three items, no double-toggle, actual emulated touch removal, tap-only undress, all three draggable outfits, care persistence after reload, a real 3D closed pin/plush teddy and nappy hidden beneath outfits. No runtime exceptions or tablet/phone overflow. Speech help starts closed; its remaining preparation controls were invoked with a mocked preparation backend, and both website and native UI branches were checked. Existing audio-asset tests pass; speech processing and selected child voices are unchanged.
+Native configuration was checked locally at version 0.15.0 with Bundle ID com.spelloids.spelling. The existing Ad Hoc and TestFlight workflows are retained in the source. No macOS signing/build, physical iPad installation or listening test was performed here. The check's fallback build number is not the actual cloud build counter; Codemagic supplies its increasing counter or your IOS_BUILD_NUMBER override.
+Existing spelling progress, badges, rare colours, nursery care, collected babies, pictures, scrapbooks and test records keep the same saved-data key/schema. This update itself does not start a new week. Website and native-app data still do not sync automatically. Do not delete the installed app as a routine update step.
+Nothing was uploaded to GitHub, Apple or Diawi by preparing this package.

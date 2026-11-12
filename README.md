@@ -1,21 +1,21 @@
-# Spelloids v0.14
+# Spelloids v0.15
 
-Spelling practice for ages 5–10 using the assigned weekly list. Follow UPDATE-V14-INSTRUCTIONS.txt for uploading this combined update over v12 or v13. It includes the v13 audio and other changes as well as v14. Keep previous audio/vendor/font files and saved website data.
+Spelling practice for ages 5–10, using only the weekly assigned list. Follow UPDATE-V15-INSTRUCTIONS.txt for this cumulative update over v12–v14. Keep existing assets, saved website data and live signing settings. Include the small audio additions in the ZIP.
 
-## Current learning rules
+## This update
 
-Six independent core challenge passes make a word green. Badge 1 celebrates starting; later badges count correct distinct core answers, with the slower v13 thresholds. Whole-list tests use one answer per word, save results and earn no badge/mastery credit. An optional starting check gives a reference score. Ten scrapbook creations unlock one permanent special finish per set across five sets. These rules are unchanged here.
+Baby care uses drag-on/tap-off on the same nappy/teddy/dummy menu items. The hanger removes clothes with a tap; three outfits go on by dragging. New Moon pyjamas join the blue starry onesie and lilac hoodie. The baby holds a smaller rounded 3D teddy and wears a fitted 3D cloth nappy with closed safety pin. Both props share the baby’s lighting/rendering; nappy visibility respects clothes.
 
-## This release
+The large grown-up voice panel becomes a collapsed Speech & offline help section with question-sound and local preparation tools. The website's offline-download control is not shown in the native app, whose speech files are bundled. Child voice selection and speech processing are unchanged.
 
-Normal top navigation and one under-Spelloid return button in activities; always-visible coloured egg with clear progress; hatch-specific rapid-touch handling; drag-and-drop toys, bottle, nappy and baby outfits; timed drinking/burp; properly covered onesie limbs; hidden nappy under clothes; red parent meaning/example action flags; and an explicit confirmation for starting a new spelling week.
+Six core challenge passes per word, slower correct-only badges, one-attempt recorded tests, optional baseline, scrapbook special colours, always-visible coloured egg and new-week confirmation remain from earlier updates.
 
-The rotating egg palette is saved per egg. Care timers and drag listeners clean up on navigation. Keyboard activation remains available for drag items. Touch-action restrictions apply to the cracking/drag controls, not page-wide zoom. Parent confirmation does not mutate the week until its confirm action.
+## Run/build
 
-## Build and state
+Node 22+: npm start, npm test, npm run build. Static output: dist/. Version: 0.15.0. Bundle ID: com.spelloids.spelling. Storage key: practimals-spelling-v4; schema: 10. Existing records and collectibles are preserved. No cloud or browser/native sync has been added.
 
-Node 22+: npm start, npm test, npm run build. Static output is dist/. Package version 0.14.0. Storage remains practimals-spelling-v4, schema 10. Existing signing configuration and com.spelloids.spelling are unchanged. No cloud/browser/native sync or external publication has been added.
+The source retains both Codemagic workflows: Spelloids Family iPad — Ad Hoc for the registered family iPad via Diawi, and Spelloids iOS TestFlight for adult testers. The upload patch does not overwrite live codemagic.yaml. Native camera/photo permissions and bundled assets remain. Build numbers follow the cloud counter or explicit IOS_BUILD_NUMBER override; no live Apple counter was available locally.
 
-133 tests pass, with mouse and emulated touch browser checks. See TESTING.md and VALIDATION-V14.json. Physical iPad Safari/TestFlight behaviour and sound remain device checks.
+136 tests pass, plus browser checks for pointer/touch removal, clothes, 3D props, persistence and speech-help branches. See VALIDATION-V15.json. Physical iPad and native signing/build remain device/cloud checks. No external publication was performed.
 
-Speech and photo reading remain free and local. The existing Tesseract assets are in vendor/ocr with attribution/hashes. The 1,164-entry authored glossary and curriculum attribution are described in lexicon/README.md.
+The authored offline glossary has 1,164 entries; see lexicon/README.md for coverage/attribution. Existing local speech and Tesseract assets/licences are unchanged.

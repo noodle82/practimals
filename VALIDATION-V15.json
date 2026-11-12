@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-12",
+  "automatedChecks": 136,
+  "nursery": {
+    "mouseDragOnTapOff": [
+      "nappy",
+      "teddy",
+      "dummy"
+    ],
+    "touchTapOff": true,
+    "noDuplicateToggle": true,
+    "noSeparateRemoveButtons": true,
+    "tapOnlyUndress": true,
+    "threeDraggableSuits": true,
+    "moonPyjamas": true,
+    "perBabyPersistence": true,
+    "fitted3DNappy": true,
+    "closedSafetyPin": true,
+    "smaller3DPlushTeddy": true,
+    "nappyHiddenUnderClothes": true
+  },
+  "speechHelp": {
+    "collapsedByDefault": true,
+    "preparationBindingsCheckedWithMockBackend": true,
+    "websiteAndNativeBranchesChecked": true,
+    "previewsRemoved": true,
+    "reviewLinkRemoved": true,
+    "childVoiceChoicesUnchanged": true
+  },
+  "browser": {
+    "phoneAndTabletNoHorizontalOverflow": true,
+    "zeroRuntimeExceptions": true
+  },
+  "native": {
+    "version": "0.15.0",
+    "bundleId": "com.spelloids.spelling",
+    "configurationCheck": true,
+    "adHocAndTestFlightSourcePreserved": true,
+    "actualCloudBuildNumberVerified": false
+  },
+  "stateSchema": 10,
+  "physicalIpadTested": false,
+  "nativeBuildRun": false,
+  "publication": "Local files only; no GitHub/Apple/Diawi publication"
+}

@@ -1,7 +1,13 @@
 {
-  "version": "0.14.0",
-  "cacheName": "spelloids-v14-cca74fb13f8d",
+  "version": "0.15.0",
+  "cacheName": "spelloids-v15-e6fdfcb8df96",
   "files": [
+    {
+      "path": "v15.css"
+    },
+    {
+      "path": "baby-props.js"
+    },
     {
       "path": "parent-review.js"
     },

@@ -1,6 +1,6 @@
 {
-  "version": "0.15.0",
-  "cacheName": "spelloids-v15-e6fdfcb8df96",
+  "version": "0.16.0",
+  "cacheName": "spelloids-v16-a0783e8eec5d",
   "files": [
     {
       "path": "v15.css"
@@ -277,6 +277,12 @@
     },
     {
       "path": "audio/v13-photo-words-natural.pcm"
+    },
+    {
+      "path": "audio/v16-school-list-heart.pcm"
+    },
+    {
+      "path": "audio/v16-school-list-natural.pcm"
     },
     {
       "path": "vendor/LICENSE"

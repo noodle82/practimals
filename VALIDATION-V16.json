@@ -1,0 +1,75 @@
+{
+  "date": "2026-11-12",
+  "version": "0.16.0",
+  "automatedChecks": 143,
+  "list": {
+    "words": [
+      "adventure",
+      "capture",
+      "creature",
+      "figure",
+      "furniture",
+      "future",
+      "manufacture",
+      "mixture",
+      "nature",
+      "picture",
+      "puncture",
+      "ceiling",
+      "deceive",
+      "perceive",
+      "receive",
+      "receipt",
+      "premature",
+      "signature",
+      "temperature",
+      "vulture"
+    ],
+    "beforeMissing": [
+      "capture",
+      "figure",
+      "future",
+      "manufacture",
+      "mixture",
+      "puncture",
+      "receipt",
+      "premature",
+      "vulture"
+    ],
+    "afterMissing": [],
+    "parentReviewCsv": true
+  },
+  "glossary": {
+    "before": 1164,
+    "after": 1272,
+    "added": 108,
+    "officialAppendixForms": 1076,
+    "assignedListUnchanged": true
+  },
+  "audio": {
+    "bundledWords": 20,
+    "bundledAuthoredContexts": 20,
+    "baseBanks": [
+      "natural",
+      "heart"
+    ],
+    "selectableVoicesChecked": 3,
+    "browserWordRenders": 60,
+    "generationCalls": 0,
+    "nonSilentSamples": true,
+    "unchangedSpeed": true,
+    "physicalListeningReview": false
+  },
+  "browser": {
+    "existingListFilledOnReload": true,
+    "parentApprovedMeaningPreserved": true,
+    "weekEggProgressScrapbookPreserved": true,
+    "meaningAndGapModulesOpen": true,
+    "assignedOnlyChoices": true,
+    "zeroRuntimeExceptions": true
+  },
+  "stateSchema": 10,
+  "nativeBuildRun": false,
+  "physicalIpadTested": false,
+  "publication": "Local files only; no GitHub/Apple/hosting upload"
+}

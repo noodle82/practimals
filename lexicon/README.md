@@ -1,6 +1,6 @@
 # Offline spelling content
 
-The app bundles 1,164 original child-friendly meaning/example pairs. The tracked reference set has 1,085 distinct forms: 1,076 from England's spelling appendix plus nine supplied words (endeavour, glamour, conclusion, flavour, persuasion, supervision, benefited, drizzling, multiplying). All tracked forms have both fields. The 1,076 are not all statutory words: they include KS1 examples, common exceptions, KS2 statutory entries and illustrated examples.
+The app bundles 1,272 original child-friendly meaning/example pairs. The tracked reference set has 1,085 distinct forms: 1,076 from England's spelling appendix plus nine supplied words (endeavour, glamour, conclusion, flavour, persuasion, supervision, benefited, drizzling, multiplying). All tracked forms have both fields. The 1,076 are not all statutory words: they include KS1 examples, common exceptions, KS2 statutory entries and illustrated examples.
 
 Reference: Department for Education, English Appendix 1: Spelling.
 https://assets.publishing.service.gov.uk/media/5a7ccc06ed915d63cc65ce61/English_Appendix_1_-_Spelling.pdf
@@ -21,3 +21,7 @@ Run node scripts/build-word-bank.mjs, then npm test, then npm run build. The com
 Only explicitly approved parent edits with current provenance are retained as teaching text. Old nonempty text without that marker is replaced by an authored pair where available. Differing legacy text is kept in a parent-only review draft. If a word is unsupported, unchecked fields are withheld and the parent is asked to supply them. Child-made scrapbook sentences are not changed. Additional phrase/UK checks supplement this provenance model; a keyword filter is not the safety system.
 
 The v13 photo-list additions (armour, rumour, humour, revision and explosion) are maintained in photo-list-extra.tsv.
+
+## v16 word-family expansion
+
+word-families-v16.tsv adds 108 original meaning/example pairs around a parent-supplied twenty-word list and related primary spelling patterns. weekly-list-v16.json records that supplied list and the reviewed family candidates separately from the official appendix transcription. All twenty supplied words now have local meanings/examples. The existing entries and parent-approved edits keep priority. This remains a finite word bank; an uncommon teacher-selected word can still need parent input. New word families expand the library, not the assigned weekly list.

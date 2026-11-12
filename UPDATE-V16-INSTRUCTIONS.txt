@@ -1,0 +1,27 @@
+SPELLOIDS v0.16 — TWENTY-WORD LIST AND WIDER WORD FAMILIES
+
+UPLOAD
+1. Extract spelloids-v16-update.zip.
+2. Upload ALL extracted contents into the TOP LEVEL of your EXISTING practimals/Spelloids GitHub repository, replacing matching files. Include the audio and lexicon folders. Do not upload the outer folder or ZIP, and do not delete existing files.
+3. Keep all previous audio, vendor, fonts and native files. This cumulative app update includes the changes from v13, v14 and v15 as well as this library repair. Your live codemagic.yaml/signing settings are deliberately excluded.
+4. Commit, wait for Pages deployment, then reload. Wait a few seconds and reload again if the previous content remains. Do not clear site data, start another week or retype your list just to apply this repair. An existing saved list picks up missing meanings automatically; approved parent wording stays in place.
+5. Your daughter's INSTALLED app needs a new Spelloids Family iPad — Ad Hoc build after uploading, then upload the resulting IPA to Install On Air and install over the existing app. Adult testers use the separate TestFlight workflow. Keep the installed app and its data when updating. The new app version is 0.16.0.
+
+YOUR SUPPLIED LIST
+adventure, capture, creature, figure, furniture, future, manufacture, mixture, nature, picture, puncture, ceiling, deceive, perceive, receive, receipt, premature, signature, temperature, vulture.
+
+The current v15 source lacked meanings/examples for nine: capture, figure, future, manufacture, mixture, puncture, receipt, premature and vulture. The other eleven already had entries. All twenty now have simple local meanings and exact-target example sentences. WORD-LIST-REVIEW.csv lets you review them together. Some words have several meanings: the default for figure is a shape/model; a grown-up can change it to a maths meaning if that is what school intends.
+
+WIDER EXPANSION
+The glossary grows from 1,164 to 1,272 complete pairs: 108 new original entries including related forms and spelling families. Examples include captures/captured/capturing, manufacturer/manufacturing, mixtures, punctured, receipts, perceiving, signatures, temperatures, sculpture, texture, moisture and measurement. The official appendix-reference count is unchanged; these additions are separately identified rather than labelled as new official statutory words.
+New library words do NOT enter your child's games automatically. Every module and answer choice still uses ONLY the assigned twenty words. This is still a finite library; other teacher-selected words can need a parent meaning/example. Meanings and examples remain free, offline and parent-editable. No online dictionary fallback is added.
+
+SPEECH
+All twenty isolated words AND their authored context sentences now have bundled recordings in the two retained base banks. All three selectable character voices use them at their existing settings and unchanged speed. The guide uses the normal base recording before a child's voice is chosen. This list no longer needs first-use generation for its target words. Parent-written alternative sentences can still use the existing local generation/optional-context behaviour.
+Include audio/manifest.json and audio/v16-school-list-*.pcm in your upload, as well as the included v13 additions. Keep all earlier banks. Related family words outside this twenty-word set still use the existing on-device generator unless previously recorded; they have not all received new recordings here.
+
+CHECKS
+143 automated tests pass, including exact-target sentences, child-content/UK filters, 108 family entries, all twenty words, approved parent edits, current-set progress preservation, assigned-only questions and recorded audio hashes/levels. Browser tests loaded an old twenty-word set with the nine gaps: all fields filled without changing the week, egg, saved challenge light or scrapbook; a parent-approved maths meaning for figure was retained. The meaning and missing-word modules opened using only assigned options. Every target rendered with non-silent audio in all three voices with zero generation calls; original context recordings were available. Automated browser was muted. Physical iPad listening/native signing were not run here.
+
+SAVED DATA AND LIMITS
+The storage key/schema and Bundle ID remain unchanged. This update does not reset the week or replace your list. Browser and native progress still do not sync automatically. Both iOS workflows remain in the source; the upload patch preserves your live configuration. Nothing has been uploaded to GitHub, Apple or a hosting service by this work.

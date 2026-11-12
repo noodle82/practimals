@@ -80,6 +80,22 @@ export const SCHOOL_WORDS={
     "meaning": "An exciting experience or journey.",
     "sentence": "Our woodland walk became an adventure."
   },
+  "adventurer": {
+    "meaning": "Someone who goes on exciting journeys.",
+    "sentence": "The young adventurer explored a hidden valley in the story."
+  },
+  "adventurers": {
+    "meaning": "People who go on exciting journeys.",
+    "sentence": "The adventurers followed the map to the old tower."
+  },
+  "adventures": {
+    "meaning": "Exciting experiences or journeys.",
+    "sentence": "We imagined adventures in a magical forest."
+  },
+  "adventurous": {
+    "meaning": "Happy to try new or exciting things.",
+    "sentence": "Our adventurous class tried a new outdoor game."
+  },
   "advice": {
     "meaning": "Helpful ideas about what to do.",
     "sentence": "My teacher gave me advice about my drawing."
@@ -628,6 +644,22 @@ export const SCHOOL_WORDS={
     "meaning": "The main city of a country, or a large letter.",
     "sentence": "London is the capital of England."
   },
+  "capture": {
+    "meaning": "To catch something and keep hold of it.",
+    "sentence": "The game lets us capture a flag."
+  },
+  "captured": {
+    "meaning": "Caught something and kept hold of it.",
+    "sentence": "Our team captured the flag in the game."
+  },
+  "captures": {
+    "meaning": "Catches something and keeps hold of it.",
+    "sentence": "The player captures a flag in our game."
+  },
+  "capturing": {
+    "meaning": "Catching something or saving it in a picture.",
+    "sentence": "I am capturing the sunset with my camera."
+  },
   "car": {
     "meaning": "A road vehicle usually used to carry a few people.",
     "sentence": "We travelled to the park in a car."
@@ -679,6 +711,10 @@ export const SCHOOL_WORDS={
   "ceiling": {
     "meaning": "The top inside surface of a room.",
     "sentence": "There is a bright lamp on the ceiling."
+  },
+  "ceilings": {
+    "meaning": "The top inside surfaces of rooms.",
+    "sentence": "The old house has high ceilings."
   },
   "cell": {
     "meaning": "A tiny part that living things are made of.",
@@ -1016,6 +1052,10 @@ export const SCHOOL_WORDS={
     "meaning": "A living animal or an imaginary living thing.",
     "sentence": "The story had a friendly purple creature."
   },
+  "creatures": {
+    "meaning": "Animals or imaginary living things.",
+    "sentence": "Tiny creatures live under the garden stones."
+  },
   "crescent": {
     "meaning": "A curved shape like a thin moon.",
     "sentence": "The moon looked like a silver crescent."
@@ -1068,9 +1108,29 @@ export const SCHOOL_WORDS={
     "meaning": "Loved or valued very much.",
     "sentence": "My dear friend made me a birthday card."
   },
+  "deceit": {
+    "meaning": "Words or actions that make someone believe a lie.",
+    "sentence": "The story teaches us that deceit can hurt our friends."
+  },
+  "deceitful": {
+    "meaning": "Trying to make someone believe a lie.",
+    "sentence": "The deceitful fox hid the truth in the story."
+  },
   "deceive": {
     "meaning": "To make someone believe something that is not true.",
     "sentence": "The story's fox tried to deceive the other animals."
+  },
+  "deceived": {
+    "meaning": "Made someone believe something that was not true.",
+    "sentence": "The story's fox deceived the other animals."
+  },
+  "deceives": {
+    "meaning": "Makes someone believe something that is not true.",
+    "sentence": "The fox deceives the other animals in the story."
+  },
+  "deceiving": {
+    "meaning": "Making someone believe something that is not true.",
+    "sentence": "The fox was deceiving the other animals in the story."
   },
   "decency": {
     "meaning": "Kind and fair behaviour.",
@@ -1079,6 +1139,10 @@ export const SCHOOL_WORDS={
   "decent": {
     "meaning": "Good enough, or kind and fair.",
     "sentence": "We found a decent spot for our picnic."
+  },
+  "deception": {
+    "meaning": "Something done to make someone believe what is not true.",
+    "sentence": "The magician's trick was a clever deception."
   },
   "decide": {
     "meaning": "To choose after thinking.",
@@ -1103,6 +1167,14 @@ export const SCHOOL_WORDS={
   "delighted": {
     "meaning": "Very pleased and happy.",
     "sentence": "I was delighted to see my cousin."
+  },
+  "departure": {
+    "meaning": "The act of leaving a place.",
+    "sentence": "We waved goodbye before the train's departure."
+  },
+  "departures": {
+    "meaning": "Times when people or vehicles leave a place.",
+    "sentence": "The station board shows the train departures."
   },
   "dependable": {
     "meaning": "Able to be trusted to do what is needed.",
@@ -1360,6 +1432,22 @@ export const SCHOOL_WORDS={
     "meaning": "To try hard to do something.",
     "sentence": "I will endeavour to finish the puzzle."
   },
+  "endure": {
+    "meaning": "To keep going through something difficult.",
+    "sentence": "The little plant can endure a cold winter."
+  },
+  "endured": {
+    "meaning": "Kept going through something difficult.",
+    "sentence": "The little plant endured the cold winter."
+  },
+  "endures": {
+    "meaning": "Keeps going through something difficult.",
+    "sentence": "The strong tree endures the winter winds."
+  },
+  "enduring": {
+    "meaning": "Lasting for a long time.",
+    "sentence": "Their enduring friendship began at school."
+  },
   "energy": {
     "meaning": "The ability or strength to do things.",
     "sentence": "A good breakfast gives me energy for the day."
@@ -1383,6 +1471,22 @@ export const SCHOOL_WORDS={
   "enough": {
     "meaning": "As much as you need.",
     "sentence": "We have enough cups for everyone."
+  },
+  "ensure": {
+    "meaning": "To make sure something happens or is true.",
+    "sentence": "Please ensure the lid is closed before you shake the pot."
+  },
+  "ensured": {
+    "meaning": "Made sure something happened or was true.",
+    "sentence": "We ensured that every child had a turn."
+  },
+  "ensures": {
+    "meaning": "Makes sure something happens or is true.",
+    "sentence": "The tight lid ensures the paint stays inside the pot."
+  },
+  "ensuring": {
+    "meaning": "Making sure something happens or is true.",
+    "sentence": "We are ensuring that everyone has a place in the game."
   },
   "environment": {
     "meaning": "The places and conditions around living things.",
@@ -1556,6 +1660,22 @@ export const SCHOOL_WORDS={
     "meaning": "The one you like best.",
     "sentence": "Blue is my favourite colour."
   },
+  "feature": {
+    "meaning": "An important or noticeable part of something.",
+    "sentence": "The garden's best feature is its huge oak tree."
+  },
+  "featured": {
+    "meaning": "Was included or shown in something.",
+    "sentence": "My picture was featured in the school newsletter."
+  },
+  "features": {
+    "meaning": "Important or noticeable parts of something.",
+    "sentence": "The drawing shows the bird's main features."
+  },
+  "featuring": {
+    "meaning": "Including or showing something.",
+    "sentence": "We read a book featuring a friendly dragon."
+  },
   "february": {
     "meaning": "The second month of the year.",
     "sentence": "My birthday is in February."
@@ -1579,6 +1699,22 @@ export const SCHOOL_WORDS={
   "field": {
     "meaning": "An open area of land.",
     "sentence": "The sheep were eating grass in the field."
+  },
+  "figure": {
+    "meaning": "A shape or a small model of a person.",
+    "sentence": "I made a small figure out of clay."
+  },
+  "figures": {
+    "meaning": "Shapes or small models of people.",
+    "sentence": "We made clay figures for our story."
+  },
+  "figurine": {
+    "meaning": "A small model of a person or animal.",
+    "sentence": "There is a tiny rabbit figurine on the shelf."
+  },
+  "figurines": {
+    "meaning": "Small models of people or animals.",
+    "sentence": "We made animal figurines from clay."
   },
   "finally": {
     "meaning": "After everything else or after a wait.",
@@ -1607,6 +1743,14 @@ export const SCHOOL_WORDS={
   "five": {
     "meaning": "The number after four.",
     "sentence": "I drew five stars on my picture."
+  },
+  "fixture": {
+    "meaning": "Something fixed in a place so it stays there.",
+    "sentence": "The lamp is a permanent fixture on the wall."
+  },
+  "fixtures": {
+    "meaning": "Things fixed in place so they stay there.",
+    "sentence": "The classroom's fixtures include its lights and sinks."
   },
   "flavour": {
     "meaning": "The taste of a food or drink.",
@@ -1740,9 +1884,33 @@ export const SCHOOL_WORDS={
     "meaning": "Making you laugh.",
     "sentence": "The funny little monster made us giggle."
   },
+  "furnish": {
+    "meaning": "To put furniture in a room.",
+    "sentence": "We will furnish the reading corner with comfy chairs."
+  },
+  "furnished": {
+    "meaning": "Filled a room with furniture.",
+    "sentence": "We furnished the doll's house with tiny chairs."
+  },
+  "furnishes": {
+    "meaning": "Puts furniture in a room.",
+    "sentence": "The shop furnishes the room with tables and chairs."
+  },
+  "furnishing": {
+    "meaning": "Putting furniture in a room.",
+    "sentence": "We are furnishing the new reading corner."
+  },
   "furniture": {
     "meaning": "Large useful objects in a room, such as chairs and tables.",
     "sentence": "We moved the furniture to make space for our game."
+  },
+  "future": {
+    "meaning": "The time that has not happened yet.",
+    "sentence": "In the future, I would like to be a vet."
+  },
+  "futuristic": {
+    "meaning": "Looking like something from an imagined future.",
+    "sentence": "My drawing shows a futuristic flying bus."
   },
   "garden": {
     "meaning": "A place where people grow flowers, vegetables or other plants.",
@@ -1767,6 +1935,14 @@ export const SCHOOL_WORDS={
   "gently": {
     "meaning": "In a careful and kind way.",
     "sentence": "I gently stroked the sleeping cat."
+  },
+  "gesture": {
+    "meaning": "A movement that shows what you mean or how you feel.",
+    "sentence": "A friendly wave is a welcoming gesture."
+  },
+  "gestures": {
+    "meaning": "Movements that show what you mean or how you feel.",
+    "sentence": "We used hand gestures to tell our story."
   },
   "giant": {
     "meaning": "An imaginary person much larger than ordinary people.",
@@ -2576,6 +2752,30 @@ export const SCHOOL_WORDS={
     "meaning": "Long hair around a lion's neck or on a horse's neck.",
     "sentence": "The horse had a long brown mane."
   },
+  "manufacture": {
+    "meaning": "To make things, often in a factory.",
+    "sentence": "This factory will manufacture toy trains."
+  },
+  "manufactured": {
+    "meaning": "Made something, often in a factory.",
+    "sentence": "These crayons were manufactured in a factory."
+  },
+  "manufacturer": {
+    "meaning": "A person or company that makes things.",
+    "sentence": "The toy manufacturer makes wooden trains."
+  },
+  "manufacturers": {
+    "meaning": "People or companies that make things.",
+    "sentence": "The manufacturers showed us how the toys are made."
+  },
+  "manufactures": {
+    "meaning": "Makes things, often in a factory.",
+    "sentence": "The factory manufactures colourful toy boats."
+  },
+  "manufacturing": {
+    "meaning": "Making things, often in a factory.",
+    "sentence": "The workers are manufacturing wooden toys."
+  },
   "many": {
     "meaning": "A large number.",
     "sentence": "We found many different leaves in the park."
@@ -2603,6 +2803,26 @@ export const SCHOOL_WORDS={
   "measure": {
     "meaning": "To find the size, length or amount of something.",
     "sentence": "We used a ruler to measure our model bridge."
+  },
+  "measured": {
+    "meaning": "Found out the size or amount of something.",
+    "sentence": "I measured the ribbon with a ruler."
+  },
+  "measurement": {
+    "meaning": "A size or amount that has been measured.",
+    "sentence": "Write the measurement beside your drawing."
+  },
+  "measurements": {
+    "meaning": "Sizes or amounts that have been measured.",
+    "sentence": "We wrote down the measurements of our tables."
+  },
+  "measures": {
+    "meaning": "Finds out the size or amount of something.",
+    "sentence": "The ruler measures the length of the leaf."
+  },
+  "measuring": {
+    "meaning": "Finding out the size or amount of something.",
+    "sentence": "We are measuring the height of our sunflower."
   },
   "meat": {
     "meaning": "Food that comes from an animal's body.",
@@ -2687,6 +2907,34 @@ export const SCHOOL_WORDS={
   "mist": {
     "meaning": "Tiny water drops floating near the ground.",
     "sentence": "A light mist covered the field this morning."
+  },
+  "mixed": {
+    "meaning": "Put different things together.",
+    "sentence": "I mixed the paint to make a new colour."
+  },
+  "mixer": {
+    "meaning": "A tool or machine for mixing things.",
+    "sentence": "We used a mixer to stir the cake mixture."
+  },
+  "mixers": {
+    "meaning": "Tools or machines for mixing things.",
+    "sentence": "The bakers use large mixers for their dough."
+  },
+  "mixing": {
+    "meaning": "Putting different things together.",
+    "sentence": "We are mixing flour and water in a bowl."
+  },
+  "mixture": {
+    "meaning": "Two or more things mixed together.",
+    "sentence": "Stir the cake mixture with a spoon."
+  },
+  "mixtures": {
+    "meaning": "Groups of things that have been mixed together.",
+    "sentence": "We made different mixtures of sand and water."
+  },
+  "moisture": {
+    "meaning": "A small amount of water in something or on a surface.",
+    "sentence": "There was moisture on the inside of the window."
   },
   "monday": {
     "meaning": "The day after Sunday and before Tuesday.",
@@ -2787,6 +3035,10 @@ export const SCHOOL_WORDS={
   "natural": {
     "meaning": "Found in nature rather than made by people.",
     "sentence": "We used natural materials to build our model nest."
+  },
+  "naturally": {
+    "meaning": "In a way that happens without people making it happen.",
+    "sentence": "The seeds spread naturally in the wind."
   },
   "nature": {
     "meaning": "The world of plants, animals and other living things.",
@@ -3036,6 +3288,14 @@ export const SCHOOL_WORDS={
     "meaning": "The time before now.",
     "sentence": "We learned about life in the past."
   },
+  "pasture": {
+    "meaning": "Land covered in grass where farm animals can eat.",
+    "sentence": "The sheep ate grass in the pasture."
+  },
+  "pastures": {
+    "meaning": "Areas of grass where farm animals can eat.",
+    "sentence": "The cows moved between two green pastures."
+  },
   "path": {
     "meaning": "A track you walk along.",
     "sentence": "The path leads to the pond."
@@ -3084,6 +3344,22 @@ export const SCHOOL_WORDS={
     "meaning": "To notice or understand something.",
     "sentence": "I could perceive a faint sound behind the door."
   },
+  "perceived": {
+    "meaning": "Noticed or understood something.",
+    "sentence": "I perceived a quiet sound outside the window."
+  },
+  "perceives": {
+    "meaning": "Notices or understands something.",
+    "sentence": "The story's owl perceives a shape in the dark."
+  },
+  "perceiving": {
+    "meaning": "Noticing or understanding something.",
+    "sentence": "The owl was perceiving shapes in the dark."
+  },
+  "perception": {
+    "meaning": "The way you notice or understand something.",
+    "sentence": "Our perception of the picture changed when we turned it around."
+  },
   "perhaps": {
     "meaning": "Maybe.",
     "sentence": "Perhaps we will see a rainbow after the rain."
@@ -3115,6 +3391,18 @@ export const SCHOOL_WORDS={
   "picture": {
     "meaning": "Something drawn, painted or photographed.",
     "sentence": "I drew a picture of our dog."
+  },
+  "pictured": {
+    "meaning": "Shown or imagined in a picture.",
+    "sentence": "The bird pictured on this page has blue wings."
+  },
+  "pictures": {
+    "meaning": "Drawings, paintings or photographs.",
+    "sentence": "We painted pictures of our favourite animals."
+  },
+  "picturing": {
+    "meaning": "Imagining how something looks.",
+    "sentence": "I am picturing a castle with purple towers."
   },
   "pie": {
     "meaning": "A baked food with pastry around a filling.",
@@ -3155,6 +3443,10 @@ export const SCHOOL_WORDS={
   "pleasure": {
     "meaning": "A feeling of happiness or enjoyment.",
     "sentence": "Reading the funny story gave us great pleasure."
+  },
+  "pleasures": {
+    "meaning": "Things that bring happiness or enjoyment.",
+    "sentence": "Reading stories is one of my favourite pleasures."
   },
   "plentiful": {
     "meaning": "Available in large amounts.",
@@ -3252,6 +3544,14 @@ export const SCHOOL_WORDS={
     "meaning": "An unfair opinion about someone before knowing them.",
     "sentence": "We learn to treat everyone kindly and challenge prejudice."
   },
+  "premature": {
+    "meaning": "Happening too soon, before something is ready.",
+    "sentence": "It was premature to pack away the game before we had finished."
+  },
+  "prematurely": {
+    "meaning": "Too soon, before something is ready.",
+    "sentence": "We opened the oven prematurely, before the cake was ready."
+  },
   "preparation": {
     "meaning": "Getting ready for something.",
     "sentence": "Our preparation for the picnic included packing sandwiches."
@@ -3323,6 +3623,22 @@ export const SCHOOL_WORDS={
   "pull": {
     "meaning": "To move something towards you.",
     "sentence": "Please pull the drawer open gently."
+  },
+  "puncture": {
+    "meaning": "A small hole made by something sharp.",
+    "sentence": "My bicycle tyre has a puncture."
+  },
+  "punctured": {
+    "meaning": "Made a small hole in something.",
+    "sentence": "A thorn punctured my bicycle tyre."
+  },
+  "punctures": {
+    "meaning": "Small holes made by something sharp.",
+    "sentence": "The old bicycle tyres had two punctures."
+  },
+  "puncturing": {
+    "meaning": "Making a small hole in something.",
+    "sentence": "The thorn was puncturing the soft rubber tyre."
   },
   "purpose": {
     "meaning": "The reason for doing or making something.",
@@ -3416,9 +3732,37 @@ export const SCHOOL_WORDS={
     "meaning": "Fair and sensible.",
     "sentence": "Taking turns is a reasonable way to share."
   },
+  "receipt": {
+    "meaning": "A note showing what you bought and paid for.",
+    "sentence": "The shop gave us a receipt for the crayons."
+  },
+  "receipts": {
+    "meaning": "Notes showing what you bought and paid for.",
+    "sentence": "We kept the shop receipts in a little folder."
+  },
   "receive": {
     "meaning": "To get something that is given or sent.",
     "sentence": "I will receive a letter from my cousin."
+  },
+  "received": {
+    "meaning": "Got something that was given or sent.",
+    "sentence": "I received a birthday card from my cousin."
+  },
+  "receiver": {
+    "meaning": "A person or thing that gets something sent to it.",
+    "sentence": "The receiver of the letter was my cousin."
+  },
+  "receivers": {
+    "meaning": "People or things that get something sent to them.",
+    "sentence": "The receivers of our cards sent us thank-you notes."
+  },
+  "receives": {
+    "meaning": "Gets something that is given or sent.",
+    "sentence": "Our school receives letters from children in another country."
+  },
+  "receiving": {
+    "meaning": "Getting something that is given or sent.",
+    "sentence": "The class is receiving a visit from an author today."
   },
   "recent": {
     "meaning": "Happening not long ago.",
@@ -3519,6 +3863,26 @@ export const SCHOOL_WORDS={
   "restaurant": {
     "meaning": "A place where people pay to eat a meal.",
     "sentence": "We ate noodles at the restaurant."
+  },
+  "retrieval": {
+    "meaning": "The act of getting something back.",
+    "sentence": "The game involves the retrieval of hidden cards."
+  },
+  "retrieve": {
+    "meaning": "To get something back or bring it back.",
+    "sentence": "The dog ran to retrieve the ball."
+  },
+  "retrieved": {
+    "meaning": "Got something back or brought it back.",
+    "sentence": "I retrieved my hat from under the bench."
+  },
+  "retrieves": {
+    "meaning": "Gets something back or brings it back.",
+    "sentence": "The dog retrieves the ball from the grass."
+  },
+  "retrieving": {
+    "meaning": "Getting something back or bringing it back.",
+    "sentence": "The dog is retrieving its favourite ball."
   },
   "return": {
     "meaning": "To go or give something back.",
@@ -3652,6 +4016,22 @@ export const SCHOOL_WORDS={
     "meaning": "The number of points in a game or test.",
     "sentence": "Our final score was ten points."
   },
+  "sculptor": {
+    "meaning": "An artist who makes sculptures.",
+    "sentence": "The sculptor shaped a bird from clay."
+  },
+  "sculptors": {
+    "meaning": "Artists who make sculptures.",
+    "sentence": "The sculptors showed us their stone animals."
+  },
+  "sculpture": {
+    "meaning": "A piece of art made by shaping a material.",
+    "sentence": "I made a clay sculpture of a rabbit."
+  },
+  "sculptures": {
+    "meaning": "Pieces of art made by shaping materials.",
+    "sentence": "Our class displayed the clay sculptures on a shelf."
+  },
   "sea": {
     "meaning": "A large area of salty water.",
     "sentence": "The boat sailed across the sea."
@@ -3747,6 +4127,10 @@ export const SCHOOL_WORDS={
   "signature": {
     "meaning": "Your name written in your own special way.",
     "sentence": "The author put her signature inside my book."
+  },
+  "signatures": {
+    "meaning": "Names written in people's own special ways.",
+    "sentence": "The authors wrote their signatures inside our books."
   },
   "simply": {
     "meaning": "In an easy or plain way.",
@@ -3908,6 +4292,18 @@ export const SCHOOL_WORDS={
     "meaning": "The power to do something difficult.",
     "sentence": "The rope had enough strength to hold the swing."
   },
+  "structural": {
+    "meaning": "To do with how something is built and held together.",
+    "sentence": "The bridge needs strong structural supports."
+  },
+  "structure": {
+    "meaning": "The way something is built or put together.",
+    "sentence": "The bridge has a strong structure."
+  },
+  "structures": {
+    "meaning": "Things that have been built or put together.",
+    "sentence": "We built tall structures from wooden blocks."
+  },
   "subdivide": {
     "meaning": "To split something into smaller parts.",
     "sentence": "We can subdivide each square into four triangles."
@@ -4028,6 +4424,10 @@ export const SCHOOL_WORDS={
     "meaning": "How hot or cold something is.",
     "sentence": "We measured the temperature of the water."
   },
+  "temperatures": {
+    "meaning": "Measures of how hot or cold things are.",
+    "sentence": "We compared the temperatures of two cups of water."
+  },
   "tension": {
     "meaning": "A tight feeling, or a feeling of worry.",
     "sentence": "There was tension as we waited for the race to start."
@@ -4043,6 +4443,18 @@ export const SCHOOL_WORDS={
   "terribly": {
     "meaning": "Very much, or in a very bad way.",
     "sentence": "I was terribly excited about our trip."
+  },
+  "texture": {
+    "meaning": "How something feels when you touch it.",
+    "sentence": "The bark has a rough texture."
+  },
+  "textured": {
+    "meaning": "Having a surface that you can feel.",
+    "sentence": "We used textured paper to make a picture."
+  },
+  "textures": {
+    "meaning": "The different ways things feel when you touch them.",
+    "sentence": "We felt the textures of wool, wood and smooth stone."
   },
   "thanks": {
     "meaning": "A word used to show you are grateful.",
@@ -4248,6 +4660,18 @@ export const SCHOOL_WORDS={
     "meaning": "Something valuable or special to someone.",
     "sentence": "The pirates searched for buried treasure."
   },
+  "treasured": {
+    "meaning": "Loved or valued something very much.",
+    "sentence": "I treasured the picture my friend made for me."
+  },
+  "treasures": {
+    "meaning": "Things that are valuable or very special to someone.",
+    "sentence": "I keep my little treasures in a painted box."
+  },
+  "treasuring": {
+    "meaning": "Loving or valuing something very much.",
+    "sentence": "She was treasuring the shell her grandad had given her."
+  },
   "tree": {
     "meaning": "A tall plant with a wooden trunk.",
     "sentence": "The tree has green leaves."
@@ -4407,6 +4831,14 @@ export const SCHOOL_WORDS={
   "visibly": {
     "meaning": "In a way that can be seen.",
     "sentence": "The puppy was visibly excited by its new toy."
+  },
+  "vulture": {
+    "meaning": "A large bird that often eats animals that have died.",
+    "sentence": "We saw a vulture flying high above the hills."
+  },
+  "vultures": {
+    "meaning": "Large birds that often eat animals that have died.",
+    "sentence": "The vultures spread their wide wings."
   },
   "wait": {
     "meaning": "To stay until something happens.",

@@ -2272,6 +2272,246 @@
           "offset": 800400,
           "length": 172800,
           "sampleRate": 24000
+        },
+        "adventure": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 0,
+          "length": 58800,
+          "sampleRate": 24000
+        },
+        "our woodland walk became an adventure.": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 58800,
+          "length": 144000,
+          "sampleRate": 24000
+        },
+        "capture": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 202800,
+          "length": 45600,
+          "sampleRate": 24000
+        },
+        "the game lets us capture a flag.": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 248400,
+          "length": 129600,
+          "sampleRate": 24000
+        },
+        "creature": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 378000,
+          "length": 43200,
+          "sampleRate": 24000
+        },
+        "the story had a friendly purple creature.": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 421200,
+          "length": 151200,
+          "sampleRate": 24000
+        },
+        "figure": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 572400,
+          "length": 37200,
+          "sampleRate": 24000
+        },
+        "i made a small figure out of clay.": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 609600,
+          "length": 128400,
+          "sampleRate": 24000
+        },
+        "furniture": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 738000,
+          "length": 49200,
+          "sampleRate": 24000
+        },
+        "we moved the furniture to make space for our game.": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 787200,
+          "length": 159600,
+          "sampleRate": 24000
+        },
+        "future": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 946800,
+          "length": 43200,
+          "sampleRate": 24000
+        },
+        "in the future, i would like to be a vet.": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 990000,
+          "length": 144000,
+          "sampleRate": 24000
+        },
+        "manufacture": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 1134000,
+          "length": 75600,
+          "sampleRate": 24000
+        },
+        "this factory will manufacture toy trains.": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 1209600,
+          "length": 157200,
+          "sampleRate": 24000
+        },
+        "mixture": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 1366800,
+          "length": 44400,
+          "sampleRate": 24000
+        },
+        "stir the cake mixture with a spoon.": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 1411200,
+          "length": 127200,
+          "sampleRate": 24000
+        },
+        "nature": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 1538400,
+          "length": 46800,
+          "sampleRate": 24000
+        },
+        "we went on a walk to enjoy nature.": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 1585200,
+          "length": 139200,
+          "sampleRate": 24000
+        },
+        "picture": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 1724400,
+          "length": 39600,
+          "sampleRate": 24000
+        },
+        "i drew a picture of our dog.": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 1764000,
+          "length": 112800,
+          "sampleRate": 24000
+        },
+        "puncture": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 1876800,
+          "length": 44400,
+          "sampleRate": 24000
+        },
+        "my bicycle tyre has a puncture.": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 1921200,
+          "length": 138000,
+          "sampleRate": 24000
+        },
+        "ceiling": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 2059200,
+          "length": 44400,
+          "sampleRate": 24000
+        },
+        "there is a bright lamp on the ceiling.": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 2103600,
+          "length": 133200,
+          "sampleRate": 24000
+        },
+        "deceive": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 2236800,
+          "length": 49200,
+          "sampleRate": 24000
+        },
+        "the story's fox tried to deceive the other animals.": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 2286000,
+          "length": 166800,
+          "sampleRate": 24000
+        },
+        "perceive": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 2452800,
+          "length": 48000,
+          "sampleRate": 24000
+        },
+        "i could perceive a faint sound behind the door.": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 2500800,
+          "length": 156000,
+          "sampleRate": 24000
+        },
+        "receive": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 2656800,
+          "length": 54000,
+          "sampleRate": 24000
+        },
+        "i will receive a letter from my cousin.": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 2710800,
+          "length": 133200,
+          "sampleRate": 24000
+        },
+        "receipt": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 2844000,
+          "length": 45600,
+          "sampleRate": 24000
+        },
+        "the shop gave us a receipt for the crayons.": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 2889600,
+          "length": 148800,
+          "sampleRate": 24000
+        },
+        "premature": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 3038400,
+          "length": 54000,
+          "sampleRate": 24000
+        },
+        "it was premature to pack away the game before we had finished.": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 3092400,
+          "length": 183600,
+          "sampleRate": 24000
+        },
+        "signature": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 3276000,
+          "length": 58800,
+          "sampleRate": 24000
+        },
+        "the author put her signature inside my book.": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 3334800,
+          "length": 162000,
+          "sampleRate": 24000
+        },
+        "temperature": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 3496800,
+          "length": 55200,
+          "sampleRate": 24000
+        },
+        "we measured the temperature of the water.": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 3552000,
+          "length": 140400,
+          "sampleRate": 24000
+        },
+        "vulture": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 3692400,
+          "length": 43200,
+          "sampleRate": 24000
+        },
+        "we saw a vulture flying high above the hills.": {
+          "file": "v16-school-list-natural.pcm",
+          "offset": 3735600,
+          "length": 163200,
+          "sampleRate": 24000
         }
       }
     },
@@ -6666,6 +6906,246 @@
           "offset": 877200,
           "length": 160800,
           "sampleRate": 24000
+        },
+        "adventure": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 0,
+          "length": 78000,
+          "sampleRate": 24000
+        },
+        "our woodland walk became an adventure.": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 78000,
+          "length": 135600,
+          "sampleRate": 24000
+        },
+        "capture": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 213600,
+          "length": 73200,
+          "sampleRate": 24000
+        },
+        "the game lets us capture a flag.": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 286800,
+          "length": 115200,
+          "sampleRate": 24000
+        },
+        "creature": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 402000,
+          "length": 72000,
+          "sampleRate": 24000
+        },
+        "the story had a friendly purple creature.": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 474000,
+          "length": 138000,
+          "sampleRate": 24000
+        },
+        "figure": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 612000,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "i made a small figure out of clay.": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 680400,
+          "length": 112800,
+          "sampleRate": 24000
+        },
+        "furniture": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 793200,
+          "length": 73200,
+          "sampleRate": 24000
+        },
+        "we moved the furniture to make space for our game.": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 866400,
+          "length": 157200,
+          "sampleRate": 24000
+        },
+        "future": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 1023600,
+          "length": 70800,
+          "sampleRate": 24000
+        },
+        "in the future, i would like to be a vet.": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 1094400,
+          "length": 134400,
+          "sampleRate": 24000
+        },
+        "manufacture": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 1228800,
+          "length": 86400,
+          "sampleRate": 24000
+        },
+        "this factory will manufacture toy trains.": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 1315200,
+          "length": 147600,
+          "sampleRate": 24000
+        },
+        "mixture": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 1462800,
+          "length": 74400,
+          "sampleRate": 24000
+        },
+        "stir the cake mixture with a spoon.": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 1537200,
+          "length": 114000,
+          "sampleRate": 24000
+        },
+        "nature": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 1651200,
+          "length": 73200,
+          "sampleRate": 24000
+        },
+        "we went on a walk to enjoy nature.": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 1724400,
+          "length": 120000,
+          "sampleRate": 24000
+        },
+        "picture": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 1844400,
+          "length": 73200,
+          "sampleRate": 24000
+        },
+        "i drew a picture of our dog.": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 1917600,
+          "length": 104400,
+          "sampleRate": 24000
+        },
+        "puncture": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 2022000,
+          "length": 75600,
+          "sampleRate": 24000
+        },
+        "my bicycle tyre has a puncture.": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 2097600,
+          "length": 129600,
+          "sampleRate": 24000
+        },
+        "ceiling": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 2227200,
+          "length": 67200,
+          "sampleRate": 24000
+        },
+        "there is a bright lamp on the ceiling.": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 2294400,
+          "length": 115200,
+          "sampleRate": 24000
+        },
+        "deceive": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 2409600,
+          "length": 70800,
+          "sampleRate": 24000
+        },
+        "the story's fox tried to deceive the other animals.": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 2480400,
+          "length": 163200,
+          "sampleRate": 24000
+        },
+        "perceive": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 2643600,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "i could perceive a faint sound behind the door.": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 2712000,
+          "length": 154800,
+          "sampleRate": 24000
+        },
+        "receive": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 2866800,
+          "length": 70800,
+          "sampleRate": 24000
+        },
+        "i will receive a letter from my cousin.": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 2937600,
+          "length": 122400,
+          "sampleRate": 24000
+        },
+        "receipt": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 3060000,
+          "length": 67200,
+          "sampleRate": 24000
+        },
+        "the shop gave us a receipt for the crayons.": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 3127200,
+          "length": 139200,
+          "sampleRate": 24000
+        },
+        "premature": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 3266400,
+          "length": 68400,
+          "sampleRate": 24000
+        },
+        "it was premature to pack away the game before we had finished.": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 3334800,
+          "length": 176400,
+          "sampleRate": 24000
+        },
+        "signature": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 3511200,
+          "length": 75600,
+          "sampleRate": 24000
+        },
+        "the author put her signature inside my book.": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 3586800,
+          "length": 142800,
+          "sampleRate": 24000
+        },
+        "temperature": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 3729600,
+          "length": 75600,
+          "sampleRate": 24000
+        },
+        "we measured the temperature of the water.": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 3805200,
+          "length": 123600,
+          "sampleRate": 24000
+        },
+        "vulture": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 3928800,
+          "length": 75600,
+          "sampleRate": 24000
+        },
+        "we saw a vulture flying high above the hills.": {
+          "file": "v16-school-list-heart.pcm",
+          "offset": 4004400,
+          "length": 154800,
+          "sampleRate": 24000
         }
       }
     }
@@ -6734,6 +7214,14 @@
     "v13-photo-words-heart.pcm": {
       "bytes": 1038000,
       "sha256": "d6cee75317faec908b24b45a230b36204ca958a6b4454e0efa78756814259803"
+    },
+    "v16-school-list-natural.pcm": {
+      "bytes": 3898800,
+      "sha256": "b7d854768f686561cf8e56c38849e11175d8fed7308bb34c2d1ee5ffbec53f66"
+    },
+    "v16-school-list-heart.pcm": {
+      "bytes": 4159200,
+      "sha256": "50b3c0e7e23207285dd18d3d4ecac1ab9b4b64fb1c1874f2a8188440832fe770"
     }
   }
 }

@@ -1,0 +1,56 @@
+{
+  "date": "2026-11-13",
+  "version": "0.17.0",
+  "source": "User-supplied tables, glossary and spelling list; no identifiable website URL supplied",
+  "primaryLists": {
+    "year2": {
+      "words": 67,
+      "beforeMissing": 0,
+      "afterMissing": 0
+    },
+    "year34": {
+      "words": 108,
+      "beforeMissing": 0,
+      "afterMissing": 0
+    },
+    "year56Expanded": {
+      "words": 104,
+      "beforeMissing": 0,
+      "afterMissing": 0
+    }
+  },
+  "allSupplied": {
+    "distinctWords": 1849,
+    "alreadyCovered": 466,
+    "newCompletePairs": 1341,
+    "excluded": 41,
+    "rejected": {
+      "ierce": "Possible truncated word; do not silently change to fierce."
+    }
+  },
+  "bank": {
+    "before": 1272,
+    "after": 2613,
+    "beforeBytes": 181741,
+    "afterBytes": 355233,
+    "addedBytes": 173492
+  },
+  "automatedTests": 148,
+  "staticBuild": true,
+  "nativeConfigurationCheck": true,
+  "nativeBuild": false,
+  "physicalIpadTest": false,
+  "speech": {
+    "audioUnchanged": true,
+    "voiceChoicesUnchanged": true,
+    "noNewRecordings": true,
+    "offlineGeneratorUnchanged": true
+  },
+  "savedData": {
+    "storageKeyUnchanged": true,
+    "schemaUnchanged": true,
+    "parentApprovedTextPreserved": true,
+    "assignedListUnchanged": true
+  },
+  "publication": "Local files only"
+}

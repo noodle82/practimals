@@ -1,7 +1,19 @@
 {
-  "version": "0.16.0",
-  "cacheName": "spelloids-v16-a0783e8eec5d",
+  "version": "0.19.0",
+  "cacheName": "spelloids-v19-dacef361a323",
   "files": [
+    {
+      "path": "recorded-audio.js"
+    },
+    {
+      "path": "speech-library.js"
+    },
+    {
+      "path": "speech-preparation.js"
+    },
+    {
+      "path": "v18.css"
+    },
     {
       "path": "v15.css"
     },
@@ -228,15 +240,6 @@
       "path": "fonts/SOURCES.json"
     },
     {
-      "path": "audio/bella-sentences-01.bin"
-    },
-    {
-      "path": "audio/bella-welcome-01.bin"
-    },
-    {
-      "path": "audio/bella-words-01.bin"
-    },
-    {
       "path": "audio/heart-sentences-01.bin"
     },
     {
@@ -256,9 +259,6 @@
     },
     {
       "path": "audio/natural-words-01.bin"
-    },
-    {
-      "path": "audio/v11-weekly-bella.pcm"
     },
     {
       "path": "audio/v11-weekly-heart.pcm"
@@ -283,6 +283,54 @@
     },
     {
       "path": "audio/v16-school-list-natural.pcm"
+    },
+    {
+      "path": "audio/v19-library-heart-001.bin"
+    },
+    {
+      "path": "audio/v19-library-heart-002.bin"
+    },
+    {
+      "path": "audio/v19-library-heart-003.bin"
+    },
+    {
+      "path": "audio/v19-library-heart-004.bin"
+    },
+    {
+      "path": "audio/v19-library-heart-005.bin"
+    },
+    {
+      "path": "audio/v19-library-heart-006.bin"
+    },
+    {
+      "path": "audio/v19-library-heart-007.bin"
+    },
+    {
+      "path": "audio/v19-library-heart-008.bin"
+    },
+    {
+      "path": "audio/v19-library-natural-001.bin"
+    },
+    {
+      "path": "audio/v19-library-natural-002.bin"
+    },
+    {
+      "path": "audio/v19-library-natural-003.bin"
+    },
+    {
+      "path": "audio/v19-library-natural-004.bin"
+    },
+    {
+      "path": "audio/v19-library-natural-005.bin"
+    },
+    {
+      "path": "audio/v19-library-natural-006.bin"
+    },
+    {
+      "path": "audio/v19-library-natural-007.bin"
+    },
+    {
+      "path": "audio/v19-library-natural-008.bin"
     },
     {
       "path": "vendor/LICENSE"

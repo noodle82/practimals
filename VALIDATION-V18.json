@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-13",
+  "version": "0.18.0",
+  "automatedTests": 153,
+  "realBrowser": {
+    "generatedWords": [
+      "trampoline",
+      "trespass",
+      "vocabulary"
+    ],
+    "currentWordShown": true,
+    "incrementalReadyCount": true,
+    "greenOnlyWhenAllReady": true,
+    "cachedRecheck": true,
+    "changedListClearsConfirmation": true,
+    "tabletAndPhoneFit": true,
+    "desktopChrome": true,
+    "physicalIpad": false
+  },
+  "failureChecks": {
+    "failedOrSilentWordsNotComplete": true,
+    "retry": true,
+    "cancellation": true,
+    "duplicateJobPrevention": true,
+    "emptyListNotComplete": true
+  },
+  "staticBuild": true,
+  "nativeConfigurationCheck": true,
+  "nativeBuild": false,
+  "libraryWords": 2613,
+  "newRecordings": 0,
+  "voicesUnchanged": true,
+  "stateSchemaUnchanged": true,
+  "publication": "Local files only"
+}

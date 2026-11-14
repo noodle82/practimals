@@ -1,0 +1,3 @@
+import{gapFor}from'./spelling.js';
+export const CREATIVE_SPEECH={sentence:'Let’s make a sentence using this word.',draw:'What picture could help us remember this word?'};
+export function activitySpeech(entry){if(typeof entry==='string')return[{kind:'word',text:entry}];const parts=[{kind:'word',text:entry.word}];if(entry.meaning)parts.push({kind:'meaning',text:entry.meaning});if(entry.sentence){parts.push({kind:'sentence',text:entry.sentence});parts.push({kind:'gap',text:gapFor(entry).replaceAll('_____','blank')});}return parts.filter((part,index,all)=>part.text&&all.findIndex(p=>p.text.trim().toLowerCase()===part.text.trim().toLowerCase())===index);}

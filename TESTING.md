@@ -1,3 +1,3 @@
-# v0.16 validation
+# v0.19 checks
 
-143 automated tests pass. All twenty supplied words have exact-target meanings/examples and banked audio in every selectable voice. The broader 108-entry supplement passes the existing content/UK checks. Browser checks upgraded an existing list with missing content, retained parent edits/progress/egg/scrapbook, verified assigned-only meaning/gap choices and rendered all 60 voice/word combinations without invoking generation. Context banks were available. No runtime exceptions. Physical iPad listening and native builds remain device/cloud checks. See VALIDATION-V16.json.
+162 automated tests pass. All 20,088 additional recordings are independently decoded and compared with their source. Browser checks cover 144 renders, all three profiles, all four activity kinds and 36 offline reload renders with generation disabled. Parent handover blocks unavailable edited audio and succeeds without generation for banked content. See VALIDATION-V19.json. Native signing and physical iPad checks remain cloud/device steps.

@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-14",
+  "version": "0.19.0",
+  "automatedTests": 162,
+  "library": {
+    "words": 2613,
+    "preparedKinds": [
+      "word",
+      "meaning",
+      "sentence",
+      "gap"
+    ],
+    "addedClips": 20088,
+    "addedBytes": 310994566,
+    "allAdditionalClipsDecodedAndCompared": true,
+    "voiceSettingsUnchanged": true
+  },
+  "browser": {
+    "rendered": 144,
+    "allThreeVoices": true,
+    "allFourActivityKinds": true,
+    "generationCalls": 0,
+    "offlineReloadRenders": 36,
+    "localServerStopped": true,
+    "decodedCacheBounded": true,
+    "fileCacheBounded": true,
+    "physicalIpad": false,
+    "errors": []
+  },
+  "preflight": {
+    "checkedAllActivityParts": true,
+    "checkedBothBaseVoices": true,
+    "parentEditInvalidatesConfirmation": true,
+    "failedEditedAudioPreventsHandoff": true,
+    "successfulHandoffNoGeneration": true,
+    "physicalIpad": false
+  },
+  "buildCheck": {
+    "allRuntimeFilesMatch": true,
+    "allActiveVoiceFilesIncluded": true,
+    "retiredAudioFilesOmitted": 4,
+    "omittedRetiredBytes": 35226000,
+    "staticBytes": 551067318,
+    "files": 153,
+    "physicalNativeBuild": false
+  },
+  "staticBuild": true,
+  "nativeConfigurationCheck": true,
+  "nativeBuild": false,
+  "physicalIpad": false,
+  "publication": "Local only; no GitHub/Apple upload"
+}

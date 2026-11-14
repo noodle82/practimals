@@ -1,0 +1,22 @@
+SPELLOIDS v0.19 — READY-MADE PRACTICE AUDIO
+
+WHAT CHANGES
+All 2,613 library words have ready recordings for the word, meaning, example sentence and missing-word clue in both retained base voices. The three character choices and their settings are unchanged. Normal practice uses recordings rather than generating speech. Text meanings/examples remain the authored offline library.
+
+The grown-up audio bar now checks the word AND its practice clues in both voice bases. Spellings ready — hand to child runs this check before leaving. A parent-edited sentence/meaning or a word outside the library is prepared offline before handing over; missing audio prevents a false ready confirmation. Changing the wording/list/voice clears the previous check. No week or progress reset is needed for this update.
+
+UPLOAD ORDER — AUDIO FIRST, CODE LAST
+1. Extract each spelloids-v19-audio-NN.zip. In GitHub, open the TOP LEVEL of your existing practimals repository, choose Add file > Upload files, and drag in the extracted audio folder. Commit each batch. Do not upload ZIPs or an outer delivery folder. Each audio file is at most 20 MiB.
+2. After ALL audio batches are uploaded, extract spelloids-v19-code-LAST.zip and upload ALL its contents at the same TOP LEVEL, replacing matching files. Commit this code batch last. Do not delete previous audio, fonts, vendor, native or other existing files. The code ZIP is cumulative over v12–v18 and deliberately preserves your live codemagic.yaml/signing settings.
+3. Wait for Pages deployment and reload if using the website. Do not clear browser data or start a new spelling week.
+4. For your daughter's installed app, start a new Spelloids Family iPad — Ad Hoc build in Codemagic after every upload is complete. Install over the existing app to retain its local data. Adult testers keep the separate TestFlight workflow. Version 0.19.0; Bundle ID com.spelloids.spelling.
+
+SIZE
+The additional ready audio is 296.6 MiB, compressed AAC with exact phrase boundaries and headroom. The installed app/IPA will be larger; its exact size needs the macOS build. The previous free upload host may reject the larger IPA. Codemagic documents installation using the device QR code in its web app or build-notification emails, so check the completed family build's device-install option first rather than re-uploading to a size-limited host. Open the install link on the registered iPad in Safari. A plain IPA download into Files is not installation. This direct-install path has not been tested on your account/device here.
+Official Codemagic reference: https://docs.codemagic.io/knowledge-white-label/white-label-apps-overview/#distributing-builds-to-developers-or-qa-testers
+
+CHECKS
+Every additional compressed phrase was decoded and compared against its source, with source-aligned sample boundaries and volume restoration. Tests cover all library fields, preserved original recordings, all three voice profiles, missing-file reporting, full-clue preparation, retries/cancellation and handover protection. A real desktop browser rendered 144 word/voice/activity combinations with generation disabled, then restored 36 after an offline reload with the local server stopped. See VALIDATION-V19.json for actual test totals and limits. Physical iPad listening, native signing and installation still require the cloud/device build.
+
+SAVED DATA
+Storage key/schema, profile IDs, assigned list, progress, scrapbook, wardrobe, babies and test records stay compatible. Browser/native data does not sync automatically. No files were uploaded externally by this local preparation.

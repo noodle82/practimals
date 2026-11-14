@@ -1,0 +1,19 @@
+SPELLOIDS v0.17 — OFFLINE LIBRARY EXPANSION
+
+1. Extract spelloids-v17-update.zip.
+2. Upload ALL extracted contents to the TOP LEVEL of your existing practimals GitHub repository, replacing matching files. Upload the contents, not the ZIP or outer folder. Do not delete existing files.
+3. Keep previous audio/vendor/fonts/native files and codemagic.yaml. This cumulative patch includes prior v13–v16 changes. Its audio files are the previously shipped additions, not new recordings for the larger dictionary. Your live signing configuration is excluded.
+4. Commit and wait for the Pages deployment. Reload the website after deployment; a second reload may be needed for the new cache. Do not clear site data or start a new spelling week to apply this update. Existing lists pick up missing local meanings/examples; approved parent edits remain preferred.
+5. To update the installed iPad app, make a new 'Spelloids Family iPad — Ad Hoc' build and install its IPA over the existing app using your existing installation process. Keep the app installed to retain local data. Adult testers keep the separate TestFlight workflow. The installed app is not updated by website deployment.
+
+RESULT
+1,341 new complete teaching pairs; 2,613 total. All supplied primary-year tables were already covered. Forty-one adult/sensitive terms are omitted as requested. The possible typo 'ierce' is not imported. See LIBRARY-REVIEW-V17.csv for every inclusion decision and example.
+
+SIZE
+The library adds just 173,492 bytes (about 0.17 MB). No voices, audio or offline models were added or removed. The cumulative upload ZIP includes recordings from earlier delivered updates.
+
+SAVED DATA
+Current words, challenge progress, wardrobe, scrapbook, babies and results remain compatible. Browser/native progress does not sync automatically. Updating teaching text does not start a new week.
+
+CHECKS
+148 automated tests pass; static build and native configuration checks pass. Actual Xcode signing, installation and iPad listening were not run on this Windows computer.

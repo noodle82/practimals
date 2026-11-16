@@ -9,6 +9,7 @@ if(process.platform!=='darwin')throw Error('Create the Apple build on Codemagicâ
 const run=(file,args)=>execFileSync(file,args,{cwd:root,stdio:'inherit'}),cap=path.join(root,'node_modules','@capacitor','cli','bin','capacitor');
 run(process.execPath,['build.js']);
 if(!fs.existsSync('ios/App/App.xcodeproj'))run(process.execPath,[cap,'add','ios','--packagemanager','CocoaPods']);
+run(process.execPath,['scripts/install-native-speech.mjs']);
 run(process.execPath,[cap,'sync','ios']);
 const project='ios/App/App.xcodeproj/project.pbxproj';let text=fs.readFileSync(project,'utf8');
 if(!/CURRENT_PROJECT_VERSION\s*=/.test(text)||!/MARKETING_VERSION\s*=/.test(text))throw Error('Unexpected Xcode project template.');

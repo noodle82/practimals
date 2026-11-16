@@ -59,7 +59,7 @@ export function buildPal(p){
  const gloves=itemById('gloves',p.wearing?.gloves);if(gloves){const fabric=mat(gloves.colour,{roughness:.85});for(let i=0;i<arms.length;i++){const sign=i===0?-1:1;ball(arms[i],fabric,sign*.21,-.43,.1,.215,.22,.215);ball(arms[i],fabric,sign*.08,-.38,.23,.08,.1,.08);}}
  const earrings=itemById('earrings',p.wearing?.earrings);if(earrings){const jewel=mat(earrings.colour,{metalness:.45,roughness:.2});for(const sign of[-1,1]){ball(body,jewel,sign*shape[0]*.96,1.42,.14,.045);if(earrings.style==='hoop')mesh(body,new T.TorusGeometry(.11,.027,10,32),jewel,sign*shape[0]*.98,1.3,.15);else ball(body,jewel,sign*shape[0]*.98,1.26,.15,.07,.12,.05);}}
 
- const babyProps=baby?buildBabyProps({T,body,shape,centreY,p,front,ball,mat,mesh,tube}):null;
+ const babyProps=baby?buildBabyProps({T,body,shape,centreY,p,front,ball,mat,mesh,tube,mouthY,mouthZ}):null;
  body.traverse(object=>{if(object.isMesh){object.castShadow=!object.material?.transparent;object.receiveShadow=true;}});
  return{root,body,babyProps,eyes,arms,feet,antennae,smile,mouth,tongue,brows,shape,headTop,mouthY,blob,baby,resources:[blushTexture]};
 }

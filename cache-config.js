@@ -1,1 +1,1 @@
-export const CACHE_NAME="spelloids-v19-0224648e6ab6";
+export const CACHE_NAME="spelloids-v19-873ced5918e9";

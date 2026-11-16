@@ -18,8 +18,10 @@ spawnSync('xcrun',['simctl','uninstall',simulator.udid,'com.spelloids.spelling']
 run('xcrun',['simctl','install',simulator.udid,app]);
 run('xcrun',['simctl','launch',simulator.udid,'com.spelloids.spelling','--spelloids-speech-self-test']);
 const container=run('xcrun',['simctl','get_app_container',simulator.udid,'com.spelloids.spelling','data']).trim(),reportPath=path.join(container,'Documents/spelloids-speech-self-test.json');
-let report;for(let second=0;second<330;second++){if(fs.existsSync(reportPath)){report=JSON.parse(fs.readFileSync(reportPath,'utf8'));break;}await new Promise(r=>setTimeout(r,1000));}
+let report;for(let second=0;second<330;second++){if(fs.existsSync(reportPath)){try{report=JSON.parse(fs.readFileSync(reportPath,'utf8'));if(report.finished===true)break;}catch{}}await new Promise(r=>setTimeout(r,1000));}
 spawnSync('xcrun',['simctl','io',simulator.udid,'screenshot',out+'/simulator.png'],{encoding:'utf8'});
+const runtimeLog=spawnSync('xcrun',['simctl','spawn',simulator.udid,'log','show','--last','7m','--style','compact','--predicate','process == \"App\"'],{encoding:'utf8',maxBuffer:16*1024*1024,timeout:30000});fs.writeFileSync(out+'/simulator-runtime.log',(runtimeLog.stdout||'')+'\n'+(runtimeLog.stderr||''));
+if(report&&report.finished!==true){report.pass=false;report.error='Simulator stopped before diagnostic completion at '+report.stage;}
 if(!report)report={pass:false,error:'The running app did not produce a native speech report. Verify that SceneDelegate starts SpelloidsViewController.'};
 report.simulator=simulator.name;report.physicalIPadVerified=false;fs.writeFileSync(out+'/speech-report.json',JSON.stringify(report,null,2));
 if(!report.pass||!report.registered||report.clips?.length!==2||report.clips.some(c=>c.parts!==4))throw Error('Native speech integration failed: '+(report.error||'incomplete audio')+'. See speech-report.json; no TestFlight upload should proceed.');

@@ -1,3 +1,4 @@
+import{prepareNativePronunciation}from'./native-pronunciation.js';
 import{speechChunks}from'./speech-chunks.js';
 export function nativeSpeechRequired(){return globalThis.Capacitor?.getPlatform?.()==='ios'||globalThis.location?.protocol==='capacitor:';}
 export function decodeNativePCM(base64){const binary=atob(base64);if(!binary.length||binary.length%4||binary.length>3*1024*1024)throw Error('The on-device voice returned invalid audio.');const bytes=Uint8Array.from(binary,c=>c.charCodeAt(0)),view=new DataView(bytes.buffer),samples=new Float32Array(binary.length/4);let peak=0;for(let i=0;i<samples.length;i++){const value=view.getFloat32(i*4,true);if(!Number.isFinite(value))throw Error('The on-device voice returned invalid samples.');samples[i]=value;peak=Math.max(peak,Math.abs(value));}if(peak<.0001)throw Error('The on-device voice returned silence.');return samples;}
@@ -18,8 +19,16 @@ export class NativeSpeechEngine{
  }
  async call(method,payload={}){if(this.inFlight)throw Error('The previous on-device voice request is still stopping. Please wait before retrying.');const pending=this.plugin()[method](payload);this.inFlight=pending;const settled=pending.finally(()=>{if(this.inFlight===pending)this.inFlight=null;});let timer;try{return await Promise.race([settled,new Promise((_,reject)=>{timer=setTimeout(()=>reject(Error('The native voice did not finish within one minute. Saved audio is kept.')),60000);})]);}finally{clearTimeout(timer);}}
  async prepare(){return this.ready??=this.call('prepare').catch(error=>{this.ready=null;throw error;});}
- inputs(text,voice){if(!this.worker){const worker=this.worker=new Worker(new URL('./native-speech-inputs.js',import.meta.url),{type:'module'});worker.onmessage=({data})=>{const job=this.jobs.get(data.id);if(!job)return;this.jobs.delete(data.id);clearTimeout(job.timer);data.error?job.reject(Error(data.error)):job.resolve(data);};worker.onerror=()=>this.stopInputs('The pronunciation files could not load. Retry preparing the word.');}
-  return new Promise((resolve,reject)=>{const id=++this.id,timer=setTimeout(()=>this.stopInputs('Pronunciation preparation did not finish. Retry preparing the word.'),30000);this.jobs.set(id,{resolve,reject,timer});this.worker.postMessage({id,text,voice});});
+ inputs(text,voice){
+  const generation=this.generation;
+  return new Promise((resolve,reject)=>{
+   const id=++this.id,timer=setTimeout(()=>{this.jobs.delete(id);reject(Error('Pronunciation preparation did not finish in the app. Saved audio is kept.'));},30000);
+   this.jobs.set(id,{resolve,reject,timer});
+   prepareNativePronunciation(text,voice,message=>this.onStatus(message)).then(result=>{
+    const job=this.jobs.get(id);if(!job)return;this.jobs.delete(id);clearTimeout(timer);
+    if(generation!==this.generation)job.reject(Error('Audio preparation paused.'));else job.resolve(result);
+   },error=>{const job=this.jobs.get(id);if(!job)return;this.jobs.delete(id);clearTimeout(timer);job.reject(error);});
+  });
  }
  stopInputs(message='Audio preparation paused. Saved sounds are kept.'){this.worker?.terminate();this.worker=null;for(const job of this.jobs.values()){clearTimeout(job.timer);job.reject(Error(message));}this.jobs.clear();}
  cancel(){this.generation++;this.stopInputs();this.ready=null;if(this.bridge)this.bridge.release().catch(()=>{});}

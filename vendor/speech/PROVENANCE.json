@@ -10,7 +10,8 @@
     "Local-only model/voice fetches and one WASM thread",
     "Model split into verified chunks below 25 MiB for GitHub browser upload",
     "Current app offers the untouched British voice and five selected character options. Legacy SDK catalogue entries are unused.",
-    "Expose identical phonemizer/tokenizer and voice-vector inputs for native iOS ONNX inference; browser generation unchanged."
+    "Expose identical phonemizer/tokenizer and voice-vector inputs for native iOS ONNX inference; browser generation unchanged.",
+    "Native pronunciation runs in the main app webview rather than a module worker; identical phonemizer, token IDs and voice vectors, with preparation-stage reporting."
   ],
   "voices": [
     "bf_emma",

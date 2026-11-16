@@ -3,9 +3,9 @@
 <h1>Spelloids — native speech diagnostic</h1><p>Automated simulator check. Your child's progress is not used.</p><pre id="status">Loading diagnostic…</pre>
 <script>
 window.__spelloidsSpeechProbe={finished:false,pass:false,clips:[],stage:'html-loaded',started:Date.now(),events:[]};
-window.reportSpeechProbe=(stage,extra={})=>{const r=window.__spelloidsSpeechProbe;Object.assign(r,extra,{stage,elapsedMs:Date.now()-r.started});r.events.push({stage,ms:r.elapsedMs});document.querySelector('#status').textContent=JSON.stringify(r,null,2);window.webkit?.messageHandlers?.spelloidsSpeechProbe?.postMessage(JSON.stringify(r));};
-window.failSpeechProbe=error=>reportSpeechProbe('failed',{finished:true,pass:false,error:String(error?.message||error)});
-addEventListener('error',e=>failSpeechProbe(e.message||('Could not load '+(e.target?.src||'diagnostic script'))),true);
+window.reportSpeechProbe=(stage,extra={})=>{const r=window.__spelloidsSpeechProbe;Object.assign(r,extra,{stage,elapsedMs:Date.now()-r.started});r.events.push({stage,ms:r.elapsedMs,detail:r.detail});document.querySelector('#status').textContent=JSON.stringify(r,null,2);window.webkit?.messageHandlers?.spelloidsSpeechProbe?.postMessage(JSON.stringify(r));};
+window.failSpeechProbe=error=>reportSpeechProbe('failed',{finished:true,pass:false,error:String(error?.message||error),errorStack:String(error?.stack||''),streamAsyncIterator:typeof ReadableStream.prototype[Symbol.asyncIterator]});
+addEventListener('error',e=>failSpeechProbe(e.error||e.message||('Could not load '+(e.target?.src||'diagnostic script'))),true);
 addEventListener('unhandledrejection',e=>failSpeechProbe(e.reason));
 reportSpeechProbe('html-loaded',{url:location.href,protocol:location.protocol});
 </script><script type="module" src="speech-diagnostic.js" onerror="failSpeechProbe('The speech diagnostic module could not load')"></script></html>

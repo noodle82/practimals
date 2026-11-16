@@ -1,0 +1,1 @@
+Read-only regression fixture from @capacitor/cli 8.6.0, assets/ios-pods-template.tar.gz. Source: https://registry.npmjs.org/@capacitor/cli/-/cli-8.6.0.tgz . Capacitor is MIT licensed, copyright Ionic. These files are test input; they are not copied directly into the app.

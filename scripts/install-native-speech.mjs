@@ -25,6 +25,17 @@ export function configureNativeSpeech(projectRoot=root){
  else pods="platform :ios, '"+NATIVE_SPEECH_MIN_IOS+"'\n"+pods;
  if(!pods.includes("pod 'onnxruntime-objc'")){if(!/target ['"]App['"] do/.test(pods))throw Error('Missing App CocoaPods target');pods=pods.replace(/target ['"]App['"] do/,"target 'App' do\n  pod 'onnxruntime-objc', '1.22.0'");}
  fs.writeFileSync(podfile,pods);
+ // Capacitor 8.6's SceneDelegate constructs the root controller in code.
+ // The storyboard customClass alone is not enough on this template.
+ const scenePath=path.join(app,'SceneDelegate.swift');
+ if(fs.existsSync(scenePath)){
+  let scene=fs.readFileSync(scenePath,'utf8');
+  if(!scene.includes('SpelloidsViewController()')){
+   if(!/rootViewController\s*=\s*CAPBridgeViewController\(\)/.test(scene))throw Error('Unrecognised scene startup: cannot prove native speech registration');
+   scene=scene.replace(/rootViewController\s*=\s*CAPBridgeViewController\(\)/g,'rootViewController = SpelloidsViewController()');
+   fs.writeFileSync(scenePath,scene);
+  }
+ }
  const storyboard=path.join(app,'Base.lproj/Main.storyboard');let story=fs.readFileSync(storyboard,'utf8');
  if(!story.includes('SpelloidsViewController')){if(!story.includes('customClass="CAPBridgeViewController"'))throw Error('Missing Capacitor view controller');story=story.replace('customClass="CAPBridgeViewController" customModule="Capacitor"','customClass="SpelloidsViewController" customModule="App"');if(!story.includes('SpelloidsViewController'))throw Error('Unexpected storyboard module');fs.writeFileSync(storyboard,story);}
  return{files:sources.map(([name])=>name),runtime:'onnxruntime-objc 1.22.0',minimumIOS:NATIVE_SPEECH_MIN_IOS};

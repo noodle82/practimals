@@ -1,6 +1,7 @@
+import{setupUpgrade,actionUpgrade,stepUpgrade}from'./arcade-upgrades.js';
 const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
 const length=(a,b)=>Math.hypot(a.x-b.x,a.y-b.y);
-export const ARCADE_ENGINES=['snack','bubbles','dash','bowling','pinball','buggy','jelly','fishing','maze','plane','dance','slide','treasure','football','golf','splat','gravity'];
+export const ARCADE_ENGINES=['snack','bubbles','dash','bowling','pinball','buggy','jelly','fishing','maze','plane','dance','slide','treasure','football','golf','splat','gravity','snap'];
 export const GAME_COLOURS=['#ae95d3','#77bbaa','#e7b77e','#da9cb9','#8cadd9'];
 export function makeMaze(cols,rows,random=Math.random){
  const cells=Array.from({length:cols*rows},()=>({visited:false,walls:[true,true,true,true]})),stack=[0];cells[0].visited=true;
@@ -27,7 +28,7 @@ export function createArcadeRound(engine,{random=Math.random,words=[]}={}){
  if(engine==='splat')s.objects=Array.from({length:6},(_,i)=>({x:120+i%3*240,y:125+Math.floor(i/3)*200,r:47,colour:i%5,alive:true}));
  if(engine==='gravity'){s.player={x:180,y:250,vy:0};s.spawn=1.5;}
  if(engine==='dance'){s.sequence=[Math.floor(random()*4),Math.floor(random()*4)];s.danceShowing=true;}
- return s;
+ setupUpgrade(s);return s;
 }
 function finish(s,reason,won=false){if(s.finished)return;s.finished=true;s.reason=reason;s.won=won;if(!won)s.lives=0;}
 function spark(s,x,y,colour=0){for(let i=0;i<9;i++)s.particles.push({x,y,vx:(s.random()-.5)*190,vy:-40-s.random()*120,life:.65,colour});}
@@ -36,7 +37,7 @@ function contact(p,o,r=16){return p.x+r>o.x&&p.x-r<o.x+o.w&&p.y+r>o.y&&p.y-r<o.y
 function dancePress(s,index){if(s.danceShowing)return;const expected=s.sequence[s.danceInput.length];if(index!==expected){finish(s,'A lovely dance! Ready to try that pattern again?');return;}s.danceInput.push(index);reward(s,5,160+index*160,365);if(s.danceInput.length===s.sequence.length){s.level++;s.sequence.push(Math.floor(s.random()*4));s.danceInput=[];s.danceShowing=true;s.danceAt=s.time+.7;}}
 export function arcadeAction(s,{x=400,y=250,type='press',direction=null,dy=0}={}){
  if(s.finished)return;if(!s.started){s.started=true;s.danceAt=s.time+.5;if(s.engine==='dance')return;}
- const e=s.engine;
+ const e=s.engine;if(actionUpgrade(s,{x,y,type,direction,dy,...arguments[1]}))return;
  if(type==='release'){
   if(e==='bowling'&&Math.abs(s.ball.vy)<1){s.shots++;s.ball.vx=clamp((x-s.ball.x)*2,-240,240);s.ball.vy=-420-s.level*12;}
   if(e==='football'&&!s.ball.vy){s.aim=clamp(x,100,700);s.ball.vx=(s.aim-s.ball.x)*1.2;s.ball.vy=-390;}
@@ -53,7 +54,7 @@ export function arcadeAction(s,{x=400,y=250,type='press',direction=null,dy=0}={}
  if(e==='splat'){if(y>448){s.palette=clamp(Math.floor((x-150)/100),0,4);return;}s.strokes.push({x,y,colour:s.palette,r:15+s.random()*18});const target=s.objects.find(o=>o.alive&&o.colour===s.palette&&length({x,y},o)<o.r+14);if(target){target.alive=false;reward(s,15,x,y);}if(s.objects.every(o=>!o.alive))s.freePaint=true;}
 }
 export function stepArcade(s,dt,input={x:400,y:350,active:false}){
- if(s.finished||!s.started)return;s.time+=dt;if(!['maze','dance','golf','treasure','splat','bowling'].includes(s.engine))s.level=Math.max(s.level,1+Math.floor(s.time/18));const d=1+Math.min(1.6,s.time/45+s.score/700),e=s.engine,p=s.player;const ix=clamp(input.x??400,10,790),iy=clamp(input.y??350,10,490);
+ if(s.finished||!s.started)return;s.time+=dt;if(stepUpgrade(s,dt,input))return;if(!['maze','dance','golf','treasure','splat','bowling'].includes(s.engine))s.level=Math.max(s.level,1+Math.floor(s.time/18));const d=1+Math.min(1.6,s.time/45+s.score/700),e=s.engine,p=s.player;const ix=clamp(input.x??400,10,790),iy=clamp(input.y??350,10,490);
  for(const a of s.particles){a.x+=a.vx*dt;a.y+=a.vy*dt;a.vy+=220*dt;a.life-=dt;}s.particles=s.particles.filter(a=>a.life>0);
  if(s.time>=60&&!['maze','golf','treasure','dance','splat'].includes(e)){finish(s,'A brilliant little adventure. Play again for a fresh course!',true);return;}
  if(e==='snack'||e==='bubbles'){

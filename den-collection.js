@@ -4,43 +4,49 @@ export const DEN_GAMES=[
  ['wordsearch','Word Nest','Settle into a cosy wordsearch with this week’s words.','⌕','#b8abd6','Join the first and last letter of a hidden word.'],
  ['pairs','Memory Mates','Turn over cards and discover matching word pairs.','▧','#a4cbbd','Turn over two cards. Remember their hiding places.'],
  ['snack','Snack Catcher','Catch falling treats and dodge the silly socks.','🍓','#a9cfc1','Drag your basket left and right. Avoid the socks!'],
- ['bubbles','Bubble Trouble','Pop bright bubbles and build a sparkling combo.','◌','#a6c7e2','Tap the bubbles before they float away.'],
+ ['bubbles','Bubble Trouble','Pop friendly balloons, avoid trouble and stop them escaping.','◌','#a6c7e2','Pop the colourful balloons. Avoid dark × balloons. Five escapes end the game.'],
  ['dash','Spelloid Dash','Jump logs and duck under branches on a woodland run.','🌿','#9ec3ae','Tap to jump. Swipe down or press ↓ to duck.'],
- ['bowling','Cosmic Bowling','Aim a glowing ball at wobbly alien skittles.','🎳','#aaa0ce','Drag to aim, then release to bowl. Clear the skittles.'],
- ['pinball','Den Pinball','Keep a star ball bouncing around a glowing pinball den.','✦','#8f96c4','Tap left or right to flip. One ball—how far can you go?'],
- ['buggy','Moon Buggy','Drive over rolling moon hills and jump the craters.','🛞','#b8adcc','Tap to hop over craters. The buggy drives itself.'],
- ['jelly','Jelly Bounce','Bounce a ball off a jelly trampoline to break colourful blocks.','▦','#b9b3dd','Drag the jelly paddle. Keep your one ball bouncing.'],
+ ['bowling','Cosmic Bowling','Aim a glowing ball at wobbly alien skittles.','🎳','#aaa0ce','Swipe up the lane. Faster swipes add power; curved swipes add spin. Strike to discover new pin formations.'],
+ ['pinball','Den Pinball','Keep a star ball bouncing around a glowing pinball den.','✦','#8f96c4','Hold left or right to flip. Resting flippers still bounce. Light every bumper for a new table.'],
+ ['buggy','Moon Buggy','Drive over rolling moon hills and jump the craters.','🛞','#b8adcc','Tap to jump early. Tap again in the air for a second moon boost.'],
+ ['jelly','Jelly Bounce','Bounce a ball off a jelly trampoline to break colourful blocks.','▦','#b9b3dd','Drag the paddle. Clear the blocks to discover new patterns and tougher jelly levels.'],
  ['fishing','Star Fishing','Cast a little line and catch peculiar space fish.','🐟','#8dbbc9','Tap to drop the hook. Catch a fish as it swims past.'],
  ['maze','Marble Maze','Roll your Spelloid’s bubble through a twisting maze.','◎','#b5cfbd','Drag to steer through the passages and find the star.'],
- ['plane','Paper Plane Parade','Swoop through hoops and catch gentle breezes.','✈','#a6c9d5','Drag up and down. Fly through the hoops and avoid clouds.'],
+ ['plane','Paper Plane Parade','Draw a paper plane and send your design on a long scenic flight.','✈','#a6c9d5','Draw a plane, tap Ready to fly, then swipe upwards to throw. Try a balanced, streamlined design.'],
  ['dance','Disco Den','Watch the steps, then help your Spelloid copy the dance.','♫','#c5a6d4','Watch the glowing directions, then tap them in order.'],
  ['slide','Splash Slide','Steer down a winding slide and make enormous splashes.','💧','#83c6cf','Drag left and right. Stay in the water and dodge the ducks.'],
- ['treasure','Treasure Tunnels','Dig up gems, fossils and funny buried surprises.','💎','#d1b49d','Tap a square to dig. Follow the little hints to buried treasure.'],
- ['football','Goal Getter','Place your shots past a playful alien goalkeeper.','⚽','#9fc7a4','Drag to aim at the goal, then release to shoot.'],
- ['golf','Mini Monster Golf','Putt around tiny courses full of ramps and obstacles.','⛳','#9bcab5','Pull back from the ball and release to putt.'],
- ['splat','Splat Studio','Make playful splat pictures with your Spelloid.','🎨','#d3b0c7','Pick a colour. Splat the glowing targets, then paint freely.'],
- ['gravity','Gravity Glider','Tap to keep your spaceship aloft through a changing space maze.','🛸','#46577f','Tap for a boost. Gravity pulls you down. One life—mind the walls!']
+ ['treasure','Treasure Tunnels','Uncover safe treasure patches without waking the sleepy grumbles.','💎','#d1b49d','Dig safe squares. Numbers count nearby grumbles. Switch to Flag mode to mark them. Your first dig is safe.'],
+ ['football','Goal Getter','Place your shots past a playful alien goalkeeper.','⚽','#9fc7a4','Swipe up from the ball. Speed adds power; a curved swipe adds curl. Score through the star to level up.'],
+ ['golf','Mini Monster Golf','Putt around tiny courses full of ramps and obstacles.','⛳','#9bcab5','Pull back from the ball and release. Finish in par or better to reach a new course.'],
+ ['splat','Spelloid Sketchbook','Draw a new alien friend, then bring it to life.','🎨','#d3b0c7','Draw your own Spelloid. Press Animate to see it walk, dance and say a cheeky hello.'],
+ ['snap','Spelloid Snap','Find matching alien friends, from little grids to big challenges.','▧','#b7a1d1','Turn over two cards and find identical Spelloids. Choose a small, medium or big grid.'],
+ ['gravity','Gravity Rider','Tap to keep your spaceship aloft through a changing space maze.','🛸','#46577f','Tap for a boost. Gravity pulls you down. One life—mind the walls!']
 ].map(([id,name,description,icon,colour,instructions],index)=>({id,engine:id,name,description,icon,colour,instructions,order:index,edition:1}));
 export const DEN_LIMIT=DEN_GAMES.length;
+export const DEN_STARTERS=['gravity','jelly'];
 export function completedDenModules(p){return ['study','listen','build','letters','gap','meaning'].filter(m=>p.words?.length&&p.words.every(w=>p.week?.progress[w.word]?.passed?.includes(m)));}
+export function childDenOrder(p){
+ const ids=new Set(DEN_GAMES.map(g=>g.id));let seed=2166136261;for(const c of String(p.id||p.name||'Spelloid'))seed=Math.imul(seed^c.charCodeAt(0),16777619)>>>0;
+ const random=()=>((seed=Math.imul(seed,1664525)+1013904223>>>0)/4294967296),rest=DEN_GAMES.map(g=>g.id).filter(id=>!DEN_STARTERS.includes(id)&&id!=='golf');
+ for(let i=rest.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[rest[i],rest[j]]=[rest[j],rest[i]];}
+ const order=[...DEN_STARTERS,'golf'];for(const id of p.denGameOrder||[])if(ids.has(id)&&!order.includes(id))order.push(id);for(const id of rest)if(!order.includes(id))order.push(id);return order;
+}
 export function migrateDenCollection(p){
- if(p.denCollectionVersion===2)return false;
- const old=p.denLibrary||[],owned=[];
+ if(p.denCollectionVersion===3&&p.denGameOrder?.length===DEN_LIMIT&&DEN_STARTERS.every(id=>p.denLibrary?.some(g=>g.id===id)))return false;
+ const old=p.denLibrary||[],owned=[],order=childDenOrder(p);
  for(const item of old){const match=DEN_GAMES.find(g=>g.id===item.id)||DEN_GAMES.find(g=>g.engine===item.engine);if(match&&!owned.some(g=>g.id===match.id))owned.push({...match,unlockedWeek:item.unlockedWeek||null});}
- // Preserve the size of older collections, replacing retired Bingo/remixes with distinct games.
- const target=Math.min(DEN_LIMIT,Math.max(1,old.length));
- for(const game of DEN_GAMES)if(owned.length<target&&!owned.some(g=>g.id===game.id))owned.push({...game});
- p.denLibrary=owned.sort((a,b)=>a.order-b.order);p.denRewardWeeks??=[];p.denCollectionVersion=2;return true;
+ // No earned game is taken away; every child receives both new starter games.
+ for(const id of DEN_STARTERS)if(!owned.some(g=>g.id===id))owned.push({...DEN_GAMES.find(g=>g.id===id)});
+ const target=Math.min(DEN_LIMIT,Math.max(2,old.length));for(const id of order)if(owned.length<target&&!owned.some(g=>g.id===id))owned.push({...DEN_GAMES.find(g=>g.id===id)});
+ p.denGameOrder=order;p.denLibrary=owned.sort((a,b)=>order.indexOf(a.id)-order.indexOf(b.id));p.denRewardWeeks??=[];p.denCollectionVersion=3;return true;
 }
 export function awardDenGame(p){
- let changed=migrateDenCollection(p);if(!p.week||completedDenModules(p).length<3||p.denRewardWeeks.includes(p.week.id))return changed;
- p.denRewardWeeks.push(p.week.id);p.week.denGameAwarded=true;
- const next=DEN_GAMES.find(g=>!p.denLibrary.some(owned=>owned.id===g.id));
- if(next){p.denLibrary.push({...next,unlockedWeek:p.week.id});p.week.denNewGame=next.id;}
- return true;
+ const changed=migrateDenCollection(p);if(!p.week||completedDenModules(p).length<3||p.denRewardWeeks.includes(p.week.id))return changed;
+ p.denRewardWeeks.push(p.week.id);p.week.denGameAwarded=true;const next=nextDenGame(p);
+ if(next){p.denLibrary.push({...next,unlockedWeek:p.week.id});p.week.denNewGame=next.id;}return true;
 }
 export function denCollectionCards(p){
  const ids=new Set((p.denLibrary||[]).map(g=>g.id)),open=completedDenModules(p).length>0;
- return DEN_GAMES.map(game=>({...game,earned:ids.has(game.id),playable:open&&ids.has(game.id),starter:game.id==='rocket'}));
+ return childDenOrder(p).map((id,order)=>{const game=DEN_GAMES.find(g=>g.id===id);return{...game,order,earned:ids.has(id),playable:open&&ids.has(id),starter:DEN_STARTERS.includes(id)};});
 }
-export function nextDenGame(p){const owned=new Set((p.denLibrary||[]).map(g=>g.id));return DEN_GAMES.find(g=>!owned.has(g.id))||null;}
+export function nextDenGame(p){const owned=new Set((p.denLibrary||[]).map(g=>g.id));const id=childDenOrder(p).find(id=>!owned.has(id));return DEN_GAMES.find(g=>g.id===id)||null;}

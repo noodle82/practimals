@@ -31,3 +31,13 @@ export function landOnPractice(){
 }
 export function landOnSpelloid(){landAt(document.querySelector('.pledge-card')||document.querySelector('.pal-layout'));}
 export function launchIntro(){if(new URLSearchParams(location.search).get('skipIntro')==='1')return;const reduced=globalThis.matchMedia?.('(prefers-reduced-motion: reduce)').matches,overlay=document.createElement('div');overlay.className='launch-intro';overlay.setAttribute('role','dialog');overlay.setAttribute('aria-label','Welcome to Spelloids');overlay.innerHTML='<div class="intro-brand"><img src="brand-mark.svg" alt="A friendly Spelloid"><h1>Spelloids</h1><p>Little practice. Big confidence.</p></div><button class="intro-skip">Let’s play →</button>';document.body.append(overlay);const app=document.querySelector('#app');if(app)app.inert=true;let closed=false,timer;const close=()=>{if(closed)return;closed=true;clearTimeout(timer);overlay.classList.add('leaving');if(app)app.inert=false;setTimeout(()=>overlay.remove(),reduced?0:900);};overlay.querySelector('button').onclick=close;timer=setTimeout(close,reduced?500:2700);}
+
+let watchingDenViewport=false;
+export function landOnDenGame(){
+ const stage=document.querySelector('.arcade-stage,.den-play-area,#wordsearch-board,#table-game');if(!stage)return;
+ const viewport=()=>{document.documentElement.style.setProperty('--den-viewport-height',(window.visualViewport?.height||innerHeight)+'px');};viewport();
+ if(!watchingDenViewport){watchingDenViewport=true;const resize=()=>{if(document.body.dataset.view==='play')landOnDenGame();};window.addEventListener('resize',resize,{passive:true});window.visualViewport?.addEventListener('resize',resize,{passive:true});}
+ settleLanding(()=>{if(!stage.isConnected)return null;viewport();const header=document.querySelector('.activity-header'),surface=stage.closest('.table-game-surface'),start=surface||header||stage,v=window.visualViewport,pageY=scrollY;
+  return optimalLandingTop({start:start.getBoundingClientRect().top+pageY,end:stage.getBoundingClientRect().bottom+pageY,viewportHeight:v?.height||innerHeight,offset:16+(v?.offsetTop||0)});
+ });
+}

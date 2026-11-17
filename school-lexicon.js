@@ -316,6 +316,10 @@ export const SCHOOL_WORDS={
     "meaning": "Becoming unwell when near or eating certain things.",
     "sentence": "She is allergic to peanuts."
   },
+  "allow": {
+    "meaning": "To let someone do something.",
+    "sentence": "The rules allow us to take turns."
+  },
   "allowed": {
     "meaning": "Given permission to do something.",
     "sentence": "We are allowed to draw after finishing our work."
@@ -1588,6 +1592,10 @@ export const SCHOOL_WORDS={
     "meaning": "Kind and honourable behaviour, especially in knight stories.",
     "sentence": "The knight showed chivalry by helping others."
   },
+  "choose": {
+    "meaning": "To pick the one you want.",
+    "sentence": "You can choose a book to read."
+  },
   "chopper": {
     "meaning": "An informal word for a helicopter.",
     "sentence": "The rescue chopper flew overhead."
@@ -2215,6 +2223,10 @@ export const SCHOOL_WORDS={
   "craziest": {
     "meaning": "Most wildly silly or unusual.",
     "sentence": "That was our craziest costume idea."
+  },
+  "create": {
+    "meaning": "To make something new.",
+    "sentence": "We will create a picture together."
   },
   "creature": {
     "meaning": "A living animal or an imaginary living thing.",
@@ -4544,6 +4556,10 @@ export const SCHOOL_WORDS={
     "meaning": "A hard covering that protects your head.",
     "sentence": "Wear your helmet when cycling."
   },
+  "help": {
+    "meaning": "To make something easier for someone.",
+    "sentence": "Please help me carry these books."
+  },
   "her": {
     "meaning": "Belonging to a girl or woman, or referring to her.",
     "sentence": "My sister put her book on the shelf."
@@ -4983,6 +4999,10 @@ export const SCHOOL_WORDS={
   "incision": {
     "meaning": "A careful cut made during an operation.",
     "sentence": "The surgeon made a small incision."
+  },
+  "include": {
+    "meaning": "To have something as part of a group or activity.",
+    "sentence": "Please include your name on the drawing."
   },
   "incognito": {
     "meaning": "Without letting people know who you are.",
@@ -6387,6 +6407,10 @@ export const SCHOOL_WORDS={
   "necessitate": {
     "meaning": "To make something needed.",
     "sentence": "Heavy rain may necessitate a change of plans."
+  },
+  "need": {
+    "meaning": "To have to have something.",
+    "sentence": "I need a coat because it is cold."
   },
   "negligent": {
     "meaning": "Not taking proper care.",
@@ -7995,6 +8019,10 @@ export const SCHOOL_WORDS={
   "reprimand": {
     "meaning": "To tell someone firmly that their behaviour was wrong.",
     "sentence": "The captain gave the careless sailor a reprimand."
+  },
+  "require": {
+    "meaning": "To need something.",
+    "sentence": "Plants require water to grow."
   },
   "rescue": {
     "meaning": "To save someone or something from danger.",

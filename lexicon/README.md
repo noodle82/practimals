@@ -1,6 +1,6 @@
 # Offline spelling content
 
-The app bundles 2,613 original child-friendly meaning/example pairs. The tracked reference set has 1,085 distinct forms: 1,076 from England's spelling appendix plus nine supplied words (endeavour, glamour, conclusion, flavour, persuasion, supervision, benefited, drizzling, multiplying). All tracked forms have both fields. The 1,076 are not all statutory words: they include KS1 examples, common exceptions, KS2 statutory entries and illustrated examples.
+The app bundles 2,620 original child-friendly meaning/example pairs. The tracked reference set has 1,085 distinct forms: 1,076 from England's spelling appendix plus nine supplied words (endeavour, glamour, conclusion, flavour, persuasion, supervision, benefited, drizzling, multiplying). All tracked forms have both fields. The 1,076 are not all statutory words: they include KS1 examples, common exceptions, KS2 statutory entries and illustrated examples.
 
 Reference: Department for Education, English Appendix 1: Spelling.
 https://assets.publishing.service.gov.uk/media/5a7ccc06ed915d63cc65ce61/English_Appendix_1_-_Spelling.pdf
@@ -29,3 +29,8 @@ word-families-v16.tsv adds 108 original meaning/example pairs around a parent-su
 ## v17 supplied wider lists
 
 wider-spellings-v17.tsv contains 1,341 original additional teaching pairs. supplied-lists-v17.json records the supplied headwords, already covered entries, additions and omissions; it is audit metadata, not a curriculum-pack source. The 41 omitted adult/sensitive terms and unverified ierce are not added to the teaching bank. The 1,076 appendix-reference count and primary random packs are unchanged. No website URL was supplied with the later pasted lists. All new content stays free and offline. See LIBRARY-REVIEW-V17.csv for review.
+
+
+## Small everyday-word gap correction
+
+everyday-gaps-v19.tsv adds seven original meaning/example pairs: allow, choose, create, help, include, need and require. The five exploratory test words were deliberately not added. The 2,613-word recorded bank is unchanged. These seven text-only additions use on-device speech preparation only if a parent assigns them. No additional voices, models or bundled recordings are added.

@@ -12,3 +12,6 @@ export function bindAnswerKeyboard(input,mode){
  board.onpointerdown=e=>{if(e.target.closest('button'))e.preventDefault();};
  board.onclick=e=>{const button=e.target.closest('[data-answer-key]');if(!button||input.disabled)return;const result=keyboardEdit(input.value,input.selectionStart??input.value.length,input.selectionEnd??input.value.length,button.dataset.answerKey);input.value=result.value;input.setSelectionRange(result.caret,result.caret);input.dispatchEvent(new Event('input',{bubbles:true}));};
 }
+
+export const answerKeyboardFor=profile=>profile?.answerKeyboard==='device'?'device':'app';
+export function answerKeyboardSettings(profile){const mode=answerKeyboardFor(profile);return `<div class="parent-keyboard-settings"><h3>Answer keyboard</h3><label class="field-label" for="answer-keyboard">Keyboard for ${String(profile.name||'your child').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]||c))}<select id="answer-keyboard"><option value="app" ${mode==='app'?'selected':''}>Spelloids keyboard (default)</option><option value="device" ${mode==='device'?'selected':''}>iPad / device keyboard</option></select></label><p class="hint">The Spelloids keyboard keeps the device keyboard and its dictation button closed for spelling answers. Your choice saves straight away.</p></div>`;}

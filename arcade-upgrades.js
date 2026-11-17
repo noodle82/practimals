@@ -3,7 +3,7 @@ const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const distance=(a,b)=>Math.hypot(a.x-b.x,a.y-b.y);
 export const UPGRADED_GAMES=new Set(['pinball','buggy','jelly','plane','dance','treasure','football','golf','bubbles','dash','bowling','splat','snap']);
 const say=(s,message)=>{s.message=message;s.messageUntil=s.time+3;};
-const points=(s,n)=>{s.score+=n;if(s.words.length){s.word=s.words[Math.floor(s.random()*s.words.length)];s.wordUntil=s.time+2;}};
+const points=(s,n)=>{s.score+=n;if(s.words.length&&s.engine!=='bubbles'){s.word=s.words[Math.floor(s.random()*s.words.length)];s.wordUntil=s.time+2;}};
 const lose=(s,message)=>{s.finished=true;s.won=false;s.lives=0;s.reason=message;};
 const overlaps=(b,o,r=12)=>b.x+r>o.x&&b.x-r<o.x+o.w&&b.y+r>o.y&&b.y-r<o.y+o.h;
 function shuffled(a,random){for(let i=a.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
@@ -21,9 +21,10 @@ export function jellyLevel(s){
  s.ball={x:s.paddle||400,y:390,vx:125*(s.level%2?1:-1),vy:-270-Math.min(130,s.level*12)};
  say(s,'Level '+s.level+' · a new jelly pattern!');
 }
+export function bowlingProjection(p){const depth=clamp(p.y/1200,0,1),scale=.35+.65*depth;return{x:400+(p.x-400)*scale*1.6,y:65+depth*395,scale};}
 export function bowlingRack(s){
- const patterns=[[[400,100],[375,140],[425,140],[350,180],[400,180],[450,180],[325,220],[375,220],[425,220],[475,220]],[[295,100],[400,100],[505,100],[330,145],[470,145],[365,190],[435,190],[330,235],[400,235],[470,235]],[[300,110],[350,110],[400,110],[450,110],[500,110],[325,170],[375,170],[425,170],[475,170],[400,230]],[[400,85],[350,125],[450,125],[300,165],[400,165],[500,165],[350,205],[450,205],[375,245],[425,245]]];
- s.objects=patterns[(s.level-1)%patterns.length].map(([x,y])=>({x,y,r:15,alive:true,vx:0,vy:0}));s.rackShots=0;s.ball={x:400,y:440,vx:0,vy:0,spin:0};
+ const layouts=[[[400,285],[380,245],[420,245],[360,205],[400,205],[440,205],[340,165],[380,165],[420,165],[460,165]],[[315,180],[400,180],[485,180],[345,225],[455,225],[375,270],[425,270],[345,315],[400,315],[455,315]],[[320,180],[360,180],[400,180],[440,180],[480,180],[340,235],[380,235],[420,235],[460,235],[400,290]],[[400,155],[355,195],[445,195],[310,235],[400,235],[490,235],[355,275],[445,275],[375,315],[425,315]]];
+ s.objects=layouts[(s.level-1)%layouts.length].map(([x,y])=>({x,y,r:13,alive:true,vx:0,vy:0,angle:0}));s.rackShots=0;s.rollPhase='ready';s.ball={x:400,y:1120,vx:0,vy:0,spin:0,trail:[]};
 }
 export function golfCourse(s){
  const courses=[
@@ -62,7 +63,7 @@ function footballLevel(s){
 export function setupUpgrade(s){
  if(!UPGRADED_GAMES.has(s.engine))return;
  s.message='';s.player.jumps=0;s.gesture=null;s.flipperCooldown=0;
- if(s.engine==='pinball'){pinballTable(s);s.ball={x:400,y:335,vx:35,vy:-245};s.saverUntil=6;s.saverUsed=false;}
+ if(s.engine==='pinball'){pinballTable(s);s.ball={x:620,y:385,vx:-185,vy:-465};s.lives=3;s.ballNumber=1;s.ballPhase='playing';s.launchAt=0;}
  if(s.engine==='jelly'){s.paddle=400;jellyLevel(s);}
  if(s.engine==='bowling')bowlingRack(s);
  if(s.engine==='golf')golfCourse(s);
@@ -74,23 +75,29 @@ export function setupUpgrade(s){
  if(['dash','buggy'].includes(s.engine)){s.player={x:170,y:350,vy:0,jumps:0};s.objects=[];s.spawn=2;}
 }
 export function analysePlane(strokes){
- const pts=strokes.filter(p=>!p.end);if(pts.length<8)return null;
- const xs=pts.map(p=>p.x),ys=pts.map(p=>p.y),minX=Math.min(...xs),maxX=Math.max(...xs),minY=Math.min(...ys),maxY=Math.max(...ys),width=maxX-minX,height=maxY-minY;
- if(width<45||height<20)return null;
- const centreY=(minY+maxY)/2,top=pts.filter(p=>p.y<centreY).length/pts.length;
- const balance=clamp(1-Math.abs(.5-top)*1.6,0,1),slender=clamp(1-Math.abs(width/Math.max(1,height)-2.5)/4,0,1);
- // A playful design estimate, not a real aerodynamic simulation. Every usable drawing flies.
- return{minX,maxX,minY,maxY,width,height,balance,slender,quality:.35+.35*slender+.3*balance};
+ const raw=strokes.filter(p=>!p.end);if(raw.length<8)return null;const pts=[];let previous=null,totalLength=0;for(const p of strokes){if(p.end){previous=null;continue;}if(previous&&!p.start)totalLength+=distance(p,previous);previous=p;}const spacing=Math.max(4,totalLength/12000);previous=null;
+ for(const p of strokes){if(p.end){previous=null;continue;}if(previous&&!p.start){const n=Math.max(1,Math.ceil(distance(p,previous)/spacing));for(let i=1;i<=n;i++)pts.push({x:previous.x+(p.x-previous.x)*i/n,y:previous.y+(p.y-previous.y)*i/n});}else pts.push(p);previous=p;}
+ const xs=pts.map(p=>p.x),ys=pts.map(p=>p.y),minX=Math.min(...xs),maxX=Math.max(...xs),minY=Math.min(...ys),maxY=Math.max(...ys),width=maxX-minX,height=maxY-minY;if(width<45||height<20)return null;
+ const front=pts.filter(p=>p.x>=maxX-width*.08),frontSpan=Math.max(...front.map(p=>p.y))-Math.min(...front.map(p=>p.y)),sharpness=clamp(1-frontSpan/height,0,1),centreY=(minY+maxY)/2,top=pts.filter(p=>p.y<centreY).length/pts.length,balance=clamp(1-Math.abs(.5-top)*1.5,0,1),slender=clamp(1-Math.abs(width/height-2.7)/3.5,0,1),quality=clamp(.08+sharpness*.66+balance*.14+slender*.12,.1,1);
+ return{minX,maxX,minY,maxY,width,height,balance,slender,sharpness,quality,nose:sharpness>.65?'Pointed nose':sharpness<.3?'Flat nose':'Rounded nose'};
 }
 function drawMark(s,a){
  if(a.x<65||a.x>735||a.y<80||a.y>392||s.strokes.length>=5500)return;
  const previous=s.strokes.at(-1);s.strokes.push({x:a.x,y:a.y,colour:s.palette,start:a.type==='press'||!previous||previous.end});s.ink++;
 }
 export function gestureShot(a,origin={x:400,y:435}){
- const start=a.start||origin,dx=a.x-start.x,dy=a.y-start.y,ms=clamp(a.duration||400,80,1400),length=Math.hypot(dx,dy);
- if(length<12)return null;const speed=length/(ms/1000);
- return{dx,dy,speed,power:clamp(speed/1000,.22,1),spin:clamp(((a.bend||0)*.013+dx*.0008),-1,1)};
+ const start=a.start||origin,dx=a.x-start.x,dy=a.y-start.y,length=Math.hypot(dx,dy),ms=clamp(a.duration||400,90,1500);if(length<20)return null;
+ let bend=a.bend||0;const trace=(a.path||[]).filter(p=>Number.isFinite(p.x)&&Number.isFinite(p.y));
+ if(trace.length>2&&Math.abs(dy)>20){bend=0;for(const p of trace){const f=(p.y-start.y)/dy;if(f>.08&&f<.92){const n=p.x-(start.x+dx*f);if(Math.abs(n)>Math.abs(bend))bend=n;}}}
+ const speed=length/(ms/1000),spin=clamp(bend/Math.max(20,length*.12),-1,1);return{dx,dy,speed,power:clamp((speed-100)/1100,.15,1),spin,bend,trace:[{...start},...trace,{x:a.x,y:a.y}]};
 }
+function showSwipe(s,a,shot){s.swipeTrace=shot.trace;s.swipeUntil=s.time+1.8;s.shotPower=shot.power;s.shotSpin=shot.spin;s.feedbackUntil=s.time+4;}
+export function runnerObstacle(s,o){
+ if(s.engine==='buggy'){if(o.kind==='rock'||o.kind==='tower')return{x:o.x-o.w/2,y:412-o.h,w:o.w,h:o.h};return{x:o.x-o.w/2,y:412,w:o.w,h:20};}
+ return o.bad?{x:o.x-44,y:310,w:88,h:56}:{x:o.x-25,y:376,w:50,h:36};
+}
+export function runnerBounds(s){const lift=350-s.player.y,bottom=412-lift,height=s.ducking?38:74;return{x:151,y:bottom-height,w:38,h:height,bottom,lift};}
+
 export function actionUpgrade(s,a){
  const e=s.engine;if(!UPGRADED_GAMES.has(e))return false;
  const {x=400,y=250,type='press',direction=null}=a;
@@ -98,15 +105,15 @@ export function actionUpgrade(s,a){
   if(type==='press'&&y>=437){
    if(x<355){s.palette=clamp(Math.floor((x-45)/60),0,4);return true;}
    if(x<475){s.strokes=[];s.ink=0;s.phase='draw';s.distance=0;s.player={x:180,y:270,vy:0};return true;}
-   if(s.phase!=='draw')return true;
-   if(e==='plane'){const shape=analysePlane(s.strokes);if(!shape){say(s,'Draw a bigger plane inside the paper first.');return true;}s.design=shape;s.phase='ready';say(s,'Swipe up and across the paper to launch!');}
+   if(e==='plane'&&s.phase==='landed'){s.phase='ready';say(s,'Swipe up and right to throw again!');return true;}if(s.phase!=='draw')return true;
+   if(e==='plane'){const shape=analysePlane(s.strokes);if(!shape){say(s,'Draw a bigger plane inside the paper first.');return true;}s.design=shape;s.phase='ready';say(s,shape.nose+' · swipe up and right to throw!');}
    else if(s.ink>8){s.phase='animate';s.animatedAt=s.time;s.helloEvent=(s.helloEvent||0)+1;s.score=50;say(s,'Eee-ooo! Your Spelloid is alive!');}
    return true;
   }
   if(s.phase==='draw'&&['press','move'].includes(type))drawMark(s,a);
   if(type==='release'){
    if(s.phase==='draw')s.strokes.push({end:true});
-   if(e==='plane'&&s.phase==='ready'){const shot=gestureShot(a);if(shot){s.phase='flight';s.flightStart=s.time;s.launchPower=shot.power;s.player={x:170,y:280,vy:-90-shot.power*65};s.flightSpeed=210+shot.power*140;s.distance=0;s.maxFlight=7+s.design.quality*12+shot.power*6;say(s,'Off it goes!');}}
+   if(e==='plane'&&s.phase==='ready'){const shot=gestureShot(a);if(shot&&shot.dx>35&&shot.dy<-15){showSwipe(s,a,shot);s.phase='flight';s.flightStart=s.time;s.launchPower=shot.power;s.flightWind=s.random()*2-1;s.flutterSeed=s.random()*7;s.maxFlight=clamp(1.9+s.design.quality*3.3+shot.power*.9+(s.random()-.5)*.5,2.2,6.5);s.player={x:190,y:270,vy:0};s.flightSpeed=(150+shot.power*210)*(.42+.85*s.design.quality);s.flightAngle=-.2;s.distance=0;say(s,'Whoosh!');}else if(a.type==='release'&&Math.hypot((a.x||0)-(a.start?.x||a.x||0),(a.y||0)-(a.start?.y||a.y||0))>20)say(s,'Swipe towards the arrow: up and right!');}
   }return true;
  }
  if(type==='move'||type==='cancel')return true;
@@ -114,7 +121,7 @@ export function actionUpgrade(s,a){
  if(e==='dash'){
   // Touch jumps are dispatched on release, after the gesture is classified.
   if(direction==='down'){s.duckUntil=s.time+.85;return true;}
-  if(type==='press'&&s.player.y>=349){s.player.vy=-360;s.duckUntil=0;}return true;
+  if(type==='press'){if(s.player.y>=349){s.player.vy=-360;s.duckUntil=0;}else s.jumpQueuedUntil=s.time+.13;}return true;
  }
  if(e==='buggy'){if(type==='press'&&s.player.jumps<2){s.player.vy=s.player.jumps===0?-330:-305;s.player.jumps++;say(s,s.player.jumps===2?'Moon boost!':'Tap again for a moon boost');}return true;}
  if(e==='bubbles'&&type==='press'){
@@ -139,11 +146,11 @@ export function actionUpgrade(s,a){
  }
  if(e==='football'&&type==='release'&&!s.ball.flying){
   let shot=gestureShot(a);if(!shot&&a.keyboard)shot={dx:x-400,dy:-280,power:.7,spin:0};if(!shot||shot.dy>=-12){say(s,'Swipe upwards from the ball. Curve your swipe to curl!');return true;}
-  const seconds=.65+(1-shot.power)*.65,target=clamp(400+shot.dx*1.35,115,685);s.ball.vy=-320/seconds;s.ball.spin=shot.spin;s.ball.vx=(target-400-.5*shot.spin*170*seconds*seconds)/seconds;s.ball.flying=true;s.shotPower=shot.power;s.shots++;return true;
+  showSwipe(s,a,shot);const seconds=1.35-shot.power*.3;s.ball.vy=-320/seconds;s.ball.spin=shot.spin;s.ball.vx=clamp(shot.dx/Math.max(60,-shot.dy)*Math.abs(s.ball.vy)*.85,-300,300);s.ball.flying=true;s.shotPower=shot.power;s.shots++;return true;
  }
- if(e==='bowling'&&type==='release'&&Math.abs(s.ball.vy)<1){
+ if(e==='bowling'&&type==='release'&&s.rollPhase==='ready'){
   let shot=gestureShot(a,{x:400,y:440});if(!shot&&a.keyboard)shot={dx:x-400,dy:-300,power:.7,spin:0};if(!shot||shot.dy>=-12){say(s,'Swipe up the lane. A curved swipe adds spin.');return true;}
-  s.ball.vy=-310-shot.power*300;s.ball.vx=clamp(shot.dx/Math.max(90,-shot.dy)*Math.abs(s.ball.vy)*.65,-240,240);s.ball.spin=shot.spin;s.rackShots++;s.shots++;return true;
+  showSwipe(s,a,shot);s.ball.vy=-390-shot.power*500;s.ball.vx=clamp(shot.dx/Math.max(90,-shot.dy)*Math.abs(s.ball.vy)*.52,-320,320);s.ball.spin=shot.spin;s.ball.trail=[];s.rollPhase='rolling';s.rollAt=s.time;s.rackShots++;s.shots++;return true;
  }
  return true;
 }
@@ -156,30 +163,34 @@ export function bounceSegment(ball,a,b,r=20,kick=0){
  const dx=b.x-a.x,dy=b.y-a.y,t=clamp(((ball.x-a.x)*dx+(ball.y-a.y)*dy)/(dx*dx+dy*dy),0,1),q={x:a.x+t*dx,y:a.y+t*dy},dist=distance(ball,q);if(dist>=r)return false;
  let nx=(ball.x-q.x)/(dist||1),ny=(ball.y-q.y)/(dist||1);if(!dist){nx=0;ny=-1;}const dot=ball.vx*nx+ball.vy*ny;ball.x=q.x+nx*(r+.4);ball.y=q.y+ny*(r+.4);if(dot<0){ball.vx-=1.82*dot*nx;ball.vy-=1.82*dot*ny;if(kick)ball.vy=Math.min(ball.vy,-kick);}return true;
 }
+function drainPinball(s){
+ s.lives--;s.ballPhase='waiting';s.ball={x:620,y:385,vx:0,vy:0,hidden:true};if(s.lives<=0){lose(s,'Three balls played! Ready for another sparkling pinball game?');return;}s.ballNumber++;s.launchAt=s.time+.85;say(s,'Ball '+s.ballNumber+' of 3 · here it comes!');
+}
 function advancePinball(s,dt,input){
- const b=s.ball,flippers=flipperSegments(s,input),steps=Math.max(1,Math.ceil(dt/.007)),h=dt/steps;
+ if(s.ballPhase==='waiting'){if(s.time<s.launchAt)return;s.ballPhase='playing';s.ball={x:620,y:385,vx:-185,vy:-465};}
+ const b=s.ball,flippers=flipperSegments(s,input),steps=Math.max(1,Math.ceil(dt/.006)),h=dt/steps;
  for(let k=0;k<steps;k++){
   b.vy+=270*h;b.x+=b.vx*h;b.y+=b.vy*h;
+  // Once below the levers, the ball drains from any x; there is no hidden bouncing floor.
+  if(b.y>460){drainPinball(s);return;}
   if(b.x<125){b.x=125;b.vx=Math.abs(b.vx)*.92;}if(b.x>675){b.x=675;b.vx=-Math.abs(b.vx)*.92;}if(b.y<50){b.y=50;b.vy=Math.abs(b.vy);}
   for(const o of s.objects){const d=distance(b,o);if(d<o.r+12){const nx=(b.x-o.x)/(d||1),ny=(b.y-o.y)/(d||1);b.x=o.x+nx*(o.r+13);b.y=o.y+ny*(o.r+13);const force=320+Math.min(130,s.level*16);b.vx=nx*force;b.vy=ny*force;points(s,o.lit?5:15);o.lit=true;s.bumperHits++;}}
-  bounceSegment(b,{x:125,y:340},{x:205,y:402},20);bounceSegment(b,{x:675,y:340},{x:595,y:402},20);
-  for(const f of flippers)bounceSegment(b,f.a,f.b,22,f.active?460:0);
-  if(b.y>450&&(b.x<355||b.x>445)){b.y=450;b.vy=-Math.max(180,Math.abs(b.vy)*.82);b.vx+=(400-b.x)*.25;}
+  bounceSegment(b,{x:125,y:340},{x:205,y:402},20);bounceSegment(b,{x:675,y:340},{x:595,y:402},20);for(const f of flippers)bounceSegment(b,f.a,f.b,22,f.active?460:0);
   const speed=Math.hypot(b.vx,b.vy);if(speed>650){b.vx*=650/speed;b.vy*=650/speed;}
-  if(b.y>525){if(!s.saverUsed&&s.time<s.saverUntil){s.saverUsed=true;s.ball={x:400,y:330,vx:20,vy:-260};say(s,'Ball saved!');return;}lose(s,'A sparkling run! Try another table.');return;}
  }
- if(s.objects.every(o=>o.lit)||s.bumperHits>=10){s.level++;points(s,100);pinballTable(s);say(s,'Table '+s.level+' · new bumpers and a bonus!');}s.avatar={x:66,y:405};
+ if(s.objects.every(o=>o.lit)){s.level++;points(s,100);pinballTable(s);say(s,'All targets lit! Table '+s.level+'!');}s.avatar={x:66,y:405};
 }
 function stepRunner(s,dt,input){
- const p=s.player,buggy=s.engine==='buggy',speed=(buggy?180:190)+Math.min(buggy?135:160,s.time*1.8),gravity=buggy?610:900;
- s.level=1+Math.floor(s.time/20);s.camera+=speed*dt;p.vy+=gravity*dt;p.y+=p.vy*dt;if(p.y>=350){p.y=350;p.vy=0;p.jumps=0;}
+ const p=s.player,buggy=s.engine==='buggy',speed=(buggy?180:185)+Math.min(buggy?135:140,s.time*1.65),gravity=buggy?610:900;
+ s.level=1+Math.floor(s.time/20);s.camera+=speed*dt;p.vy+=gravity*dt;p.y+=p.vy*dt;if(p.y>=350){p.y=350;p.vy=0;p.jumps=0;if(!buggy&&s.jumpQueuedUntil>s.time){p.vy=-360;s.jumpQueuedUntil=0;}}
  if(input.down&&!buggy)s.duckUntil=s.time+.18;s.ducking=!buggy&&s.duckUntil>s.time;s.avatar={x:170,y:p.y+(buggy?-8:30)};s.spawn-=dt;
- if(s.spawn<=0){s.spawn=(buggy?1.9:1.65)+s.random()*.65;s.objects.push({x:870,w:buggy?72+Math.min(40,s.level*4):55,bad:!buggy&&s.random()<.42,passed:false});}
- for(const o of s.objects){o.x-=speed*dt;
-  // Only tyres over the open centre count; the generous lip is visible in the drawing.
-  const horizontal=Math.abs(o.x-170)<(buggy?o.w/2-7:29),hit=buggy?p.y>323:o.bad?!s.ducking&&p.y>275:p.y>299;
-  if(horizontal&&hit){lose(s,buggy?'A moon bump! Jump a little earlier, then tap for a second boost.':'A woodland wobble. Jump logs or swipe down under branches!');return;}
-  if(o.x+(o.w||55)/2<125&&!o.passed){o.passed=true;points(s,10);}
+ if(s.spawn<=0){s.spawn=(buggy?2.35:1.9)+s.random()*.65;const n=s.runnerSpawn=(s.runnerSpawn||0)+1,kind=buggy?(n%4===3?'tower':n%2===0?'rock':'crater'):'obstacle';s.objects.push({x:870,kind,w:buggy?(kind==='tower'?46:kind==='rock'?54:76+Math.min(36,s.level*4)):50,h:kind==='tower'?130+Math.min(8,s.level):48,bad:!buggy&&s.random()<.42,passed:false});if(kind==='tower')say(s,'Tall moon rocks need two taps!');}
+ const body=runnerBounds(s);s.runnerBox=body;
+ for(const o of s.objects){o.x-=speed*dt;const box=runnerObstacle(s,o);let hit=false;
+  if(buggy){const near=Math.abs(o.x-170)<(o.kind==='crater'||!o.kind?o.w/2-8:o.w/2+25);hit=near&&(o.kind==='rock'||o.kind==='tower'?body.lift<o.h-8:body.lift<23);}
+  else{const near=body.x+body.w-8>box.x&&body.x+8<box.x+box.w;hit=near&&body.bottom>box.y+8&&body.y<box.y+box.h-8;}
+  if(hit){lose(s,buggy?'Moon bump! One tap for a hop, two taps for tall rocks.':'A woodland wobble. Try an earlier hop, or duck below the branch.');return;}
+  if(o.x+(o.w||50)/2<125&&!o.passed){o.passed=true;points(s,10);}
  }s.objects=s.objects.filter(o=>o.x>-100);
 }
 function stepJelly(s,dt,input){
@@ -192,13 +203,30 @@ function stepJelly(s,dt,input){
  }if(s.objects.every(o=>!o.alive)){s.level++;points(s,75);jellyLevel(s);}
 }
 function stepBowling(s,dt){
- const b=s.ball;s.avatar={x:95,y:410};if(!b.vy)return;
- b.vx+=(b.spin||0)*95*dt;b.x+=b.vx*dt;b.y+=b.vy*dt;
- const newly=[];for(const o of s.objects)if(o.alive&&distance(b,o)<32){o.alive=false;o.vx=b.vx+(o.x-b.x)*7;o.vy=b.vy*.6;newly.push(o);points(s,10);}
- // Pin-to-pin collisions propagate deterministically: a well aimed pocket shot can strike.
- for(let i=0;i<newly.length;i++){const o=newly[i];for(const n of s.objects)if(n.alive&&n.y<o.y+10&&distance(n,o)<72){n.alive=false;n.vx=o.vx+(n.x-o.x)*5;n.vy=-210;newly.push(n);points(s,10);}}
- for(const o of s.objects)if(!o.alive){o.x+=(o.vx||0)*dt;o.y+=(o.vy||0)*dt;o.vx*=Math.exp(-dt*3);o.vy*=Math.exp(-dt*3);}
- if(b.y<-45||b.x<70||b.x>730){if(s.objects.every(o=>!o.alive)){const strike=s.rackShots===1;points(s,strike?100:30);s.level++;bowlingRack(s);say(s,strike?'STRIKE! A new pin formation!':'Lane cleared! Try the next formation.');}else{s.ball={x:400,y:440,vx:0,vy:0,spin:0};say(s,'Curve your swipe to reach the remaining pins.');}}
+ const b=s.ball;s.avatar={x:90,y:423};if(s.rollPhase==='ready')return;
+ const steps=Math.max(1,Math.ceil(dt/.004)),h=dt/steps;
+ for(let n=0;n<steps;n++){
+  if(s.rollPhase==='rolling'){
+   const progress=clamp((1120-b.y)/1000,0,1);b.vx+=(b.spin||0)*290*(.15+.85*progress*progress)*h;b.x+=b.vx*h;b.y+=b.vy*h;b.vx*=Math.exp(-h*.07);b.vy*=Math.exp(-h*.1);
+   if(b.x<216||b.x>584){s.rollPhase='gutter';s.rollEnd=s.time+1.3;say(s,'Into the gutter. Try a straighter or gentler curl.');}
+   if(b.y<70){s.rollPhase='settling';s.rollEnd=s.time+1.3;}
+  }
+  if(s.rollPhase==='gutter')b.y-=330*h;
+  for(const pin of s.objects){pin.x+=pin.vx*h;pin.y+=pin.vy*h;pin.angle+=(pin.vx*.006+pin.vy*.001)*h;pin.vx*=Math.exp(-h*1.65);pin.vy*=Math.exp(-h*1.65);
+   if(s.rollPhase==='rolling'){
+    const d=distance(b,pin),reach=27;if(d<reach&&d>0){const nx=(pin.x-b.x)/d,ny=(pin.y-b.y)/d,relative=(pin.vx-b.vx)*nx+(pin.vy-b.vy)*ny;
+     if(relative<0){const impulse=-(1+.55)*relative/(1/5+1);pin.vx+=impulse*nx;pin.vy+=impulse*ny;b.vx-=impulse*nx/5;b.vy-=impulse*ny/5;pin.x=b.x+nx*(reach+.2);pin.y=b.y+ny*(reach+.2);}
+    }
+   }
+  }
+  for(let i=0;i<s.objects.length;i++)for(let j=i+1;j<s.objects.length;j++){
+   const a=s.objects[i],z=s.objects[j],d=distance(a,z);if(d>0&&d<26){const nx=(z.x-a.x)/d,ny=(z.y-a.y)/d,closing=(z.vx-a.vx)*nx+(z.vy-a.vy)*ny;if(closing<0){const impulse=-closing*.74;a.vx-=impulse*nx;a.vy-=impulse*ny;z.vx+=impulse*nx;z.vy+=impulse*ny;}const overlap=(26-d)/2+.01;a.x-=nx*overlap;a.y-=ny*overlap;z.x+=nx*overlap;z.y+=ny*overlap;}
+  }
+  for(const pin of s.objects)if(pin.alive&&Math.hypot(pin.vx,pin.vy)>125){pin.alive=false;points(s,10);}
+ }
+ b.trail??=[];if(s.rollPhase!=='ready'){b.trail.push({x:b.x,y:b.y});if(b.trail.length>32)b.trail.shift();}
+ if(s.time-s.rollAt>5&&s.rollPhase==='rolling'){s.rollPhase='settling';s.rollEnd=s.time+.7;}
+ if(s.rollPhase!=='rolling'&&s.time>=s.rollEnd){if(s.objects.every(o=>!o.alive)){const strike=s.rackShots===1;points(s,strike?100:30);s.level++;bowlingRack(s);say(s,strike?'STRIKE! Try a new pin formation!':'Lane cleared! A fresh formation.');}else{s.rollPhase='ready';s.ball={x:400,y:1120,vx:0,vy:0,spin:0,trail:[]};say(s,'Aim for the remaining pins. Curve your swipe to hook.');}}
 }
 function stepGolf(s,dt){
  const b=s.ball;s.avatar={x:65,y:420};const steps=Math.max(1,Math.ceil(dt/.006));
@@ -212,16 +240,18 @@ function stepGolf(s,dt){
 function stepFootball(s,dt){
  const b=s.ball;s.avatar={x:95,y:420};s.keeper=400+Math.sin(s.time*(1.05+Math.min(2,s.level*.15)))*Math.min(230,130+s.level*15);
  if(!b.flying)return;b.trail.push({x:b.x,y:b.y});if(b.trail.length>18)b.trail.shift();const steps=Math.max(1,Math.ceil(dt/.006));
- for(let i=0;i<steps;i++){const h=dt/steps,previousY=b.y;b.vx+=(b.spin||0)*170*h;b.x+=b.vx*h;b.y+=b.vy*h;
+ for(let i=0;i<steps;i++){const h=dt/steps,previousY=b.y;b.vx+=(b.spin||0)*420*h;b.x+=b.vx*h;b.y+=b.vy*h;
   if(s.objects.some(o=>overlaps(b,o,14))||previousY>=161&&b.y<161&&Math.abs(b.x-s.keeper)<43){footballLevel(s);say(s,'Saved! Try curling around the defender or keeper.');return;}
   if(b.y<118){const goal=b.x>130&&b.x<670;if(goal){points(s,20);if(Math.abs(b.x-s.starTarget.x)<s.starTarget.r+12){points(s,80);s.level++;footballLevel(s);say(s,'GOAL + STAR! Level '+s.level+'!');}else{footballLevel(s);say(s,'GOAL! Now aim for the star to unlock the next level.');}}else{footballLevel(s);say(s,'Just wide! Try a gentler swipe.');}return;}
  }
 }
 function stepCreative(s,dt){
  if(s.engine==='plane'&&s.phase==='flight'){
-  s.distance+=s.flightSpeed*dt/12;s.camera+=s.flightSpeed*dt;s.flightSpeed=Math.max(100,s.flightSpeed-dt*(4+(1-s.design.quality)*5));const age=s.time-s.flightStart;
-  s.player.y=280-110*Math.sin(Math.min(1,age/s.maxFlight)*Math.PI)+Math.pow(age/s.maxFlight,5)*210;s.avatar={x:720,y:420};s.score=Math.floor(s.distance);
-  if(age>s.maxFlight||s.player.y>438){s.phase='landed';s.score=Math.floor(s.distance);say(s,Math.round(s.distance)+' metres! Clear the paper to try a new design.');}
+  const quality=s.design.quality,age=s.time-s.flightStart,u=clamp(age/s.maxFlight,0,1),lastY=s.player.y,flutter=(1-quality)*27+5;
+  s.flightSpeed*=Math.exp(-dt*(.04+(1-quality)*.3));s.distance+=s.flightSpeed*dt/10;s.camera+=s.flightSpeed*dt;
+  s.player.y=270-(70+quality*38)*Math.sin(u*Math.PI)+Math.pow(u,3)*185+Math.sin(age*(4+s.flutterSeed*.12)+s.flutterSeed)*flutter*Math.sin(u*Math.PI)+Math.sin(age*1.6)*s.flightWind*18;
+  s.flightAngle=clamp(Math.atan2((s.player.y-lastY)/Math.max(dt,.001),s.flightSpeed)*.65,-.55,.9);s.score=Math.max(Math.floor(s.distance),s.bestFlight||0);
+  if(age>=s.maxFlight||s.player.y>435){s.phase='landed';s.bestFlight=Math.max(Math.floor(s.distance),s.bestFlight||0);s.score=s.bestFlight;say(s,Math.round(s.distance)+' metres · '+s.design.nose.toLowerCase()+'! Try a new design or fly again.');}
  }
 }
 export function stepUpgrade(s,dt,input={}){

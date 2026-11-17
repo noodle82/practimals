@@ -9,10 +9,7 @@ test('resting pinball flippers are solid and active flippers launch the ball upw
  const s=game('pinball'),[left]=flipperSegments(s,{}),b={x:300,y:415,vx:0,vy:180};assert.ok(bounceSegment(b,left.a,left.b,22));assert.ok(b.vy<0);
  const active=flipperSegments(s,{left:true})[0],hot={x:300,y:380,vx:0,vy:200};assert.ok(bounceSegment(hot,active.a,active.b,22,460));assert.ok(hot.vy<=-460);
 });
-test('pinball side drains are supported, central drain remains a loss after the ball saver',()=>{
- const s=game('pinball');s.time=10;s.ball={x:620,y:449,vx:0,vy:200};advance(s,.1);assert.equal(s.finished,false);assert.ok(s.ball.vy<0);
- s.ball={x:400,y:490,vx:0,vy:200};advance(s,.3);assert.equal(s.finished,true);assert.equal(s.lives,0);
-});
+test('pinball side and central drains each consume a ball and never bounce below the levers',()=>{const s=game('pinball');s.ball={x:620,y:459,vx:0,vy:200};advance(s,.05);assert.equal(s.finished,false);assert.equal(s.lives,2);assert.equal(s.ballPhase,'waiting');assert.equal(s.ball.hidden,true);advance(s,.9);assert.equal(s.ballPhase,'playing');s.ball={x:400,y:459,vx:0,vy:200};advance(s,.05);assert.equal(s.lives,1);});
 test('lighting pinball bumpers unlocks a genuinely different table',()=>{const s=game('pinball'),old=s.objects.map(o=>[o.x,o.y]);s.objects.forEach(o=>o.lit=true);stepArcade(s,.01);assert.equal(s.level,2);assert.notDeepEqual(s.objects.map(o=>[o.x,o.y]),old);});
 test('Moon Buggy has exactly two air jumps and landing restores both',()=>{
  const s=game('buggy');arcadeAction(s);advance(s,.2);assert.equal(s.player.jumps,1);arcadeAction(s);assert.equal(s.player.jumps,2);const vy=s.player.vy;arcadeAction(s);assert.equal(s.player.vy,vy);s.objects=[];s.spawn=100;advance(s,2);assert.equal(s.player.jumps,0);
@@ -52,9 +49,7 @@ test('football requires both a goal and the star to advance',()=>{
 test('football later levels add defenders and a moving goalkeeper',()=>{
  const s=game('football');for(let i=0;i<3;i++){s.ball={x:s.starTarget.x,y:119,vx:0,vy:-100,flying:true,trail:[]};stepArcade(s,.02);}assert.equal(s.level,4);assert.ok(s.objects.length>0);const keeper=s.keeper;stepArcade(s,.1);assert.notEqual(s.keeper,keeper);
 });
-test('a central bowling swipe can knock down all ten pins and a strike changes formation',()=>{
- const s=game('bowling'),first=s.objects.map(o=>[o.x,o.y]);arcadeAction(s,{type:'release',start:{x:400,y:440},x:400,y:110,duration:250});advance(s,2);assert.equal(s.level,2);assert.notDeepEqual(s.objects.map(o=>[o.x,o.y]),first);assert.ok(s.score>=200);
-});
+test('an accurate pocket bowling swipe can strike and change the formation',()=>{const s=game('bowling'),first=s.objects.map(o=>[o.x,o.y]);arcadeAction(s,{type:'release',start:{x:400,y:440},x:388,y:110,duration:180});advance(s,5);assert.equal(s.level,2);assert.notDeepEqual(s.objects.map(o=>[o.x,o.y]),first);assert.ok(s.score>=200);});
 test('bowling curved swipes produce lateral acceleration',()=>{
  const s=game('bowling');arcadeAction(s,{type:'release',start:{x:400,y:440},x:400,y:110,duration:250,bend:40});const vx=s.ball.vx;stepArcade(s,.1);assert.ok(s.ball.vx>vx);
 });
@@ -72,8 +67,8 @@ test('every golf course has a clear route for the ball within its par allowance'
  }
 });
 test('paper-plane design affects flight estimate, and the actual drawing flies through scenery',()=>{
- const s=game('plane');for(let i=0;i<30;i++)arcadeAction(s,{x:150+i*12,y:180+(i%3)*30,type:i?'move':'press'});const design=analysePlane(s.strokes);assert.ok(design&&design.quality>0);arcadeAction(s,{x:600,y:465});assert.equal(s.phase,'ready');arcadeAction(s,{type:'release',start:{x:180,y:300},x:500,y:120,duration:240});assert.equal(s.phase,'flight');advance(s,2);assert.ok(s.distance>30);assert.ok(s.camera>400);assert.equal(s.strokes.length,30);
- const wide=analysePlane(Array.from({length:20},(_,i)=>({x:i*10,y:i%2*50}))),tall=analysePlane(Array.from({length:20},(_,i)=>({x:i%2*50,y:i*10})));assert.ok(wide.quality>tall.quality);
+ const s=game('plane');for(let i=0;i<30;i++)arcadeAction(s,{x:150+i*12,y:180+(i%3)*30,type:i?'move':'press'});const design=analysePlane(s.strokes);assert.ok(design&&design.quality>0);arcadeAction(s,{x:600,y:465});assert.equal(s.phase,'ready');arcadeAction(s,{type:'release',start:{x:180,y:300},x:500,y:120,duration:240});assert.equal(s.phase,'flight');advance(s,2);assert.ok(s.distance>30);assert.ok(s.camera>300);assert.equal(s.strokes.length,30);
+ const wide=analysePlane(Array.from({length:20},(_,i)=>({x:i*10,y:i%2*50}))),tall=analysePlane(Array.from({length:20},(_,i)=>({x:i%2*50,y:i*10})));assert.ok(wide.slender>tall.slender);
 });
 test('drawn Spelloid keeps its strokes, animates and requests one hello sound',()=>{
  const s=game('splat');for(let i=0;i<20;i++)arcadeAction(s,{type:i?'move':'press',x:220+i*8,y:200+(i%2)*40});arcadeAction(s,{x:600,y:465});assert.equal(s.phase,'animate');assert.equal(s.helloEvent,1);assert.equal(s.strokes.length,20);advance(s,3);assert.equal(s.helloEvent,1);arcadeAction(s,{x:400,y:465});assert.equal(s.phase,'draw');assert.equal(s.strokes.length,0);

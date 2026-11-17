@@ -9,8 +9,8 @@ test('resting pinball flippers are solid and active flippers launch the ball upw
  const s=game('pinball'),[left]=flipperSegments(s,{}),b={x:300,y:415,vx:0,vy:180};assert.ok(bounceSegment(b,left.a,left.b,22));assert.ok(b.vy<0);
  const active=flipperSegments(s,{left:true})[0],hot={x:300,y:380,vx:0,vy:200};assert.ok(bounceSegment(hot,active.a,active.b,22,460));assert.ok(hot.vy<=-460);
 });
-test('pinball side and central drains each consume a ball and never bounce below the levers',()=>{const s=game('pinball');s.ball={x:620,y:459,vx:0,vy:200};advance(s,.05);assert.equal(s.finished,false);assert.equal(s.lives,2);assert.equal(s.ballPhase,'waiting');assert.equal(s.ball.hidden,true);advance(s,.9);assert.equal(s.ballPhase,'playing');s.ball={x:400,y:459,vx:0,vy:200};advance(s,.05);assert.equal(s.lives,1);});
-test('lighting pinball bumpers unlocks a genuinely different table',()=>{const s=game('pinball'),old=s.objects.map(o=>[o.x,o.y]);s.objects.forEach(o=>o.lit=true);stepArcade(s,.01);assert.equal(s.level,2);assert.notDeepEqual(s.objects.map(o=>[o.x,o.y]),old);});
+test('pinball side and central drains each consume a ball and never bounce below the levers',()=>{const s=game('pinball');s.ballPhase='playing';s.ball={x:620,y:459,vx:0,vy:200};advance(s,.05);assert.equal(s.finished,false);assert.equal(s.lives,2);assert.equal(s.ballPhase,'waiting');assert.equal(s.ball.hidden,true);advance(s,.9);assert.equal(s.ballPhase,'ready');s.ballPhase='playing';s.ball={x:400,y:459,vx:0,vy:200};advance(s,.05);assert.equal(s.lives,1);});
+test('lighting pinball bumpers unlocks a genuinely different table',()=>{const s=game('pinball'),old=s.objects.map(o=>[o.x,o.y]);s.objects.forEach(o=>o.lit=true);s.ballPhase='playing';stepArcade(s,.01);assert.equal(s.level,2);assert.notDeepEqual(s.objects.map(o=>[o.x,o.y]),old);});
 test('Moon Buggy has exactly two air jumps and landing restores both',()=>{
  const s=game('buggy');arcadeAction(s);advance(s,.2);assert.equal(s.player.jumps,1);arcadeAction(s);assert.equal(s.player.jumps,2);const vy=s.player.vy;arcadeAction(s);assert.equal(s.player.vy,vy);s.objects=[];s.spawn=100;advance(s,2);assert.equal(s.player.jumps,0);
 });
@@ -41,7 +41,7 @@ test('Spelloid Snap offers paired identities and multiple grid sizes, retaining 
 });
 test('matching every Spelloid grows the grid without awarding spelling progress',()=>{const s=game('snap');for(const identity of new Set(s.objects.map(o=>o.identity))){for(const o of s.objects.filter(o=>o.identity===identity))arcadeAction(s,{x:o.x+5,y:o.y+5});advance(s,.9);}assert.equal(s.level,2);assert.equal(s.objects.length,12);assert.ok(!('week'in s));});
 test('swipe duration controls power while bend controls curl independently',()=>{
- const base={x:440,y:160,start:{x:400,y:435}},fast=gestureShot({...base,duration:160}),slow=gestureShot({...base,duration:900}),curve=gestureShot({...base,duration:160,bend:50});assert.ok(fast.power>slow.power);assert.ok(curve.spin>fast.spin);assert.equal(curve.power,fast.power);
+ const base={x:440,y:160,start:{x:400,y:435}},fast=gestureShot({...base,duration:160}),slow=gestureShot({...base,duration:900}),curve=gestureShot({...base,duration:160,bend:50});assert.ok(fast.power>slow.power);assert.ok(curve.spin<fast.spin);assert.equal(curve.power,fast.power);
 });
 test('football requires both a goal and the star to advance',()=>{
  const s=game('football');s.ball={x:600,y:119,vx:0,vy:-100,flying:true,trail:[]};stepArcade(s,.02);assert.equal(s.level,1);assert.ok(s.score>0);s.ball={x:s.starTarget.x,y:119,vx:0,vy:-100,flying:true,trail:[]};stepArcade(s,.02);assert.equal(s.level,2);
@@ -51,7 +51,7 @@ test('football later levels add defenders and a moving goalkeeper',()=>{
 });
 test('an accurate pocket bowling swipe can strike and change the formation',()=>{const s=game('bowling'),first=s.objects.map(o=>[o.x,o.y]);arcadeAction(s,{type:'release',start:{x:400,y:440},x:388,y:110,duration:180});advance(s,5);assert.equal(s.level,2);assert.notDeepEqual(s.objects.map(o=>[o.x,o.y]),first);assert.ok(s.score>=200);});
 test('bowling curved swipes produce lateral acceleration',()=>{
- const s=game('bowling');arcadeAction(s,{type:'release',start:{x:400,y:440},x:400,y:110,duration:250,bend:40});const vx=s.ball.vx;stepArcade(s,.1);assert.ok(s.ball.vx>vx);
+ const s=game('bowling');arcadeAction(s,{type:'release',start:{x:400,y:440},x:400,y:110,duration:250,bend:40});const vx=s.ball.vx;stepArcade(s,.1);assert.ok(s.ball.vx<vx);
 });
 test('six golf courses differ and par remains necessary before advancing',()=>{
  const s=game('golf'),layouts=[];for(let level=1;level<=6;level++){s.level=level;golfCourse(s);layouts.push(JSON.stringify({goal:s.goal,walls:s.objects}));}assert.equal(new Set(layouts).size,6);

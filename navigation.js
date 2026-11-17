@@ -30,7 +30,16 @@ export function landOnPractice(){
  });
 }
 export function landOnSpelloid(){landAt(document.querySelector('.pledge-card')||document.querySelector('.pal-layout'));}
-export function launchIntro(){if(new URLSearchParams(location.search).get('skipIntro')==='1')return;const reduced=globalThis.matchMedia?.('(prefers-reduced-motion: reduce)').matches,overlay=document.createElement('div');overlay.className='launch-intro';overlay.setAttribute('role','dialog');overlay.setAttribute('aria-label','Welcome to Spelloids');overlay.innerHTML='<div class="intro-brand"><img src="brand-mark.svg" alt="A friendly Spelloid"><h1>Spelloids</h1><p>Little practice. Big confidence.</p></div><button class="intro-skip">Let’s play →</button>';document.body.append(overlay);const app=document.querySelector('#app');if(app)app.inert=true;let closed=false,timer;const close=()=>{if(closed)return;closed=true;clearTimeout(timer);overlay.classList.add('leaving');if(app)app.inert=false;setTimeout(()=>overlay.remove(),reduced?0:900);};overlay.querySelector('button').onclick=close;timer=setTimeout(close,reduced?500:2700);}
+export function launchIntro(){
+ const overlay=document.getElementById('launch-intro');if(!overlay)return;
+ if(new URLSearchParams(location.search).get('skipIntro')==='1'){overlay.remove();return;}
+ const reduced=globalThis.matchMedia?.('(prefers-reduced-motion: reduce)').matches,app=document.querySelector('#app');
+ if(app)app.inert=true;let closed=false,timer;const close=()=>{if(closed)return;closed=true;clearTimeout(timer);overlay.classList.add('leaving');if(app)app.inert=false;setTimeout(()=>overlay.remove(),reduced?0:900);};
+ overlay.querySelector('button').onclick=close;
+ const image=overlay.querySelector('img'),imageReady=image.decode?image.decode().catch(()=>{}):Promise.resolve();
+ Promise.race([Promise.all([document.fonts?.ready,imageReady]),new Promise(r=>setTimeout(r,1500))]).then(()=>{if(closed)return;overlay.classList.add('intro-ready');timer=setTimeout(close,reduced?500:2700);});
+}
+
 
 let watchingDenViewport=false;
 export function landOnDenGame(){

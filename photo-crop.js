@@ -10,14 +10,47 @@ export function normalisePhotoLighting(image,width,height){
  for(let y=0;y<height;y++){const top=Math.max(0,y-radius),bottom=Math.min(height,y+radius+1);for(let x=0;x<width;x++){const left=Math.max(0,x-radius),right=Math.min(width,x+radius+1),mean=(integral[bottom*stride+right]-integral[top*stride+right]-integral[bottom*stride+left]+integral[top*stride+left])/((right-left)*(bottom-top)),i=y*width+x,j=i*4,v=Math.max(0,Math.min(255,(grey[i]/Math.max(1,mean)-.4)*425));image[j]=image[j+1]=image[j+2]=v;image[j+3]=255;}}
  return image;
 }
-export function cropPhoto(source,crop,{legacy=false}={}){
+// Estimate the paper behind the letters with a separable maximum filter.
+// Unlike a fixed brightness threshold, this keeps shaded paper light without losing ink.
+export function normalisePhotoPaper(image,width,height){
+ const grey=new Uint8Array(width*height),horizontal=new Uint8Array(grey.length),paper=new Uint8Array(grey.length),radius=Math.max(5,Math.round(width*.025)),queue=new Int32Array(Math.max(width,height));
+ for(let i=0;i<grey.length;i++)grey[i]=Math.round(image[i*4]*.299+image[i*4+1]*.587+image[i*4+2]*.114);
+ for(let y=0;y<height;y++){let head=0,tail=0,right=-1;for(let x=0;x<width;x++){const limit=Math.min(width-1,x+radius);while(right<limit){right++;while(tail>head&&grey[y*width+queue[tail-1]]<=grey[y*width+right])tail--;queue[tail++]=right;}while(queue[head]<x-radius)head++;horizontal[y*width+x]=grey[y*width+queue[head]];}}
+ for(let x=0;x<width;x++){let head=0,tail=0,bottom=-1;for(let y=0;y<height;y++){const limit=Math.min(height-1,y+radius);while(bottom<limit){bottom++;while(tail>head&&horizontal[queue[tail-1]*width+x]<=horizontal[bottom*width+x])tail--;queue[tail++]=bottom;}while(queue[head]<y-radius)head++;paper[y*width+x]=horizontal[queue[head]*width+x];}}
+ for(let i=0;i<grey.length;i++){const v=Math.max(0,Math.min(255,(grey[i]/Math.max(1,paper[i])-.25)*365));image[i*4]=image[i*4+1]=image[i*4+2]=v;image[i*4+3]=255;}
+ return image;
+}
+export function removePhotoRules(image,width,height){
+ const rows=[],columns=[];
+ for(let y=0;y<height;y++){let count=0;for(let x=0;x<width;x++)if(image[(y*width+x)*4]<130)count++;if(count>width*.7)rows.push(y);}
+ for(let x=0;x<width;x++){let count=0;for(let y=0;y<height;y++)if(image[(y*width+x)*4]<130)count++;if(count>height*.75)columns.push(x);}
+ const white=(x,y)=>{const j=(y*width+x)*4;image[j]=image[j+1]=image[j+2]=255;};
+ for(const y of rows)for(let x=0;x<width;x++)for(let dy=-1;dy<=1;dy++)if(y+dy>=0&&y+dy<height)white(x,y+dy);
+ for(const x of columns)for(let y=0;y<height;y++)for(let dx=-1;dx<=1;dx++)if(x+dx>=0&&x+dx<width)white(x+dx,y);
+ // Table borders can be slightly slanted. Remove only connected marks spanning
+ // nearly the entire crop with the proportions of a thin rule, not word shapes.
+ const visited=new Uint8Array(width*height),queue=new Int32Array(width*height);
+ for(let i=0;i<visited.length;i++){
+  if(visited[i]||image[i*4]>=160)continue;let head=0,tail=1,minX=i%width,maxX=minX,minY=Math.floor(i/width),maxY=minY;queue[0]=i;visited[i]=1;
+  while(head<tail){const p=queue[head++],x=p%width,y=Math.floor(p/width);minX=Math.min(minX,x);maxX=Math.max(maxX,x);minY=Math.min(minY,y);maxY=Math.max(maxY,y);for(const q of[p-width,p+width,...(x?[p-1]:[]),...(x<width-1?[p+1]:[])])if(q>=0&&q<visited.length&&!visited[q]&&image[q*4]<160){visited[q]=1;queue[tail++]=q;}}
+  const w=maxX-minX+1,h=maxY-minY+1;
+  if(w>width*.75&&h<height*.03&&w/h>12||h>height*.8&&w<width*.03&&h/w>12)for(let n=0;n<tail;n++){const p=queue[n],x=p%width,y=Math.floor(p/width);for(let dy=-1;dy<=1;dy++)for(let dx=-1;dx<=1;dx++)if(x+dx>=0&&x+dx<width&&y+dy>=0&&y+dy<height)white(x+dx,y+dy);}
+ }
+ return image;
+}
+export function cropPhoto(source,crop,{legacy=false,variant='paper'}={}){
  if(legacy)return legacyPhotoCrop(source,crop);
  const c=clampCrop(crop),sw=Math.max(1,source.width*c.w),sh=Math.max(1,source.height*c.h),scale=Math.min(3,2800/sh,1800/sw),width=Math.max(1,Math.round(sw*scale)),height=Math.max(1,Math.round(sh*scale)),padding=Math.max(16,Math.round(Math.min(width,height)*.025)),out=document.createElement('canvas');
  out.width=width+padding*2;out.height=height+padding*2;const ctx=out.getContext('2d');ctx.fillStyle='white';ctx.fillRect(0,0,out.width,out.height);ctx.drawImage(source,c.x*source.width,c.y*source.height,sw,sh,padding,padding,width,height);
- const image=ctx.getImageData(padding,padding,width,height);normalisePhotoLighting(image.data,width,height);ctx.putImageData(image,padding,padding);return out;
+ const image=ctx.getImageData(padding,padding,width,height);
+ if(variant==='paper'){normalisePhotoPaper(image.data,width,height);removePhotoRules(image.data,width,height);}
+ else if(variant==='adaptive')normalisePhotoLighting(image.data,width,height);
+ // The original pixels are useful when filtering removes thin strokes or punctuation.
+ ctx.putImageData(image,padding,padding);return out;
 }
 
 export function bindPhotoCrop(stage,initial,onChange){let crop=clampCrop(initial),drag=null;const box=stage.querySelector('.photo-crop-box'),ranges=[...stage.parentElement.querySelectorAll('[data-crop-range]')];const paint=()=>{box.style.left=crop.x*100+'%';box.style.top=crop.y*100+'%';box.style.width=crop.w*100+'%';box.style.height=crop.h*100+'%';for(const input of ranges)input.value=Math.round(crop[input.dataset.cropRange]*100);};for(const input of ranges)input.oninput=()=>{const key=input.dataset.cropRange,v=Number(input.value)/100;crop=clampCrop({...crop,[key]:v});onChange({...crop});paint();};box.onpointerdown=e=>{if(e.button!==0)return;e.preventDefault();box.setPointerCapture(e.pointerId);drag={x:e.clientX,y:e.clientY,rect:stage.getBoundingClientRect(),crop:{...crop},resize:!!e.target.closest('[data-crop-handle]')};};box.onpointermove=e=>{if(!drag)return;e.preventDefault();const dx=(e.clientX-drag.x)/drag.rect.width,dy=(e.clientY-drag.y)/drag.rect.height;crop=drag.resize?clampCrop({...drag.crop,w:Math.min(1-drag.crop.x,drag.crop.w+dx),h:Math.min(1-drag.crop.y,drag.crop.h+dy)}):clampCrop({...drag.crop,x:drag.crop.x+dx,y:drag.crop.y+dy});paint();};box.onpointerup=()=>{if(drag)onChange({...crop});drag=null;};box.onpointercancel=()=>drag=null;paint();}
 
 // Retained only as a second pass for small/faint photos that the new filter cannot read.
 function legacyPhotoCrop(source,crop){const c=clampCrop(crop),sw=Math.max(1,source.width*c.w),sh=Math.max(1,source.height*c.h),scale=Math.min(4,3600/sh,2200/sw),out=document.createElement('canvas');out.width=Math.round(sw*scale);out.height=Math.round(sh*scale);const ctx=out.getContext('2d');ctx.fillStyle='white';ctx.fillRect(0,0,out.width,out.height);ctx.drawImage(source,c.x*source.width,c.y*source.height,sw,sh,0,0,out.width,out.height);const img=ctx.getImageData(0,0,out.width,out.height);for(let i=0;i<img.data.length;i+=4){const grey=img.data[i]*.299+img.data[i+1]*.587+img.data[i+2]*.114,v=Math.max(0,Math.min(255,(grey-160)*255/75));img.data[i]=img.data[i+1]=img.data[i+2]=v;}ctx.putImageData(img,0,0);return out;}
+

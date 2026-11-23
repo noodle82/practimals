@@ -101,16 +101,29 @@ export function compareManifests(before, after) {
 async function shaFile(file) {
   const h = crypto.createHash('sha256'); for await (const chunk of fs.createReadStream(file)) h.update(chunk); return h.digest('hex');
 }
-async function download(url, destination) {
-  let next = new URL(url);
-  if (next.hostname !== 'api.codemagic.io' || !/^\/+artifacts\//.test(next.pathname)) throw Error('Paste the direct App.ipa artifact link from Codemagic.');
+export function normaliseArtifactLink(value) {
+  const text = String(value || '').trim();
+  if (!text) throw Error('Enter the App.ipa download link from the successful build in the workflow input.');
+  if (/\$\{\{|inputs\.source_ipa_url/.test(text)) throw Error('Codemagic did not resolve the source_ipa_url input. Check the workflow input and SPELLOIDS_SOURCE_IPA_URL mapping; no download was attempted.');
+  // Pasting a clickable chat link may supply [label](address), <address>,
+  // quotes, or a fenced block. Extract addresses as data; never evaluate them.
+  const candidates = [...new Set((text.match(/https:\/\/[^\s<>"'`\[\]()]+/gi) || []).map(s => s.replace(/&amp;/g, '&')))];
+  if (candidates.length !== 1) throw Error(candidates.length ? 'More than one different address was pasted. Enter only the App.ipa artifact link.' : 'The input is not a web download link. Right-click App.ipa in the successful Codemagic build and choose Copy link address.');
+  let parsed;
+  try { parsed = new URL(candidates[0]); } catch { throw Error('The artifact link is malformed. Copy the App.ipa link address again from Codemagic.'); }
+  if (parsed.protocol !== 'https:' || parsed.username || parsed.password || parsed.hostname !== 'api.codemagic.io' || !/^\/+artifacts\//.test(parsed.pathname)) throw Error('Paste the direct App.ipa artifact link from Codemagic, starting with https://api.codemagic.io/.');
+  return parsed.href;
+}
+export async function download(url, destination) {
+  let next = new URL(normaliseArtifactLink(url));
   for (let redirects = 0; redirects < 6; redirects++) {
     if (next.protocol !== 'https:' || next.username || next.password) throw Error('The source must use HTTPS without embedded login details.');
     const response = await fetch(next, {redirect: 'manual', signal: AbortSignal.timeout(300000)});
     if ([301, 302, 303, 307, 308].includes(response.status)) {
       const location = response.headers.get('location'); await response.body?.cancel();
       if (!location) throw Error('Artifact redirect is missing its destination.');
-      next = new URL(location, next); continue;
+      try { next = new URL(location, next); } catch { throw Error('The artifact server returned an invalid redirect address. Copy a fresh App.ipa download link.'); }
+      continue;
     }
     if (!response.ok || !response.body) throw Error('Artifact download failed (HTTP ' + response.status + '). Copy a fresh App.ipa link from the successful build.');
     if (response.headers.has('content-length') && Number(response.headers.get('content-length')) !== SOURCE.bytes) {
@@ -150,8 +163,7 @@ function selectSigningProfile(sourceProfile) {
 }
 export async function main() {
   if (process.platform !== 'darwin') throw Error('Run this workflow on Codemagic macOS; Apple signing is not available on Windows.');
-  const url = process.env.SPELLOIDS_SOURCE_IPA_URL?.trim();
-  if (!url) throw Error('Enter the App.ipa download link from the successful build in the workflow input.');
+  const url = normaliseArtifactLink(process.env.SPELLOIDS_SOURCE_IPA_URL);
   for (const key of ['FASTLANE_SKIP_UPDATE_CHECK', 'FASTLANE_HIDE_CHANGELOG', 'FASTLANE_OPT_OUT_USAGE', 'FASTLANE_DISABLE_COLORS']) process.env[key] = '1';
   run('fastlane', ['--version']); // Installed on the Codemagic macOS image.
   const temp = fs.mkdtempSync(path.join(os.tmpdir(), 'spelloids-family-'));

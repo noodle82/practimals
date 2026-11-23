@@ -89,3 +89,28 @@ workflows:
         script: node scripts/test-ios-speech-simulator.mjs
     artifacts:
       - build/speech-diagnostics/**
+
+  ios-family-reuse-build30:
+    name: Spelloids Family iPad — reuse working build 30
+    max_build_duration: 20
+    instance_type: mac_mini_m2
+    integrations:
+      app_store_connect: Codemagic
+    inputs:
+      source_ipa_url:
+        description: Paste the App.ipa artifact download link from the successful Spelloids build 30
+        type: string
+    environment:
+      node: "22"
+      xcode: latest
+      vars:
+        SPELLOIDS_SOURCE_IPA_URL: ${{ inputs.source_ipa_url }}
+      ios_signing:
+        distribution_type: ad_hoc
+        bundle_identifier: com.spelloids.spelling
+    scripts:
+      - name: Re-sign and verify the existing working app for the registered family iPad
+        script: node scripts/reuse-spelloids-ipa.mjs
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - build/family-reuse-report.json
